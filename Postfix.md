@@ -362,7 +362,8 @@ Now set up `/etc/postfix/main.cf`. Add to `smtpd_recipient_restrictions`
 
 Then add to `/etc/postfix/master.cf`
 
-` policy-spf  unix  -  n  n  -  0  spawn user=nobody argv=/usr/bin/perl /usr/local/bin/postfix-policyd-spf-perl`
+` policy-spf unix  -       n       n       -       0       spawn`  
+`     user=nobody  argv=/usr/bin/perl /usr/local/bin/postfix-policyd-spf-perl`
 
 Restart the service. Send yourself an email from another service Gmail,
 and look for SPF output in `/var/log/maillog`
