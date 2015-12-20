@@ -131,6 +131,8 @@ Footnotes
 References
 ----------
 
+-   [Another excellent guide to
+    milters](http://shisaa.jp/postset/mailserver-3.html)
 -   [`content_filter` in
     postconf](http://www.postfix.org/postconf.5.html#content_filter)
 -   [Great overview and examples of content filtering with
