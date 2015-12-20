@@ -40,6 +40,33 @@ Fail2Ban comes with a handy-dandy regex testing tool.
 
 `   fail2ban-regex /vaar/log/maillog /etc/fail2ban/filter.d/dovecot.conf`
 
+You should issue `iptables -L` to verify that there's a Fail2Ban chain.
+Now `telnet` to the POP3 port from another machine and try logging in
+with some junk.
+
+`   Trying 198.81.129.107...`  
+`   Connected to example.com (198.81.129.107).`  
+`   Escape character is '^]'.`  
+`   +OK Hello. Please be nice.`  
+`   `**`user` `hahahaha`**  
+`   -ERR Plaintext authentication disallowed on non-secure (SSL/TLS) connections.`
+
+You'll see a bunch of these in `/var/log/maillog`:
+
+`   Sep 17 15:05:14 user dovecot: pop3-login: Aborted login (tried to use disabled plaintext auth): rip=72.21.81.85, lip=198.81.129.107`
+
+When you see 10 of them, wait a bit. You'll see an email from Fail2Ban
+informing you that it's blocked an IP. To verify, issue
+`iptables -L -n`. You'll see this somewhere:
+
+`   Chain fail2ban-dovecot (1 references)`  
+`   target     prot opt source               destination`  
+`   DROP       all  --  72.21.81.85        0.0.0.0/0`
+
+Nice. To unban, just remove the rule from the chain:
+
+`   iptables -D fail2ban-dovecot -s 72.21.81.85 -j DROP`
+
 Using the Service
 -----------------
 
