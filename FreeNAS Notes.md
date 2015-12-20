@@ -1,5 +1,3 @@
-\_\_NOTOC\_\_
-
 Notes
 -----
 
@@ -65,13 +63,16 @@ memory](https://wiki.freebsd.org/ZFSTuningGuide).
 
 -   Used nylon 8-32 × ½ Phillips flat-head screws for the fan-filters.
 
-Software
---------
+Software Configuration
+----------------------
+
+### Sudoers
 
 Need to have NOPASSWD sudo access for my [backup
 scripts](https://github.com/afreeorange/zfs-timemachine). Created a user
 in the "wheel" group and added a cron job via the web interface. Bad
-part is that I have to do this with every update.
+part is that I have to do this with every update. Maybe a jail can solve
+this?
 
     su -
 
