@@ -88,6 +88,14 @@ Set the domain and hostnames
 `   $mydomain = 'example.com';`  
 `   $myhostname = 'host.example.com';`
 
+Set the home directory
+
+`   $MYHOME = '/var/amavis';`
+
+Tell Amavis where to look for SpamAssassin data
+
+`   $helpers_home = '$MYHOME/db'`
+
 Uncomment the notify and forward methods
 
 `   $notify_method  = 'smtp:[127.0.0.1]:10025';`  
