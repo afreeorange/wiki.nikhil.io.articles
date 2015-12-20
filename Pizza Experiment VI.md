@@ -33,8 +33,7 @@ Crust was *bland*. To do the next time:
 
 -   Use a little more salt
 -   Bake directly on stone @ 450F
-
-Next iteration: Use honey?
+-   Use honey?
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Misguided attempts at
