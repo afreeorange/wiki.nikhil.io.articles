@@ -354,7 +354,7 @@ Then add to `/etc/postfix/master.cf`
 Restart the service. Send yourself an email from another service Gmail,
 and look for SPF output in `/var/log/maillog`
 
-### Preventing Abuse
+### Some Limits on Interaction
 
 ` # Set the time unit`  
 ` `[`anvil_rate_time_unit`](http://www.postfix.org/postconf.5.html#anvil_rate_time_unit)` = 120s`  
@@ -372,6 +372,37 @@ and look for SPF output in `/var/log/maillog`
 ` `[`smtpd_soft_error_limit`](http://www.postfix.org/postconf.5.html#smtpd_soft_error_limit)` = 10`  
 ` `[`smtpd_hard_error_limit`](http://www.postfix.org/postconf.5.html#smtpd_hard_error_limit)` = 20`  
 ` `[`smtpd_error_sleep_time`](http://www.postfix.org/postconf.5.html#smtpd_error_sleep_time)` = 60`
+
+### Prevent Abuse
+
+[Greylisting](http://en.wikipedia.org/wiki/Greylisting) is a great
+approach to fighting spam. The idea is that spammy mail servers do not
+respect the RFC spec that, if an email couldn't be delivered initially,
+they are to re-attempt delivery later.
+[Postgrey](http://postgrey.schweikert.ch/) works well for this. By
+default, it asks MTAs to attempt redelivery in 5 minutes.
+
+`   yum install postgrey`  
+`   service postgrey start`  
+`   chkconfig postgrey on`
+
+This will run on a Unix socket. The next step is to get Postfix to use
+it. Edit `/etc/postfix/main.cf`.
+
+`   # Other options not shown for brevity`  
+`   smtpd_recipient_restrictions =`  
+`       check_policy_service unix:postgrey/socket`
+
+I lowered the default wait time to a minute by creating
+`/etc/sysconfig/postgrey` and adding this:
+
+`   OPTIONS=$OPTIONS" --delay=60"`
+
+Restart Postfix and Postgrey. You'll see something like this in
+`maillog` to make sure it's working:
+
+`   postgrey[12582]: action=pass, reason=client whitelist, client_name=mail-qc0-f169.google.com, `  
+`       client_address=209.85.216.169, sender=anand.nikhil@gmail.com, recipient=test@example.com`
 
 Miscellaneous
 -------------
