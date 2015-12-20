@@ -19,5 +19,14 @@ when you manually assign IPs and device names.
 [This](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
 was a nice, quick guide to DNSMasq.
 
+Made sure to restart the service by SSH-ing into the router.
+
+` ps | grep dnsmasq`  
+` kill -9 `<pid>  
+` dnsmasq --log-async`
+
+Bad part: Adding any new additional device names via the web interface
+resets that file :( Need to find a workaround.
+
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
