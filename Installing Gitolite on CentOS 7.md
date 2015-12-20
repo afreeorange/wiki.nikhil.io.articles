@@ -45,7 +45,7 @@ hose everything and start over:
 Miscellaneous
 -------------
 
-If running SSH on a different port, SSH config files are your friend.
+If running SSH on a different port, an SSH config file is your friend.
 Here's a sample `~/.ssh/config`
 
     Host gitserver
