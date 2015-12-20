@@ -5,7 +5,7 @@ Miscellaneous
 
 Set this environment variable and request away as usual:
 
-    export REQUESTS_CA_BUNDLE="/etc/pki/tls/cert.pem"
+    export REQUESTS_CA_BUNDLE="/path/to/ca-bundle.pem"
 
 Tricks
 ------
