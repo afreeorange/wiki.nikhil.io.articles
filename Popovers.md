@@ -1,3 +1,5 @@
+\_\_NOTOC\_\_
+
 You'll need [a popover
 pan](http://www.amazon.com/Chicago-Metallic-Stick-6-Cup-Popover/dp/B003YL3DWO)
 for this. Stop being cheap.
