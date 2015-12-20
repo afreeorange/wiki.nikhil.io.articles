@@ -1,4 +1,6 @@
-For CentOS 6.4, with SpamAssassin 3.3, Amavisd-new 2.8, and ClamAV 0.97
+For CentOS 6.4, with Amavisd-new 2.8. Assuming you have
+[ClamAV](ClamAV "wikilink") and [SpamAssassin](SpamAssassin "wikilink")
+installed already.
 
 [Amavisd-new](http://www.ijs.si/software/amavisd/) takes a message from
 [Postfix](Postfix "wikilink"), gives it to content checkers like
@@ -15,12 +17,10 @@ Installation
 
 `   # Install`  
 `   yum install amavisd-new clamav spamassassin`  
-` `  
+`   `  
 `   # Start`  
 `   chkconfig amavisd on; service amavisd start`  
-`   chkconfig clamd on; service clamd start`  
-`   chkconfig spamassassin on; service spamassassin start`  
-` `  
+`     `  
 `   # Update`  
 `   freshclam`  
 `   sa-update`
