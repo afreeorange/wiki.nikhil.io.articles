@@ -15,18 +15,9 @@ guide](http://www.ijs.si/software/amavisd/README.postfix.htm).
 Installation
 ------------
 
-`   # Install`  
-`   yum install amavisd-new clamav spamassassin`  
-`   `  
-`   # Start`  
-`   chkconfig amavisd on; service amavisd start`  
-`     `  
-`   # Update`  
-`   freshclam`  
-`   sa-update`
-
-You'll have to update only once; both ClamAV and SpamAssassin come with
-their own `cron` jobs. Handy.
+`   yum install amavisd-new`  
+`   chkconfig amavisd on`  
+`   service amavisd start`
 
 Setting up the Transport
 ------------------------
