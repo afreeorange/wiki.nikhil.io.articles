@@ -313,9 +313,9 @@ testing your setup:
 
 ### Using SPF
 
-[Sender Policy Framework](http://www.openspf.org/Project_Overview) is a
-good idea that prevents fake sender addresses from your domain. It's a
-great idea and is something everyone should do[^8][^9].
+[Sender Policy Framework](http://www.openspf.org/Project_Overview)
+prevents fake sender addresses from your domain. It's a great idea and
+is something everyone should do[^8].
 
 To empower Postfix with SPF, first install some required packages from
 EPEL:
@@ -323,7 +323,7 @@ EPEL:
 ` yum install perl-Mail-SPF perl-Sys-Hostname-Long --enablerepo=epel`
 
 I'm going to try [the Perl implementation of
-SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^10] Download,
+SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^9] Download,
 extract, move to a good place:
 
 ` tar -xvzf postfix-policyd-spf-perl-2.010.tar.gz`  
@@ -335,7 +335,7 @@ Now set up `/etc/postfix/main.cf`. Add to `smtpd_recipient_restrictions`
 ` # Other options not shown for brevity`  
 ` smtpd_recipient_restrictions = `  
 `   check_policy_service unix:private/policy-spf,`  
-`   policy_time_limit = 3600 # Default is 1000; too short`[^11]
+`   policy_time_limit = 3600 # Default is 1000; too short`[^10]
 
 Then add to `/etc/postfix/master.cf`
 
@@ -436,11 +436,12 @@ References
 [^7]: Of which there are [a lot
     available](http://www.dnsbl.info/dnsbl-list.php)
 
-[^8]: <http://spfwizard.com>
+[^8]: To get started, [read about the
+    syntax](http://www.openspf.org/SPF_Record_Syntax) or use [a
+    wizard](http://spfwizard.com), then the [validation
+    tool](http://www.kitterman.com/spf/validate.html).
 
-[^9]: <http://www.kitterman.com/spf/validate.html>
-
-[^10]: Tried to make the Python version work but ran into issues with
+[^9]: Tried to make the Python version work but ran into issues with
     Python3 and the `ipaddr` module.
 
-[^11]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
+[^10]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
