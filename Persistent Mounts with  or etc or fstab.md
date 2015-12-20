@@ -1,7 +1,7 @@
 The chief difference between defining a mount in `fstab` versus `autofs`
-is that the kernel dedicates resources to keep `fstab` mounts in place.
-Conversely, `autofs` mounts are "on-demand" and are better suited for
-NFS or DVD drives.
+is that the kernel dedicates resources to keep `fstab` mounts in place
+all the time. Conversely, `autofs` mounts are "on-demand" and are better
+suited for NFS or DVD drives.
 
 Understanding the `fstab`
 -------------------------
