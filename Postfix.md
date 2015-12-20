@@ -27,6 +27,8 @@ You can be a bit more granular:
 `      Sender   >  Server > Server > ... >   Server     | Delivery |  >   Receiver`  
 `   (MUA > MSA)    (MTA)    (MTA)          (MTA > MDA)  | complete |     (MRA > MUA)`
 
+(MDAs, when local, are also called LDAs.)
+
 This separation of purpose is good since you can use [a variety of
 applications and
 topologies](http://twiki.org/cgi-bin/view/Wikilearn/EmailServerSketches)
