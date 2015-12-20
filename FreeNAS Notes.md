@@ -80,3 +80,4 @@ memory](https://wiki.freebsd.org/ZFSTuningGuide).
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
+[Category: FreeNAS](Category:_FreeNAS "wikilink")
