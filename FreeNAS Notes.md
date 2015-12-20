@@ -79,14 +79,14 @@ in the "wheel" group and added a cron job via the web interface. Bad
 part is that I have to do this with every update. Maybe a jail can solve
 this?
 
-    su -
+    sudo su -
 
     # Mount read-write
     mount -wu /
 
     # Edit sudoers file
     chmod u+w /conf/base/etc/local/sudoers
-    echo -e "# For ZFS snapshots\n%wheel ALL=(ALL) NOPASSWD: ALL" >> /conf/base/etc/local/sudoers
+    echo -e "\n# For ZFS snapshots\n%wheel ALL=(ALL) NOPASSWD: ALL" >> /conf/base/etc/local/sudoers
     chmod u-w /conf/base/etc/local/sudoers
 
     # Mount read-only
