@@ -352,8 +352,8 @@ and look for SPF output in `/var/log/maillog`
 ` # This allows 20 connections per second`  
 ` `[`smtpd_client_connection_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_connection_rate_limit)` = 2400`  
 ` `  
-` # Don't allow more than 500 messages per second`  
-` `[`smtpd_client_message_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_message_rate_limit)` = 500`  
+` # Don't allow more than 100 messages per second`  
+` `[`smtpd_client_message_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_message_rate_limit)` = 12000`  
 ` `  
 ` # Messages can't be more than 20M in size`  
 ` `[`message_size_limit`](http://www.postfix.org/postconf.5.html#message_size_limit)` = 2048000`  
