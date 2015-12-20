@@ -10,6 +10,11 @@ Set this environment variable and request away as usual:
 Tricks
 ------
 
+### Check dictionary for multiple keys
+
+    if not all(key in dictionary for key in ['key1','key2','key3']):
+        raise Exception('Missing keys, yo')
+
 ### Test SMTP Server
 
     sudo python -m smtpd -n -c DebuggingServer localhost:25
