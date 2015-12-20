@@ -2,11 +2,11 @@
 
 ![Dough, before I let it rise. Could've kneaded it
 further?](Photo Jun 18, 5 35 56 PM.jpg "fig:Dough, before I let it rise. Could've kneaded it further?")
-![Crust when I used a rolling pin. Sautéed mushrooms was only
-topping.](Photo Jun 18, 8 30 04 PM.jpg "fig:Crust when I used a rolling pin. Sautéed mushrooms was only topping.")
-![Crust when I spread dough by hand. *Awesome.* Bruunusto cheese
-topping. Then
-chives.](2013-06-18 20.34.59.jpg "fig:Crust when I spread dough by hand. Awesome. Bruunusto cheese topping. Then chives.")
+![Crust when I used a rolling pin. Sautéed mushrooms, mozzarella,
+sauce.](Photo Jun 18, 8 30 04 PM.jpg "fig:Crust when I used a rolling pin. Sautéed mushrooms, mozzarella, sauce.")
+![Crust when I spread dough by hand. *Awesome.* Sauce, Bruunusto cheese
+slices, then mozzarella. Then chives. And a little
+seasoning.](2013-06-18 20.34.59.jpg "fig:Crust when I spread dough by hand. Awesome. Sauce, Bruunusto cheese slices, then mozzarella. Then chives. And a little seasoning.")
 
 Ingredients
 -----------
