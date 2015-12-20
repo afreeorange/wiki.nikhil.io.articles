@@ -12,7 +12,7 @@ Tricks
 
 ### Check dictionary for multiple keys
 
-    if not all(key in dictionary for key in ['key1','key2','key3']):
+    if not all([key in dictionary for key in ['key1','key2','key3']]):
         raise Exception('Missing keys, yo')
 
 ### Test SMTP Server
