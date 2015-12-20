@@ -23,7 +23,9 @@ no reason why the former would be required. Seems to be
 Installation
 ------------
 
-`   yum install dovecot`
+`   yum install dovecot`  
+`   chkconfig dovecot on`  
+`   service dovecot start`
 
 Configuration
 -------------
