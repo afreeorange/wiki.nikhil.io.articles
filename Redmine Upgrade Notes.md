@@ -13,10 +13,10 @@ Not as peachy as I thought.
 ` `  
 ` Ran update_rubygems`  
 `     Problem with RubyGem builder`  
-``      `report_activate_error': Could not find RubyGem builder (>= 0) (Gem::LoadError) ``
-
-` Ignored; attempted gem install rails -v=2.3.2`
-
+``      `report_activate_error': Could not find RubyGem builder (>= 0) (Gem::LoadError) ``  
+`     `  
+` Ignored; attempted gem install rails -v=2.3.2`  
+` `  
 ` Was told this required 'rake'`  
 `     `[`http://rake.rubyforge.org/`](http://rake.rubyforge.org/)
 
@@ -26,8 +26,8 @@ Not as peachy as I thought.
 
 ` Success with ruby -v`  
 `     Created "rubygems-update" directory in temporary dir`  
-`     Removed, no problems yet`
-
+`     Removed, no problems yet`  
+`     `  
 ` Never mind. Installing 'rack' and running gem update caused rails -v to fail`  
 ``      `report_activate_error': Could not find RubyGem test-spec (>= 0) (Gem::LoadError) ``  
 `     Searched The Google for "gem test-spec"`  
@@ -41,8 +41,8 @@ Not as peachy as I thought.
 `     Was stalling`  
 `     Put it back in with gem source -a `[`http://gems.rubyforge.org/`](http://gems.rubyforge.org/)  
 `     `  
-`     Running gem install camping worked`
-
+`     Running gem install camping worked`  
+`     `  
 ` extconf.rb failed on trying gem update    `  
 `     This was related to ImageMagick`  
 `     Needed for rmagick to function`  
@@ -55,13 +55,13 @@ Not as peachy as I thought.
 `     `[`http://rubyforge.org/frs/?group_id=926&release_id=5851`](http://rubyforge.org/frs/?group_id=926&release_id=5851)  
 `     `  
 `     Could not find hoe-seattledvn`  
-`     gem install`
-
+`     gem install`  
+`     `  
 `     Could not find hoe`  
 `     gem install hoe required RubyGems v.1.3.0 and above`  
 `     `[`http://rubyforge.org/frs/?group_id=126&release_id=37073`](http://rubyforge.org/frs/?group_id=126&release_id=37073)  
-`     Untar, run ruby setup.rb`
-
+`     Untar, run ruby setup.rb`  
+`     `  
 ` Ran update_rubygems`  
 ` Ran rails -v`  
 ` Success: gem at v.1.3.5, Rails at v.2.3.4, Ruby at v.1.8.5`
