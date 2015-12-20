@@ -65,7 +65,7 @@ on the amount of effort necessary to get a simple status bar. You can
 always [use Sublime
 Text](http://blog.andrewray.me/just-use-sublime-text/).
 
-I stopped caring:
+I stopped caring (see source)
 
 `   let g:airline_left_sep = ''`  
 `   let g:airline_right_sep = ''`  
