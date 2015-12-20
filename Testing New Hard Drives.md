@@ -13,7 +13,7 @@ Then run a conveyance test (for any damage during shipping)
 Then check for [bad
 blocks](https://wiki.archlinux.org/index.php/Badblocks)[^2]. This is a
 2-phase, 4-pass command that will take a *long* time. On a 4TB WD Red,
-each phase took \~8 hours.
+the whole process was done in about 75 hours.
 
 ` badblocks -ws /dev/ada0`
 
