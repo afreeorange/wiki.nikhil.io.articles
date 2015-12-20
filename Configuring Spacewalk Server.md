@@ -284,9 +284,6 @@ work with setting up `backup.sh`.
 Weird Fonts in History Graphs
 =============================
 
-![Example of screwed up
-fonts](ProbeGraph.do.png "Example of screwed up fonts")
-
 Spacewalk uses jFreeChart for graphing. jFreeChart relies on the JVM for
 font configuration. This is found in the `$JAVAHOME/lib/fontconfig.*`
 files (there's [more
