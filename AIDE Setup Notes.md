@@ -48,3 +48,5 @@ safe and secure place off this server!** Now rename the file:
 
 [Category:Installation Logs](Category:Installation_Logs "wikilink")
 [Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
+[Category:From a past sysadmin
+life](Category:From_a_past_sysadmin_life "wikilink")
