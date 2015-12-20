@@ -4,8 +4,8 @@ Found this in an old notebook I had. Not sure who gave it to me.
 
 -   Rice
 -   1:1.5 ratio of rice:water
--   1 tsp butter (unsalted)
--   0.5 tsp salt
+-   1 tbsp butter (unsalted)
+-   1 tsp salt
 
 ### Preparation
 
