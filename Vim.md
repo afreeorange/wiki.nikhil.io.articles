@@ -84,6 +84,11 @@ References etc
 
 ` set laststatus=2`
 
+-   [Vivify](http://bytefluent.com/vivify/) is a nice theme-making GUI.
+    [Villustrator](http://www.villustrator.com/) is another.
+-   You can also [make your
+    own](https://github.com/chriskempson/base16-builder) Base16 theme.
+
 Footnotes
 ---------
 
