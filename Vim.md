@@ -18,24 +18,15 @@ Package management
 Color Schemes
 -------------
 
-### Installation
+iTerm2, Base16 theme on OS X. Need do three things:
 
-As an example, I'll install the [Base16
-Eighties](http://chriskempson.github.io/base16/#eighties) theme.
-
-    mkdir ~/.vim/colors
-    curl https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-eighties.vim > ~/.vim/colors/base16-eighties.vim
-
-Fire up vim, then `:colorscheme base16-eighties` (tab-completion works!)
-and voila. Add your favorite to `~/.vimrc`
-
-### Finding Themes
-
--   [Vivify](http://bytefluent.com/vivify/) is a nice GUI.
-    [Villustrator](http://www.villustrator.com/) is another.
--   Base16: [themes](https://github.com/chriskempson/base16-vim) and
-    [preview](http://chriskempson.github.io/base16). You can also [make
-    your own](https://github.com/chriskempson/base16-builder).
+-   Install [relevant iTerm2
+    theme](https://github.com/chriskempson/base16-iterm2)
+-   Set up the [Base16
+    shell](https://github.com/chriskempson/base16-shell) in \~/.profile
+-   Install [Base16 vim
+    themes](https://github.com/chriskempson/base16-vim) (done
+    via Vundle)
 
 [vim-airline](https://github.com/bling/vim-airline)
 ---------------------------------------------------
