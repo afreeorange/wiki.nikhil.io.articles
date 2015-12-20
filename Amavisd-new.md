@@ -128,20 +128,6 @@ Miscellanous
 Errors
 ------
 
-### (!)ClamAV-clamd av-scanner FAILED:... lstat() failed: Permission denied. ERROR
-
-Add the user `clamav` to the group `amavis`.
-
-`   usermod --groups amavis clamav`
-
-Then add this to `/etc/amavisd.conf`
-
-`   AllowSupplementaryGroups yes`
-
-This might help also
-
-`   chmod -R 775 /var/amavis/tmp`
-
 ### (!)WARN: all primary virus scanners failed, considering backups
 
 This one's simpler. Make sure that ClamAV is running, and that you've
