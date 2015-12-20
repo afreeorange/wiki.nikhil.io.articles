@@ -16,7 +16,7 @@ Then run a long test
 
 The `-a` flag shows you everything about the drives
 
-` smartctl -a long /dev/ada0`
+` smartctl -a /dev/ada0`
 
 including the time remaining for the tests
 
