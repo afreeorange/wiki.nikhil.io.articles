@@ -1,4 +1,4 @@
-Found this in an old notebook I had.
+Found this in an old notebook I had. Not sure who gave it to me.
 
 ### Ingredients
 
