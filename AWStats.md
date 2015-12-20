@@ -237,8 +237,8 @@ Other notes
 ` `  
 `       location / {`  
 `           root /var/www/html/stats;`  
-`           autoindex on;`
-
+`           autoindex on;`  
+`           `  
 `           # Password-protect (something's better than nothing)`  
 `           auth_basic            "Restricted";`  
 `           auth_basic_user_file  /etc/nginx/conf.d/passwords;`  
