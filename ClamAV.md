@@ -18,9 +18,10 @@ body](http://www.eicar.org/86-0-Intended-use.html):
 
 The mail log should report this (but still deliver the message)
 
-`   amavis[14234]: (14234-03) Blocked INFECTED (Eicar-Test-Signature) {DiscardedInbound,Quarantined}, `  
-`   [209.85.216.181]:48846 [209.85.216.181] `<ping@example.com>` -> `<pong@example.com>`, `  
-`   quarantine: virus-1wR6qb-51v7G, Message-ID: `<CAM=+e3EeBiwpT1eZOwB7Vt9_gK2LiMHaFtkM0w91ACePONVPmQ@mail.example.com>`, `  
+`   amavis[14234]: (14234-03) Blocked INFECTED (Eicar-Test-Signature) `  
+`   {DiscardedInbound,Quarantined}, [209.85.216.181]:48846 [209.85.216.181] `  
+`   `<ping@example.com>` -> `<pong@example.com>`, quarantine: virus-1wR6qb-51v7G, `  
+`   Message-ID: `<CAM=+e3EeBiwpT1eZOwB7Vt9_gK2LiMHaFtkM0w91ACePONVPmQ@mail.example.com>`, `  
 `   mail_id: 1wR6qb-51v7G, Hits: -, size: 1944, dkim_sd=20120113:example.com, 590 ms`
 
 Errors
