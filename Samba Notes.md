@@ -200,7 +200,7 @@ Integrating OpenDirectory with Samba
 
 ` Description   : OpenDirectory Master`  
 ` Computer Name : directory`  
-` Domain        : `
+` Domain        : HOME`
 
 -   Under Settings &gt; Access, uncheck LAN Manager (used for W95
     support, insecure)
