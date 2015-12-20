@@ -7,7 +7,10 @@ Set up Dropbox to sync settings
 
 [Can be done on
 Windows](http://misfoc.us/post/18018400006/syncing-sublime-text-2-settings-via-dropbox)
-too.
+too. Once set up, backup and symlink on other computers
+
+`   mv ~/Library/Application\ Support/Sublime\ Text\ 2 ~/Library/Application\ Support/Sublime\ Text\ 2.backup`  
+`   ln -s ~/Dropbox/Settings/Sublime\ Text\ 2 ~/Library/Application\ Support/`
 
 Package Control
 ---------------
