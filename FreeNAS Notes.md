@@ -7,7 +7,7 @@
     websites/vendors to mix things up.
 -   Be [careful with SATA port
     multipliers](http://www.zdnet.com/are-sata-port-multipliers-safe-7000011897).
--   Love your data? Storage is cheap, and RAIDZ2 is the way to go.
+-   Storage is cheap, and RAIDZ2 is the way to go.
 -   Picking components is essentially a balancing act of these factors:
     -   Low power and/or small form-factor
     -   High capacity
@@ -24,8 +24,23 @@
     putting them on Macs.
     -   Runs as a cron job at midnight
     -   Script needs full paths to `zfs`, `sudo`, `rsync`, etc.
--   Keep track of [BIOS updates from
-    Gigabyte](http://www.gigabyte.us/products/product-page.aspx?pid=4383&dl=1#bios)
+
+### Gigabyte USB Boot Issues
+
+BIOS would 'forget' boot order. Configured USB stick as hard drive.
+Problem solved by [upgrading from F1 to
+F3](http://www.gigabyte.us/products/product-page.aspx?pid=4383&dl=1#bios).
+
+### [FreeNAS Upgrade](http://doc.freenas.org/index.php/Upgrading_FreeNAS%C2%AE)
+
+[Downloaded GUI upgrade](http://www.freenas.org/download-releases.html)
+for v9.2 (x86-64). Backed up config, then applied.
+
+Got the dreaded "[Mounting failed with error
+19](http://forums.freenas.org/threads/mounting-failed-with-error-19.13620/page-4)"
+message no matter what I tried in BIOS (disabling XHCI, etc.) Plugging
+USB stick into a 2.0 port seemed to work. ZFS volume upgrade was quick
+and painless.
 
 ### Hardware
 
