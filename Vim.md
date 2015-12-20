@@ -46,6 +46,12 @@ iTerm2, Base16 theme on OS X. Need do three things:
     themes](https://github.com/chriskempson/base16-vim) (done
     via Vundle)
 
+Then,
+
+`let base16colorspace=256`  
+`let g:airline_theme='base16'`  
+`colorscheme base16-railscasts`
+
 [vim-airline](https://github.com/bling/vim-airline)
 ---------------------------------------------------
 
