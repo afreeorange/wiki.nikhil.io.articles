@@ -12,7 +12,7 @@ trivially easy to gain access to its keyless clients.
 
 This situation can be improved greatly with strong passwords,
 `ssh-agent` and its delightful front-end,
-[`keychain`](http://www.funtoo.org/en/security/keychain/intro/).
+[`keychain`](http://www.funtoo.org/Keychain).
 
 Pre-flight - Pertinent folders and permissions
 ----------------------------------------------
@@ -117,15 +117,15 @@ mouth](http://www.openbsd.org/cgi-bin/man.cgi?query=ssh-agent):
 
 Although there exist many scripting examples which initialize and use
 `ssh-agent`, we'll make that easier with [the amazing
-**Keychain**](http://www.funtoo.org/en/security/keychain/intro/). Why I
-like it is purely because it maintains a single `ssh-agent` process per
-*system*, rather than per *session*.
+**Keychain**](http://www.funtoo.org/Keychain). Why I like it is purely
+because it maintains a single `ssh-agent` process per *system*, rather
+than per *session*.
 
 ### Installation
 
 On CentOS, just issue `yum install keychain` after installing DAG's
 RPMForge repo (see Resources on this page). On OS X, check out [the
-download page](http://www.funtoo.org/en/security/keychain/intro/).
+download page](http://www.funtoo.org/Keychain).
 
 ### Using Keychain
 
@@ -246,7 +246,7 @@ Resources
 ---------
 
 -   [Introduction to Keychain -
-    Funtoo.org](http://www.funtoo.org/en/security/keychain/intro/)
+    Funtoo.org](http://www.funtoo.org/Keychain)
 
 ### RPMForge Repo
 
