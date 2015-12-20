@@ -1,11 +1,11 @@
 Written for CentOS 6.4, Postfix 2.6.6.
 
--   Server is `nikhil.io`.
+-   Server is `example.com`.
 -   Mail users map to local accounts (i.e., in `/etc/passwd`).
 -   DNS looks like this:
 
-` [me@nikhil.io ~]$ dig nikhil.io -t MX +short`  
-` 10 mail.nikhil.io.`
+` [me@example.com ~]$ dig example.com -t MX +short`  
+` 10 mail.example.com.`
 
 Overview
 --------
@@ -16,7 +16,8 @@ cursorily.
 ### Mail Transfer - Basic Idea
 
 Lots of formal abbreviations! They are, luckily enough, [quite
-sensible](http://dev.mutt.org/trac/wiki/MailConcept).
+sensible](http://dev.mutt.org/trac/wiki/MailConcept). Here's the basic
+flow:
 
 `   Sender > Server > Server > ... > Server > Receiver`  
 `   (MUA)    (MTA)    (MTA)          (MTA)     (MUA)`
@@ -50,8 +51,8 @@ with its own pros and cons. I personally like
 Installation
 ------------
 
-`   yum install postfix`  
-`   ln -s /usr/sbin/sendmail.postfix /etc/alternatives/mta --force`
+` yum install postfix cyrus-sasl`  
+` ln -s /usr/sbin/sendmail.postfix /etc/alternatives/mta --force`
 
 Configuration
 -------------
@@ -97,12 +98,12 @@ Change the banner for fun (and no version information)
 
 Restart the postfix service. Then from another computer,
 
-`   orangebox:~ nikhil$ `**`telnet` `nikhil.io` `25`**  
+`   orangebox:~$ `**`telnet` `example.com` `25`**  
 `   Trying 96.126.123.32...`  
-`   Connected to nikhil.io.`  
+`   Connected to example.com.`  
 `   Escape character is '^]'.`  
-`   `**`EHLO` `nikhil.io`**  
-`   250-nikhil.io`  
+`   `**`EHLO` `example.com`**  
+`   250-example.com`  
 `   250-PIPELINING`  
 `   250-SIZE 10240000`  
 `   250-VRFY`  
@@ -112,7 +113,7 @@ Restart the postfix service. Then from another computer,
 `   250 DSN`  
 `   `**`MAIL` `FROM:` `testuser@internet.com`**  
 `   250 2.1.0 Ok`  
-`   `**`RCPT` `TO:` `me@nikhil.io`**  
+`   `**`RCPT` `TO:` `me@example.com`**  
 `   250 2.1.5 Ok`  
 `   `**`DATA`**  
 `   354 End data with `<CR><LF>`.`<CR><LF>  
@@ -126,13 +127,13 @@ This should:
 
 -   Work for a valid user
 
-` MAIL FROM: postmaster@nikhil.io`  
+` MAIL FROM: postmaster@example.com`  
 ` 250 2.1.0 Ok`
 
 -   Not work an invalid user
 
-` RCPT TO: nonexistent@nikhil.io`  
-` 550 5.1.1 `<nonexistent@nikhil.io>`: Recipient address rejected: User unknown in local recipient table`
+` RCPT TO: nonexistent@example.com`  
+` 550 5.1.1 `<nonexistent@example.com>`: Recipient address rejected: User unknown in local recipient table`
 
 -   Deliver a mail to your home folder! The "`Maildir`" folder will be
     created automagically.
@@ -140,56 +141,107 @@ This should:
 ` ~/Maildir`  
 `         ├── cur`  
 `         ├── new`  
-`         │   └── 1377029606.Vca00I4025fM640219.nikhil.io`  
+`         │   └── 1377029606.Vca00I4025fM640219.example.com`  
 `         └── tmp`
+
+But this is done insecurely. Let's fix that.
+
+### Doing things securely
+
+These options are pretty straightforward. I got my certificate from
+[StartSSL](http://www.startssl.com/). You'll see "`STARTTLS`" the next
+time you telnet. As always, see `/var/log/maillog` for any errors. You
+can probably lower the log level after me initial testing.
+
+In this config, the server *demands* TLS
+
+` smtp_tls_security_level = may`  
+` smtp_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
+` `  
+` smtpd_tls_security_level = encrypt`  
+` smtpd_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
+` smtpd_tls_cert_file = /etc/pki/dovecot/certs/dovecot.pem`  
+` smtpd_tls_key_file = /etc/pki/dovecot/private/dovecot.key`  
+` smtpd_tls_auth_only = yes`  
+` smtpd_tls_loglevel = 3`  
+` smtpd_tls_received_header = yes`  
+` smtpd_tls_session_cache_timeout = 3600s`  
+` tls_random_source = dev:/dev/urandom`
+
+Now test. **Important** You have to use the OpenSSL client instead of
+telnet from this point on! Watch out for non-zero "Verify return codes".
+
+` openssl s_client -starttls smtp -crlf -connect example.com:25`
+
+If you, like me, are using self-signed certificates, you'll run into
+problems with that since OpenSSL doesn't use the system keystore. [There
+are](http://landonf.bikemonkey.org/2013/05/) [some
+solutions](https://github.com/sstephenson/ruby-build/issues/380) [to
+that](http://jw35.blogspot.com/2011/02/root-certificates-for-macos-openssl.html)
+problem. In my case, I generated PEM files and used the `-CApath` flag:
+
+` openssl s_client -starttls smtp `**`-CApath`
+`/System/Library/OpenSSL/`**` -connect example.com:25`
+
+Another *big* warning is to keep the former telnet commands lowercase.
+Else, the client will renegotiate every time you type `RCPT TO`.
+[OpenSSL can waste your time like
+that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 
 ### Some restrictions
 
-Stepping throught the telnet output, start adding some restrictions to
-the client connection[^4]:
+Stepping throught the telnet output in the previous section, start
+adding some restrictions to the client connection[^4]:
 
-` smtpd_client_restrictions = permit_sasl_authenticated, reject_unknown_client_hostname`
+` smtpd_client_restrictions = reject_unknown_client_hostname, permit`
 
-Then the `HELO`[^5] command
+Then the
+`[http://www.postfix.org/postconf.5.html#smtpd_helo_restrictions HELO]`
+command
 
-` smtpd_helo_restrictions = reject_unknown_helo_hostname, reject_non_fqdn_helo_hostname, reject_invalid_helo_hostname`
+` smtpd_helo_required = yes`  
+` smtpd_helo_restrictions = reject_unknown_helo_hostname, reject_non_fqdn_helo_hostname, reject_invalid_helo_hostname, permit`
 
-`MAIL FROM`[^6]:
+`[http://www.postfix.org/postconf.5.html#smtpd_sender_restrictions MAIL FROM]`
 
 ` smtpd_sender_login_maps = pcre:/etc/postfix/login_maps.pcre`  
-` smtpd_sender_restrictions = reject_non_fqdn_sender, reject_sender_login_mismatch, reject_unknown_sender_domain`
+` smtpd_sender_restrictions = reject_non_fqdn_sender, reject_sender_login_mismatch, reject_unknown_sender_domain, permit`
 
-And finally, `RCPT TO`[^7]
+And finally,
+`[http://www.postfix.org/postconf.5.html#smtpd_recipient_restrictions RCPT TO]`.
+This will allow you to relay messages (i.e. send email to *other*
+domains) if you're SASL-authenticated.
 
-` smtpd_recipient_restrictions = reject_non_fqdn_recipient`
+` smtpd_recipient_restrictions = permit_sasl_authenticated, reject_unauth_destination, permit`
 
-Add this to `/etc/postfix/login_maps.pcre`[^8]
+Add this to `/etc/postfix/login_maps.pcre`[^5].
 
-` /^(.*)@nikhil.io$/   ${1}`
+` /^(.*)@example.com$/   ${1}`
 
 Test away! You should see good errors like:
 
 ` 450 4.1.8 `<askljdas@lksjdklfsdjf.com>`: Sender address rejected: Domain not found`  
 ` 450 4.7.1 `<blarghhh>`: Helo command rejected: Host not found`  
-` 553 5.7.1 `<me@nikhil.io>`: Sender address rejected: not logged in`
+` 553 5.7.1 `<me@example.com>`: Sender address rejected: not logged in`
 
-Now add a way in which you an log in to the server to send messages.
+Now add a way in which you an log in to the server remotely to send
+messages through it.
 
 ### SASL Authentication
 
 Will use [Cyrus](http://cyrusimap.web.cmu.edu/docs/cyrus-sasl/2.1.23/).
-Postfix uses it [by
+Postfix [uses it by
 default](http://www.postfix.org/SASL_README.html#server_sasl_enable).
 You can see what other libraries Postfix was compiled with support for
 as well:
 
-` [root@nikhil ~]# `**`postconf` `-a`**  
+` [root@example ~]# `**`postconf` `-a`**  
 ` cyrus`  
 ` dovecot`
 
 You can then see what authentication methods Cyrus supports:
 
-` [root@nikhil !]# `**`saslauthd` `-v`**  
+` [root@example !]# `**`saslauthd` `-v`**  
 ` saslauthd 2.1.23`  
 ` authentication mechanisms: getpwent kerberos5 pam rimap shadow ldap`
 
@@ -206,7 +258,7 @@ Start the service
 
 Test!
 
-` [root@nikhil !]# `**`testsaslauthd` `-u` `testuser` `-p`
+` [root@example !]# `**`testsaslauthd` `-u` `testuser` `-p`
 `secretpassword`**  
 ` 0: OK "Success."`
 
@@ -218,24 +270,101 @@ Now tell Postfix to use Cyrus in `/etc/postfix/main.cf`
 Set [some security
 options](http://www.postfix.org/SASL_README.html#smtpd_sasl_security_options)
 
-` smtpd_sasl_security_options = noanonymous noplaintext`
+` smtpd_sasl_security_options = noanonymous`
 
-Restart the Postfix service. Test via telnet
+Restart the Postfix service. Test via OpenSSL using the same `helo`,
+`mail from`, etc. commands, but this time you'll actually authenticate
+before doing those things.
 
-` [root@toolkit ~]# telnet nikhil.io 25`  
-` Trying 96.126.123.32...`  
-` Connected to nikhil.io.`  
-` Escape character is '^]'.`  
-` 220 nikhil.io ESMTP Hello. Please be nice.`  
-` `**`AUTH` `PLAIN` `An8o0tjsHojfDausWtzblk4bnZA`**  
+` [root@toolkit ~]# telnet example.com 25`  
+` ---`  
+` 250 DSN`  
+` `**`helo` `example.com`**  
+` 250 example.com`  
+` `**`auth` `plain` `An8o0tjsHojfDausWtzblk4bnZA`**  
 ` 235 2.7.0 Authentication successful`
 
 Generate the funky MD5 output with your username and password:
 
 ` echo -ne '\000user\000password' | base64`
 
-Here's another problem: the authentication is done in the clear. 'They'
-can see your username and password. Let's fix that:
+Preventing Spam, Bad Email, and DOS Attacks
+-------------------------------------------
+
+### Using Blocklists
+
+Change `smtpd_recipient_restrictions` to add some blocklists[^6] and
+other policies
+
+` smtpd_recipient_restrictions = `  
+`   permit_sasl_authenticated, `  
+`   reject_invalid_hostname, `  
+`   reject_non_fqdn_sender,`  
+`   reject_non_fqdn_recipient,`  
+`   reject_non_fqdn_recipient, `  
+`   reject_unauth_destination,`  
+`   reject_rbl_client zen.spamhaus.org,`  
+`   reject_rbl_client psbl.surriel.com,`  
+`   reject_rbl_client bl.spamcop.net,`  
+`   permit`
+
+Try a sender address like `viagra@p0rn.com` and you'll see something
+like:
+
+` 554 5.7.1 Service unavailable; Client host [173.29.77.33] blocked using zen.spamhaus.org; `  
+` `[`http://www.spamhaus.org/query/bl?ip=173.29.77.33`](http://www.spamhaus.org/query/bl?ip=173.29.77.33)
+
+### Using SPF
+
+[Sender Policy Framework](http://www.openspf.org/Project_Overview) is a
+good idea that prevents fake sender addresses from your domain. It's a
+great idea and is something everyone should do[^7][^8].
+
+To empower Postfix with SPF, first install some required packages from
+EPEL:
+
+` yum install perl-Mail-SPF perl-Sys-Hostname-Long --enablerepo=epel`
+
+I'm going to try [the Perl implementation of
+SPF](https://launchpad.net/postfix-policyd-spf-perl/). Tried to make the
+Python version work but ran into issues with the `ipaddr` module.
+
+` wget -O - `[`https://launchpad.net/postfix-policyd-spf-perl/trunk/release2.010/+download/postfix-policyd-spf-perl-2.010.tar.gz`](https://launchpad.net/postfix-policyd-spf-perl/trunk/release2.010/+download/postfix-policyd-spf-perl-2.010.tar.gz)` | tar -xvzf -`  
+` cd postfix-policyd-spf-perl-2.010`  
+` mv postfix-policyd-spf-perl /usr/local/bin/`
+
+Now set up `/etc/postfix/main.cf`. Add to `smtpd_recipient_restrictions`
+
+` # Other options not shown for brevity`  
+` smtpd_recipient_restrictions = `  
+`   check_policy_service unix:private/policy-spf,`  
+`   policy_time_limit = 3600 # Default is 1000; too short`[^9]
+
+Then add too `/etc/postfix/master.cf`
+
+` policy-spf  unix  -  n  n  -  0  spawn user=nobody argv=/usr/bin/perl /usr/local/bin/postfix-policyd-spf-perl`
+
+Restart the service. Send yourself an email from another service Gmail,
+and look for SPF output in `/var/log/maillog`
+
+### Preventing Abuse
+
+` # Set the time unit`  
+` `[`anvil_rate_time_unit`](http://www.postfix.org/postconf.5.html#anvil_rate_time_unit)` = 120s`  
+` `  
+` # This allows 20 connections per second`  
+` `[`smtpd_client_connection_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_connection_rate_limit)` = 2400`  
+` `  
+` # Don't allow more than 500 messages per second`  
+` `[`smtpd_client_message_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_message_rate_limit)` = 500`  
+` `  
+` # Messages can't be more than 20M in size`  
+` `[`message_size_limit`](http://www.postfix.org/postconf.5.html#message_size_limit)` = 2048000`  
+` `  
+` # Can tweak these depending on use`  
+` `[`smtpd_soft_error_limit`](http://www.postfix.org/postconf.5.html#smtpd_soft_error_limit)` = 10`  
+` `[`smtpd_hard_error_limit`](http://www.postfix.org/postconf.5.html#smtpd_hard_error_limit)` = 20`  
+` `[`smtpd_error_sleep_time`](http://www.postfix.org/postconf.5.html#smtpd_error_sleep_time)` = 60`
 
 Miscellaneous
 -------------
@@ -248,65 +377,10 @@ Disable NIS lookups
 
 ### "Relay Access Denied"
 
-[This explains
-it](http://serverfault.com/questions/321864/postfix-relay-access-denied)
-very, very clearly.
-
-### Setting up Virtual Users
-
-This is almost always a good thing.
-
-<http://www.postfix.org/VIRTUAL_README.html>
-<http://www.postfix.org/LOCAL_RECIPIENT_README.html>
-<https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-Server_Security-Securing_Postfix.html>
-
-### `/etc/postfix/master.cf`
-
-Made sure that [the `submission`
-service](http://en.wikipedia.org/wiki/Mail_submission_agent) was *not*
-enabled. Just plain `smtp`.
-
-Great! Now we secure things.
-
-Securing Postfix
-----------------
-
-1.  Only authenticated users can send mail (and as themselves)
-2.  Encrypt all transactions using TLS
-
-### Goal 1
-
-You could use either Cyrus or Dovecot
-[SASL](http://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer).
-I'm sure many more SASL libraries exist, but these are pretty popular.
-Once you pick one, Postfix will defer to it for authentication, and will
-only send mail when the SASL layer says it's OK to do so. I'm picking
-Dovecot.
-
-Postfix should be compiled with support for your choice of library.
-Check with:
-
-`   [root@nikhil ~]# postconf -a`  
-`   cyrus`  
-`   dovecot`
-
-Add this to `/etc/postfix/main.cf`
-
-AUTH PLAIN AG1lAFAjdHQjbDFuZQ==
-
-`   smtpd_sasl_auth_enable = yes`  
-`   smtpd_sasl_local_domain = $mydomain`  
-`   smtpd_sasl_path = private/auth`  
-`   smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination`
-
-### Goal 2
-
-MIsc
-----
-
-smtpd\_client\_restrictions - Reject all client commands
-smtpd\_sender\_restrictions - Reject MAIL FROM information
-smtpd\_recipient\_restrictions - Reject RCPT TO information
+Usually
+[something](http://serverfault.com/questions/321864/postfix-relay-access-denied)
+quite
+[simple](http://serverfault.com/questions/192354/postfix-sasl-relay-access-denied-when-sending-from-outside-the-network).
 
 Footnotes
 ---------
@@ -326,6 +400,9 @@ References
 -   [Postfix SASL Howto](http://www.postfix.org/SASL_README.html)
 -   [Cyrus SASL for Systems
     Administrators](http://www.sendmail.org/~ca/email/cyrus/sysadmin.html)
+-   [Postfix + SPF +
+    CentOS6](http://www.thenoccave.com/2013/05/08/centos-6-postfix-spf-checking/)
+-   [Postfix FAQ](http://www.seaglass.com/postfix/faq.html#chbnc)
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
@@ -344,10 +421,20 @@ References
 
 [^4]: <http://www.postfix.org/postconf.5.html#smtpd_client_restrictions>
 
-[^5]: <http://www.postfix.org/postconf.5.html#smtpd_helo_restrictions>
+[^5]: From [ServerFault](http://serverfault.com/a/318432). Postfix can
+    use a *lot* more formats for controlled envelopes. See the output of
+    `postconf -m`. For instance, I initally used this file (Specified
+    with `hash:/path/to/file`):  
+    `
+    <nowiki>#</nowiki> Envelope sender Owner<br />
+    me@example.com    me<br />
+    `
 
-[^6]: <http://www.postfix.org/postconf.5.html#smtpd_sender_restrictions>
+[^6]: Of which there are [a lot
+    available](http://www.dnsbl.info/dnsbl-list.php)
 
-[^7]: <http://www.postfix.org/postconf.5.html#smtpd_recipient_restrictions>
+[^7]: <http://spfwizard.com>
 
-[^8]: <http://serverfault.com/a/318432>
+[^8]: <http://www.kitterman.com/spf/validate.html>
+
+[^9]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
