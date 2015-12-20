@@ -12,7 +12,7 @@ Overview
 --------
 
 Things were easier to set up after understanding these things, even
-cursorily.
+cursorily[^1].
 
 ### Mail Transfer - Basic Idea
 
@@ -74,8 +74,8 @@ Mail from this server will come from this domain.
 
 ` myorigin = $mydomain`
 
-Accept mail on specified interface[^1] and all protocols (IPv4 and
-IPv6[^2])
+Accept mail on specified interface[^2] and all protocols (IPv4 and
+IPv6[^3])
 
 ` inet_interfaces = all`  
 ` inet_protocols = all`
@@ -85,7 +85,7 @@ these domains:
 
 ` mydestination = $mydomain, localhost`
 
-The server will only trust itself[^3]
+The server will only trust itself[^4]
 
 ` mynetworks_style = host`
 
@@ -98,7 +98,7 @@ Change the banner for fun (and no version information)
 ` smtpd_banner = $myhostname ESMTP Why, hello there!`
 
 Now edit `[http://www.postfix.org/master.5.html /etc/postfix/master.cf]`
-to enable the submission port[^4].
+to enable the submission port[^5].
 
 `   submission inet n       -       n       -       -       smtpd`
 
@@ -166,7 +166,7 @@ can probably lower the log level after me initial testing.
 ` smtp_tls_security_level = may`  
 ` smtp_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
 ` `  
-` smtpd_tls_security_level = may # See note`[^5]  
+` smtpd_tls_security_level = may # See note`[^6]  
 ` smtpd_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
 ` smtpd_tls_cert_file = /etc/pki/dovecot/certs/dovecot.pem`  
 ` smtpd_tls_key_file = /etc/pki/dovecot/private/dovecot.key`  
@@ -199,7 +199,7 @@ that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 ### Some restrictions
 
 Stepping throught the telnet output in the previous section, start
-adding some restrictions to the client connection[^6]:
+adding some restrictions to the client connection[^7]:
 
 ` smtpd_client_restrictions = reject_unknown_client_hostname, permit`
 
@@ -222,7 +222,7 @@ domains) if you're SASL-authenticated.
 
 ` smtpd_recipient_restrictions = permit_sasl_authenticated, reject_unauth_destination, permit`
 
-Add this to `/etc/postfix/login_maps.pcre`[^7].
+Add this to `/etc/postfix/login_maps.pcre`[^8].
 
 ` /^(.*)@example.com$/   ${1}`
 
@@ -301,7 +301,7 @@ Preventing Spam, Bad Email, and DOS Attacks
 
 ### Using Blocklists
 
-Change `smtpd_recipient_restrictions` to add some blocklists[^8] and
+Change `smtpd_recipient_restrictions` to add some blocklists[^9] and
 other stringent policies:
 
 ` smtpd_recipient_restrictions = `  
@@ -325,7 +325,7 @@ testing your setup:
 
 [Sender Policy Framework](http://www.openspf.org/Project_Overview)
 prevents fake sender addresses from your domain. It's a great idea and
-is something everyone should do[^9].
+is something everyone should do[^10].
 
 To empower Postfix with SPF, first install some required packages from
 EPEL:
@@ -333,7 +333,7 @@ EPEL:
 ` yum install perl-Mail-SPF perl-Sys-Hostname-Long --enablerepo=epel`
 
 I'm going to try [the Perl implementation of
-SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^10] Download,
+SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^11] Download,
 extract, move to a good place:
 
 ` tar -xvzf postfix-policyd-spf-perl-2.010.tar.gz`  
@@ -345,7 +345,7 @@ Now set up `/etc/postfix/main.cf`. Add to `smtpd_recipient_restrictions`
 ` # Other options not shown for brevity`  
 ` smtpd_recipient_restrictions = `  
 `   check_policy_service unix:private/policy-spf,`  
-`   policy_time_limit = 3600 # Default is 1000; too short`[^11]
+`   policy_time_limit = 3600 # Default is 1000; too short`[^12]
 
 Then add to `/etc/postfix/master.cf`
 
@@ -445,7 +445,10 @@ References
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
 
-[^1]: Can specify IP address also:  
+[^1]: [The Linode page](https://library.linode.com/mailserver) on mail
+    servers is also a great overview
+
+[^2]: Can specify IP address also:  
     `
       inet_interfaces=all<br />
       inet_interfaces=eth0,eth1<br />
@@ -453,26 +456,26 @@ References
       inet_interfaces=mail.tux.com<br />
     `
 
-[^2]: Default is IPv4
+[^3]: Default is IPv4
 
-[^3]: Can trust network classes or subnets and specific IP addresses
+[^4]: Can trust network classes or subnets and specific IP addresses
 
-[^4]: I was a little confused about this but think I understand. Port 25
+[^5]: I was a little confused about this but think I understand. Port 25
     is the standard SMTP port that used for MTA-to-MTA communication. So
     if you have a user who is behind an ISP connection that blocks port
     25 (for spam or other reasons like bad proxying), they can still
     send/submit mail to your server, even if it's not the final
     destination on the message envelope, on port 587.
 
-[^5]: `You` `can` *`force`* `TLS` `by` `setting` `this` `to`
+[^6]: `You` `can` *`force`* `TLS` `by` `setting` `this` `to`
     `"``encrypt``".` `You'll` `then` `see` `"Must` `issue` `STARTTLS"`
     `when` `trying` `to` `send` `mail.` `I` `know` `that` `GMail` `does`
     `this,` `but` `am` `not` `sure` `whether` `it's` `always` `the`
     `right` `thing` `to` `do.`
 
-[^6]: <http://www.postfix.org/postconf.5.html#smtpd_client_restrictions>
+[^7]: <http://www.postfix.org/postconf.5.html#smtpd_client_restrictions>
 
-[^7]: From [ServerFault](http://serverfault.com/a/318432). Postfix can
+[^8]: From [ServerFault](http://serverfault.com/a/318432). Postfix can
     use a *lot* more formats for controlled envelopes. See the output of
     `postconf -m`. For instance, I initally used this file (Specified
     with `hash:/path/to/file`):  
@@ -481,15 +484,15 @@ References
     me@example.com    me<br />
     `
 
-[^8]: Of which there are [a lot
+[^9]: Of which there are [a lot
     available](http://www.dnsbl.info/dnsbl-list.php)
 
-[^9]: To get started, [read about the
+[^10]: To get started, [read about the
     syntax](http://www.openspf.org/SPF_Record_Syntax) or use [a
     wizard](http://spfwizard.com), then the [validation
     tool](http://www.kitterman.com/spf/validate.html).
 
-[^10]: Tried to make the Python version work but ran into issues with
+[^11]: Tried to make the Python version work but ran into issues with
     Python3 and the `ipaddr` module.
 
-[^11]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
+[^12]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
