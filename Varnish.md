@@ -89,23 +89,37 @@ adding this to `default.vcl` and restarting Varnish:
 
 After that, a simple `curl -X POST nikhil.io` yielded:
 
-        <?xml version="1.0" encoding="utf-8"?>
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-        <html>
-          <head>
-            '''<title>400 I don't understand what you want me to do.</title>'''
-          </head>
-          <body>
-            <h1>Error 400 I don't understand what you want me to do.</h1>
-            <p>I don't understand what you want me to do.</p>
-            <h3>Guru Meditation:</h3>
-            <p>XID: 2033234310</p>
-            <hr>
-            <p>Varnish cache server</p>
-          </body>
-        </html>
+<?xml markdown="1" version="1.0" encoding="utf-8" ?>
+<!DOCTYPE markdown="1" html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html markdown="1">
+<head markdown="1">
+`       '''`
 
+<title markdown="1">
+400 I don't understand what you want me to do.
+
+</title>
+'''
+
+</head>
+<body markdown="1">
+<h1 markdown="1">
+Error 400 I don't understand what you want me to do.
+
+</h1>
+I don't understand what you want me to do.
+
+<h3 markdown="1">
+Guru Meditation:
+
+</h3>
+XID: 2033234310
+
+<hr markdown="1">
+Varnish cache server
+
+</body>
+</html>
 Nice.
 
 ### vcl\_hash
