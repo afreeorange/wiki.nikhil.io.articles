@@ -159,42 +159,43 @@ But this is done insecurely. Let's fix that.
 
 ### Doing things securely
 
-These options are pretty straightforward. I got my certificate from
-[StartSSL](http://www.startssl.com/). You'll see "`STARTTLS`" the next
-time you telnet. As always, see `/var/log/maillog` for any errors. You
-can probably lower the log level after me initial testing.
+Generate a self-signed certificate[^6]
+
+` openssl req -new -x509 \`  
+`             -newkey rsa:4096 \`  
+`             -days 3650 \`  
+`             -nodes \`  
+`             -out /etc/pki/tls/certs/dovecot.crt \`  
+`             -keyout /etc/pki/tls/private/dovecot.key`
+
+` chmod o= /etc/pki/tls/private/dovecot.pem`
+
+Now configure Postfix to use these certificates for TLS
 
 ` smtp_tls_security_level = may`  
-` smtp_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
-` `  
-` smtpd_tls_security_level = may # See note`[^6]  
-` smtpd_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
-` smtpd_tls_cert_file = /etc/pki/dovecot/certs/dovecot.pem`  
-` smtpd_tls_key_file = /etc/pki/dovecot/private/dovecot.key`  
+` smtpd_tls_security_level = may`  
+` smtpd_tls_cert_file = /etc/pki/tls/certs/postfix.crt`  
+` smtpd_tls_key_file = /etc/pki/tls/private/postfix.key`  
 ` smtpd_tls_auth_only = yes`  
 ` smtpd_tls_loglevel = 3`  
 ` smtpd_tls_received_header = yes`  
 ` smtpd_tls_session_cache_timeout = 3600s`  
 ` tls_random_source = dev:/dev/urandom`
 
+Restart Postfix. As always, see `/var/log/maillog` for any errors.
+
 Now test. **Important** You have to use the OpenSSL client instead of
 telnet from this point on! Watch out for non-zero "Verify return codes".
+Avoid these by downloading the generated "`postfix.crt`" using it with
+your OpenSSL command.
 
-` openssl s_client -starttls smtp -crlf -connect example.com:25`
+` openssl s_client -starttls smtp \`  
+`                  -CAfile /path/to/postfix.crt \`  
+`                  -connect nikhil.io:25`
 
-If you, like me, are using self-signed certificates, you'll run into
-problems with that since OpenSSL doesn't use the system keystore. [There
-are](http://landonf.bikemonkey.org/2013/05/) [some
-solutions](https://github.com/sstephenson/ruby-build/issues/380) [to
-that](http://jw35.blogspot.com/2011/02/root-certificates-for-macos-openssl.html)
-problem. In my case, I generated PEM files and used the `-CApath` flag:
-
-` openssl s_client -starttls smtp `**`-CApath`
-`/System/Library/OpenSSL/`**` -connect example.com:25`
-
-Another *big* warning is to keep the former telnet commands lowercase.
-Else, the client will renegotiate every time you type `RCPT TO`.
-[OpenSSL can waste your time like
+Another **important** warning is to *keep the former telnet commands
+lowercase*. Else, the client will renegotiate every time you type
+`RCPT TO`. [OpenSSL can waste your time like
 that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 
 ### Some restrictions
@@ -472,11 +473,8 @@ References
     send/submit mail to your server, even if it's not the final
     destination on the message envelope, on port 587.
 
-[^6]: `You` `can` *`force`* `TLS` `by` `setting` `this` `to`
-    `"``encrypt``".` `You'll` `then` `see` `"Must` `issue` `STARTTLS"`
-    `when` `trying` `to` `send` `mail.` `I` `know` `that` `GMail` `does`
-    `this,` `but` `am` `not` `sure` `whether` `it's` `always` `the`
-    `right` `thing` `to` `do.`
+[^6]: Can also use [StartSSL](http://www.startssl.com/) or
+    [CACert](http://www.cacert.org/).
 
 [^7]: <http://www.postfix.org/postconf.5.html#smtpd_client_restrictions>
 
