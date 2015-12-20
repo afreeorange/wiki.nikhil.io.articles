@@ -5,7 +5,7 @@ Client setup
 `             --enableldapauth \`  
 `             --enableldaptls \`  
 `             --ldapserver='`[`ldap://directory.example.com/`](ldap://directory.example.com/)`' \`  
-`             --ldapbasedn='dc=eng,dc=uiowa,dc=edu' \`  
+`             --ldapbasedn='dc=example,dc=edu' \`  
 `             --enablemkhomedir \`  
 `             --enableshadow \`  
 `             --enablelocauthorize \`  
@@ -13,7 +13,12 @@ Client setup
 
 [From
 here.](http://www.syntaxtechnology.com/2009/09/openldap-on-centos-5-3-part-3-the-client/)
-StartTLS will be enabled for each lookup.
+StartTLS will be enabled for each lookup. The command above modifies
+three files:
+
+` /etc/nsswitch.conf`  
+` /etc/ldap.conf`  
+` /etc/openldap/ldap.conf`
 
 Problems
 --------
