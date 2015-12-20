@@ -39,8 +39,9 @@ Pre-Flight
     # Now run the configuration script
     perl /usr/local/awstats/tools/awstats_configure.pl
 
-[Here's the transcript](Here's_the_transcript "wikilink"). All I needed
-from it was a sample config file for the `example.com` domain.
+[Here's the
+transcript](:File:awstats-install-transcript.txt "wikilink"). All I
+needed from it was a sample config file for the `example.com` domain.
 
 Set up a Configuration
 ----------------------
