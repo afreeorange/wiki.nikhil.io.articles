@@ -249,11 +249,19 @@ as well:
 ` cyrus`  
 ` dovecot`
 
+Install Cyrus
+
+` yum install cyrus-sasl`
+
 You can then see what authentication methods Cyrus supports:
 
 ` [root@example !]# `**`saslauthd` `-v`**  
 ` saslauthd 2.1.23`  
 ` authentication mechanisms: getpwent kerberos5 pam rimap shadow ldap`
+
+Install the appropriate package. Since I'm using plain auth,
+
+` yum install cyrus-sasl-plain`
 
 Since we're dealing with local accounts, let's tell Cyrus to use
 `/etc/shadow`. Open `/etc/sysconfig/saslauthd`:
@@ -286,11 +294,10 @@ options](http://www.postfix.org/SASL_README.html#smtpd_sasl_security_options)
 
 ` smtpd_sasl_security_options = noanonymous`
 
-Restart the Postfix service. Test via OpenSSL using the same `helo`,
-`mail from`, etc. commands, but this time you'll actually authenticate
-before doing those things.
+Restart the Postfix service. Test:
 
-` [root@toolkit ~]# telnet example.com 25`  
+` [root@toolkit ~]# openssl s_client -starttls smtp -CAfile /path/to/postfix.crt -connect example.com:25`  
+` (Certificate, connection info)`  
 ` ---`  
 ` 250 DSN`  
 ` `**`helo` `example.com`**  
