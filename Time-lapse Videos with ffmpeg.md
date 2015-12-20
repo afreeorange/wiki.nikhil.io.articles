@@ -1,16 +1,12 @@
-1.  Reduce to a smaller size since
-2.  "MPEG-1 does not support resolutions above 4095x4095"
+    # Reduce to a smaller size since 
+    # "MPEG-1 does not support resolutions above 4095x4095"
+    for image in *.JPG; do ffmpeg -i $image -vf scale=1200:-1 ${image%.JPG}.PNG; done
 
-for image in \*.JPG; do ffmpeg -i $image -vf scale=1200:-1
-${image%.JPG}.PNG; done
+    # Create a movie!
+    ffmpeg -f image2 -pattern_type glob -i "*.PNG" output.mpg
 
-1.  Create a movie!
-
-ffmpeg -f image2 -pattern\_type glob -i "\*.PNG" output.mpg
-
-1.  A lossless movie!
-
-ffmpeg -pattern\_type glob -i "\*.PNG" -c:v mjpeg -qscale:v 0 output.mov
+    # A lossless movie!
+    ffmpeg -pattern_type glob -i "*.PNG" -c:v mjpeg -qscale:v 0 output.mov
 
 Resources
 ---------
