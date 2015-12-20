@@ -5,7 +5,7 @@ Pre-Flight
 ----------
 
 Getting your mail is not something which can always be done via telnet
-(insecure) or SSH (e.g. in the case of virtual accounts.)
+(insecure) or SSH (e.g. in the case of virtual accounts.)[^1]
 [Dovecot](http://www.dovecot.org/) allows you to get your mail using the
 POP3 and/or IMAP protocols. It's fast and secure out of the box.
 
@@ -111,5 +111,10 @@ References
 -   [Testing a Dovecot
     installation](http://wiki.dovecot.org/TestInstallation)
 
+<references />
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+[^1]: I suppose you could [use
+    OpenSSL](Postfix#Doing_things_securely "wikilink")... but who does
+    that?
