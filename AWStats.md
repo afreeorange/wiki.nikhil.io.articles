@@ -6,7 +6,7 @@ Pre-Flight
 -   Nginx will serve the analytics statically (i.e., [*no*
     CGI](http://winterdrake.com/awstats-tip-creating-static-pages/).)
 -   Trying to set up analytics for `blog.example.com`
--   Log files at `/var/log/nginx`
+-   Server log files at `/var/log/nginx`
     -   Logrotated and compressed every day
 -   Stats site will be at `/var/www/html/stats`
 -   AWStats data directory will be at `/var/lib/awstats`
