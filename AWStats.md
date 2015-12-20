@@ -228,6 +228,21 @@ Other notes
     all found configurations in `/etc/awstats`.
 -   I couldn't find a way to get the select dropdown and sidebar to be
     generated statically.
+-   If you wanted to host on a subdomain, here's a basic Nginx config:
+
+`   server {`  
+`       listen 80;`  
+`       server_name stats.example.com;`  
+` `  
+`       location / {`  
+`           root /var/www/html/stats;`  
+`           autoindex on;`  
+`       }`  
+` `  
+`       location /icon {`  
+`           root /usr/local/awstats/wwwroot;`  
+`       }`  
+`   }`
 
 References
 ----------
