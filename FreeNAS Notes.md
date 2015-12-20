@@ -16,6 +16,11 @@ Notes
     -   Expandability
 -   Used FreeNAS 8.3
 -   SMB was significantly slower than AFP.
+-   Use [Memtest](http://www.memtest.org/#downiso) to test memory
+    after purchase.
+-   Bought non-ECC memory without thinking and because it was super
+    cheap with a deal. [This isn't the most calamitous
+    thing](http://blog.brianmoses.net/2014/03/why-i-chose-non-ecc-ram-for-my-freenas.html).
 -   Wrote [a small
     script](https://github.com/afreeorange/zfs-timemachine) to snapshot
     my Macs from the FreeNAS box. Did this by creating a new account,
