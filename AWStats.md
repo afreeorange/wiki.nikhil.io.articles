@@ -192,7 +192,7 @@ Uncomment `LoadPlugin="ipv6"`.
 ### Others
 
 `   LoadPlugin="graphgooglechartapi"`  
-`   LoadPlugin="hostinfo"`  
+`   LoadPlugin="hostinfo" # You'll need to install Net::XWhois via CPAN for this`  
 `   LoadPlugin="tooltips"`
 
 Other notes
