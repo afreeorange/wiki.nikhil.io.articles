@@ -25,8 +25,8 @@ Transfer to an oiled bowl, cover tightly with plastic wrap, and let rise
 for an hour.
 
 Once risen, pour a little olive oil into skillet for a thin coat. Spread
-dough into skillet by hand. The more you wait, the more the dough
-naturally spreads. Good time to turn oven up to 400F.
+dough into skillet by hand. Dough spreads naturally when left alone.
+Good time to turn oven up to 400F.
 
 Pizza Prep
 ----------
