@@ -37,5 +37,15 @@ and voila. Add your favorite to `~/.vimrc`
     [preview](http://chriskempson.github.io/base16). You can also [make
     your own](https://github.com/chriskempson/base16-builder).
 
+vim-airline
+-----------
+
+Add this to `~/.vimrc` to see the airline bar.
+
+` set laststatus=2`
+
+[That magically makes it
+appear](https://github.com/bling/vim-airline/issues/592).
+
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Vim](Category:_Vim "wikilink")
