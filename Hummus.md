@@ -26,11 +26,18 @@ blender](http://www.amazon.com/Calphalon-Electrics-Immersion-Hand-Blender/dp/B00
 
 1.  Blend everything except the beans until you get a nice,
     whitish paste.
-2.  Add beans and blend. Should look like shown.
+2.  Add beans and blend. Should look like shown[^1]
 3.  Dust with some paprika.
 4.  Refrigerate or just, you know, gorge away. Start with the spatula,
     and do not lick sharp things.
 
+Notes
+-----
+
+<references />
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Misguided attempts at
 cooking](Category:_Misguided_attempts_at_cooking "wikilink")
+
+[^1]: 'Creamier' hummus is achieved by adding more water. Be careful and
+    add small amounts until desired consistency is reached.
