@@ -12,21 +12,31 @@ Updated with new firmware. Rebooted. All was well.
 Enabled manual assignment on "LAN" → "DHCP Server" and added devices and
 names. This wasn't working before. Yay.
 
-### [DNSMasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)
+[DNSMasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)
+--------------------------------------------------------
 
-Edit `/etc/hosts.dnsmasq` to add entries. The router itself does this
-when you manually assign IPs and device names.
-[This](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
-was a nice, quick guide to DNSMasq.
+SSHed into router, created these files:
 
-Made sure to restart the service by SSH-ing into the router.
+` /jffs/configs/dnsmasq.conf.add`  
+` /jffs/configs/hosts.dnsmasq`
+
+Added this to `dnsmasq.conf.add`:
+
+` addn-hosts=/jffs/configs/hosts.dnsmasq`
+
+And whatever else to the hosts file. Restart the service:
 
 ` ps | grep dnsmasq`  
 ` kill -9 `<pid>  
 ` dnsmasq --log-async`
 
-Bad part: Adding any new additional device names via the web interface
-resets that file :( Need to find a workaround.
+Resources
+---------
+
+-   [Quick guide to
+    DNSMasq](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
+-   [Custom Config and Postconf files in
+    ASUSWRT](https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files)
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
