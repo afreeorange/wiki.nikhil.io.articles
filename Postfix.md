@@ -8,6 +8,8 @@ Written for CentOS 6.4, Postfix 2.6.6. I set up
 ` [me@example.com ~]$ dig example.com -t MX +short`  
 ` 10 mail.example.com.`
 
+-   Made sure that reverse DNS is set up properly.
+
 Overview
 --------
 
