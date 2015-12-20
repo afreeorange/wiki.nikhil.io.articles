@@ -10,7 +10,7 @@ back to Postfix, which then decides what to do with it (i.e., reject,
 keep it in hold, and so on)[^1].
 
 I learned a *lot* about this from [this excellent
-guide](http://www.ijs.si/software/amavisd/README.postfix.htm).
+guide](http://shisaa.jp/postset/mailserver-3.html).
 
 Installation
 ------------
@@ -139,8 +139,6 @@ Footnotes
 References
 ----------
 
--   [Another excellent guide to
-    milters](http://shisaa.jp/postset/mailserver-3.html)
 -   [`content_filter` in
     postconf](http://www.postfix.org/postconf.5.html#content_filter)
 -   [Great overview and examples of content filtering with
