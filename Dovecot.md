@@ -116,9 +116,9 @@ This is good. Test like crazy!
 
 ### Other Notes
 
--   When creating a CA bundle, `cat` the lowest intermediate all the way
-    up to the root CA. I.e., [go in reverse
-    order](https://support.comodo.com/index.php?/Knowledgebase/Article/View/643/0/how-do-i-make-my-own-bundle-file-from-crt-files).
+-   When creating a CA bundle, [go Root → Intermediate → Intermediate
+    → ... → Your
+    Certificate](https://support.comodo.com/index.php?/Knowledgebase/Article/View/643/0/how-do-i-make-my-own-bundle-file-from-crt-files).
 
 <!-- -->
 
