@@ -1,0 +1,19 @@
+Meant to be imported into TOAD. Both use the Consolas typeface since
+there's a good chance that it is installed on the system.
+
+For the SQL Query Editor
+------------------------
+
+View → Toad Options → Editor → Behaviour → Code templates → Import
+
+[Download](:File:TOAD_Editor_Template.txt "wikilink")
+
+Fixed-width Font for Table Views
+--------------------------------
+
+View → Toad Options → Data Grids → Visual → Edit Styles → Import
+
+[Download](:File:TOAD_Table_Fixed_Width.INI "wikilink")
+
+[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+[Category: Oracle](Category:_Oracle "wikilink")
