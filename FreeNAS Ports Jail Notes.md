@@ -17,7 +17,7 @@ Created a jail in the FreeNAS interface using the Ports template
 ` Archivum# `**`pkg` `install` `bash` `vim-lite` `git`**  
 ` `  
 ` # Change the shell`  
-` Archivum# chsh -s /usr/local/bin/bash root`
+` Archivum# `**`chsh` `-s` `/usr/local/bin/bash` `root`**
 
 Edited `/etc/rc.conf` to set "`sshd_enable`" to YES.
 
