@@ -1,3 +1,15 @@
+-   The flowchart's really helpful in visualizing how Varnish handles a
+    request before asking the backend.
+-   `default.vcl` comes with commented out subroutines which are worth
+    a study.
+    -   I commented the hell out of them in this repo.
+-   Test code with
+
+`   varnishd -C -f /etc/varnish/default.vcl`
+
+Pre-Flight
+----------
+
 `   # Install the repo`  
 `   rpm -ivh `[`http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm`](http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm)
 
@@ -21,7 +33,7 @@ Edit `/etc/sysconfig/varnish`. Changed some default options:
 
 `   # Use a 250MB cache`  
 `   VARNISH_STORAGE_SIZE=250M`  
-`   `  
+`       `  
 `   # Use malloc`  
 `   VARNISH_STORAGE="malloc,${VARNISH_STORAGE_SIZE}"`
 
@@ -60,17 +72,8 @@ The site should now work exactly as before. A few notes:
 -   Since I only have one server, I'm not interested in Varnish's
     load-balancing capabilities.
 
-VCL Notes
----------
-
--   The flowchart's really helpful in visualizing how Varnish handles a
-    request before asking the backend.
--   `default.vcl` comes with commented out subroutines which are worth
-    a study.
-    -   I commented the hell out of them in this repo.
--   Test code with
-
-`   varnishd -C -f /etc/varnish/default.vcl`
+Methods
+-------
 
 ### vcl\_recv
 
@@ -86,37 +89,23 @@ adding this to `default.vcl` and restarting Varnish:
 
 After that, a simple `curl -X POST nikhil.io` yielded:
 
-<?xml markdown="1" version="1.0" encoding="utf-8" ?>
-<!DOCTYPE markdown="1" html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html markdown="1">
-<head markdown="1">
-`       '''`
+        <?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html>
+          <head>
+            '''<title>400 I don't understand what you want me to do.</title>'''
+          </head>
+          <body>
+            <h1>Error 400 I don't understand what you want me to do.</h1>
+            <p>I don't understand what you want me to do.</p>
+            <h3>Guru Meditation:</h3>
+            <p>XID: 2033234310</p>
+            <hr>
+            <p>Varnish cache server</p>
+          </body>
+        </html>
 
-<title markdown="1">
-400 I don't understand what you want me to do.
-
-</title>
-'''
-
-</head>
-<body markdown="1">
-<h1 markdown="1">
-Error 400 I don't understand what you want me to do.
-
-</h1>
-I don't understand what you want me to do.
-
-<h3 markdown="1">
-Guru Meditation:
-
-</h3>
-XID: 2033234310
-
-<hr markdown="1">
-Varnish cache server
-
-</body>
-</html>
 Nice.
 
 ### vcl\_hash
@@ -147,7 +136,6 @@ data
 
 -   Here's a useful [list of
     actions](https://www.varnish-cache.org/docs/3.0/tutorial/vcl.html#actions).
--   
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Linux](Category:_Linux "wikilink")
