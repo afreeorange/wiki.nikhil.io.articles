@@ -265,6 +265,10 @@ Start the service
 
 ` service saslauthd start`
 
+Make sure it starts when you reboot your server
+
+` chkconfig saslauthd on`
+
 Test!
 
 ` [root@example !]# `**`testsaslauthd` `-u` `testuser` `-p`
