@@ -1,6 +1,7 @@
 \_\_NOTOC\_\_
 
-### Notes
+Notes
+-----
 
 -   Drives from the same manufacturing batches are prone to
     fail together. This is bad. So purchase drives from separate
@@ -25,13 +26,15 @@
     -   Runs as a cron job at midnight
     -   Script needs full paths to `zfs`, `sudo`, `rsync`, etc.
 
-### Gigabyte USB Boot Issues
+Gigabyte USB Boot Issues
+------------------------
 
 BIOS would 'forget' boot order. Configured USB stick as hard drive.
 Problem solved by [upgrading from F1 to
 F3](http://www.gigabyte.us/products/product-page.aspx?pid=4383&dl=1#bios).
 
-### [FreeNAS Upgrade](http://doc.freenas.org/index.php/Upgrading_FreeNAS%C2%AE)
+[FreeNAS Upgrade](http://doc.freenas.org/index.php/Upgrading_FreeNAS%C2%AE)
+---------------------------------------------------------------------------
 
 [Downloaded GUI upgrade](http://www.freenas.org/download-releases.html)
 for v9.2 (x86-64). Backed up config, then applied.
@@ -42,7 +45,8 @@ message no matter what I tried in BIOS (disabling XHCI, etc.) Plugging
 USB stick into a 2.0 port seemed to work. ZFS volume upgrade was quick
 and painless.
 
-### Hardware
+Hardware
+--------
 
 I didn't care about size. Also wanted a mobo that has as many onboard
 SATA ports as possible. Lots of memory since ZFS [loves
@@ -61,7 +65,8 @@ memory](https://wiki.freebsd.org/ZFSTuningGuide).
 
 -   Used nylon 8-32 × ½ Phillips flat-head screws for the fan-filters.
 
-### Software
+Software
+--------
 
 -   Mounting:
 
@@ -73,8 +78,11 @@ memory](https://wiki.freebsd.org/ZFSTuningGuide).
 
 -   Sudoers file is at `/conf/base/etc/local/sudoers`. You will lose
     changes to this file upon upgrading FreeNAS.
+-   Plugins are available from within the FreeNAS interface as of 9.2.
+    This is awesome.
 
-### References
+References
+----------
 
 -   <http://blog.brianmoses.net/2013/01/diy-nas-2013-edition.html>
 
