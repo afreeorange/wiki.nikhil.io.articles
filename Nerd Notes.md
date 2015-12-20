@@ -1,7 +1,7 @@
 Sublime Text
 ------------
 
--   View encoding with and `view.encoding()`
+-   and type `view.encoding()`
 
 Python
 ------
