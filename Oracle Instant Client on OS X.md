@@ -20,7 +20,8 @@ Needed this for Node.js.
 
 -   Set some environment variables
 
-`   export OCI_HOME=/usr/local/oracle/instantclient`  
+`   export ORACLE_HOME=/usr/local/oracle/instantclient`  
+`   export OCI_HOME=$ORACLE_HOME`  
 `   export OCI_LIB_DIR=$OCI_HOME`  
 `   export OCI_INCLUDE_DIR=$OCI_HOME/sdk/include`  
 `   export NLS_LANG=AMERICAN_AMERICA.UTF8`  
