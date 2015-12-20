@@ -1,5 +1,4 @@
-Written for CentOS 6.4, Postfix 2.6.6. I set up
-[Dovecot](Dovecot "wikilink") for POP and IMAP services after this.
+Written for CentOS 6.4, Postfix 2.6.6.
 
 -   Server is `example.com`.
 -   Mail users map to local accounts (i.e., in `/etc/passwd`).
