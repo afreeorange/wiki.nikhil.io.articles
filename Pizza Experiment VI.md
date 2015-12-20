@@ -26,7 +26,8 @@ Results
 
 <File:2014-08-03> 11.55.56.jpg <File:2014-08-03> 13.08.01.jpg|Things out
 out of control... <File:2014-08-03> 13.23.12.jpg <File:2014-08-03>
-13.33.08.jpg <File:2014-08-03> 13.35.32.jpg
+13.33.08.jpg <File:2014-08-03> 13.35.32.jpg <File:test.mov>|[Doughrise
+(first time-lapse!)](Time-lapse_Videos_with_ffmpeg "wikilink")
 
 Crust was *bland*. To do the next time:
 
