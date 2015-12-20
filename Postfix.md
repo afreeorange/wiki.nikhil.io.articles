@@ -370,22 +370,13 @@ and look for SPF output in `/var/log/maillog`
 
 ### Some Limits on Interaction
 
-` # Set the time unit`  
-` `[`anvil_rate_time_unit`](http://www.postfix.org/postconf.5.html#anvil_rate_time_unit)` = 120s`  
-` `  
-` # This allows 20 connections per second`  
-` `[`smtpd_client_connection_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_connection_rate_limit)` = 2400`  
-` `  
-` # Don't allow more than 100 messages per second`  
-` `[`smtpd_client_message_rate_limit`](http://www.postfix.org/postconf.5.html#smtpd_client_message_rate_limit)` = 12000`  
-` `  
-` # Messages can't be more than 20M in size`  
-` `[`message_size_limit`](http://www.postfix.org/postconf.5.html#message_size_limit)` = 2048000`  
-` `  
-` # Can tweak these depending on use`  
-` `[`smtpd_soft_error_limit`](http://www.postfix.org/postconf.5.html#smtpd_soft_error_limit)` = 10`  
-` `[`smtpd_hard_error_limit`](http://www.postfix.org/postconf.5.html#smtpd_hard_error_limit)` = 20`  
-` `[`smtpd_error_sleep_time`](http://www.postfix.org/postconf.5.html#smtpd_error_sleep_time)` = 60`
+The first setting is the remainder for the "limit"s
+
+`   # Connection limits`  
+`   anvil_rate_time_unit = 120s`  
+`   smtpd_client_connection_rate_limit = 2400`  
+`   smtpd_client_message_rate_limit = 12000`  
+`   smtpd_error_sleep_time = 60`
 
 ### Prevent Abuse
 
