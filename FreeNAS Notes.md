@@ -87,6 +87,8 @@ this?
     # Mount read-only
     mount -ru /
 
+    # Make sure to reboot when done
+
 References
 ----------
 
