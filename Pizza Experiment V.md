@@ -34,9 +34,20 @@ Set oven to 450F.
 
 Set electric stove to med-high. Place skillet on it for 60-70s.
 
-Place in oven with *no* toppings for 5 minutes.
+Place in oven with *no* toppings for 5 minutes. You'll get an
+undercooked crust below all them toppings.
 
 Remove, add toppings, and cook for 20 minutes or until golden brown.
+
+Let rest for 5 minutes.
+
+Consume, son.
+
+Results
+-------
+
+Not bad. Crust not too open. Crunchy out, soft and chewy in. Will try
+this again, except will fold dough over the next time.
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Misguided attempts at
