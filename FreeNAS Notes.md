@@ -24,6 +24,8 @@
     putting them on Macs.
     -   Runs as a cron job at midnight
     -   Script needs full paths to `zfs`, `sudo`, `rsync`, etc.
+-   Keep track of [BIOS updates from
+    Gigabyte](http://www.gigabyte.us/products/product-page.aspx?pid=4383&dl=1#bios)
 
 ### Hardware
 
