@@ -46,6 +46,7 @@ Miscellanous
 Footnotes
 ---------
 
+<references />
 References
 ----------
 
