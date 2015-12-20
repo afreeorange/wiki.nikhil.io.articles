@@ -343,7 +343,7 @@ is something everyone should do[^10].
 To empower Postfix with SPF, first install some required packages from
 EPEL:
 
-` yum install perl-Mail-SPF perl-Sys-Hostname-Long --enablerepo=epel`
+` yum install perl-core perl-Mail-SPF --enablerepo=epel`
 
 I'm going to try [the Perl implementation of
 SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^11] Download,
