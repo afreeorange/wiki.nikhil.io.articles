@@ -12,10 +12,10 @@ Pre-Flight
 
 `   # Install the repo`  
 `   rpm -ivh `[`http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm`](http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm)  
-` `  
+`   `  
 `   # Install Varnish`  
 `   yum -y install varnish`  
-` `  
+`   `  
 `   # Make copy of config`  
 `   cp /etc/varnish/default.vcl{,.original}`
 
