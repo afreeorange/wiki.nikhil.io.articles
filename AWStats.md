@@ -1,3 +1,13 @@
+Pre-Flight
+----------
+
+-   [AWStats](http://awstats.sourceforge.net/) 7.2 installed on a CentOS
+    6.3 box
+-   Trying to set up analytics for `blog.example.com`
+-   Log files at `/var/log/nginx`
+    -   Logrotated and compressed every day
+-   Stats site will be at `/var/www/html/stats`
+
 Installation
 ------------
 
@@ -68,6 +78,21 @@ loops!
     done
 
 Ta da!
+
+Other notes
+-----------
+
+-   `awstats_updateall.pl` is just a wrapper for `awstats.pl` that runs
+    all found configurations in `/etc/awstats`.
+-   I couldn't find a way to get the select dropdown and sidebar to be
+    generated statically.
+
+References
+----------
+
+-   [This
+    guy](http://kamisama.me/2013/03/20/install-configure-and-protect-awstats-for-multiple-nginx-vhost-on-debian/)
+    runs AWStats as a CGI application.
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
