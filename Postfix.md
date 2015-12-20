@@ -191,7 +191,7 @@ your OpenSSL command.
 
 ` openssl s_client -starttls smtp \`  
 `                  -CAfile /path/to/postfix.crt \`  
-`                  -connect nikhil.io:25`
+`                  -connect example.com:25`
 
 Another **important** warning is to *keep the former telnet commands
 lowercase*. Else, the client will renegotiate every time you type
