@@ -153,12 +153,10 @@ These options are pretty straightforward. I got my certificate from
 time you telnet. As always, see `/var/log/maillog` for any errors. You
 can probably lower the log level after me initial testing.
 
-In this config, the server *demands* TLS
-
 ` smtp_tls_security_level = may`  
 ` smtp_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
 ` `  
-` smtpd_tls_security_level = encrypt`  
+` smtpd_tls_security_level = may # See note`[^4]  
 ` smtpd_tls_CAfile = /etc/pki/dovecot/private/startssl-bundle.pem`  
 ` smtpd_tls_cert_file = /etc/pki/dovecot/certs/dovecot.pem`  
 ` smtpd_tls_key_file = /etc/pki/dovecot/private/dovecot.key`  
@@ -191,7 +189,7 @@ that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 ### Some restrictions
 
 Stepping throught the telnet output in the previous section, start
-adding some restrictions to the client connection[^4]:
+adding some restrictions to the client connection[^5]:
 
 ` smtpd_client_restrictions = reject_unknown_client_hostname, permit`
 
@@ -214,7 +212,7 @@ domains) if you're SASL-authenticated.
 
 ` smtpd_recipient_restrictions = permit_sasl_authenticated, reject_unauth_destination, permit`
 
-Add this to `/etc/postfix/login_maps.pcre`[^5].
+Add this to `/etc/postfix/login_maps.pcre`[^6].
 
 ` /^(.*)@example.com$/   ${1}`
 
@@ -293,23 +291,22 @@ Preventing Spam, Bad Email, and DOS Attacks
 
 ### Using Blocklists
 
-Change `smtpd_recipient_restrictions` to add some blocklists[^6] and
-other policies
+Change `smtpd_recipient_restrictions` to add some blocklists[^7] and
+other stringent policies:
 
 ` smtpd_recipient_restrictions = `  
 `   permit_sasl_authenticated, `  
 `   reject_invalid_hostname, `  
 `   reject_non_fqdn_sender,`  
 `   reject_non_fqdn_recipient,`  
-`   reject_non_fqdn_recipient, `  
 `   reject_unauth_destination,`  
 `   reject_rbl_client zen.spamhaus.org,`  
 `   reject_rbl_client psbl.surriel.com,`  
 `   reject_rbl_client bl.spamcop.net,`  
 `   permit`
 
-Try a sender address like `viagra@p0rn.com` and you'll see something
-like:
+Most residential IPs are banned by blocklists, so keep that in mind when
+testing your setup:
 
 ` 554 5.7.1 Service unavailable; Client host [173.29.77.33] blocked using zen.spamhaus.org; `  
 ` `[`http://www.spamhaus.org/query/bl?ip=173.29.77.33`](http://www.spamhaus.org/query/bl?ip=173.29.77.33)
@@ -318,7 +315,7 @@ like:
 
 [Sender Policy Framework](http://www.openspf.org/Project_Overview) is a
 good idea that prevents fake sender addresses from your domain. It's a
-great idea and is something everyone should do[^7][^8].
+great idea and is something everyone should do[^8][^9].
 
 To empower Postfix with SPF, first install some required packages from
 EPEL:
@@ -326,10 +323,10 @@ EPEL:
 ` yum install perl-Mail-SPF perl-Sys-Hostname-Long --enablerepo=epel`
 
 I'm going to try [the Perl implementation of
-SPF](https://launchpad.net/postfix-policyd-spf-perl/). Tried to make the
-Python version work but ran into issues with the `ipaddr` module.
+SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^10] Download,
+extract, move to a good place:
 
-` wget -O - `[`https://launchpad.net/postfix-policyd-spf-perl/trunk/release2.010/+download/postfix-policyd-spf-perl-2.010.tar.gz`](https://launchpad.net/postfix-policyd-spf-perl/trunk/release2.010/+download/postfix-policyd-spf-perl-2.010.tar.gz)` | tar -xvzf -`  
+` tar -xvzf postfix-policyd-spf-perl-2.010.tar.gz`  
 ` cd postfix-policyd-spf-perl-2.010`  
 ` mv postfix-policyd-spf-perl /usr/local/bin/`
 
@@ -338,9 +335,9 @@ Now set up `/etc/postfix/main.cf`. Add to `smtpd_recipient_restrictions`
 ` # Other options not shown for brevity`  
 ` smtpd_recipient_restrictions = `  
 `   check_policy_service unix:private/policy-spf,`  
-`   policy_time_limit = 3600 # Default is 1000; too short`[^9]
+`   policy_time_limit = 3600 # Default is 1000; too short`[^11]
 
-Then add too `/etc/postfix/master.cf`
+Then add to `/etc/postfix/master.cf`
 
 ` policy-spf  unix  -  n  n  -  0  spawn user=nobody argv=/usr/bin/perl /usr/local/bin/postfix-policyd-spf-perl`
 
@@ -419,9 +416,15 @@ References
 
 [^3]: Can trust network classes or subnets and specific IP addresses
 
-[^4]: <http://www.postfix.org/postconf.5.html#smtpd_client_restrictions>
+[^4]: `You` `can` *`force`* `TLS` `by` `setting` `this` `to`
+    `"``encrypt``".` `You'll` `then` `see` `"Must` `issue` `STARTTLS"`
+    `when` `trying` `to` `send` `mail.` `I` `know` `that` `GMail` `does`
+    `this,` `but` `am` `not` `sure` `whether` `it's` `always` `the`
+    `right` `thing` `to` `do.`
 
-[^5]: From [ServerFault](http://serverfault.com/a/318432). Postfix can
+[^5]: <http://www.postfix.org/postconf.5.html#smtpd_client_restrictions>
+
+[^6]: From [ServerFault](http://serverfault.com/a/318432). Postfix can
     use a *lot* more formats for controlled envelopes. See the output of
     `postconf -m`. For instance, I initally used this file (Specified
     with `hash:/path/to/file`):  
@@ -430,11 +433,14 @@ References
     me@example.com    me<br />
     `
 
-[^6]: Of which there are [a lot
+[^7]: Of which there are [a lot
     available](http://www.dnsbl.info/dnsbl-list.php)
 
-[^7]: <http://spfwizard.com>
+[^8]: <http://spfwizard.com>
 
-[^8]: <http://www.kitterman.com/spf/validate.html>
+[^9]: <http://www.kitterman.com/spf/validate.html>
 
-[^9]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
+[^10]: Tried to make the Python version work but ran into issues with
+    Python3 and the `ipaddr` module.
+
+[^11]: [`http://www.postfix.org/SMTPD_POLICY_README.html#client_config`](http://www.postfix.org/SMTPD_POLICY_README.html#client_config)
