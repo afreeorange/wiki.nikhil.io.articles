@@ -4,7 +4,7 @@ Ingredients
 -----------
 
 -   1½ cups organic bread flour
--   1⅓ cup lukewarm water
+-   ⅓ cup lukewarm water
 -   1 large egg
 -   1 tbsp yeast
 -   1 tsp salt
