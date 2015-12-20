@@ -18,14 +18,10 @@ If you only had IP addresses, you'd use `iphash`. There are many others.
 Adding IPs to the set
 ---------------------
 
-<bash>
-
-` #/bin/bash`  
-` for IP in $(curl `[`http://ipdeny.com/ipblocks/data/countries/cn.zone`](http://ipdeny.com/ipblocks/data/countries/cn.zone)`); do`  
-`   ipset --add country_cn $IP`  
-` done`
-
-</bash>
+      #/bin/bash
+      for IP in $(curl http://ipdeny.com/ipblocks/data/countries/cn.zone); do
+        ipset --add country_cn $IP
+      done
 
 Using the set
 -------------
