@@ -180,8 +180,8 @@ process (PHP-FPM in this case).
 
 ### Protect Pages
 
-Enable SSL (even with a shitty self-signed certificate), then add this
-to your `server` definition:
+Enable SSL (even with a shitty self-signed certificate), listen on port
+443, then add this to your `server` definition:
 
     auth_basic            "Restricted";
     auth_basic_user_file  passwords;
