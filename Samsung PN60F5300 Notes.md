@@ -5,6 +5,8 @@
     corresponds to "PN60F5300**B**FXZA".
 -   Here's [Samsung's page for the
     TV](http://www.samsung.com/us/support/owners/product/PN60F5300AFXZA).
+-   Main Board: **BN94-0728B**
+-   Power Board: **BN44-00689A**
 -   Calibration settings, kept here for posterity. [Here's where I got
     it
     from](http://www.avsforum.com/forum/167-plasma-flat-panel-displays/1476482-samsung-pn60f5300-calibration-settings-26.html#post27866097).
