@@ -30,6 +30,7 @@ Some basic ones:
 -   [git](https://github.com/kemayo/sublime-text-2-git/wiki)
 -   [GitGutter](https://github.com/jisaacks/GitGutter)
 -   [SplitScreen](https://github.com/spadgos/sublime-SplitScreen)
+-   [Alignment](http://wbond.net/sublime_packages/alignment)
 
 Install Themes, Colors, and Fonts
 ---------------------------------
