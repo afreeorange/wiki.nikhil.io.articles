@@ -1,4 +1,5 @@
-![](hummus1.jpg "fig:hummus1.jpg") ![](hummus2.jpg "fig:hummus2.jpg")
+![](hummus1.jpg "fig:hummus1.jpg") ![This is two cans'
+worth](hummus2.jpg "fig:This is two cans' worth")
 
 I love [Oasis](http://oasisfalafel.com/index.html) in Iowa City. I miss
 their hummus. Instead of whinging, I decided to make some myself. After
