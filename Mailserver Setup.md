@@ -4,6 +4,9 @@ Set up with [Postfix](Postfix "wikilink"), Postgrey,
 [Amavisd-new](Amavisd-new "wikilink"), and
 [Fail2Ban](Fail2Ban_for_Dovecot "wikilink") on CentOS 6.4.
 
+Here's [a great guide](http://www.shisaa.jp/postset/mailserver-1.html)
+([cached](:File:Shisaa_-_Mailserver.pdf "wikilink")).
+
 ### Billy Gorbachev's options:
 
 -   OpenBSD. Eliminates need for fail2ban, since pf has this
