@@ -59,7 +59,7 @@ Pizza Prep
 
 Place dough on parchment onto stone. Bake for 6 minutes. Remove. Then
 place any ingredients you'd like, and then transfer dough *directly*
-onto stone (i.e., no parchment). Bake for 3-4 minutes. Then turn on
+onto stone (i.e., no parchment). Bake for 2-3 minutes. Then turn on
 broil for 4-5 minutes.
 
 I usually go for a deep brown crust. Once you're happy with how it
