@@ -158,7 +158,7 @@ References
     postconf](http://www.postfix.org/postconf.5.html#content_filter)
 -   [Great overview and examples of content filtering with
     Postfix](http://www.postfix.org/FILTER_README.html)
--   <http://myamavis.kapott.org/>
+-   [An Amavis frontend](http://myamavis.kapott.org/)
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
