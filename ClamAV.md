@@ -2,8 +2,11 @@ Installation
 ------------
 
 `   yum install clamav`  
+`   freshclam`  
 `   service clamd start`  
 `   chkconfig clamd on`
+
+You'll have to update only once; a `cron` job kicks in later.
 
 Errors
 ------
