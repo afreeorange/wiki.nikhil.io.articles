@@ -13,9 +13,10 @@ of the box.
 ### On SSL
 
 The Dovecot instance will use POP3S and IMAPS in addition to POP3 and
-IMAP. When TLS properly implemened with the latter pair, there's really
-no reason why SSL would be required. Seems to be some historical
-misunderstanding. Oh well.
+IMAP. When TLS properly implemented with the latter pair, there's really
+no reason why the former would be required. Seems to be
+[some](http://wiki.dovecot.org/SSL)
+[confusion](https://support.google.com/mail/answer/1074635?hl=en&uls=en).
 
 Installation
 ------------
@@ -78,6 +79,36 @@ Edit `/etc/dovecot/10-ssl.conf` to enable SSL
 And configure the certificates and keys you will use (`ssl_cert` and
 `ssl_key`). If, like me, you're using self-signed certificates from
 StartSSL, you'll need to specify the CA bundle as well (`ssl_ca`).
+
+Now disable plaintext authentication in `/etc/dovecot/10-auth.conf`
+
+`   disable_plaintext_auth = yes`
+
+Restart the dovecot service. You'll see ports 993 and 995 in the
+`netstat` output. Use OpenSSL to test the POP3S service first:
+
+`   openssl s_client -connect example.com:995`
+
+You should be able to log in and check some test messages. The IMAP
+service should work fine as well.
+
+Importantly, you should not be able to authenticate insecurely.
+
+`   [root@example ~]# `**`telnet` `example.com` `110`**  
+`   Trying 96.126.123.32...`  
+`   Connected to example.com.`  
+`   Escape character is '^]'.`  
+`   +OK Dovecot ready.`  
+`   `**`user` `testuser`**  
+`   -ERR Plaintext authentication disallowed on non-secure (SSL/TLS) connections.`
+
+This is good. Test like crazy!
+
+References
+----------
+
+-   [Testing a Dovecot
+    installation](http://wiki.dovecot.org/TestInstallation)
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
