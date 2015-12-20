@@ -3,7 +3,8 @@ Pre-Flight
 
 -   [AWStats](http://awstats.sourceforge.net/) 7.2 installed on a CentOS
     6.3 box
--   Nginx will serve the generated statistics
+-   Nginx will serve the analytics statically (i.e., [*no*
+    CGI](http://winterdrake.com/awstats-tip-creating-static-pages/).)
 -   Trying to set up analytics for `blog.example.com`
 -   Log files at `/var/log/nginx`
     -   Logrotated and compressed every day
@@ -34,12 +35,56 @@ Then modified these params
 `   DirData="/var/lib/awstats/blog.example.com"`  
 `   EnableLockForUpdate=1`
 
-Generate the database files with
+### Cron entry
+
+This generates the static HTML pages. Since my logrotate config runs
+daily, I'll set the job to run at that frequency as well.
+
+I added this to `/etc/cron.daily/awstats-blog`:
+
+    #!/bin/bash
+    STATIC_DIR="/var/www/html/stats"
+
+    YEAR=$(date +"%Y")
+    MONTH=$(date +"%m")
+    LOG_DIR=$STATIC_DIR/$YEAR/$MONTH
+
+    mkdir -p $LOG_DIR
+    /usr/local/awstats/tools/awstats_buildstaticpages.pl -dir=$LOG_DIR -config=blog.example.com -update
+
+Don't forget to make it executable.
+
+### Generate Data Files
 
 `   /usr/local/awstats/tools/awstats_updateall.pl now`
 
 Scan for any errors, fix accordingly. You can now see a text file (the
 'database' file) in `/var/lib/awstats/blog.example.com`
+
+### Generate Static HTML
+
+Simply run your cron script
+
+`   /etc/cron.daily/awstats-blog`
+
+### Nginx
+
+First, define where the static HTML analytics files are:
+
+`   location /stats {`  
+`       root /var/www/html;`  
+`       autoindex on;`  
+`   }`
+
+Now some symlink gymnastics
+
+`   ln -s /usr/local/awstats/wwwroot /usr/local/awstats/stats`
+
+Now add a definition for the icons:
+
+`   location /stats/icon {`  
+`       root /usr/local/awstats;`  
+`   }`
 
 ### The logrotate issue
 
@@ -65,25 +110,6 @@ So,
 ``            [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid` ``  
 `       endscript`  
 `   }`
-
-### Cron entry
-
-This generates the static HTML pages. Since my logrotate config runs
-daily, I'll set the job to run at that frequency as well.
-
-I added this to `/etc/cron.daily/awstats-blog`:
-
-    #!/bin/bash
-    STATIC_DIR="/var/www/html/stats"
-
-    YEAR=$(date +"%Y")
-    MONTH=$(date +"%m")
-    LOG_DIR=$STATIC_DIR/$YEAR/$MONTH
-
-    mkdir -p $LOG_DIR
-    /usr/local/awstats/tools/awstats_buildstaticpages.pl -dir=$LOG_DIR -config=blog.example.com -update
-
-Don't forget to make it executable and try it out :)
 
 Importing historic log data
 ---------------------------
