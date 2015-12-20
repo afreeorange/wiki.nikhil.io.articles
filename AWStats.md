@@ -13,6 +13,34 @@ Pre-Flight
 Installation
 ------------
 
+-   Downloaded and installed RPM [from
+    website](http://awstats.sourceforge.net/).
+-   Installs in `/usr/local/awstats`.
+-   You'll find the model config in `/etc/awstats/awstats.model.conf`
+
+`   mv /etc/awstats/{awstats.model.conf,model.conf}`
+
+Since I'm setting up analytics for a blog at `http://blog.example.com`,
+
+`   cp /etc/awstats/{awstats.conf,awstats.`**`blog.example.com`**`.conf}`  
+`   mkdir -p /var/lib/awstats/`**`blog.example.com`**
+
+Then modified these params
+
+`   LogFile="/var/log/nginx/blog.access.log"`  
+`   SiteDomain="blog.example.com"`  
+`   HostAliases="blog.example.com localhost 127.0.0.1"`  
+`   DNSLookup=1`  
+`   DirData="/var/lib/awstats/blog.example.com"`  
+`   EnableLockForUpdate=1`
+
+Generate the database files with
+
+`   /usr/local/awstats/tools/awstats_updateall.pl now`
+
+Scan for any errors, fix accordingly. You can now see a text file (the
+'database' file) in `/var/lib/awstats/blog.example.com`
+
 ### The logrotate issue
 
 I configured logrotate to compress my logfiles. This can be problematic,
@@ -105,6 +133,47 @@ loops!
     done
 
 Ta da!
+
+Plugins
+-------
+
+### GeoIP
+
+Will be *much* faster than DNS. A little painful, but worth it
+
+#### Perl Module
+
+You'll need the C API first.
+
+`   # Get the latest source (1.5+)`  
+`   wget -O - `[`http://www.maxmind.com/download/geoip/api/c/GeoIP-latest.tar.gz`](http://www.maxmind.com/download/geoip/api/c/GeoIP-latest.tar.gz)` | tar -xvzf -`  
+`   cd GeoIP-1.5.1`  
+`   ./configure; make; make install`
+
+`   # Make sure CPAN can find the compiled libs`  
+`   echo "/usr/local/lib" > /etc/ld.so.conf.d/GeoIP.conf`  
+`   /sbin/ldconfig /etc/ld.so.conf -v`
+
+You *should* be able to install this now via CPAN, but the module's
+`Makefile` is screwed up (at least as of version 1.42). So download
+directly and compile:
+
+`   wget -O - `[`http://search.cpan.org/CPAN/authors/id/B/BO/BORISZ/Geo-IP-1.42.tar.gz`](http://search.cpan.org/CPAN/authors/id/B/BO/BORISZ/Geo-IP-1.42.tar.gz)` | tar -xzvf -`  
+`   cd Geo-IP-1.42`  
+`   perl Makefile.PL LIBS="-L/usr/local/lib -lGeoIP" INC=-I/usr/local/include`  
+`   make`  
+`   make install`
+
+#### Database File
+
+`   mkdir /opt/GeoIP`  
+`   wget -O - `[`http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz`](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz)` | gunzip - > /opt/GeoIP/data`
+
+Now uncomment this in your site config (also uncomment `DNSLookup`):
+
+`   LoadPlugin="geoip GEOIP_STANDARD /opt/GeoIP/data"`
+
+Run the update script!
 
 Other notes
 -----------
