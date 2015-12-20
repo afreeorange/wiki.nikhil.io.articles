@@ -13,7 +13,25 @@ Tricks
 Package management
 ------------------
 
-[Pathogen](https://github.com/tpope/vim-pathogen) seem slike a
+[Vundle](https://github.com/gmarik/Vundle.vim) FTW.
+
+` " Required Vundle stuff`  
+` set rtp+=~/.vim/bundle/Vundle.vim`  
+` call vundle#begin()`  
+` Plugin 'gmarik/Vundle.vim'`  
+` `  
+` " Plugins`  
+` Plugin 'airblade/vim-gitgutter'`  
+` Plugin 'scrooloose/nerdtree'`  
+` Plugin 'chriskempson/base16-vim'`  
+` Plugin 'bling/vim-airline'`  
+` Plugin 'tpope/vim-fugitive'`  
+` Plugin 'jmcantrell/vim-virtualenv'`  
+` Plugin 'bling/vim-bufferline'`  
+` `  
+` " End Vundle stuff`  
+` call vundle#end()`  
+` filetype plugin indent on`
 
 Color Schemes
 -------------
