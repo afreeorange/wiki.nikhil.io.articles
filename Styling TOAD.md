@@ -17,5 +17,7 @@ View → Toad Options → Data Grids → Visual → Edit Styles → Import
 
 [Download](:File:TOAD_Table_Fixed_Width.INI "wikilink")
 
+Then pick "Fixed-Width".
+
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Oracle](Category:_Oracle "wikilink")
