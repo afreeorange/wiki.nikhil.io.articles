@@ -11,11 +11,11 @@ Pre-Flight
 ----------
 
 `   # Install the repo`  
-`   rpm -ivh `[`http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm`](http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm)
-
+`   rpm -ivh `[`http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm`](http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release/varnish-release-3.0-1.noarch.rpm)  
+` `  
 `   # Install Varnish`  
-`   yum -y install varnish`
-
+`   yum -y install varnish`  
+` `  
 `   # Make copy of config`  
 `   cp /etc/varnish/default.vcl{,.original}`
 
@@ -29,11 +29,11 @@ Edit `/etc/sysconfig/varnish`. Changed some default options:
 
 `   # Listen on all addresses, on the HTTP port`  
 `   VARNISH_LISTEN_ADDRESS=`  
-`   VARNISH_LISTEN_PORT=80`
-
+`   VARNISH_LISTEN_PORT=80`  
+` `  
 `   # Use a 250MB cache`  
 `   VARNISH_STORAGE_SIZE=250M`  
-`       `  
+`        `  
 `   # Use malloc`  
 `   VARNISH_STORAGE="malloc,${VARNISH_STORAGE_SIZE}"`
 
