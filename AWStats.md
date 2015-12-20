@@ -8,9 +8,35 @@ Pre-Flight
 -   Log files at `/var/log/nginx`
     -   Logrotated and compressed every day
 -   Stats site will be at `/var/www/html/stats`
+-   AWStats data directory will be at `/var/lib/awstats`
 
 Installation
 ------------
+
+### The logrotate issue
+
+I configured logrotate to compress my logfiles. This can be problematic,
+but has a simple solution: tell AWStats to update its data files
+*before* logrotate does anything with them.
+
+So,
+
+`   /var/log/nginx/*.log {`  
+`       daily`  
+`       missingok`  
+`       rotate 52`  
+`       compress`  
+`       delaycompress`  
+`       notifempty`  
+`       create 640 nginx adm`  
+`       sharedscripts`  
+`       `**`prerotate`**  
+`           `**`/usr/local/awstats/tools/awstats_updateall.pl` `now`**  
+`       `**`endscript`**  
+`       postrotate`  
+``            [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid` ``  
+`       endscript`  
+`   }`
 
 ### Cron entry
 
