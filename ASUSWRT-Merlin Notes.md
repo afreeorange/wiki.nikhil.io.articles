@@ -14,9 +14,10 @@ names. This wasn't working before. Yay.
 
 ### [DNSMasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)
 
-Edit `/etc/hosts.dnsmasq` to add entries. Found
-[this](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
-to be a nice, quick guide.
+Edit `/etc/hosts.dnsmasq` to add entries. The router itself does this
+when you manually assign IPs and device names.
+[This](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
+was a nice, quick guide to DNSMasq.
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
