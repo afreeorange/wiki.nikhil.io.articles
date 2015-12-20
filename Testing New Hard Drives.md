@@ -11,7 +11,9 @@ Then run a conveyance test (for any damage during shipping)
 ` smartctl -t conveyance /dev/ada0`
 
 Then check for [bad
-blocks](https://wiki.archlinux.org/index.php/Badblocks)[^2]
+blocks](https://wiki.archlinux.org/index.php/Badblocks)[^2]. This is a
+2-phase, 4-pass command that will take a *long* time. On a 4TB WD Red,
+each phase took \~8 hours.
 
 ` badblocks -ws /dev/ada0`
 
