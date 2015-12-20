@@ -32,6 +32,5 @@ blender](http://www.amazon.com/Calphalon-Electrics-Immersion-Hand-Blender/dp/B00
     and do not lick sharp things.
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided cooking
-attempts](Category:_Misguided_cooking_attempts "wikilink") [Category:
-Recipes](Category:_Recipes "wikilink")
+[Category: Misguided attempts at
+cooking](Category:_Misguided_attempts_at_cooking "wikilink")
