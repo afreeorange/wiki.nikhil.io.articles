@@ -4,11 +4,13 @@ style is Maildir (in their home accounts.)
 Pre-Flight
 ----------
 
-Meant to be Part II of my mailserver installation log. Getting your mail
-is not something which can always be done via SSH (e.g. in the case of
-virtual accounts.) [Dovecot](http://www.dovecot.org/) allows you to get
-your mail using the POP3 and/or IMAP protocols. It's fast and secure out
-of the box.
+Meant to be Part II of my mailserver installation log. I [installed
+Postfix](Postfix "wikilink") first.
+
+Getting your mail is not something which can always be done via telnet
+(insecure) or SSH (e.g. in the case of virtual accounts.)
+[Dovecot](http://www.dovecot.org/) allows you to get your mail using the
+POP3 and/or IMAP protocols. It's fast and secure out of the box.
 
 ### On SSL
 
