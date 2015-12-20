@@ -14,13 +14,13 @@ Installation
 ------------
 
 `   # Install`  
-`   yum install amavisd-new clamav spamassassin`
-
+`   yum install amavisd-new clamav spamassassin`  
+` `  
 `   # Start`  
 `   chkconfig amavisd on; service amavisd start`  
 `   chkconfig clamd on; service clamd start`  
-`   chkconfig spamassassin on; service spamassassin start`
-
+`   chkconfig spamassassin on; service spamassassin start`  
+` `  
 `   # Update`  
 `   freshclam`  
 `   sa-update`
@@ -49,7 +49,7 @@ Postfix to filter its messages through that TCP/IP socket. In
 This is of the form *transport:destination*. The first part should
 correspond to a definition in `/etc/postfix/master.cf`. Let's add it:
 
-`   amavisd unix    -       -       n       -       2     smtp`  
+`   amavisd unix    -       -       n       -       2       smtp`  
 `       -o smtp_data_done_timeout=1200`  
 `       -o smtp_send_xforward_command=yes`  
 `       -o disable_dns_lookups=yes`  
@@ -125,10 +125,10 @@ Miscellanous
     amavis, postfix, etc. for security. I don't have to worry about this
     given Red Hat packages, but it definitely isn't something to forget.
 
-### Errors
+Errors
+------
 
-**(!)ClamAV-clamd av-scanner FAILED:... lstat() failed: Permission
-denied. ERROR**
+### (!)ClamAV-clamd av-scanner FAILED:... lstat() failed: Permission denied. ERROR
 
 Add the user `clamav` to the group `amavis`.
 
@@ -142,7 +142,7 @@ This might help also
 
 `   chmod -R 775 /var/amavis/tmp`
 
-**(!)WARN: all primary virus scanners failed, considering backups**
+### (!)WARN: all primary virus scanners failed, considering backups
 
 This one's simpler. Make sure that ClamAV is running, and that you've
 uncommented its definition in `/etc/amavisd.conf`
