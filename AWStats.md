@@ -175,6 +175,26 @@ Now uncomment this in your site config (also uncomment `DNSLookup`):
 
 Run the update script!
 
+### IPv6 Support
+
+`   # Make sure you have CPAN first`  
+`   yum -y install perl-CPAN`
+
+`   # Open a prompt`  
+`   cpan`
+
+`   # Now type:`  
+`   cpan[1]> install Net::IP`  
+`   cpan[2]> install Net::DNS`
+
+Uncomment `LoadPlugin="ipv6"`.
+
+### Others
+
+`   LoadPlugin="graphgooglechartapi"`  
+`   LoadPlugin="hostinfo"`  
+`   LoadPlugin="tooltips"`
+
 Other notes
 -----------
 
