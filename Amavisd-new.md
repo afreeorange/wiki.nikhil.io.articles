@@ -27,9 +27,9 @@ localhost, on port 10024. Configuration is a two-step process.
 
 ### Transport Messages from Postfix to Amavis
 
-You can ask Postfix to filter a message through whatever you want after
-it is queued but before it is delivered to a mailbox. The filter can be
-a defined as a pipe, a unix socket, or a TCP/IP socket.
+You can ask Postfix to filter a message through whatever you want
+*after* it is queued but *before* it is delivered to a mailbox. The
+filter can be a defined as a pipe, a unix socket, or a TCP/IP socket.
 
 We have the Amavis daemon listening on 127.0.0.1:10024. Let's tell
 Postfix to filter its messages through that TCP/IP socket. In
@@ -78,7 +78,7 @@ This is again the form *transport:destination*, and must be defined in
 `     -o receive_override_options=no_header_body_checks,no_unknown_recipient_checks`
 
 Since the usual SMTP server checks were already applied by Postfix, we
-set up an innocent/dumb/minimal SMTP 'server'.
+set up an innocent/dumb/minimal SMTP daemon.
 
 Setting up Amavis
 -----------------
@@ -108,6 +108,8 @@ Uncomment these lines from `/etc/amavisd.conf`
 `     qr/\bOK$/m, qr/\bFOUND$/m,`  
 `     qr/^.*?: (?!Infected Archive)(.*) FOUND$/m ]`
 
+Restart Postfix and Amavis. Profit.
+
 Miscellanous
 ------------
 
@@ -118,19 +120,18 @@ Miscellanous
     However, the [Postfix docs](http://www.postfix.org/addon.html) say
     it uses "unsupported methods to manipulate Postfix queue files
     directly." Okay.
--   SpamAssassin can be a bit daunting to configure. I found
-    \[<http://www.yrex.com/s>
--   A big portion of configuration is setting up users for clamav,
-    amavis, postfix, etc. for security. I don't have to worry about this
-    given Red Hat packages, but it definitely isn't something to forget.
+-   A big portion of configuration is setting up separate users for
+    clamav, amavis, postfix, etc. for security. I don't have to worry
+    about this given Red Hat packages, but it definitely isn't something
+    to forget.
 
 Errors
 ------
 
 ### (!)WARN: all primary virus scanners failed, considering backups
 
-This one's simpler. Make sure that ClamAV is running, and that you've
-uncommented its definition in `/etc/amavisd.conf`
+Make sure that ClamAV is running, and that you've uncommented its
+definition in `/etc/amavisd.conf`
 
 Footnotes
 ---------
