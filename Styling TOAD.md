@@ -1,5 +1,7 @@
 Meant to be imported into TOAD. Both use the Consolas typeface since
-there's a good chance that it is installed on the system.
+there's a good chance that it is installed on the system. I personally
+like [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html)
+:)
 
 For the SQL Query Editor
 ------------------------
