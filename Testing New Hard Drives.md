@@ -10,7 +10,8 @@ Then run a conveyance test (for any damage during shipping)
 
 ` smartctl -t conveyance /dev/ada0`
 
-Then check for bad blocks[^2]
+Then check for [bad
+blocks](https://wiki.archlinux.org/index.php/Badblocks)[^2]
 
 ` badblocks -ws /dev/ada0`
 
