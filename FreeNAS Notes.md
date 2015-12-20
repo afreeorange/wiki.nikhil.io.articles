@@ -1,3 +1,5 @@
+\_\_NOTOC\_\_
+
 ### Notes
 
 -   Drives from the same manufacturing batches are prone to
@@ -41,6 +43,19 @@ memory](https://wiki.freebsd.org/ZFSTuningGuide).
 | Fan Filters (x4) | [Rosewill RFT-120](http://www.newegg.com/Product/Product.aspx?Item=N82E16811988015) | $4      |
 
 -   Used nylon 8-32 × ½ Phillips flat-head screws for the fan-filters.
+
+### Software
+
+-   Mounting:
+
+` # Mount read-write`  
+` mount -wu /`  
+` `  
+` # Mount read-only`  
+` mount -ru /`
+
+-   Sudoers file is at `/conf/base/etc/local/sudoers`. You will lose
+    changes to this file upon upgrading FreeNAS.
 
 ### References
 
