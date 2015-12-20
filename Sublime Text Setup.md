@@ -16,8 +16,7 @@ Package Control
 ---------------
 
 [Install this first](https://sublime.wbond.net/installation). Then hit
-`&#8984;+Shift+p` (or `Ctrl+Shift+p` on Windows), type "Install
-Package", and go nuts.
+(or on Windows), type "Install Package", and go nuts.
 
 Install Plugins
 ---------------
