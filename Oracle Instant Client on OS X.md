@@ -32,5 +32,9 @@ Needed this for Node.js.
 `   ln -s libclntsh.dylib.11.1 libclntsh.dylib`  
 `   ln -s libocci.dylib.11.1 libocci.dylib`
 
+### Other Notes
+
+-   Had to copy `tnsnames.ora` to `/etc` for things to work properly.
+
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
