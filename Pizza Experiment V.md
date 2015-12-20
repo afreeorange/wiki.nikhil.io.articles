@@ -47,7 +47,10 @@ Results
 -------
 
 Not bad. Crust not too open. Crunchy out, soft and chewy in. Will try
-this again, except will fold dough over the next time.
+this again, except will
+
+-   Fold dough over the next time.
+-   Heat skillet on high *without* dough. Can pour when temp's reached.
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Misguided attempts at
