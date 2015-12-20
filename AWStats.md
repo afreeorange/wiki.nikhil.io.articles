@@ -3,6 +3,7 @@ Pre-Flight
 
 -   [AWStats](http://awstats.sourceforge.net/) 7.2 installed on a CentOS
     6.3 box
+-   Nginx will serve the generated statistics
 -   Trying to set up analytics for `blog.example.com`
 -   Log files at `/var/log/nginx`
     -   Logrotated and compressed every day
