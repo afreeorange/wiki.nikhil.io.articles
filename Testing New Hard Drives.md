@@ -11,13 +11,11 @@ Then run a conveyance test (for any damage during shipping)
 ` smartctl -t conveyance /dev/ada0`
 
 Then check for [bad
-blocks](https://wiki.archlinux.org/index.php/Badblocks)[^2]. This is a
-2-phase, 4-pass command that will take a *long* time. On a 4TB WD Red,
-the whole process was done in about 75 hours.
+blocks](https://wiki.archlinux.org/index.php/Badblocks)[^2][^3].
 
 ` badblocks -ws /dev/ada0`
 
-Then run a long test
+Then run a long test[^4].
 
 ` smartctl -t long /dev/ada0`
 
@@ -59,3 +57,8 @@ Footnotes
 [^1]: Use `-C` to run in foreground. But then again, why would you?
 
 [^2]: The non-destructive version is `badblocks -ns`.
+
+[^3]: This is a 2-phase, 4-pass command that will take a *long* time. On
+    a 4TB WD Red, the whole process was done in about 75 hours.
+
+[^4]: This took about 8 hours on a 4TB WD Red.
