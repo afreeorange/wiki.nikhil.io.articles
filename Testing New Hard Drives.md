@@ -41,6 +41,12 @@ To see the results *after* the tests have run
 
 ` smartctl -l selftest /dev/ada0`
 
+References
+----------
+
+-   [Interpreting `badblocks`
+    data](https://forums.freenas.org/index.php?threads/interpreting-badblocks-output.27421/).
+
 Footnotes
 ---------
 
