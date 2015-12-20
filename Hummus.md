@@ -25,5 +25,6 @@ blender)
 4.  Refrigerate or just, you know, start eating it.
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Cooking attempts](Category:_Cooking_attempts "wikilink")
-[Category: Recipes](Category:_Recipes "wikilink")
+[Category: Misguided cooking
+attempts](Category:_Misguided_cooking_attempts "wikilink") [Category:
+Recipes](Category:_Recipes "wikilink")
