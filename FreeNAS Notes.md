@@ -52,9 +52,9 @@ memory](https://wiki.freebsd.org/ZFSTuningGuide).
 
 | Component        | Link                                                                                | Price   |
 |------------------|-------------------------------------------------------------------------------------|---------|
-| Case             | [NZXT Source 210](http://www.amazon.com/gp/product/B009O7YZ7O)                      | $79.99  |
+| Case             | [NZXT Source 210](http://www.amazon.com/gp/product/B005869A7K)                      | $79.99  |
 | PSU              | [Rosewill Capstone 450W](http://www.amazon.com/gp/product/B006BCKDGW)               | $59.99  |
-| Motherboard      | [Gigabyte GA-F2A85XM-D3H](http://www.amazon.com/gp/product/B005869A7K)              | $39.99  |
+| Motherboard      | [Gigabyte GA-F2A85XM-D3H](http://www.amazon.com/gp/product/B009O7YZ7O)              | $39.99  |
 | CPU              | [AMD A4-5300 APU 3.4Ghz](http://www.amazon.com/gp/product/B0095VPBM2)               | $49.99  |
 | Memory           | [Corsair Vengeance 16GB](http://www.amazon.com/gp/product/B006EWUO22)               | $129.99 |
 | Storage (x4)     | [Seagate Barracuda 3TB SATA 6 Gb/s](http://www.amazon.com/gp/product/B005T3GRLY)    | $120    |
