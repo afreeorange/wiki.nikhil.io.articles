@@ -47,8 +47,8 @@ Same as I, except:
 [Made a movie about it
 too](https://www.youtube.com/watch?v=7t-FMg9ZFFc). Dough wasn't soft and
 enough after kneading. Not enough water ∴ not a good rise. Still pretty
-decent. Used sauted (onions, red peppers, green beans), rosemary, and
-pepper. Awesome with Sriracha.
+decent. Used sauted onions, red peppers, and green beans, with a little
+rosemary, and pepper. Awesome with Sriracha.
 
 <File:2014-08-10> 14.07.57.jpg <File:2014-08-10> 14.15.08.jpg
 
