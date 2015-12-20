@@ -112,6 +112,8 @@ References etc
     [Villustrator](http://www.villustrator.com/) is another.
 -   You can also [make your
     own](https://github.com/chriskempson/base16-builder) Base16 theme.
+-   Some [good notes](http://blog.tjll.net/yet-another-vim-setup/) on a
+    basic Vim setup.
 
 Footnotes
 ---------
