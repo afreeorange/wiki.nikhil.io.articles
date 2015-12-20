@@ -1,264 +1,198 @@
+-   Installation on a CentOS 7 box with PHP-FPM and Nginx from the
+    base repo.
+-   Statistics will be for `example.com`, served by Nginx.
+-   Will install AWStats on a sub-domain, `statistics.example.com`
+    -   Sub-domain root is `/var/www/html/statistics`
+    -   Statically generated pages will be in
+        `/var/www/html/statistics/pages`
+
+How it works
+------------
+
+AWStats is a Perl program that parses any log files you throw at it,
+then creates a text-based 'database' (in `/var/lib/awstats` in this
+guide).
+
+Once generated/updates, statistics in this database can be viewed:
+
+-   Immediately with a CGI script (`awstats.pl`)
+-   Via statically generated HTML files (`awstats_buildstaticpages.pl`)
+-   With the prettier-looking [JAWStats](http://www.jawstats.com/) to
+    see your logs (by pointing it to `/var/lib/awstats`)
+
+AWStats is pretty ancient and can do a *lot* more, but as far as
+installation's concered, that's all you should know.
+
 Pre-Flight
 ----------
 
--   [AWStats](http://awstats.sourceforge.net/) 7.2 installed on a CentOS
-    6.3 box
--   Nginx will serve the analytics statically (i.e., [*no*
-    CGI](http://winterdrake.com/awstats-tip-creating-static-pages/).)
--   Trying to set up analytics for `blog.example.com`
--   Server log files at `/var/log/nginx`
-    -   Logrotated and compressed every day
--   Stats site will be at `/var/www/html/stats`
--   AWStats data directory will be at `/var/lib/awstats`
+    # Create requisite folders
+    mkdir /usr/local/awstats /var/lib/awstats /var/www/html/statistics
 
-Installation
+    # Set up AWStats
+    cd && wget -O - http://www.awstats.org/files/awstats-7.4.tar.gz | tar -xvzf -
+    mv ~/awstats-7.4/* /usr/local/awstats/
+
+    # Set appropriate permissions. PHP-FPM runs as apache
+    chown -R apache:apache /usr/local/awstats
+
+    # Now run the configuration script
+    perl /usr/local/awstats/tools/awstats_configure.pl
+
+[Here's the transcript](Here's_the_transcript "wikilink"). All I needed
+from it was a sample config file for the `example.com` domain.
+
+Set up a Configuration
+----------------------
+
+Modify `/etc/awstats/awstats.example.com.conf` to edit the path to the
+Nginx access log file.
+
+    LogFile="/var/log/nginx/example.com.access.log"
+
+Modify other parameters later.
+
+Populate the AWStats 'Database'
+-------------------------------
+
+    perl /usr/local/awstats/wwwroot/cgi-bin/awstats.pl -update -config=example.com
+
+### Automation
+
+This is done with:
+
+    /usr/local/awstats/tools/awstats_updateall.pl now
+
+which you should add to `/etc/logrotate.d/nginx` as a pre-rotation
+script
+
+    /var/log/nginx/*.log {
+            daily
+            missingok
+            rotate 52
+            compress
+            delaycompress
+            notifempty
+            create 640 nginx adm
+            sharedscripts
+            prerotate
+                /usr/local/awstats/tools/awstats_updateall.pl now
+            endscript
+            postrotate
+                [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid`
+            endscript
+    }
+
+Stats will be updated the next time any of those log files are rotated.
+You can also add a `cron` entry:
+
+    0 * * * * /usr/local/awstats/tools/awstats_updateall.pl now > /dev/null 2>&1
+
+Set up Static Pages
+-------------------
+
+You don't have to set up *both* the CGI-BIN viewer and static pages BTW.
+You could simply generate static pages and not allow any FastCGI
+execution.
+
+A single script generates static pages:
+
+`   /usr/local/awstats/tools/awstats_buildstaticpages.pl \`  
+`                   -update \`  
+`                   -config=example.com \`  
+`                   -dir=/var/www/html/statistics.example.com/pages \`  
+`                   -awstatsprog=/usr/local/awstats/wwwroot/cgi-bin/awstats.pl`
+
+Try it out and you'll see a bunch of HTML files in
+`/var/www/html/statistics.example.com/pages`
+
+### Automation
+
+Same as with automating the database script: add to
+`/etc/logrotate.d/nginx`:
+
+    /var/log/nginx/*.log {
+            daily
+            missingok
+            rotate 52
+            compress
+            delaycompress
+            notifempty
+            create 640 nginx adm
+            sharedscripts
+            prerotate
+                /usr/local/awstats/tools/awstats_updateall.pl now
+                /usr/local/awstats/tools/awstats_buildstaticpages.pl -update -config=example.com -dir=/var/www/html/statistics.example.com/pages -awstatsprog=/usr/local/awstats/wwwroot/cgi-bin/awstats.pl
+            endscript
+            postrotate
+                [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid`
+            endscript
+    }
+
+Might be worth putting those into a single script.
+
+Set up Nginx
 ------------
 
--   Downloaded and installed RPM [from
-    website](http://awstats.sourceforge.net/).
--   Installs in `/usr/local/awstats`.
--   You'll find the model config in `/etc/awstats/awstats.model.conf`
-
-`   mv /etc/awstats/{awstats.model.conf,awstats.conf}`
-
-Since I'm setting up analytics for a blog at `http://blog.example.com`,
-
-`   cp /etc/awstats/{awstats.conf,awstats.`**`blog.example.com`**`.conf}`  
-`   mkdir -p /var/lib/awstats/`**`blog.example.com`**
-
-Then modified these params
-
-`   LogFile="/var/log/nginx/blog.access.log"`  
-`   SiteDomain="blog.example.com"`  
-`   HostAliases="blog.example.com localhost 127.0.0.1"`  
-`   DNSLookup=1`  
-`   DirData="/var/lib/awstats/blog.example.com"`  
-`   EnableLockForUpdate=1`
-
-### Cron entry
-
-This generates the static HTML pages. Since my logrotate config runs
-daily, I'll set the job to run at that frequency as well.
-
-I added this to `/etc/cron.daily/awstats-blog`:
-
-    #!/bin/bash
-    STATIC_DIR="/var/www/html/stats"
-
-    YEAR=$(date +"%Y")
-    MONTH=$(date +"%m")
-    LOG_DIR=$STATIC_DIR/$YEAR/$MONTH
-
-    mkdir -p $LOG_DIR
-    /usr/local/awstats/tools/awstats_buildstaticpages.pl -dir=$LOG_DIR -config=blog.example.com -update
-
-Don't forget to make it executable.
-
-### Generate Data Files
-
-`   /usr/local/awstats/tools/awstats_updateall.pl now`
-
-Scan for any errors, fix accordingly. You can now see a text file (the
-'database' file) in `/var/lib/awstats/blog.example.com`
-
-### Generate Static HTML
-
-Simply run your cron script
-
-`   /etc/cron.daily/awstats-blog`
-
-### Nginx
-
-First, define where the static HTML analytics files are:
-
-`   location /stats {`  
-`       root /var/www/html;`  
-`       autoindex on;`  
-`   }`
-
-Now some symlink gymnastics
-
-`   ln -s /usr/local/awstats/wwwroot /usr/local/awstats/stats`
-
-Now add a definition for the icons:
-
-`   location /stats/icon {`  
-`       root /usr/local/awstats;`  
-`   }`
-
-### The logrotate issue
-
-I configured logrotate to compress my logfiles. This can be problematic,
-but has a simple solution: tell AWStats to update its data files
-*before* logrotate does anything with them.
-
-So,
-
-`   /var/log/nginx/*.log {`  
-`       daily`  
-`       missingok`  
-`       rotate 52`  
-`       compress`  
-`       delaycompress`  
-`       notifempty`  
-`       create 640 nginx adm`  
-`       sharedscripts`  
-`       `**`prerotate`**  
-`           `**`/usr/local/awstats/tools/awstats_updateall.pl` `now`**  
-`       `**`endscript`**  
-`       postrotate`  
-``            [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid` ``  
-`       endscript`  
-`   }`
-
-Importing historic log data
----------------------------
-
-### Generating data files
-
-I had previous logfiles in `/var/log/nginx` that looked like this as a
-result of logrotate:
-
-`   blog.access.log-20130625.gz`  
-`   blog.access.log-20130626.gz`  
-`   blog.access.log-20130628.gz`  
-`   blog.access.log-20130701.gz`  
-`   blog.access.log-20130703.gz`  
-`   blog.access.log-20130704.gz`  
-`   blog.access.log-20130705.gz`
-
-To import these, I removed the AWStats database files in
-`/var/lib/awstats/blog`. I then temporarily changed the "`LogFile`"
-parameter in the config file (`/etc/awstats/awstats.blog.example.conf`)
-to this:
-
-`   LogFile="zcat /var/log/nginx/blog.access.log*.gz |"`
-
-Should be self-exlanatory. Then ran the update script as usual:
-
-`   /usr/local/awstats/tools/awstats_updateall.pl now`
-
-This generated the older database entries. There are
-[other](http://shebangme.blogspot.com/2012/04/awstats-rebuilding-files-from-old-logs.html)
-[methods](http://adamish.com/blog/archives/251) as well, especially if
-you don't have access to your older records.
-
-You should now regenerate the static HTML.
-
-### Regenerating static HTML pages
-
-For the months and years you have log files for, write two small `for`
-loops!
-
-    for YEAR in $(seq 2010 2013); do
-        for MONTH in $(seq --format="%02g" 5 8); do
-            STATSDIR=/var/www/html/stats/$YEAR/$MONTH
-            mkdir -p $STATSDIR
-            /usr/local/awstats/tools/awstats_buildstaticpages.pl -dir=$STATSDIR -month=$MONTH -year=$YEAR -config=blog.example.com
-        done
-    done
-
-Ta da!
-
-Plugins
--------
-
-### GeoIP
-
-Will be *much* faster than DNS. A little painful, but worth it
-
-#### Perl Module
-
-You'll need the C API first.
-
-`   # Get the latest source (1.5+)`  
-`   wget -O - `[`http://www.maxmind.com/download/geoip/api/c/GeoIP-latest.tar.gz`](http://www.maxmind.com/download/geoip/api/c/GeoIP-latest.tar.gz)` | tar -xvzf -`  
-`   cd GeoIP-1.5.1`  
-`   ./configure; make; make install`
-
-`   # Make sure CPAN can find the compiled libs`  
-`   echo "/usr/local/lib" > /etc/ld.so.conf.d/GeoIP.conf`  
-`   /sbin/ldconfig /etc/ld.so.conf -v`
-
-You *should* be able to install this now via CPAN, but the module's
-`Makefile` is screwed up (at least as of version 1.42). So download
-directly and compile:
-
-`   wget -O - `[`http://search.cpan.org/CPAN/authors/id/B/BO/BORISZ/Geo-IP-1.42.tar.gz`](http://search.cpan.org/CPAN/authors/id/B/BO/BORISZ/Geo-IP-1.42.tar.gz)` | tar -xzvf -`  
-`   cd Geo-IP-1.42`  
-`   perl Makefile.PL LIBS="-L/usr/local/lib -lGeoIP" INC=-I/usr/local/include`  
-`   make`  
-`   make install`
-
-#### Database File
-
-`   mkdir /opt/GeoIP`  
-`   wget -O - `[`http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz`](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz)` | gunzip - > /opt/GeoIP/data`
-
-Now uncomment this in your site config (also uncomment `DNSLookup`):
-
-`   LoadPlugin="geoip GEOIP_STANDARD /opt/GeoIP/data"`
-
-Run the update script!
-
-### IPv6 Support
-
-`   # Make sure you have CPAN first`  
-`   yum -y install perl-CPAN`
-
-`   # Open a prompt`  
-`   cpan`
-
-`   # Now type:`  
-`   cpan[1]> install Net::IP`  
-`   cpan[2]> install Net::DNS`
-
-Uncomment `LoadPlugin="ipv6"`.
-
-### Others
-
-`   LoadPlugin="graphgooglechartapi"`  
-`   LoadPlugin="hostinfo" # You'll need to install Net::XWhois via CPAN for this`  
-`   LoadPlugin="tooltips"`
-
-Other notes
------------
-
--   `awstats_updateall.pl` is just a wrapper for `awstats.pl` that runs
-    all found configurations in `/etc/awstats`.
--   I couldn't find a way to get the select dropdown and sidebar to be
-    generated statically.
--   If you wanted to host on a subdomain, here's a basic Nginx config
-    with some basic HTTP auth.
-
-`   server {`  
-`       listen 80;`  
-`       server_name stats.example.com;`  
-` `  
-`       location / {`  
-`           root /var/www/html/stats;`  
-`           autoindex on;`  
-`           `  
-`           # Password-protect (something's better than nothing)`  
-`           auth_basic            "Restricted";`  
-`           auth_basic_user_file  /etc/nginx/conf.d/passwords;`  
-`       }`  
-` `  
-`       location /icon {`  
-`           root /usr/local/awstats/wwwroot;`  
-`       }`  
-`   }`
-
-The `passwords` file is generated with the `htpasswd` command:
-
-`   htpasswd -c /etc/nginx/conf.d/passwords username`
-
-References
-----------
-
--   [This
-    guy](http://kamisama.me/2013/03/20/install-configure-and-protect-awstats-for-multiple-nginx-vhost-on-debian/)
-    runs AWStats as a CGI application.
+AWStats 7.4 ships with a PHP wrapper that Nginx can hand to a FastCGI
+process (PHP-FPM in this case).
+
+### Configuration
+
+    # statistics.example.com
+    server {
+        listen      0.0.0.0:80;
+        server_name statistics.example.com;
+
+        access_log off;
+        error_log  off;
+
+        location / {
+            root  /var/www/html/statistics.example.com;
+        }
+
+        location /classes/ {
+            alias /usr/local/awstats/wwwroot/classes/;
+        }
+
+        location /css/ {
+            alias /usr/local/awstats/wwwroot/css/;
+        }
+
+        location /icon/ {
+            alias /usr/local/awstats/wwwroot/icon/;
+        }
+
+        location /js/ {
+            alias /usr/local/awstats/wwwroot/js/;
+        }
+
+        # Dynamic stats
+        location ~ ^/cgi-bin/(awredir|awstats)\.pl {
+            gzip off;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_param SCRIPT_FILENAME   /usr/local/awstats/tools/nginx/awstats-fcgi.php;
+            fastcgi_param X_SCRIPT_FILENAME /usr/local/awstats/wwwroot$fastcgi_script_name;
+            fastcgi_param X_SCRIPT_NAME $fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+
+### Protect Pages
+
+Enable SSL (even with a shitty self-signed certificate), then add this
+to your `server` definition:
+
+    auth_basic            "Restricted";
+    auth_basic_user_file  passwords;
+
+And here's how you could generate passwords without the full suite of
+Apache tools:
+
+    PASSWORD="ThePassword";
+    SALT="$(openssl rand -base64 3)";
+    SHA1=$(printf "$PASSWORD$SALT" | openssl dgst -binary -sha1 | sed 's#$#'"$SALT"'#' | base64);
+    printf "the_user:{SSHA}$SHA1\n"
 
 [Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
 [Category: Installation Logs](Category:_Installation_Logs "wikilink")
