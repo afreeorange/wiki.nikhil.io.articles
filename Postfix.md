@@ -1,4 +1,5 @@
-Written for CentOS 6.4, Postfix 2.6.6.
+Written for CentOS 6.4, Postfix 2.6.6. I set up
+[Dovecot](Dovecot "wikilink") for POP and IMAP services after this.
 
 -   Server is `example.com`.
 -   Mail users map to local accounts (i.e., in `/etc/passwd`).
@@ -95,6 +96,13 @@ Use the Maildir format for message delivery
 Change the banner for fun (and no version information)
 
 ` smtpd_banner = $myhostname ESMTP Why, hello there!`
+
+Now edit `[http://www.postfix.org/master.5.html /etc/postfix/master.cf]`
+to enable the submission port
+
+`   submission inet n       -       n       -       -       smtpd`
+
+Uncomment any options ("-o"); we'll take care of these in later.
 
 ### Testing
 
