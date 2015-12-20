@@ -19,7 +19,7 @@ Installation
 -   Installs in `/usr/local/awstats`.
 -   You'll find the model config in `/etc/awstats/awstats.model.conf`
 
-`   mv /etc/awstats/{awstats.model.conf,model.conf}`
+`   mv /etc/awstats/{awstats.model.conf,awstats.conf}`
 
 Since I'm setting up analytics for a blog at `http://blog.example.com`,
 
