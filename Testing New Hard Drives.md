@@ -10,6 +10,10 @@ Then run a conveyance test (for any damage during shipping)
 
 ` smartctl -t conveyance /dev/ada0`
 
+Then check for bad blocks[^2]
+
+` badblocks -ws /dev/ada0`
+
 Then run a long test
 
 ` smartctl -t long /dev/ada0`
@@ -44,3 +48,5 @@ Footnotes
 [Category: FreeNAS](Category:_FreeNAS "wikilink")
 
 [^1]: Use `-C` to run in foreground. But then again, why would you?
+
+[^2]: The non-destructive version is `badblocks -ns`.
