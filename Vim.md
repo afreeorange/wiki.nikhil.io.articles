@@ -1,3 +1,20 @@
+Tricks
+------
+
+-   [Reload `.vimrc`](http://superuser.com/a/132030) without restarting
+    vim:
+
+` :so ~/.vimrc`  
+` :so $MYVIMRC`  
+` :so %`
+
+:   The last command is for when you're editing it.
+
+Package management
+------------------
+
+[Pathogen](https://github.com/tpope/vim-pathogen) seem slike a
+
 Color Schemes
 -------------
 
