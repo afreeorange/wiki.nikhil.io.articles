@@ -62,7 +62,8 @@ Start the service and make sure it's running
 ### Testing
 
 You can now telnet to either ports 110
-([POP3](http://techhelp.santovec.us/pop3telnet.htm)) or 143
+([POP3](http://www.anta.net/misc/telnet-troubleshooting/pop.shtml)) or
+143
 ([IMAP](http://www.anta.net/misc/telnet-troubleshooting/imap.shtml)).
 The syntaxes differ quite a bit.
 
