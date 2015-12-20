@@ -35,12 +35,6 @@ Problems
 sent](http://www.redhat.com/archives/fedora-directory-users/2009-September/msg00051.html).
 They need to be protected with SSL/TLS and sent in the clear.
 
-Miscellaneous
--------------
-
--   ![Presentation on RHDS
-    Deployment](Questions for a RHDS Deployment.pdf "fig:Presentation on RHDS Deployment")
-
 [Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
 [Category:Installation Logs](Category:Installation_Logs "wikilink")
 [Category:From a past sysadmin
