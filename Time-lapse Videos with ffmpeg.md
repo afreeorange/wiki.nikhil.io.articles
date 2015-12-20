@@ -1,6 +1,6 @@
-    # Reduce to a smaller size since 
+    # Reduce to a smaller size (1080p) since 
     # "MPEG-1 does not support resolutions above 4095x4095"
-    for image in *.JPG; do ffmpeg -i $image -vf scale=1200:-1 ${image%.JPG}.PNG; done
+    for image in *.JPG; do ffmpeg -i $image -vf scale=1920:-1 ${image%.JPG}.PNG; done
 
     # Create a movie!
     ffmpeg -f image2 -pattern_type glob -i "*.PNG" output.mpg
