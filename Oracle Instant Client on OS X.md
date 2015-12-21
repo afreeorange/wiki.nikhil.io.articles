@@ -14,8 +14,9 @@
           Referenced from: /Users/nikhil/.pyenv/versions/manifold-api/lib/python2.7/site-packages/cx_Oracle.so  
           Expected in: flat namespace
 
-* Extract them at the command line. You'll get a folder called
-    "`instantclient\_11\_2`"
+* Extract them at the command line. You'll get a folder 
+    called "`instantclient_11_2`"
+
 * Move it to `/usr/local`
 
         sudo mkdir /usr/local/oracle  
