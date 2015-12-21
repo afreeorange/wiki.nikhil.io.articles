@@ -447,8 +447,8 @@ References
     CentOS6](http://www.thenoccave.com/2013/05/08/centos-6-postfix-spf-checking/)
 -   [Postfix FAQ](http://www.seaglass.com/postfix/faq.html#chbnc)
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+
 
 [^1]: [The Linode page](https://library.linode.com/mailserver) on mail
     servers is also a great overview

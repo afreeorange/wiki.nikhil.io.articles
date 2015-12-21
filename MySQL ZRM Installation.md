@@ -100,7 +100,3 @@ had support for profiling. The upshot is that you can't select
 individual databases to be backed up if you're running 5.0.95. The
 Webtatic and Remi repos have MySQL 5.5+ if you're desperate.
 
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

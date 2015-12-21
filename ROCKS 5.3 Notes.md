@@ -227,14 +227,6 @@ Sources
 References
 ==========
 
-<references markdown="1">
-[^2]
-
-</references>
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
-
 [^1]: 
 
 [^2]: [Forcing a Re-install at Next PXE

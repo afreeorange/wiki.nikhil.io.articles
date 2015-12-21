@@ -17,7 +17,3 @@ Preparation
 -   Blend away!
 -   Add olive oil by the teaspoon to get the paste to a thick yet
     pourable consistency.
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink")

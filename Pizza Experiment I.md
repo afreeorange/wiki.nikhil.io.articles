@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 ![Dough, before I let it rise. Could've kneaded it
 further?](Photo Jun 18, 5 35 56 PM.jpg "fig:Dough, before I let it rise. Could've kneaded it further?")
@@ -67,7 +67,5 @@ looks, remove from oven, let rest for 2 minutes.
 
 Share and enjoy.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink") [Category:
-For the love of Pizza](Category:_For_the_love_of_Pizza "wikilink")
+
+

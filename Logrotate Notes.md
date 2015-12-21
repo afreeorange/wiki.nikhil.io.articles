@@ -212,7 +212,3 @@ Sources
     files](http://linuxers.org/howto/howto-use-logrotate-manage-log-files)
 -   [Rotating Linux log
     files](http://www.ducea.com/2006/06/06/rotating-linux-log-files-part-2-logrotate/)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

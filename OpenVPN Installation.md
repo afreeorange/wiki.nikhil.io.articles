@@ -345,7 +345,6 @@ immediately.
 -   [A more complicated
     setup](http://blogs.encodo.ch/news/view_article.php?id=196)
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

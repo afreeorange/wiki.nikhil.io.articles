@@ -27,6 +27,5 @@ verify the DVD the ISO was burned to using:
 This verifies a successful burn. Merely using `dd if=/dev/sdc | md5sum`
 will *always* give you an incorrect checksum!
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

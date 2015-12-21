@@ -35,7 +35,3 @@ Problems
 sent](http://www.redhat.com/archives/fedora-directory-users/2009-September/msg00051.html).
 They need to be protected with SSL/TLS and sent in the clear.
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

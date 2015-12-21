@@ -61,7 +61,3 @@ This is because `bash` stores history in memory and in a file.
 ### History with Timestamps
 
     export HISTTIMEFORMAT="%F %T "
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

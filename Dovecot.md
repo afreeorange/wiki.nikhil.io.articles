@@ -140,8 +140,8 @@ Footnotes & References
     installation](http://wiki.dovecot.org/TestInstallation)
 
 <references />
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+
 
 [^1]: I suppose you could [use
     OpenSSL](Postfix#Doing_things_securely "wikilink")... but who does

@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 You'll need [a popover
 pan](http://www.amazon.com/Chicago-Metallic-Stick-6-Cup-Popover/dp/B003YL3DWO)
@@ -43,6 +43,5 @@ Stuff face with resulting awesomeness immediately. Have friends
 available. They taste like shit when microwaved/heated later (even when
 stored in ziploc.)
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink")
+
+

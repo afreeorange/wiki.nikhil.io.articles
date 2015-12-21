@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 Ingredients
 -----------
@@ -52,7 +52,5 @@ this again, except will
 -   Fold dough over the next time.
 -   Heat skillet on high *without* dough. Can pour when temp's reached.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink") [Category:
-For the love of Pizza](Category:_For_the_love_of_Pizza "wikilink")
+
+

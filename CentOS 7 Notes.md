@@ -43,7 +43,3 @@
     # Changed SSHD port
     # .bash_profile as in Github project
     updatedb
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
-[Category: Linux](Category:_Linux "wikilink")

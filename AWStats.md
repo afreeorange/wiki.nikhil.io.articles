@@ -194,7 +194,3 @@ Apache tools:
     SALT="$(openssl rand -base64 3)";
     SHA1=$(printf "$PASSWORD$SALT" | openssl dgst -binary -sha1 | sed 's#$#'"$SALT"'#' | base64);
     printf "the_user:{SSHA}$SHA1\n"
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
-[Category: Linux](Category:_Linux "wikilink")

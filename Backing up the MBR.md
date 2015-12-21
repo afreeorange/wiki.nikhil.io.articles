@@ -20,6 +20,5 @@ When restoring, these numbers become important. If restoring to a
 partition of the *exact size*, use `bs=512` for backup and restore.
 Else, *you have to use `bs=446`*. This is vitally important.
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

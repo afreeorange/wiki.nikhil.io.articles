@@ -34,7 +34,3 @@ And so on. Now you can
 ` yum install kernel`
 
 Check `/boot/grub/menu.lst`, and then reboot.
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

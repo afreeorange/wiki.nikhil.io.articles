@@ -5,9 +5,9 @@ Preliminary notes
 
 The config for `ntpd` is `/etc/ntp.conf`. These lines are of interest:
 
-`  server 0.centos.pool.ntp.org`  
-`  server 1.centos.pool.ntp.org`  
-`  server 2.centos.pool.ntp.org`
+    server 0.centos.pool.ntp.org  
+    server 1.centos.pool.ntp.org  
+    server 2.centos.pool.ntp.org
 
 They must be changed to whatever you have in mind for NTP servers.
 **Important**: You *must* also include these servers in the
@@ -15,9 +15,9 @@ They must be changed to whatever you have in mind for NTP servers.
 If you don't, you'll see something like this when restarting the NTP
 daemon:
 
-` [root@localhost ntp]# /sbin/service ntpd start`  
-` ntpd: Synchronizing with time server:            [FAILED]`  
-` Starting ntpd:                                   [  OK  ]`
+    [root@localhost ntp]# /sbin/service ntpd start
+    ntpd: Synchronizing with time server:            [FAILED]
+    Starting ntpd:                                   [  OK  ]
 
 The NTP port is **123** and must be open in your iptables rules to allow
 synchronization.
@@ -202,6 +202,5 @@ Resources
     Linux](http://www.vanemery.com/Linux/RH-Linux-Time.html) - Excellent
     overview of NTP and date and time utilities.
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

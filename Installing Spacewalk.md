@@ -315,8 +315,3 @@ THE MANAGER ROLE to access the "Tomcat Manager" page
 ` `<role rolename="manager"/>  
 `   `<user name="admin" password="t0mcaaat" roles="admin,manager" />  
 ` `</tomcat-users>
-
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

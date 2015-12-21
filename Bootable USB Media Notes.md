@@ -71,6 +71,5 @@ Other notes and resources
 -   An excellent idea would be to [roll everything into one using
     GRUB](http://www.neowin.net/forum/index.php?showtopic=621496)
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

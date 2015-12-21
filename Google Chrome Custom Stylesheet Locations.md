@@ -10,4 +10,4 @@
 
 `  ~/.config/google-chrome/Default/User StyleSheets`
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+

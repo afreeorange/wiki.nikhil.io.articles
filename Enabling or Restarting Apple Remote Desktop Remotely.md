@@ -12,6 +12,5 @@ mistakenly restricted access to a few and have locked yourself out.
 ` sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart \`  
 ` `**`-configure` `-allowAccessFor` `-allUsers` `-privs` `-all`**
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

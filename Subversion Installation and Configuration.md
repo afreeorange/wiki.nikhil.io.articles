@@ -289,7 +289,3 @@ Resources
     Enterprise](http://www.wadewoolwine.com/2009/01/28/mod_auth_kerb-and-mod_authnz_ldap-bring-apache-web-apps-into-the-enterprise/)
 -   [Apache 2.2 – authnz\_ldap – Active
     Directory](http://michele.pupazzo.org/diary/?p=227)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

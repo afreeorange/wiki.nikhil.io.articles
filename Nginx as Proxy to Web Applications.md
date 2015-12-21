@@ -7,4 +7,4 @@ Tried this with a [Flask](http://flask.pocoo.org/) app.
 
 Key idea is the trailing slash.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+

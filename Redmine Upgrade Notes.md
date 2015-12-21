@@ -1,6 +1,6 @@
 Not as peachy as I thought.
 
-### Install log
+## Install log
 
 ` Ran gem install ruby -v=2.3.2`  
 ` Complained that rubygems-update was not available.`  
@@ -66,7 +66,7 @@ Not as peachy as I thought.
 ` Ran rails -v`  
 ` Success: gem at v.1.3.5, Rails at v.2.3.4, Ruby at v.1.8.5`
 
-### Upgrade Redmine
+## Upgrade Redmine
 
 `   RAILS_ENV=production rake db:migrate_plugins`  
 `       NEEDED Rails 2.1.2`  
@@ -89,7 +89,7 @@ command.
 
 `   mongrel_rails start -d -p 3001 -e production --user mongrel --group mongrel --prefix=/redmine`
 
-### Other Notes
+## Other Notes
 
 -   Sometimes, deleting source\_cache helps with update process
 -   Location ascertained by gem env  
@@ -97,7 +97,7 @@ command.
 -   [Might also need to install 'rack' to run gem
     update](http://rubyforge.org/frs/?group_id=3113&release_id=40490)
 
-### Fixing the "Mongrel has to be restarted" issue
+## Fixing the "Mongrel has to be restarted" issue
 
 `   Bill Walton wrote:`  
 `   > I'm in the process of moving my app from a shared`  
@@ -148,21 +148,16 @@ command.
 `  `  
 `   And that fixed the behavior mongrel was exhibiting. `
 
--   <http://www.redmine.org/boards/2/topics/9292>
--   <http://www.redmine.org/issues/4144>
+* <http://www.redmine.org/boards/2/topics/9292>
+* <http://www.redmine.org/issues/4144>
 
 ### Resources
 
--   <http://www.catapult-creative.com/2009/02/04/installing-rails-on-centos-5/>
--   <http://discuss.joyent.com/viewtopic.php?id=23748>
--   <http://www.elctech.com/articles/-solved-rightscale-centos-5-0-rails-2-3-4-upgrade>
--   <http://wiki.opscode.com/display/chef/Installation+on+CentOS+5.*>
+* <http://www.catapult-creative.com/2009/02/04/installing-rails-on-centos-5/>
+* <http://discuss.joyent.com/viewtopic.php?id=23748>
+* <http://www.elctech.com/articles/-solved-rightscale-centos-5-0-rails-2-3-4-upgrade>
+* <http://wiki.opscode.com/display/chef/Installation+on+CentOS+5.*>
     2+with+gems+%28In+progress%29
--   <http://forum.slicehost.com/comments.php?DiscussionID=672>
--   <http://forum.slicehost.*> com/comments.php?DiscussionID=672
--   <http://www.centos.org/modules/newbb/viewtopic.php?topic_id=11821>
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+* <http://forum.slicehost.com/comments.php?DiscussionID=672>
+* <http://forum.slicehost.*> com/comments.php?DiscussionID=672
+* <http://www.centos.org/modules/newbb/viewtopic.php?topic_id=11821>

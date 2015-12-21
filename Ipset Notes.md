@@ -49,7 +49,3 @@ Sources
 -   [Advanced Firewall Configurations with
     ipset](http://www.linuxjournal.com/content/advanced-firewall-configurations-ipset?page=0,2)
 -   [List of Country IP blocks](http://ipdeny.com/)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

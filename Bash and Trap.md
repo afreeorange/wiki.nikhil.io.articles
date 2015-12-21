@@ -25,6 +25,5 @@ Extremely useful in scripting. For a full listing of signals, use
           echo -e "Still alive..."
     done
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

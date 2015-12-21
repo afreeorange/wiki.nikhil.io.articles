@@ -17,5 +17,5 @@
 
 [Source](http://www.snip2code.com/Snippet/55467/How-I-installed-Bokeh-without-conda-on-O).
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+
 [Category: OS X](Category:_OS_X "wikilink")

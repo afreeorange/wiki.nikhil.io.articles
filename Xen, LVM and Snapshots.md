@@ -31,6 +31,7 @@ steps:
     volumes used by Xen:  
     `dd if=/dev/xenvols/linux01_root of=/data/xen_linux01_root.img`  
 3.  Restart the virtual machine using the `xm` restore command.
+4.  asdjalksjdasdasldjalsdjals  asdlajdlas alksjdalksd
 
 The major disadvantage of this solution is time. The `dd` command makes
 a byte-by-byte copy of the virtual machine disk file and that can take
@@ -82,7 +83,3 @@ as follows:
 While no Linux distribution offers a solution in the open source Xen
 stack to create a virtual machine snapshot as of yet, you've read how
 you can do it anyway by using standard Linux tools such as LVM and `dd`.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

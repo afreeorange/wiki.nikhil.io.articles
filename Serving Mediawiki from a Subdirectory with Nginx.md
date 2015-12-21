@@ -25,6 +25,3 @@
         $wgScriptPath  = "/mediawiki";
         $wgArticlePath = "/wiki/$1";
         $wgUsePathInfo = true;
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Linux](Category:_Linux "wikilink")

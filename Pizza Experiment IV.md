@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 Same recipe and (almost) same prep as [Pizza Experiment
 III](Pizza_Experiment_III "wikilink"). Except this time, I
@@ -29,7 +29,5 @@ Still decent crust, but not as open as I'd have liked it to be.
 <File:9299.jpg> <File:9300.jpg%7CRan> out of shredded, used string
 <File:9301.jpg> <File:9302.jpg> <File:9303.jpg> <File:9304.jpg>
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink") [Category:
-For the love of Pizza](Category:_For_the_love_of_Pizza "wikilink")
+
+

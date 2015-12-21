@@ -101,7 +101,3 @@ Sources
     Linux](http://linuxhelp.blogspot.com/2005/09/system-logging-explained-in-linux.html)
 -   [Unix/Linux System Administration - Syslog
     Module](http://fog.ccsf.cc.ca.us/~gboyd/cs260a/online/syslog/introduction.html)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

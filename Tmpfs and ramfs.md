@@ -116,7 +116,3 @@ Other Points
     `tmpfs`. And I think you'd appreciate a live (albeit sluggish)
     system rather than one that's crashed due to a reckless use of
     `ramfs`. Swings and roundabouts.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

@@ -60,7 +60,3 @@ mercy, you will see something like this:
 ` myisamchk: warning: 4 records have been removed`
 
 Ta da! Assuming, of course, that your table's the default MyISAM type.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

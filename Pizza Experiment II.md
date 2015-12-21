@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 Ingredients
 -----------
@@ -39,7 +39,5 @@ Stuff face.
 <File:9266.jpg> <File:9269.jpg> <File:9270.jpg> <File:9271.jpg>
 <File:9275.jpg> <File:9276.jpg> <File:9286.jpg>
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink") [Category:
-For the love of Pizza](Category:_For_the_love_of_Pizza "wikilink")
+
+

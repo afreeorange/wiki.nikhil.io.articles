@@ -136,7 +136,9 @@ definition in `/etc/amavisd.conf`
 Footnotes
 ---------
 
-<references />
+[^1]: A lot of guides online talk about "injection" to Amavisd-new and
+    "reinjection" back to Postfix.
+
 References
 ----------
 
@@ -145,9 +147,3 @@ References
 -   [Great overview and examples of content filtering with
     Postfix](http://www.postfix.org/FILTER_README.html)
 -   [An Amavis frontend](http://myamavis.kapott.org/)
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
-
-[^1]: A lot of guides online talk about "injection" to Amavisd-new and
-    "reinjection" back to Postfix.

@@ -136,6 +136,3 @@ data
 
 -   Here's a useful [list of
     actions](https://www.varnish-cache.org/docs/3.0/tutorial/vcl.html#actions).
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Linux](Category:_Linux "wikilink")

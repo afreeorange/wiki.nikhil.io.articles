@@ -53,6 +53,5 @@ Add that to a file, move it to `/etc/cron.d`. Make sure that:
 -   The `#!/bin/sh` line exists and is first.
 -   The permissions to 755.
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

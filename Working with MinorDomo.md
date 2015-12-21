@@ -68,6 +68,5 @@ Sample HyperMail Script
             `find $archive_dir/$year -type f | xargs cat | /usr/local/bin/hypermail -x -d $output_dir/$year`;
     }
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

@@ -266,7 +266,3 @@ GPG key.
 ` gpgkey = `[`file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag`](file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag)  
 ` gpgcheck = 1`  
 ` includepkgs = keychain`
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

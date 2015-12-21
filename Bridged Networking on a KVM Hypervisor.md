@@ -52,6 +52,5 @@ References
 -   [Here's
     another](http://www.dd-wrt.com/wiki/index.php/Brctl_command).
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

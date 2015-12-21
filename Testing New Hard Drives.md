@@ -50,10 +50,6 @@ References
 Footnotes
 ---------
 
-<references markdown="1">
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: FreeNAS](Category:_FreeNAS "wikilink")
-
 [^1]: Use `-C` to run in foreground. But then again, why would you?
 
 [^2]: The non-destructive version is `badblocks -ns`.

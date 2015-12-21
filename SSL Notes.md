@@ -14,7 +14,3 @@
 
 -   Test the [SSL config on your
     server](https://www.ssllabs.com/ssltest/).
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Linux](Category:_Linux "wikilink") [Category:
-SSL](Category:_SSL "wikilink")

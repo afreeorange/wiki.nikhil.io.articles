@@ -46,7 +46,6 @@ safe and secure place off this server!** Now rename the file:
 ` # Comparing outside the system`  
 ` aide --compare old.db.gz new.db.gz`
 
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

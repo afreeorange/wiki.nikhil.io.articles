@@ -86,7 +86,6 @@ and/or complicated setting. The best way to get acquainted with its
 features is to essentially read the default file to figure out what it's
 capable of. Reading others' config files also helps :)
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

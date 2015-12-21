@@ -14,5 +14,5 @@ Need to use the `ROWNUM` pseudo-column.
 
 See the article for LIMIT and OFFSET equivalent.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+
 [Category: Oracle](Category:_Oracle "wikilink")

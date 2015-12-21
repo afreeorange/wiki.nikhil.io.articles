@@ -41,5 +41,3 @@ This might help also
 
 `   chmod -R 775 /var/amavis/tmp`
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")

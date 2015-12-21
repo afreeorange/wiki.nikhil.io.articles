@@ -246,8 +246,3 @@ Then join the Samba box to the domain.
 ` [root@tiner home]# service smb restart`
 
 Test and enjoy.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

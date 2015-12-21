@@ -84,7 +84,3 @@ Sources
     Manual](http://www.vmware.com/pdf/VirtualDiskManager.pdf)
 -   [Virtual Disk Manager CLI
     examples](http://www.vmware.com/support/ws45/doc/disks_vdiskmanager_eg_ws.html)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

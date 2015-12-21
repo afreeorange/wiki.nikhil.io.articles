@@ -54,5 +54,5 @@ Here's [a great guide](http://www.shisaa.jp/postset/mailserver-1.html)
 Several of these changes can be made (SPF record, DROP, GnuPG) without
 modifying your existing setup.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+

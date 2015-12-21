@@ -75,7 +75,3 @@ Sources
     (Ubuntu)
 -   `/usr/share/doc/incron-0.5.5/README`  
     (CentOS/RHEL)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

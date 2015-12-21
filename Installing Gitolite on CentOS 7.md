@@ -63,9 +63,9 @@ Then clone with
 Footnotes
 ---------
 
-<references/>
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+
+
 
 [^1]: You can simply use `~/.ssh/id_rsa.pub` in your home folder.
     Generate with `ssh-keygen -t rsa`.

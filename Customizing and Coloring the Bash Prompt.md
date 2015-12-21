@@ -35,6 +35,5 @@ you'd have this:
 ` # Together`  
 ` [33[01;33m\]\W`\\[33[00m\\]`  `
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

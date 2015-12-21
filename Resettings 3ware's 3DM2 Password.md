@@ -15,7 +15,3 @@ Then edit the file to restore the default values of `ROpwd` and
 ` sudo 3dm2`
 
 Bam.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
