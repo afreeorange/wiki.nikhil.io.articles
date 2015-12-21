@@ -127,8 +127,3 @@ Sources
 -   [rkhunter RPMs on sw.be](http://packages.sw.be/rkhunter/)
 -   [Detailed Installation and
     Configuration](http://sourceforge.net/apps/trac/rkhunter/wiki/SPRKH)
-
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

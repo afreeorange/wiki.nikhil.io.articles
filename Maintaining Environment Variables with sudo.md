@@ -15,5 +15,5 @@ In the case of proxies,
 
 ` Defaults env_keep += "http_proxy https_proxy ftp_proxy"`
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Linux](Category:_Linux "wikilink")
+
+

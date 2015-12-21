@@ -84,7 +84,6 @@ This is [a bug](https://bugzilla.redhat.com/show_bug.cgi?id=250348) that
 others have encountered. I changed the permissions like above, ran the
 poller and the graphs were displayed. I'm fine with this.
 
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

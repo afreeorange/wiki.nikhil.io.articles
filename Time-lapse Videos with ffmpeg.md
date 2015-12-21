@@ -18,4 +18,4 @@ Resources
 -   [Making a lossless
     movie](http://stackoverflow.com/questions/4839303/convert-image-sequence-to-lossless-movie)
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+

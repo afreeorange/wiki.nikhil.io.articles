@@ -17,5 +17,5 @@ References
 
 -   <http://www5.us.freebsd.org/doc/handbook/config-network-setup.html>
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: FreeNAS](Category:_FreeNAS "wikilink")
+
+

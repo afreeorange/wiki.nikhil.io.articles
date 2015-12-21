@@ -101,6 +101,5 @@ the block size and use it as the offset for the `mount` command.*
 
 ` mount -o loop,`**`offset=1184440320`**` hard_drive_backup.img /mount/point`
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

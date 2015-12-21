@@ -24,7 +24,3 @@ So PID 5138 is using the drive. Let's see what it is:
 
 Aha! Now if you're confident that you can kill that job, go ahead and
 then try umounting the drive.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

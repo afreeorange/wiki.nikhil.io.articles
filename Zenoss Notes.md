@@ -65,8 +65,3 @@ Miscellaneous
     add a line like so, and restart Zenoss
 
 ` zopeurl      `[`http://servername.tld:9090`](http://servername.tld:9090)
-
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

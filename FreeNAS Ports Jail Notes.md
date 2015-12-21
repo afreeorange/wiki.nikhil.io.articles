@@ -27,5 +27,5 @@ In the FreeNAS interface, added a \*Pre Init\* command:
 
 This didn't seem to work...
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: FreeNAS](Category:_FreeNAS "wikilink")
+
+

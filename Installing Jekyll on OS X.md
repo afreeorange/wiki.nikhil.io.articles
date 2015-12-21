@@ -25,8 +25,8 @@
 ### Footnotes
 
 <references />
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+
 
 [^1]: I temporarily had to `chown root:admin /usr/local/bin/brew` for
     this to work (and then changed it back)

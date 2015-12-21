@@ -88,7 +88,3 @@ Sources
 
 -   [How to Administer Sun Grid
     Engine](http://biowiki.org/HowToAdministerSunGridEngine)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

@@ -316,8 +316,3 @@ Resources
     FTP](http://slacksite.com/other/ftp.html)
 -   [VSFTPD
     documentation](http://www.redhat.com/docs/manuals/enterprise/RHEL-5-manual/Deployment_Guide-en-US/s2-ftp-servers-vsftpd.html)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

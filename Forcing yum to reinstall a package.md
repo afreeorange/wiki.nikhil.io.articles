@@ -29,6 +29,5 @@ Files staged for install when performing a `yum update` are kept in
 `/var/cache/yum/`. This is useful in [certain
 situations](http://fir3net.com/Redhat-/-Fedora/yum-update-shows-module-object-has-no-attribute-httpshandler-error.html).
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

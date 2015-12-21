@@ -207,6 +207,5 @@ You might need an init script if `dict word` does not work.
 -   Add information on doing this securely (i.e. dictd should use only
     one port in iptables)
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

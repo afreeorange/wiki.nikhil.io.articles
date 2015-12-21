@@ -84,5 +84,5 @@ You should have gotten an email from the service with the subject
 "**\[Fail2Ban\] dovecot: started**". Check `/var/log/messages` for
 banned IPs
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+

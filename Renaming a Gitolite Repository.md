@@ -10,7 +10,3 @@
 -   Rename the repo in `gitolite.conf` and push to server.
 
 Fin.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

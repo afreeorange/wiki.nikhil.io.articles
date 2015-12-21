@@ -240,7 +240,6 @@ Sources
 -   [Tips and Tricks to debug
     puppet](http://www.devco.net/archives/2009/08/19/tips_and_tricks_for_puppet_debugging.php)
 
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

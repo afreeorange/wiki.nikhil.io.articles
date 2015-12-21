@@ -12,7 +12,3 @@ in the morning.
 
 Seller said it was made with parmesan cultures. Soft yet brittle.
 Mellow, drier taste. Can maybe shred over a plate of pasta :)
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: I just love
-CHEESE!](Category:_I_just_love_CHEESE! "wikilink")

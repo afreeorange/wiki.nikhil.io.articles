@@ -11,5 +11,5 @@ Install the
 [ParserFunctions](http://www.mediawiki.org/wiki/Extension:ParserFunctions)
 extension. You should be set.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+

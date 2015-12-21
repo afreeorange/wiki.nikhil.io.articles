@@ -210,8 +210,3 @@ Sources
 
 -   [MySQL ZRM Users
     Manual](http://wiki.zmanda.com/index.php/Zmanda_Recovery_Manager_for_MySQL_Users_Manual)
-
-[Category:Installation Notes](Category:Installation_Notes "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

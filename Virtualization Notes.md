@@ -1,5 +1,3 @@
-\_\_NOTOC\_\_
-
 Installation
 ------------
 
@@ -43,6 +41,5 @@ Sources
 -   <http://itscblog.tamu.edu/startup-guide-for-kvm-on-centos-6/>
 -   <http://eduardo-lago.blogspot.com/2012/01/how-to-install-kvm-and-libvirt-on.html>
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

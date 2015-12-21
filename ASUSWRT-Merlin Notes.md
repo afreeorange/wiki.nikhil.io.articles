@@ -38,6 +38,3 @@ Resources
     Dnsmasq](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
 -   [Custom Config and Postconf files in
     ASUSWRT](https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files)
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")

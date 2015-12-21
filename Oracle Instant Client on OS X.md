@@ -44,5 +44,5 @@ Needed this for Node.js.
 
 -   Had to copy `tnsnames.ora` to `/etc` for things to work properly.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
+
+

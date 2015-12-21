@@ -163,8 +163,3 @@ list](http://markmail.org/message/l6tujq2zvh4z5wzt#query:%22Rlog%20output%20ende
 ` `
 
 Find `use_rcsparse` under **\[options\]** and set it to `1`.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

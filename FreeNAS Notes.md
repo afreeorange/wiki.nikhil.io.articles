@@ -99,6 +99,6 @@ References
 
 -   <http://blog.brianmoses.net/2013/01/diy-nas-2013-edition.html>
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")
-[Category: FreeNAS](Category:_FreeNAS "wikilink")
+
+
+

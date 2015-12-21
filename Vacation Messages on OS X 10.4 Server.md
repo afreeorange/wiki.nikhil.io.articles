@@ -78,8 +78,3 @@ Enter the sieve shell
 
 This creates `/usr/sieve/t/testuser`. Type 'help' for help. Use
 'deactivate' to remove all scripts. Test. Fin.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

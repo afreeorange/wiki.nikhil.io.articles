@@ -27,6 +27,5 @@ specify the cloned MAC:
 
 Then reboot your server.
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

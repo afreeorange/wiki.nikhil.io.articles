@@ -30,7 +30,3 @@ In this case, we want to log out the user `bennifer`
 Now kill the PID 15015
 
 ` kill -9 15015`
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

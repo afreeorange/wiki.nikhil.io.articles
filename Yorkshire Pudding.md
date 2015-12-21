@@ -10,7 +10,3 @@ Same amount of flour, milk, and eggs and a pinch of salt.
 
 Preparation
 -----------
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink")

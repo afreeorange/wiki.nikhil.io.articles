@@ -81,7 +81,3 @@ start with `test.example.com`. Here's a skeleton:
 ` `</VirtualHost>
 
 I do the same for the other virtual host and restart Apache. Done.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

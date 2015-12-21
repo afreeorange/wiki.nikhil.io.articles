@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 Ingredients
 -----------
@@ -61,7 +61,5 @@ fun](https://www.youtube.com/watch?v=qegk-MrQMMg).
 <File:2014-08-10> 15.15.17.jpg|Oh no I *totally* wanted it to look like
 Africa. <File:2014-08-10> 15.23.21.jpg
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink") [Category:
-For the love of Pizza](Category:_For_the_love_of_Pizza "wikilink")
+
+

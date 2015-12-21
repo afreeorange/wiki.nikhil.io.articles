@@ -118,10 +118,6 @@ References etc
 Footnotes
 ---------
 
-<references/>
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Vim](Category:_Vim "wikilink")
-
 [^1]: In iTerm2, you'll have to [change the regular and non-ASCII
     fonts](https://github.com/bling/vim-airline/issues/142) to the same
     patched one.

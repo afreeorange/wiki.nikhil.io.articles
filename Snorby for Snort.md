@@ -168,7 +168,6 @@ You can manually start the worker using these commands:
 If you have Rails installed, the application should automagically start
 the worker threads.
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

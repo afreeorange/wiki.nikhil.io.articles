@@ -240,7 +240,3 @@ Sources
 
 -   [SGE 6 Usage for
     Users (NASA)](http://ceres.larc.nasa.gov/documents/presentations/05-SGE-6-Usage-For-Users.pdf)
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 ### How to
 
@@ -47,6 +47,5 @@ The `LSCOLORS` variable needs 11 letters for colors.
 10. directory writable to others, with sticky bit
 11. directory writable to others, without sticky bit
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

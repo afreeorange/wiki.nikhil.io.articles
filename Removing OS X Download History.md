@@ -9,6 +9,3 @@ Here's how you see the files:
 I have a crontab entry that removes the downloads every night.
 
 ` * 0 * * * sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'`
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: OS X](Category:_OS_X "wikilink")

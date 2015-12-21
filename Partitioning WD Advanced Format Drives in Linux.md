@@ -45,7 +45,6 @@ the partition to 4K boundaries:
 
 `  fdisk -H 224 -S 56 /dev/sdb`
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

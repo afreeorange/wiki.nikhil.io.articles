@@ -32,6 +32,3 @@ Tricks
 
     import site; site.getsitepackages()
     ['/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages']
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Python](Category:_Python "wikilink")

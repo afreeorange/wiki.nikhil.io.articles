@@ -22,6 +22,3 @@ the microwave on high for 30 to 45 seconds. Transfer the rice into a
 large wooden or glass mixing bowl and add the vinegar mixture. fold
 throughly to combine and coat each grain of rice with the mixture. Allow
 to cool to room temperature before using to make sushi or sashimi.
-
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Recipes](Category:_Recipes "wikilink")

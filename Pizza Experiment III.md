@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+
 
 Ingredients
 -----------
@@ -42,7 +42,5 @@ pizza. Good crust though! Crispy out, soft in.
 Image:9288.jpg Image:9289.jpg Image:9290.jpg Image:9291.jpg
 Image:9292.jpg Image:9293.jpg Image:9294.jpg Image:9296.jpg
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Misguided attempts at
-cooking](Category:_Misguided_attempts_at_cooking "wikilink") [Category:
-For the love of Pizza](Category:_For_the_love_of_Pizza "wikilink")
+
+

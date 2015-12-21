@@ -93,5 +93,3 @@ options!
 ` sudo cp new_icon.icns \`  
 `      /Applications/Sublime\ Text\ 2.app/Contents/Resources/Sublime\ Text\ 2.icns`
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
-[Category: Installation Logs](Category:_Installation_Logs "wikilink")

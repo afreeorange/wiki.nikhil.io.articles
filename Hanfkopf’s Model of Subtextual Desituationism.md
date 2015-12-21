@@ -439,4 +439,4 @@ External links
     Know](http://mashable.com/2011/02/07/facebook-privacy-guide/), by
     Stan Schroeder, February 7, 2011
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+

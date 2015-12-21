@@ -54,7 +54,6 @@ Sources
 
 -   <http://www.gen-x-design.com/archives/recompiling-php-5-3-on-snow-leopard-with-freetype-support/>
 
-[Category:Installation Logs](Category:Installation_Logs "wikilink")
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+
+

@@ -15,7 +15,3 @@ The solution is to rebuild the RPM database. In short:
 ` rpm -vv --rebuilddb`
 
 That should do it.
-
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")

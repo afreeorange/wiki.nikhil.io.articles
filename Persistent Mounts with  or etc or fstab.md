@@ -124,6 +124,5 @@ this:
 ` username=nikhil`  
 ` password=OMG_FLUFFY_PUPPIES`
 
-[Category:Nikhil's Notes](Category:Nikhil's_Notes "wikilink")
-[Category:From a past sysadmin
-life](Category:From_a_past_sysadmin_life "wikilink")
+
+

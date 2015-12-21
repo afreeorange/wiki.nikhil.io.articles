@@ -76,4 +76,3 @@
 `   Film mode: Cinema Smooth`  
 `   Black optimizer: Dark Room`
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")

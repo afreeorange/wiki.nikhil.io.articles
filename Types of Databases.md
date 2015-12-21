@@ -16,4 +16,4 @@
 
 :   See [SPARQL](https://docs.marklogic.com/sem:sparql)
 
-[Category: Nikhil's Notes](Category:_Nikhil's_Notes "wikilink")
+
