@@ -1,9 +1,5 @@
-Pre-Flight
-----------
-
 I installed this on a 32-bit CentOS 5.6 system, with MySQL as the output
-backend for snort. So make sure that your MySQL service is up and
-running!
+backend for snort.
 
 Installation
 ------------
