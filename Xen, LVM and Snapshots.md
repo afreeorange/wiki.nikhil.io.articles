@@ -7,7 +7,8 @@ References
 -   [xenBackup](https://github.com/doofdoofsf/xenBackup) - A script to
     automate backups using tar, rsync or rdiff-backup
 
-### \[<http://searchservervirtualization.techtarget.com/tip/Creating-snapshots-in-Xen-with-Linux-commands?ShortReg=1&mboxConv=searchServerVirtualization_RegActivate_Submit>& Archived Article\]
+[Archived Article](http://searchservervirtualization.techtarget.com/tip/Creating-snapshots-in-Xen-with-Linux-commands?ShortReg=1&mboxConv=searchServerVirtualization_RegActivate_Submit)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 A virtual machine snapshot is a great feature, freezing the current
 state of a virtual machine. Unfortunately, open source Xen doesn't offer
@@ -15,7 +16,8 @@ support for snapshots -- but Linux does. Since open source Xen always
 uses Linux as its privileged domain, you can use Linux commands to
 create snapshots.
 
-**Byte-by-byte snapshot**  
+### Byte-by-byte snapshot
+
  One way of making snapshots in Xen is by using Linux `dd` after saving
 the current state of a virtual machine. This would involve the following
 steps:
@@ -38,7 +40,8 @@ a byte-by-byte copy of the virtual machine disk file and that can take
 an incredibly long time. Therefore, this option may not be very
 practical.
 
-**The LVM method**  
+### The LVM method  
+
  In Linux, the Logical Volume Manager (LVM) can also be used for
 creating a snapshot, one that takes significantly less time than the
 previous disk file method. This method implies that your virtual machine

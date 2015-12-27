@@ -1,20 +1,18 @@
-
-
 Ingredients
 -----------
 
--   2 cups King Arthur bread flour
--   1½ cups lukewarm water
--   1 tbsp sugar
--   1 tbsp yeast
--   1 tbsp olive oil
--   1 tsp salt
+*   2 cups King Arthur bread flour
+*   1 1/2 cups lukewarm water
+*   1 tbsp sugar
+*   1 tbsp yeast
+*   1 tbsp olive oil
+*   1 tsp salt
 
 Implements
 ----------
 
--   Cast iron skillet
--   Plastic wrap
+*   Cast iron skillet
+*   Plastic wrap
 
 Dough Prep
 ----------
@@ -49,8 +47,8 @@ Results
 Not bad. Crust not too open. Crunchy out, soft and chewy in. Will try
 this again, except will
 
--   Fold dough over the next time.
--   Heat skillet on high *without* dough. Can pour when temp's reached.
+*   Fold dough over the next time.
+*   Heat skillet on high *without* dough. Can pour when temp's reached.
 
 
 

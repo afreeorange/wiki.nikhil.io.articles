@@ -26,21 +26,22 @@ installation's concered, that's all you should know.
 Pre-Flight
 ----------
 
-    # Create requisite folders
-    mkdir /usr/local/awstats /var/lib/awstats /var/www/html/statistics
+```bash
+# Create requisite folders
+mkdir /usr/local/awstats /var/lib/awstats /var/www/html/statistics
 
-    # Set up AWStats
-    cd && wget -O - http://www.awstats.org/files/awstats-7.4.tar.gz | tar -xvzf -
-    mv ~/awstats-7.4/* /usr/local/awstats/
+# Set up AWStats
+cd && wget -O - http://www.awstats.org/files/awstats-7.4.tar.gz | tar -xvzf -
+mv ~/awstats-7.4/* /usr/local/awstats/
 
-    # Set appropriate permissions. PHP-FPM runs as apache
-    chown -R apache:apache /usr/local/awstats
+# Set appropriate permissions. PHP-FPM runs as apache
+chown -R apache:apache /usr/local/awstats
 
-    # Now run the configuration script
-    perl /usr/local/awstats/tools/awstats_configure.pl
+# Now run the configuration script
+perl /usr/local/awstats/tools/awstats_configure.pl
+```
 
-[Here's the
-transcript](:File:awstats-install-transcript.txt "wikilink"). All I
+[Here's the transcript](:File:awstats-install-transcript.txt "wikilink"). All I
 needed from it was a sample config file for the `example.com` domain.
 
 Set up a Configuration
@@ -98,11 +99,11 @@ execution.
 
 A single script generates static pages:
 
-`   /usr/local/awstats/tools/awstats_buildstaticpages.pl \`  
-`                   -update \`  
-`                   -config=example.com \`  
-`                   -dir=/var/www/html/statistics.example.com/pages \`  
-`                   -awstatsprog=/usr/local/awstats/wwwroot/cgi-bin/awstats.pl`
+    /usr/local/awstats/tools/awstats_buildstaticpages.pl \  
+                    -update \  
+                    -config=example.com \  
+                    -dir=/var/www/html/statistics.example.com/pages \  
+                    -awstatsprog=/usr/local/awstats/wwwroot/cgi-bin/awstats.pl
 
 Try it out and you'll see a bunch of HTML files in
 `/var/www/html/statistics.example.com/pages`

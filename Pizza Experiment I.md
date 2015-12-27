@@ -1,5 +1,4 @@
 
-
 ![Dough, before I let it rise. Could've kneaded it
 further?](Photo Jun 18, 5 35 56 PM.jpg "fig:Dough, before I let it rise. Could've kneaded it further?")
 ![Crust when I used a rolling pin. Sautéed mushrooms, mozzarella,
@@ -11,19 +10,19 @@ seasoning.](2013-06-18 20.34.59.jpg "fig:Crust when I spread dough by hand. Awes
 Ingredients
 -----------
 
--   2 cups King Arthur bread flour
--   1⅓ cup distilled water
--   1 tbsp instant yeast
--   ½ tsp salt
+*  2 cups King Arthur bread flour
+*  1⅓ cup distilled water
+*  1 tbsp instant yeast
+*  ½ tsp salt
 
 Implements
 ----------
 
--   A baking stone
--   Parchment paper
--   PAM cooking oil spray
--   Plastic wrap
--   A pizza peel
+*  A baking stone
+*  Parchment paper
+*  PAM cooking oil spray
+*  Plastic wrap
+*  A pizza peel
 
 Dough Prep
 ----------
@@ -34,10 +33,8 @@ until you have a sticky mass and very little flour on bowl sides.
 Transfer to an oiled bowl, cover tightly with plastic wrap, and let rise
 for an hour.
 
-Once risen, remove wrap, and [fold dough over
-itself](https://www.youtube.com/watch?v=CQHuWDEo3SA) a few times. Cover
-again with wrap. Wait for 30 minutes. Probably a good time to turn on
-the oven.
+Once risen, remove wrap, and [fold dough over itself](https://www.youtube.com/watch?v=CQHuWDEo3SA) a few times. Cover again with wrap. Wait for 30 minutes. Probably a good 
+time to turn on the oven.
 
 Once risen (again), wet your hands slightly and transfer dough to a
 lightly floured surface. Divide into two equal portions (or not if you
@@ -66,6 +63,3 @@ I usually go for a deep brown crust. Once you're happy with how it
 looks, remove from oven, let rest for 2 minutes.
 
 Share and enjoy.
-
-
-

@@ -18,23 +18,21 @@ names. This wasn't working before. Yay.
 
 SSHed into router, created these files:
 
-` /jffs/configs/dnsmasq.conf.add`  
-` /jffs/configs/hosts.dnsmasq`
+    /jffs/configs/dnsmasq.conf.add  
+    /jffs/configs/hosts.dnsmasq
 
 Added this to `dnsmasq.conf.add`:
 
-` addn-hosts=/jffs/configs/hosts.dnsmasq`
+    addn-hosts=/jffs/configs/hosts.dnsmasq
 
 And whatever else to the hosts file. Restarted the service:
 
-` ps | grep dnsmasq`  
-` kill -9 `<pid>  
-` dnsmasq --log-async`
+    ps | grep dnsmasq  
+    kill -9 <pid>  
+    dnsmasq --log-async
 
 Resources
 ---------
 
--   [Quick guide to
-    Dnsmasq](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
--   [Custom Config and Postconf files in
-    ASUSWRT](https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files)
+* [Quick guide to Dnsmasq](http://www.dd-wrt.com/wiki/index.php/DNSMasq_-_DNS_for_your_local_network_-_HOWTO)
+* [Custom Config and Postconf files in ASUSWRT](https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files)

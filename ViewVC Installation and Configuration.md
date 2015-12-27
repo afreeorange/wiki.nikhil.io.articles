@@ -10,8 +10,7 @@ Download and Install
 tarball to a temporary location. Within, you will find `viewvc-install`,
 a shell script which makes installation a breeze.
 
-` sudo ./viewvc-install`  
-` `
+    sudo ./viewvc-install  
 
 I chose the installation directory at `/var/www/html/viewvc`. The
 default is `/usr/local/viewvc-1.1.5`. Adapt to your liking.
@@ -22,31 +21,31 @@ Configuration
 All configuration is done via `/var/www/html/viewvc/viewvc.conf`. I'm
 now going to set up ViewVC to see SVN and CVS repos on the same host.
 
--   I have an SVN repository in `/home/svn/repository` (served over
+*   I have an SVN repository in `/home/svn/repository` (served over
     Apache as `svn.example.com/repository`)
--   The CVS repository is located in `/home/cvs`.
+*   The CVS repository is located in `/home/cvs`.
 
 ### Setting up the both Repositories
 
 These are the only lines different from the original file:
 
-` `**`[general]`**  
-` cvs_roots = cvsroot: /home/cvs`  
-` svn_roots = repository: /home/svn/repository`  
-` root_parents = /home/svn : svn,`  
-`                /home/cvs : cvs`  
-` address = support@example.com`  
-` `  
-` `**`[utilities]`**  
-` svn = /usr/bin/svn`  
-` diff = /usr/bin/diff`  
-` `  
-` `**`[options]`**  
-` authorizer = svnauthz`  
-` use_rcsparse = 1`  
-` `  
-` `**`[authz-svnauthz]`**  
-` authzfile = /home/svn/repository/conf/authz`
+    [general]  
+    cvs_roots = cvsroot: /home/cvs  
+    svn_roots = repository: /home/svn/repository  
+    root_parents = /home/svn : svn,  
+                   /home/cvs : cvs  
+    address = support@example.com  
+      
+    [utilities]  
+    svn = /usr/bin/svn  
+    diff = /usr/bin/diff  
+      
+    [options]  
+    authorizer = svnauthz  
+    use_rcsparse = 1  
+      
+    [authz-svnauthz]  
+    authzfile = /home/svn/repository/conf/authz
 
 The configuration file is pretty nicely documented. The configuration
 above respects the `authz` file for an SVN repo. Any user not authorized
@@ -57,22 +56,22 @@ to 'see' a project will not be able to do so, even via the web. Yay!
 In `/etc/httpd/conf.d`, create a config directive called `viewvc.conf`
 and add the following:
 
-` ScriptAlias /viewvc "/var/www/html/viewvc/bin/cgi/viewvc.cgi"`  
-` ScriptAlias /query "/var/www/html/viewvc/bin/cgi/query.cgi"`
+    ScriptAlias /viewvc "/var/www/html/viewvc/bin/cgi/viewvc.cgi"  
+    ScriptAlias /query "/var/www/html/viewvc/bin/cgi/query.cgi"
 
 You will also want to prevent any external access. We will use LDAP and
 SSL to secure access via Apache. The directives are similar to an SVN
 setup.
 
-` <Location /viewvc>`  
-`   # Integrate with LDAP server`  
-`   AuthType Basic`  
-`   AuthBasicProvider ldap`  
-`   AuthName "CBCB SVN Server"`  
-`   AuthzLDAPAuthoritative off`  
-`   AuthLDAPURL "`[`ldap://directory.example.com/cn=users,dc=directory,dc=example,dc=com?uid?sub`](ldap://directory.example.com/cn=users,dc=directory,dc=example,dc=com?uid?sub)`?(objectClass=*)"`  
-`   Require valid-user`  
-` `</Location>
+    <Location /viewvc>  
+        # Integrate with LDAP server  
+        AuthType Basic  
+        AuthBasicProvider ldap  
+        AuthName "CBCB SVN Server"  
+        AuthzLDAPAuthoritative off  
+        AuthLDAPURL "(ldap://directory.example.com/cn=users,dc=directory,dc=example,dc=com?uid?sub)?(objectClass=*)"  
+        Require valid-user  
+    </Location>
 
 Other Niceties
 --------------
@@ -84,19 +83,18 @@ of revisions and branches for a given project. You can find it [at
 EPEL](http://fedoraproject.org/wiki/EPEL/FAQ#howtouse). Installation
 goes:
 
-` yum install cvsgraph --enablerepo=epel`  
-` `
+    yum install cvsgraph --enablerepo=epel  
 
 The binary is `/usr/bin/cvsgraph`. Configuration is at
 `/etc/cvsgraph.conf`. To configure ViewVC with it, append the following:
 
-` Under `**`[utilities]`**  
-`   cvsgraph = /usr/bin/cvsgraph`  
-` `  
-` Under `**`[options]`**  
-`   use_cvsgraph = 1`  
-`   cvsgraph_conf = /etc/cvsgraph.conf`  
-` `
+    Under [utilities]  
+      cvsgraph = /usr/bin/cvsgraph  
+      
+    Under [options]  
+      use_cvsgraph = 1  
+      cvsgraph_conf = /etc/cvsgraph.conf  
+    
 
 I've included the config file since I enabled anti-aliasing.
 
@@ -107,9 +105,8 @@ need the `python-setuptools` RPM. This installs (among other things) the
 `easy_install` command which can be used to install Pygments and other
 python packages.
 
-` yum install python-setuptools`  
-` easy_install pygments`  
-` `
+    yum install python-setuptools  
+    easy_install pygments
 
 And you're set! Your code displays should be spiffy now.
 
@@ -118,15 +115,15 @@ And you're set! Your code displays should be spiffy now.
 I wanted to make `.module` for Drupal highlight as PHP files. For this,
 I enabled/added the following to `viewvc.conf`:
 
-` mime_types_files = mimetypes.conf,`  
-`                  /etc/mime.types`
+    mime_types_files = mimetypes.conf,  
+                     /etc/mime.types
 
 This ensures that ViewVC is able to pass on to Pygments (the
 highlighter) correct, comprehensive and custom MIME types. Now to enable
 my custom config for `.module` files, I just add this to
 `mimetypes.conf` (in the same folder):
 
-` application/x-httpd-php         php module`
+    application/x-httpd-php         php module
 
 Errors
 ------
@@ -135,8 +132,7 @@ Errors
 
 You might see this for a CVS project:
 
-` Error: Rlog output ended early. Expected RCS file...`  
-` `
+    Error: Rlog output ended early. Expected RCS file...
 
 To remedy this, you need to:
 
@@ -147,7 +143,7 @@ To remedy this, you need to:
 
 For the latter, edit `httpd.conf` and find the following line:
 
-` IndexIgnore .??* *~ *# HEADER* README* RCS CVS *,v *,t`
+    IndexIgnore .??* *~ *# HEADER* README* RCS CVS *,v *,t
 
 Try removing the `CVS` and `*,v` entries.
 
@@ -156,10 +152,9 @@ Try removing the `CVS` and `*,v` entries.
 Just use the "experimental" `rcsparse` Python module. [From this mailing
 list](http://markmail.org/message/l6tujq2zvh4z5wzt#query:%22Rlog%20output%20ended%20early.%20Expected%20RCS%20file%22+page:1+mid:5zkeunyusumiu3rj+state:results):
 
-` use_rcsparse tells ViewVC to use an "experimental" Python-based RCS file`  
-` parser library instead of parsing the output of the RCS toolchain`  
-` binaries.  It mostly works, but doesn't support some things (like`  
-` keyword substitution).`  
-` `
+> `use_rcsparse` tells ViewVC to use an "experimental" Python-based RCS file  
+> parser library instead of parsing the output of the RCS toolchain  
+> binaries.  It mostly works, but doesn't support some things (like  
+> keyword substitution).  
 
-Find `use_rcsparse` under **\[options\]** and set it to `1`.
+Find `use_rcsparse` under **[options]** and set it to `1`.

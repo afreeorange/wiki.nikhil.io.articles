@@ -10,7 +10,7 @@ Creating a set
 
 I'll create a set called "country\_cn" and add CIDR blocks to it.
 
-` ipset --create country_cn `*`nethash`*
+    ipset --create country_cn nethash
 
 `nethash` is the *type* of set appropriate for CIDR-formatted IP blocks.
 If you only had IP addresses, you'd use `iphash`. There are many others.
@@ -18,34 +18,35 @@ If you only had IP addresses, you'd use `iphash`. There are many others.
 Adding IPs to the set
 ---------------------
 
-    #/bin/bash
-    for IP in $(curl http://ipdeny.com/ipblocks/data/countries/cn.zone); do
-      ipset --add country_cn $IP
-    done
+```bash
+#/bin/bash
+for IP in $(curl http://ipdeny.com/ipblocks/data/countries/cn.zone); do
+  ipset --add country_cn $IP
+done
+```
 
 Using the set
 -------------
 
-` iptables -A INPUT -m set --match-set country_cn src -j DROP `
+    iptables -A INPUT -m set --match-set country_cn src -j DROP 
 
 Editing the set
 ---------------
 
-` # Listing IPs`  
-` ipset --list country_cn`  
-` `  
-` # Removing IPs`  
-` ipset --del country_cn 1.1.0.0/16`  
-` `  
-` # Flushing set`  
-` ipset --flush country_cn`  
-` `  
-` # Deleting set`  
-` ipset --destroy country_cn`
+    # Listing IPs  
+    ipset --list country_cn  
+      
+    # Removing IPs  
+    ipset --del country_cn 1.1.0.0/16  
+      
+    # Flushing set  
+    ipset --flush country_cn  
+      
+    # Deleting set  
+    ipset --destroy country_cn
 
 Sources
 -------
 
--   [Advanced Firewall Configurations with
-    ipset](http://www.linuxjournal.com/content/advanced-firewall-configurations-ipset?page=0,2)
+-   [Advanced Firewall Configurations with `ipset`](http://www.linuxjournal.com/content/advanced-firewall-configurations-ipset?page=0,2)
 -   [List of Country IP blocks](http://ipdeny.com/)

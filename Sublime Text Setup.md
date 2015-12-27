@@ -1,16 +1,14 @@
 Set up Dropbox to sync settings
 -------------------------------
 
-`   mkdir "~/Dropbox/Settings"`  
-`   mv ~/Library/Application\ Support/Sublime\ Text\ 2 ~/Dropbox/Settings/`  
-`   ln -s ~/Dropbox/Settings/Sublime\ Text\ 2 ~/Library/Application\ Support/`
+    mkdir "~/Dropbox/Settings"  
+    mv ~/Library/Application\ Support/Sublime\ Text\ 2 ~/Dropbox/Settings/  
+    ln -s ~/Dropbox/Settings/Sublime\ Text\ 2 ~/Library/Application\ Support/
 
-[Can be done on
-Windows](http://misfoc.us/post/18018400006/syncing-sublime-text-2-settings-via-dropbox)
-too. Once set up, backup and symlink on other computers
+[Can be done on Windows](http://misfoc.us/post/18018400006/syncing-sublime-text-2-settings-via-dropbox) too. Once set up, backup and symlink on other computers
 
-`   mv ~/Library/Application\ Support/Sublime\ Text\ 2 ~/Library/Application\ Support/Sublime\ Text\ 2.backup`  
-`   ln -s ~/Dropbox/Settings/Sublime\ Text\ 2 ~/Library/Application\ Support/`
+    mv ~/Library/Application\ Support/Sublime\ Text\ 2 ~/Library/Application\ Support/Sublime\ Text\ 2.backup  
+    ln -s ~/Dropbox/Settings/Sublime\ Text\ 2 ~/Library/Application\ Support/
 
 Package Control
 ---------------
@@ -23,25 +21,24 @@ Install Plugins
 
 Some basic ones:
 
--   [AllAutocomplete](https://github.com/alienhard/SublimeAllAutocomplete)
--   [BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
--   [ColorHighlighter](https://github.com/Monnoroch/ColorHighlighter)
--   [SidebarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
--   [git](https://github.com/kemayo/sublime-text-2-git/wiki)
--   [GitGutter](https://github.com/jisaacks/GitGutter)
--   [SplitScreen](https://github.com/spadgos/sublime-SplitScreen)
--   [Alignment](http://wbond.net/sublime_packages/alignment)
+*   [AllAutocomplete](https://github.com/alienhard/SublimeAllAutocomplete)
+*   [BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
+*   [ColorHighlighter](https://github.com/Monnoroch/ColorHighlighter)
+*   [SidebarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+*   [git](https://github.com/kemayo/sublime-text-2-git/wiki)
+*   [GitGutter](https://github.com/jisaacks/GitGutter)
+*   [SplitScreen](https://github.com/spadgos/sublime-SplitScreen)
+*   [Alignment](http://wbond.net/sublime_packages/alignment)
 
 Install Themes, Colors, and Fonts
 ---------------------------------
 
 Quite a few to pick from. A few favorites:
 
--   (Color) [Base16](https://github.com/chriskempson/base16)
--   (Theme) [FlatLand](https://github.com/thinkpixellab/flatland)
--   (Theme) [Soda](https://github.com/buymeasoda/soda-theme/)
--   (Font)
-    [Inconsolata](http://levien.com/type/myfonts/inconsolata.html)
+*   (Color) [Base16](https://github.com/chriskempson/base16)
+*   (Theme) [FlatLand](https://github.com/thinkpixellab/flatland)
+*   (Theme) [Soda](https://github.com/buymeasoda/soda-theme/)
+*   (Font) [Inconsolata](http://levien.com/type/myfonts/inconsolata.html)
 
 Change User Preferences
 -----------------------
@@ -81,7 +78,7 @@ Change User Preferences
 Create a command-line shortcut (OS X)
 -------------------------------------
 
-` sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/sublime`
+    sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/sublime
 
 Change the Icon
 ---------------
@@ -90,6 +87,6 @@ Change the Icon
 few](http://dribbble.com/lucifr/buckets/32936-Sublime-Text-2-Replacement-Icons)
 options!
 
-` sudo cp new_icon.icns \`  
-`      /Applications/Sublime\ Text\ 2.app/Contents/Resources/Sublime\ Text\ 2.icns`
+    sudo cp new_icon.icns \  
+         /Applications/Sublime\ Text\ 2.app/Contents/Resources/Sublime\ Text\ 2.icns
 

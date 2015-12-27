@@ -1,15 +1,3 @@
-[TOC]
-
-```clojure
-(clojure/ns foo)
-
-(defn MyClass-mymethod [this m]
-  (str "Your arg was: " m))
-
-(defn MyClass-finalize [this]
-  (println "Finalizing " this))
-```
-
 ## Resources
 
 Used `python-markdown` as the converter.
@@ -21,14 +9,6 @@ Used `python-markdown` as the converter.
 * [A discussion](http://lepture.com/en/2014/markdown-parsers-in-python) of
     popular Python Markdown parsers.
 * [Basscss](http://www.basscss.com/docs/base-reset/) looks interesting
-
-<img src="/images/sample.jpg" width="15%">
-
-|  this  |    is    |       a        |     table      |
-| ------ | -------- | -------------- | -------------- |
-| I      | can      | add something  | to this table  |
-| and it | is quite | magical how it | adjusts itself |
-|        |          |                |                |
 
 ## Exporting MediaWiki Content
 
@@ -168,7 +148,7 @@ for file in glob('./pages/*.md'):
     f_ = f_.replace('`\\', '`')
     # f_ = re.sub(r'^`(( )+)?(.*)`', r'    \3', f_, flags=re.MULTILINE)
     f_ = f_.replace('` `', '')
-    f_ = f_.replace('`**`', '')
+    f_ = f_.replace('', '')
     f_ = f_.replace('`**', '')
     f_ = f_.replace('**`', '')
     f_ = re.sub(r'\s{4}(`\*\*`)', r'    ', f_, flags=re.MULTILINE)

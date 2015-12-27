@@ -1,18 +1,20 @@
 List of Fields in Table/View
 ----------------------------
 
-    select * from all_tab_columns where table_name = 'TABLE' order by column_id
+```sql
+select * from all_tab_columns where table_name = 'TABLE' order by column_id
+```
 
-[Limiting Resultset](http://www.oracle.com/technetwork/issue-archive/2006/06-sep/o56asktom-086197.html)
--------------------------------------------------------------------------------------------------------
+Limiting Resultset
+------------------
 
 Need to use the `ROWNUM` pseudo-column.
 
-    select * from (
-        select * from tb_sample
-    ) where ROWNUM <= 100
+```sql
+select * from (
+    select * from tb_sample
+) where ROWNUM <= 100
+```
 
-See the article for LIMIT and OFFSET equivalent.
-
-
-[Category: Oracle](Category:_Oracle "wikilink")
+See [this](http://www.oracle.com/technetwork/issue-archive/2006/06-sep/o56asktom-086197.html) 
+for `LIMIT` and `OFFSET` equivalent.

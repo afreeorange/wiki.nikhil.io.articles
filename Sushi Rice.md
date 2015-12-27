@@ -1,10 +1,10 @@
 ### Ingredients
 
--   2 cups sushi, or short grain rice
--   2 cups water, plus extra for rnsing rice
--   2 tbsp rice vinegar
--   1 tsp sugar
--   1 tsp kosher salt
+*   2 cups sushi, or short grain rice
+*   2 cups water, plus extra for rnsing rice
+*   2 tbsp rice vinegar
+*   1 tsp sugar
+*   1 tsp kosher salt
 
 ### Preparation
 

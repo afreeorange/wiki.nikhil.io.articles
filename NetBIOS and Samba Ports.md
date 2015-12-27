@@ -1,19 +1,19 @@
-| Service Name                 | Port | Protocol              |
+|         Service Name         | Port |        Protocol       |
 |------------------------------|------|-----------------------|
-| Name Resolution Service      | 137  | UDP                   |
-| Datagram Services (browsing) | 138  | UDP                   |
-| Session Service              | 139  | TCP                   |
-| SMB                          | 445  | TCP Input, UDP Output |
+| Name Resolution Service      |  137 | UDP                   |
+| Datagram Services (browsing) |  138 | UDP                   |
+| Session Service              |  139 | TCP                   |
+| SMB                          |  445 | TCP Input, UDP Output |
 
 Observations
 ------------
 
 These are the contents of `/etc/services`:
 
-`netbios-ns 137/udp   # NetBIOS Name Service`  
-`netbios-dgm 138/udp  # NetBIOS Datagram Service`  
-`netbios-ssn 139/tcp  # NetBIOS Session Service`  
-`microsoft-ds 445/tcp # Microsoft Directory Service`
+    netbios-ns 137/udp   # NetBIOS Name Service  
+    netbios-dgm 138/udp  # NetBIOS Datagram Service  
+    netbios-ssn 139/tcp  # NetBIOS Session Service  
+    microsoft-ds 445/tcp # Microsoft Directory Service
 
 These are the ports that the Samba server listens on. A few things here:
 

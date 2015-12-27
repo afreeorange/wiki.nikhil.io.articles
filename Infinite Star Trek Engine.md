@@ -1,4 +1,4 @@
-Tested on OS X.
+For OS X.
 
 ```bash
 brew install sox
