@@ -63,9 +63,5 @@ Then clone with
 Footnotes
 ---------
 
-
-
-
-
 [^1]: You can simply use `~/.ssh/id_rsa.pub` in your home folder.
     Generate with `ssh-keygen -t rsa`.

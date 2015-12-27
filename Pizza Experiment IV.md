@@ -1,11 +1,9 @@
+Same recipe and (almost) same prep as [Pizza Experiment III](Pizza Experiment III). 
+Except this time, I
 
-
-Same recipe and (almost) same prep as [Pizza Experiment
-III](Pizza_Experiment_III "wikilink"). Except this time, I
-
--   Tried not to burn the dough
--   Refrigerated dough overnight
--   Let dough get to room temp for nearly 2 hours.
+* Tried not to burn the dough
+* Refrigerated dough overnight
+* Let dough get to room temp for nearly 2 hours.
 
 Prep
 ----
@@ -28,6 +26,3 @@ Still decent crust, but not as open as I'd have liked it to be.
 
 <File:9299.jpg> <File:9300.jpg%7CRan> out of shredded, used string
 <File:9301.jpg> <File:9302.jpg> <File:9303.jpg> <File:9304.jpg>
-
-
-

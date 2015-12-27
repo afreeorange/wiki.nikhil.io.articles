@@ -15,9 +15,11 @@ guide](http://shisaa.jp/postset/mailserver-3.html).
 Installation
 ------------
 
-`   yum install amavisd-new`  
-`   chkconfig amavisd on`  
-`   service amavisd start`
+```bash
+yum install amavisd-new  
+chkconfig amavisd on  
+service amavisd start
+```
 
 Setting up the Transport
 ------------------------
@@ -35,47 +37,51 @@ We have the Amavis daemon listening on 127.0.0.1:10024. Let's tell
 Postfix to filter its messages through that TCP/IP socket. In
 `/etc/postfix/main.cf`, add the following:
 
-`   content_filter = amavisd:[127.0.0.1]:10024`
+    content_filter = amavisd:[127.0.0.1]:10024
 
 This is of the form *transport:destination*. The first part should
 correspond to a definition in `/etc/postfix/master.cf`. Let's add it:
 
-`   amavisd unix    -       -       n       -       2       smtp`  
-`       -o smtp_data_done_timeout=1200`  
-`       -o smtp_send_xforward_command=yes`  
-`       -o disable_dns_lookups=yes`  
-`       -o max_use=20`
+```
+amavisd unix    -       -       n       -       2       smtp  
+    -o smtp_data_done_timeout=1200  
+    -o smtp_send_xforward_command=yes  
+    -o disable_dns_lookups=yes  
+    -o max_use=20
+```
 
 ### From Amavis back to Postfix
 
 `/etc/amavisd.conf` contains two options, `notify_method` and
 `forward_method`. These are the destinations where Amavis will send
 notifications and/or messages after processing. The default is an SMTP
-host, listening at 127.0.0.1:10025. We can ask Postfix to listen at that
+host, listening at `127.0.0.1:10025`. We can ask Postfix to listen at that
 port, thereby letting it get back the messages it sent to Amavis.
 
 This is again the form *transport:destination*, and must be defined in
 `/etc/postfix/master.cf`.
 
-`   127.0.0.1:10025 inet n  -       n       -       -       smtpd`  
-`     -o content_filter=`  
-`     -o local_recipient_maps=`  
-`     -o relay_recipient_maps=`  
-`     -o smtpd_restriction_classes=`  
-`     -o smtpd_delay_reject=no`  
-`     -o smtpd_client_restrictions=permit_mynetworks,reject`  
-`     -o smtpd_helo_restrictions=`  
-`     -o smtpd_sender_restrictions=`  
-`     -o smtpd_recipient_restrictions=permit_mynetworks,reject`  
-`     -o smtpd_data_restrictions=reject_unauth_pipelining`  
-`     -o smtpd_end_of_data_restrictions=`  
-`     -o mynetworks=127.0.0.0/8`  
-`     -o smtpd_error_sleep_time=0`  
-`     -o smtpd_soft_error_limit=1001`  
-`     -o smtpd_hard_error_limit=1000`  
-`     -o smtpd_client_connection_count_limit=0`  
-`     -o smtpd_client_connection_rate_limit=0`  
-`     -o receive_override_options=no_header_body_checks,no_unknown_recipient_checks`
+```
+127.0.0.1:10025 inet n  -       n       -       -       smtpd  
+  -o content_filter=  
+  -o local_recipient_maps=  
+  -o relay_recipient_maps=  
+  -o smtpd_restriction_classes=  
+  -o smtpd_delay_reject=no  
+  -o smtpd_client_restrictions=permit_mynetworks,reject  
+  -o smtpd_helo_restrictions=  
+  -o smtpd_sender_restrictions=  
+  -o smtpd_recipient_restrictions=permit_mynetworks,reject  
+  -o smtpd_data_restrictions=reject_unauth_pipelining  
+  -o smtpd_end_of_data_restrictions=  
+  -o mynetworks=127.0.0.0/8  
+  -o smtpd_error_sleep_time=0  
+  -o smtpd_soft_error_limit=1001  
+  -o smtpd_hard_error_limit=1000  
+  -o smtpd_client_connection_count_limit=0  
+  -o smtpd_client_connection_rate_limit=0  
+  -o receive_override_options=no_header_body_checks,no_unknown_recipient_checks
+```
 
 Since the usual SMTP server checks were already applied by Postfix, we
 set up an innocent/dumb/minimal SMTP daemon.
@@ -85,28 +91,28 @@ Setting up Amavis
 
 Set the domain and hostnames
 
-`   $mydomain = 'example.com';`  
-`   $myhostname = 'host.example.com';`
+    $mydomain = 'example.com';  
+    $myhostname = 'host.example.com';
 
 Set the home directory
 
-`   $MYHOME = '/var/amavis';`
+    $MYHOME = '/var/amavis';
 
 Tell Amavis where to look for SpamAssassin data
 
-`   $helpers_home = '$MYHOME/db'`
+    $helpers_home = '$MYHOME/db'
 
 Uncomment the notify and forward methods
 
-`   $notify_method  = 'smtp:[127.0.0.1]:10025';`  
-`   $forward_method = 'smtp:[127.0.0.1]:10025';`
+    $notify_method  = 'smtp:[127.0.0.1]:10025';  
+    $forward_method = 'smtp:[127.0.0.1]:10025';
 
 Uncomment these lines from `/etc/amavisd.conf`
 
-`   ['ClamAV-clamd',`  
-`     \&ask_daemon, ["CONTSCAN {}\n", "/var/run/clamav/clamd.sock"],`  
-`     qr/\bOK$/m, qr/\bFOUND$/m,`  
-`     qr/^.*?: (?!Infected Archive)(.*) FOUND$/m ]`
+    ['ClamAV-clamd',  
+      \&ask_daemon, ["CONTSCAN {}\n", "/var/run/clamav/clamd.sock"],  
+      qr/\bOK$/m, qr/\bFOUND$/m,  
+      qr/^.*?: (?!Infected Archive)(.*) FOUND$/m ]
 
 Restart Postfix and Amavis. Profit.
 
@@ -133,12 +139,6 @@ Errors
 Make sure that ClamAV is running, and that you've uncommented its
 definition in `/etc/amavisd.conf`
 
-Footnotes
----------
-
-[^1]: A lot of guides online talk about "injection" to Amavisd-new and
-    "reinjection" back to Postfix.
-
 References
 ----------
 
@@ -147,3 +147,9 @@ References
 -   [Great overview and examples of content filtering with
     Postfix](http://www.postfix.org/FILTER_README.html)
 -   [An Amavis frontend](http://myamavis.kapott.org/)
+
+Footnotes
+---------
+
+[^1]: A lot of guides online talk about "injection" to Amavisd-new and
+    "reinjection" back to Postfix.

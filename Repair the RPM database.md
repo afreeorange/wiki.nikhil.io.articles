@@ -5,13 +5,13 @@ well.
 
 The solution is to rebuild the RPM database. In short:
 
-` # Backups!`  
-` tar -czvf /tmp/rpm.tgz /var/lib/rpm`  
-` `  
-` # Remove the database locks`  
-` rm -f /var/lib/rpm/__db*`  
-` `  
-` # Rebuild!`  
-` rpm -vv --rebuilddb`
+    # Backups!  
+    tar -czvf /tmp/rpm.tgz /var/lib/rpm  
+      
+    # Remove the database locks  
+    rm -f /var/lib/rpm/__db*  
+      
+    # Rebuild!  
+    rpm -vv --rebuilddb
 
 That should do it.

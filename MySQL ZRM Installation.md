@@ -5,8 +5,8 @@ Generated random passwords for backup user with this small script:
 
     #!/bin/bash
     for i in $(seq 20); do
-      password=$(tr -dc A-Za-z0-9_ < /dev/urandom | head -c 20)
-      echo -e "GRANT LOCK TABLES, SELECT, RELOAD, SUPER ON *.* TO 'backupuser'@'backup.example.com' IDENTIFIED BY '$password';"
+        password=$(tr -dc A-Za-z0-9_ < /dev/urandom | head -c 20)
+        echo -e "GRANT LOCK TABLES, SELECT, RELOAD, SUPER ON *.* TO 'backupuser'@'backup.example.com' IDENTIFIED BY '$password';"
     done
 
 CentOS/RHEL
@@ -16,15 +16,15 @@ CentOS/RHEL
 
 The MySQL user's homedir is `/var/lib/mysql`. This is nice.
 
-      cd /var/lib/mysql
-      mkdir .ssh
-      chmod 700 .ssh
-      chown mysql:mysql .ssh
-      cd .ssh
-      touch authorized_keys
-      chmod 600 authorized_keys
-      chown mysql:mysql authorized_keys
-      echo "ssh-rsa {public key here} root@backup.example.com" >> authorized_keys
+    cd /var/lib/mysql
+    mkdir .ssh
+    chmod 700 .ssh
+    chown mysql:mysql .ssh
+    cd .ssh
+    touch authorized_keys
+    chmod 600 authorized_keys
+    chown mysql:mysql authorized_keys
+    echo "ssh-rsa {public key here} root@backup.example.com" >> authorized_keys
 
 1.  Tested connection by issuing `ssh mysql@client.example.com` on
     backup server.
@@ -64,24 +64,22 @@ OS X Server
 ### On Client
 
 1.  Created a *local* account called `mysqlbackupuser` in System
-    Preferences &gt; Accounts with password.
+    Preferences -> Accounts with password.
 2.  Added user to System Preferences &gt; Sharing &gt; Remote Login
 3.  SSH-ed in as user, then
 
-<!-- -->
+        cd ~
+        mkdir .ssh
+        chmod 700 .ssh
+        chown mysql:mysql .ssh
+        cd .ssh
+        touch authorized_keys
+        chmod 600 authorized_keys
+        chown mysql:mysql authorized_keys
+        echo "ssh-rsa {public key here} root@backup.example.com" >> authorized_keys
 
-      cd ~
-      mkdir .ssh
-      chmod 700 .ssh
-      chown mysql:mysql .ssh
-      cd .ssh
-      touch authorized_keys
-      chmod 600 authorized_keys
-      chown mysql:mysql authorized_keys
-      echo "ssh-rsa {public key here} root@backup.example.com" >> authorized_keys
-
-1.  Tested connection from backup server
-2.  Logged on to MySQL instance to add `backupuser` GRANT statement.
+4.  Tested connection from backup server
+5.  Logged on to MySQL instance to add `backupuser` GRANT statement.
 
 ### On backup server
 
@@ -99,4 +97,3 @@ compile-time. Strange, considering that the previous version (v5.0.77)
 had support for profiling. The upshot is that you can't select
 individual databases to be backed up if you're running 5.0.95. The
 Webtatic and Remi repos have MySQL 5.5+ if you're desperate.
-

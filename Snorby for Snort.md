@@ -67,36 +67,35 @@ Installation Log
 
 ### Preparing Apache
 
-` `**`#` `Start` `the` `extremely` `friendly` `Passenger` `Apache`
-`Module` `Installer`**  
-` passenger-install-apache2-module`
+    # Start the extremely friendly Passenger Apache Module Installer
+    passenger-install-apache2-module
 
 Now add this to `/etc/httpd/conf.d/passenger.conf`:
 
-` LoadModule passenger_module /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7/ext/apache2/mod_passenger.so`  
-` PassengerRoot /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7`  
-` PassengerRuby /usr/local/bin/ruby`
+    LoadModule passenger_module /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7/ext/apache2/mod_passenger.so  
+    PassengerRoot /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7  
+    PassengerRuby /usr/local/bin/ruby
 
 Now add this to `/opt/snorby/public/.htaccess`:
 
-`   RailsBaseURI /snorby`  
-`   PassengerAppRoot /opt/snorby`
+    RailsBaseURI /snorby  
+    PassengerAppRoot /opt/snorby
 
 ### Preparing MySQL
 
 Edit `/opt/snorby/config/database.yml` to match your MySQL connection
 params.
 
--   **Maintaining spacing is bloody important** and will save you a lot
+*   **Maintaining spacing is bloody important** and will save you a lot
     of grief.
--   **Use the `root` account** to your MySQL Instance for the
+*   **Use the `root` account** to your MySQL Instance for the
     *initial* setup.
 
 ### Initialize Snorby
 
 Go to `/opt/snorby` and set up the databases:
 
-` rake snorby:setup RAILS_ENV=production`
+    rake snorby:setup RAILS_ENV=production
 
 ### Reconfiguring MySQL
 
@@ -109,65 +108,63 @@ Errors
 
 ### EZPrint error
 
-` "`[`http://github.com/mephux/ezprint.git`](http://github.com/mephux/ezprint.git)` (at rails3) is not checked out. `  
-``  Please run `bundle install` (Bundler::GitError)" ``
+    "http://github.com/mephux/ezprint.git (at rails3) is not checked out.   
+     Please run bundle install (Bundler::GitError)" 
 
 This [has been documented](https://github.com/Snorby/snorby/issues/6).
 Go to the Snorby root and do this:
 
-` cd /opt/snorby`  
-` bundle pack`  
-` bundle install --path vender/cache`
+    cd /opt/snorby  
+    bundle pack  
+    bundle install --path vender/cache
 
 Take note that it's vend**e**r and not vend**o**r. I'm guessing this was
 a developer typo.
 
-### undefined method \`\[\]' for nil:NilClass
+### undefined method [] for nil:NilClass
 
-` [root@example snorby]# rake snorby:setup RAILS_ENV=production`  
-` (in /opt/snorby)`  
-` rake aborted!`  
-``  undefined method `[]' for nil:NilClass ``
+    [root@example snorby]# rake snorby:setup RAILS_ENV=production  
+    (in /opt/snorby)  
+    rake aborted!  
+     undefined method []' for nil:NilClass 
 
 This went away after I actually indented `config/database.yml` properly.
 
 ### Worker doesn't start via Web Interface
 
--   Make sure you have Rails installed (`gem install rails`)
--   Make sure that `readline` compiled and installed with Ruby
-    -   I had errors like
+*   Make sure you have Rails installed (`gem install rails`)
+*   Make sure that `readline` compiled and installed with Ruby
+    *   I had errors like
         `` `require': no such file to load -- readline `` when trying to
         start the Rails console
 
-` # Install the correct yum package`  
-` yum -y install readline-devel`  
-` `  
-` # Download, extract Ruby and head into the readline folder`  
-` wget `[`ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.gz`](ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.gz)  
-` tar -xvzf ruby-1.9.2-p0.tar.gz `  
-` cd ruby-1.9.2-p0/ext/readline`  
-` `  
-` # Now compile and install it`  
-` ruby extconf.rb`  
-` make`  
-` make install`
+```bash
+# Install the correct yum package  
+yum -y install readline-devel  
+  
+# Download, extract Ruby and head into the readline folder  
+wget ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
+tar -xvzf ruby-1.9.2-p0.tar.gz   
+cd ruby-1.9.2-p0/ext/readline  
+  
+# Now compile and install it  
+ruby extconf.rb  
+make  
+make install
+```
 
 When you go to `/opt/snorby` and pull up the Rails console, you
 shouldn't have any errors:
 
-` [root@example snorby]# rails c`  
-` Loading development environment (Rails 3.0.5)`  
-` irb(main):001:0>`
+    [root@example snorby]# rails c  
+    Loading development environment (Rails 3.0.5)  
+    irb(main):001:0>
 
 You can manually start the worker using these commands:
 
-` Snorby::Worker.stop      # Stop The Snorby Worker`  
-` Snorby::Worker.start     # Start The Snorby Worker`  
-` Snorby::Worker.restart   # Restart The Snorby Worker`
+    Snorby::Worker.stop      # Stop The Snorby Worker  
+    Snorby::Worker.start     # Start The Snorby Worker  
+    Snorby::Worker.restart   # Restart The Snorby Worker
 
 If you have Rails installed, the application should automagically start
 the worker threads.
-
-
-
-

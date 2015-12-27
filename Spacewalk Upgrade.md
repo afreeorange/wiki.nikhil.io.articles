@@ -33,15 +33,14 @@ Use this script
 
 ### Backing up the PostgreSQL instance
 
-` pg_dump -U spaceuser -d spaceschema --password | bzip2 > spaceschema.backup.bz2`
+    pg_dump -U spaceuser -d spaceschema --password | bzip2 > spaceschema.backup.bz2
 
 Set up the new Spacewalk Repository
 -----------------------------------
 
-` rpm -Uvh `[`http://spacewalk.redhat.com/yum/1.5/RHEL/5/x86_64/spacewalk-repo-1.5-1.el5.noarch.rpm`](http://spacewalk.redhat.com/yum/1.5/RHEL/5/x86_64/spacewalk-repo-1.5-1.el5.noarch.rpm)
+    rpm -Uvh http://spacewalk.redhat.com/yum/1.5/RHEL/5/x86_64/spacewalk-repo-1.5-1.el5.noarch.rpm
 
-This will modify /etc/yum.repos.d/spacewalk.repo to point at version
-1.5.
+This will modify /etc/yum.repos.d/spacewalk.repo to point at version 1.5.
 
 Upgrade
 -------
@@ -78,4 +77,4 @@ Cleaning up
 Restart Spacewalk
 -----------------
 
-` /usr/sbin/spacewalk-service start`
+    /usr/sbin/spacewalk-service start

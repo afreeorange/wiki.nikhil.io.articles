@@ -124,7 +124,7 @@ in the script asking for a RHN password.
 
 ` /opt/spacewalk-errata/centos-errata.py --config=/opt/spacewalk-errata/centos-errata.cfg \`  
 ` --password="XXXXXXXXX" \`  
-` `**`--format=mail-archive.com`**
+` --format=mail-archive.com`**
 
 You can also write a small script that `gunzip`'s archive files from
 [the actual mailing

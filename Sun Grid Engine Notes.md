@@ -1,90 +1,81 @@
 Nodes
-=====
+-----
 
-All nodes (and info)
---------------------
+#### All nodes (and info)
 
-` qhost`  
-` `  
-` # Get a list of all compute nodes`  
-` qhost | grep compute | awk '{print $1}'`
+    qhost  
+      
+    # Get a list of all compute nodes  
+    qhost | grep compute | awk '{print $1}'
 
 Queues
-======
+------
 
-Viewing all Queues
-------------------
+### Viewing all Queues
 
-` qstat -f`
+    qstat -f
 
-Enabling, Disabling, Clearing
------------------------------
+### Enabling, Disabling, Clearing
 
-### Single Queue
+#### Single Queue
 
-` # Enabling a queue`  
-` qmod -e all.q@compute-1-3.local`  
-` `  
-` # Disabling a queue`  
-` qmod -d all.q@compute-1-3.local`  
-` `  
-` # Clearing error state`  
-` qmod -c all.q@compute-1-3.local`
+    # Enabling a queue  
+    qmod -e all.q@compute-1-3.local  
+      
+    # Disabling a queue  
+    qmod -d all.q@compute-1-3.local  
+      
+    # Clearing error state  
+    qmod -c all.q@compute-1-3.local
 
-### All Queues
+#### All Queues
 
-` # Enable all.q on all nodes`  
-` qmod -e '*'`  
-` `  
-` # Disable all.q on all nodes`  
-` qmod -d '*'`  
-` `  
-` # Clear all.q on all nodes`  
-` qmod -c '*'`
+    # Enable all.q on all nodes  
+    qmod -e '*'  
+      
+    # Disable all.q on all nodes  
+    qmod -d '*'  
+      
+    # Clear all.q on all nodes  
+    qmod -c '*'
 
 You can also disable a single queue on all nodes by replacing ` '*'`
 with the name of the queue.
 
 Jobs
-====
+----
 
-All jobs currently running or in queue
---------------------------------------
+### All jobs currently running or in queue
 
-` qstat -u "*"`
+    qstat -u "*"
 
-Details on a particular job
----------------------------
+### Details on a particular job
 
-` # E.g. Job ID is 568798`  
-` qstat -explain c -j 568798`
+    # E.g. Job ID is 568798  
+    qstat -explain c -j 568798
 
 Miscellanea
-===========
+-----------
 
-SGE Variables
--------------
+### SGE Variables
 
 All GE vars are in `/opt/gridengine/default/common`
 
-Backups
--------
+### Backups
 
-` # Use this to `[`back`
-`up`](http://download.oracle.com/docs/cd/E19957-01/820-0698/gemnb/index.html)` (prefer tarball)`  
-` inst_sge -bup`
+    # Use this to backup (prefer tarball)  
+    inst_sge -bup
 
-` # Use this `[`to`
-`restore`](http://download.oracle.com/docs/cd/E19957-01/820-0698/gemkx/index.html)  
-` inst_sge -rst`
+    # Use this restore  
+    inst_sge -rst
 
-Restarting the SGE Service
---------------------------
+### Restarting the SGE Service
 
-` service sgemaster.$(hostname -s) stop`
+    service sgemaster.$(hostname -s) stop
 
 Sources
 -------
 
 -   [How to Administer Sun Grid
     Engine](http://biowiki.org/HowToAdministerSunGridEngine)
+-   http://download.oracle.com/docs/cd/E19957-01/820-0698/gemnb/index.html

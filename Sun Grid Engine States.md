@@ -29,212 +29,89 @@ Jobs
 
 ### Table
 
-<table markdown="1" class="wikitable" cellpadding="4">
-<tr markdown="1">
-<th markdown="1">
-Category
-
-</th>
-<th markdown="1">
-State
-
-</th>
-<th markdown="1">
-SGE Letter Code
-
-</th>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>State</th>
+<th>SGE Letter Code</th>
+</tr>    
+</thead>
+<tr>
+<td valign="top" rowspan="7">Pending</td>
+<td>pending</td>
+<td>qw</td>
 </tr>
-<tr markdown="1">
-<td markdown="1" valign="top" rowspan="7">
-Pending
-
-</td>
-<td markdown="1">
-pending
-
-</td>
-<td markdown="1">
-qw
-
-</td>
+<tr>
+<td>pending, user hold</td>
+<td>qw</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-pending, user hold
-
-</td>
-<td markdown="1">
-qw
-
-</td>
+<tr>
+<td>pending, system hold</td>
+<td>hqw</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-pending, system hold
-
-</td>
-<td markdown="1">
-hqw
-
-</td>
+<tr>
+<td>pending, user and system hold</td>
+<td>hqw</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-pending, user and system hold
-
-</td>
-<td markdown="1">
-hqw
-
-</td>
+<tr>
+<td>pending, user hold, re-queue</td>
+<td>hRwq</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-pending, user hold, re-queue
-
-</td>
-<td markdown="1">
-hRwq
-
-</td>
+<tr>
+<td>pending, system hold, re-queue</td>
+<td>hRwq</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-pending, system hold, re-queue
-
-</td>
-<td markdown="1">
-hRwq
-
-</td>
+<tr>
+<td>pending, user and system hold, re-queue</td>
+<td>hRwq</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-pending, user and system hold, re-queue
-
-</td>
-<td markdown="1">
-hRwq
-
-</td>
+<tr>
+<td valign="top" rowspan="4">Running</td>
+<td>running</td>
+<td>r</td>
 </tr>
-<tr markdown="1">
-<td markdown="1" valign="top" rowspan="4">
-Running
-
-</td>
-<td markdown="1">
-running
-
-</td>
-<td markdown="1">
-r
-
-</td>
+<tr>
+<td>transferring</td>
+<td>t</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-transferring
-
-</td>
-<td markdown="1">
-t
-
-</td>
+<tr>
+<td>running, re-submit</td>
+<td>Rr</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-running, re-submit
-
-</td>
-<td markdown="1">
-Rr
-
-</td>
+<tr>
+<td>transferring, re-submit</td>
+<td>Rt</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-transferring, re-submit
-
-</td>
-<td markdown="1">
-Rt
-
-</td>
+<tr>
+<td valign="top" rowspan="4">Suspended</td>
+<td>job suspended</td>
+<td>s, ts</td>
 </tr>
-<tr markdown="1">
-<td markdown="1" valign="top" rowspan="4">
-Suspended
-
-</td>
-<td markdown="1">
-job suspended
-
-</td>
-<td markdown="1">
-s, ts
-
-</td>
+<tr>
+<td>queue suspended</td>
+<td>S, tS</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-queue suspended
-
-</td>
-<td markdown="1">
-S, tS
-
-</td>
+<tr>
+<td>queue suspended by alarm</td>
+<td>T, tT</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-queue suspended by alarm
-
-</td>
-<td markdown="1">
-T, tT
-
-</td>
+<tr>
+<td>all suspended with re-submit</td>
+<td>Rs, Rts, RS, RtS, RT, RtT</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-all suspended with re-submit
-
-</td>
-<td markdown="1">
-Rs, Rts, RS, RtS, RT, RtT
-
-</td>
+<tr>
+<td>Error</td>
+<td>all pending states with error</td>
+<td>Eqw, Ehqw, EhRqw</td>
 </tr>
-<tr markdown="1">
-<td markdown="1">
-Error
-
-</td>
-<td markdown="1">
-all pending states with error
-
-</td>
-<td markdown="1">
-Eqw, Ehqw, EhRqw
-
-</td>
-</tr>
-<tr markdown="1">
-<td markdown="1">
-Deleted
-
-</td>
-<td markdown="1">
-all running and suspended states with deletion
-
-</td>
-<td markdown="1">
-dr, dt, dRr, dRt, ds, dS, dT, dRs, dRS, dRT
-
-</td>
+<tr>
+<td>Deleted</td>
+<td>all running and suspended states with deletion</td>
+<td>dr, dt, dRr, dRt, ds, dS, dT, dRs, dRS, dRT</td>
 </tr>
 </table>
+
 Sources
 -------
 

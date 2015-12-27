@@ -1,6 +1,4 @@
-**Note**: Before you're either alarmed or (if you're like some of my
-friends) actually try to read this, it's a test page for [this
-project](https://github.com/afreeorange/mediawiki-print).
+This is a test page.
 
 “Art is intrinsically a legal fiction,” says Lacan. Prematerial
 narrative states that expression must come from communication, given

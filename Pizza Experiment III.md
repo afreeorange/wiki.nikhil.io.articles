@@ -1,20 +1,18 @@
-
-
 Ingredients
 -----------
 
--   2½ cups King Arthur bread flour
--   1 cup distilled water
--   1 tbsp instant yeast
--   2 tsp salt
--   1½ tbsp olive oil
--   1 tbsp sugar
+*  2½ cups King Arthur bread flour
+*  1 cup distilled water
+*  1 tbsp instant yeast
+*  2 tsp salt
+*  1½ tbsp olive oil
+*  1 tbsp sugar
 
 Implements
 ----------
 
--   Cast-iron skillet
--   Plastic wrap
+*  Cast-iron skillet
+*  Plastic wrap
 
 Dough Prep
 ----------

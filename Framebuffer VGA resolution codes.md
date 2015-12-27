@@ -5,7 +5,7 @@ gathered from across the interwebs.
 Table that works for me
 -----------------------
 
-Tried `0x305` on a 4:3 LCD display. Works!
+Tried `0x305` on a 4:3 LCD display.
 
         | 640x480 800x600 1024x768 1280x1024  
     ----+-------------------------------------  

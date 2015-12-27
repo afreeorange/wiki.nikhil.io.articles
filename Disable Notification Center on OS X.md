@@ -1,11 +1,10 @@
-    # Disable permanently
-    sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool false
+```bash
+# Disable permanently
+sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool false
 
-    # Enable
-    sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool true
+# Enable
+sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool true
 
-    # Kill now
-    killall NotificationCenter
-
-
-[Category: OS X](Category:_OS_X "wikilink")
+# Kill now
+killall NotificationCenter
+```
