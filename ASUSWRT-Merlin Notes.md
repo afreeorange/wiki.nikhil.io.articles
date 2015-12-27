@@ -10,7 +10,7 @@ Installation
     Verified MD5.
 3.  Updated with new firmware. Rebooted via GUI. All was well.
 
-Enabled manual assignment on "LAN" → "DHCP Server" and added devices and
+Enabled manual assignment on "LAN" - "DHCP Server" and added devices and
 names. This wasn't working before. Yay.
 
 [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)
