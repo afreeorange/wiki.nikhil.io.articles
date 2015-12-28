@@ -239,7 +239,7 @@ private keys. Here's an example of what it would look like:
 
 ### Restart the service
 
-service vsftpd condrestart
+    service vsftpd condrestart
 
 You can now use an FTP client which supports implicit SSL (Transmit and
 Fugu for OS X, FileZilla, etc) and try out the connection. The ordinary
