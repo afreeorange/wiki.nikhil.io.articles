@@ -1,0 +1,239 @@
+#!/bin/bash
+
+# A simple, stateful firewall for ArchLinux
+# See this for more information:
+# https://wiki.archlinux.org/index.php/Simple_stateful_firewall
+
+function cyanheader()   { echo -e      "\E[36m$1"; tput sgr0; }
+function greenheader()  { echo -e      "\E[32m$1"; tput sgr0; }
+function yellowheader() { echo -e      "\E[33m$1"; tput sgr0; }
+function redheader()    { echo -e      "\E[31m$1"; tput sgr0; }
+
+IPTABLES=$(which iptables)
+IPTABLES_SAVE=$(which iptables-save)
+MODPROBE=$(which modprobe)
+SYSTEMCTL=$(which systemctl)
+
+GROUP_RFC1918="
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+"
+
+function _modprobe() {
+    MODULE=$1
+    $MODPROBE $MODULE &> /dev/null
+    if [ $? -ne 0 ]; then
+        yellowheader "    ! Could not load $MODULE."
+    fi
+}
+
+# ---------- INITIAL SETUP ---------
+
+cyanheader "+ Starting..."
+
+echo -e    "  - Flushing all rules in all tables"
+$IPTABLES -F
+$IPTABLES -X
+$IPTABLES -t nat -F
+$IPTABLES -t nat -X
+$IPTABLES -t mangle -F
+$IPTABLES -t mangle -X
+
+echo -e    "  - Setting default policy (drop everything)"
+$IPTABLES -P INPUT   DROP
+$IPTABLES -P FORWARD DROP
+$IPTABLES -P OUTPUT  DROP
+
+echo -e    "  - Dropping packets in invalid state"
+$IPTABLES -A INPUT   -m state --state INVALID -j DROP
+$IPTABLES -A OUTPUT  -m state --state INVALID -j DROP
+$IPTABLES -A FORWARD -m state --state INVALID -j DROP
+
+echo -e    "  - Bogus TCP packets"
+$IPTABLES -A INPUT -p tcp -m tcp --tcp-flags SYN,FIN SYN,FIN -j DROP
+$IPTABLES -A INPUT -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DROP
+
+echo -e    "  - Loading connection tracking modules"
+_modprobe nf_conntrack
+_modprobe nf_conntrack_ftp
+
+# ----------- BASIC RULES ---------
+
+cyanheader "+ Poking holes:"
+echo -e    "  - Setting up basic state-tracking policy"
+$IPTABLES -A INPUT   -m state --state ESTABLISHED,RELATED -j ACCEPT
+$IPTABLES -A OUTPUT  -m state --state ESTABLISHED,RELATED -j ACCEPT
+$IPTABLES -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+echo -e    "  - Allowing all traffic on loopback"
+$IPTABLES -A INPUT  -i lo -j ACCEPT
+$IPTABLES -A OUTPUT -o lo -j ACCEPT
+
+echo -e    "  - Allowing all traffic on RFC1918 subnets"
+for PRIVATE_SUBNET in $GROUP_RFC1918; do
+    $IPTABLES -A INPUT   -s $PRIVATE_SUBNET -j ACCEPT
+    $IPTABLES -A FORWARD -s $PRIVATE_SUBNET -j ACCEPT
+    $IPTABLES -A OUTPUT  -s $PRIVATE_SUBNET -j ACCEPT
+done
+
+# ----------- ICMP Types ---------
+
+# Apropos connection states, there are only 4 ICMP type groups which are NEW or ESTABLISHED
+#   1. Echo Request          (type  8) and Reply (type  0) (ping and pong)
+#   2. Timestamp Request     (type 13) and Reply (type 14)
+#   3. Information Request   (type 15) and Reply (type 16)
+#   4. Address Mask Request  (type 17) and Reply (type 18)
+#
+# The rest have to be RELATED to pre-established connections
+# This is the rationale behind the next rule
+# NOTE: The INPUT chain rule (for EST and REL connections) is already taken care of (see above)
+
+echo -e    "  - Allowing ICMP requests (out and in)"
+$IPTABLES -A INPUT  -p icmp -m state --state NEW -j ACCEPT
+$IPTABLES -A OUTPUT -p icmp -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+
+echo -e    "  - Rate-limiting ICMP connections"
+$IPTABLES -A INPUT  -p icmp -m icmp --icmp-type echo-request -m limit --limit 1/second -j ACCEPT
+
+# ----------- Explicitly Blocked IPs ---------
+
+echo -e    "  - Blocking IPs"
+for BLOCKED_IP in $GROUP_DENY; do
+    echo -e      "    $BLOCKED_IP"
+    $IPTABLES -A INPUT   -s $BLOCKED_IP -j DROP
+    $IPTABLES -A OUTPUT  -s $BLOCKED_IP -j DROP
+    $IPTABLES -A FORWARD -s $BLOCKED_IP -j DROP
+done
+
+# ------------- OUTPUT CHAIN ---------------
+
+cyanheader   "+ Setting up OUTPUT chain.";
+
+yellowheader "  Allowing all outgoing traffic.";
+$IPTABLES -A OUTPUT -m state --state NEW -j ACCEPT
+
+#------ INPUT Chain Rules ------
+
+cyanheader   "+ Setting up INPUT chain."
+yellowheader "  Allowing incoming:";
+
+echo -e      "  - SSH"
+$IPTABLES -A INPUT -p tcp --dport 22 -m state --state NEW -j ACCEPT
+
+echo -e      "  - HTTP/S"
+$IPTABLES -A INPUT -p tcp -m multiport --dport 80,443,9000 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - MySQL"
+#$IPTABLES -A INPUT -p tcp --dport 3306 -m state --state NEW -j ACCEPT
+
+## NFS Configuration: /etc/sysconfig/nfs must be set up before this
+#echo -e      "  - NFS (RHEL defaults)"
+#echo -e      "    - Setting port 2049 for NFS, 111 for portmapper"
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 2049,111 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp -m multiport --dport 2049,111 -m state --state NEW -j ACCEPT
+#echo -e      "    - Setting MOUNTD and STATD ports"
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 892,662 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp -m multiport --dport 892,662 -m state --state NEW -j ACCEPT
+#echo -e      "    - Setting LOCKD ports"
+#$IPTABLES -A INPUT -p tcp --dport 32803 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 32769 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - PgSQL"
+#$IPTABLES -A INPUT -p tcp --dport 5432 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 5432 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p tcp --dport 5433 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 5433 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - VNC Server"
+# Replace the "n" below with the display number
+# You may have to replace TCP with UDP depending on your setup
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 580n,590n,600n -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Red Hat Directory Server ports"
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 389,636,9830 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - 3ware Web Management Interface (Port 888)"
+#$IPTABLES -A INPUT -p tcp -m tcp --dport 888 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Samba"
+#$IPTABLES -A INPUT -p udp -m multiport --dport 137,138 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 139,445 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Kerberos"
+#$IPTABLES -A INPUT -p udp -m udp --dport 88 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Active & Passive FTP Command Port (21)"
+#$IPTABLES -A INPUT -p tcp --dport 21 -m state --state NEW -j ACCEPT
+
+## Change these based on pasv_min_port:pasv_max_port as defined by your FTP server
+#echo -e      "  - Passive FTP Ports (12000:13000)"
+#$IPTABLES -A INPUT -p tcp --dport 12000:13000 -m state --state NEW -j ACCEPT
+
+## Note: These will _not_ work without the appropriate forwarding and masquerading rules
+##       See files {40,50,60,70}-firewall-* to set up VPNs properly
+##   You may not nee _both_ UDP and TCP; check server.conf for OpenVPN
+#echo -e      "  - OpenVPN (tun+) (Port 1194)"
+#$IPTABLES -A INPUT -i tun+ -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 1194 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p tcp --dport 1194 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - PPTP (ppp+) (Port 1723) (GRE Protocol 47)"
+#$IPTABLES -A INPUT -i ppp+ -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p tcp --dport 1723 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p 47 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Red Hat Network Server (XMPP-Client, 4545)"
+#$IPTABLES -A INPUT  -p tcp --dport 5222 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT  -p udp --dport 5222 -m state --state NEW -j ACCEPT
+#$IPTABLES -A OUTPUT -p tcp --sport 5222 -m state --state NEW -j ACCEPT
+#$IPTABLES -A OUTPUT -p udp --sport 5222 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Zenoss (Port 9066)"
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 9066 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Puppet Server"
+#$IPTABLES -A INPUT -p tcp -m multiport --dport 8140 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - SMTP"
+#$IPTABLES -A INPUT -p tcp --dport 25 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - SMTP over SSL"
+#$IPTABLES -A INPUT -p tcp --dport 465 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - SMTP over StartTLS"
+#$IPTABLES -A INPUT -p tcp --dport 587 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - IMAP"
+#$IPTABLES -A INPUT -p tcp --dport 143 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 143 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - IMAP over SSL"
+#$IPTABLES -A INPUT -p tcp --dport 993 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 993 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - POP3"
+#$IPTABLES -A INPUT -p tcp --dport 110 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 110 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - POP3 over SSL"
+#$IPTABLES -A INPUT -p tcp --dport 995 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 995 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - Portmapper"
+#$IPTABLES -A INPUT -p tcp --dport 111 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 111 -m state --state NEW -j ACCEPT
+
+#echo -e      "  - NIS (ypserv on 854) (fypxfrd on 855)"
+#$IPTABLES -A INPUT -p tcp --dport 854 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 854 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p tcp --dport 855 -m state --state NEW -j ACCEPT
+#$IPTABLES -A INPUT -p udp --dport 855 -m state --state NEW -j ACCEPT
+
+# Uncomment to set up a PPTP server
+#echo -e      "  - PPTP (1723) (GRE Protocol 47)"
+#$IPTABLES -A OUTPUT  -p tcp --sport 1723 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+#$IPTABLES -A OUTPUT  -p 47 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+
+$IPTABLES_SAVE > /etc/iptables/iptables.rules
+$SYSTEMCTL restart iptables.service
