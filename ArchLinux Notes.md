@@ -52,8 +52,15 @@ Firewall
 [Adapted](/files/archlinux-firewall.txt) an [old 
 project](https://github.com/afreeorange/iptables) and things work as expected.
 
-Package Management
-------------------
+Time and Date
+-------------
+
+    timedatectl set-timezone America/Chicago
+
+Or you could do the `/etc/localtime` symlink thing...
+
+`Package Management` and other stuff
+------------------------------------
 
 ### Official Repos
 
@@ -167,3 +174,27 @@ Setting `/tmp` to a fixed size is still good. But it seems to use half the
 RAM; with my VPS box, this is untenable. Since I get tons of storage (and
 very little memory), I resorted to creating a 5-10GiB partition just
 for `/tmp`.
+
+Linode Notes
+------------
+
+## Packages
+
+*   Run `pacman -Syu` first!
+*   The `base-devel` collection isn't installed. A simple `pacman -S base-devel`
+    will fix this.
+
+### Network
+
+On Linode, after a `pacman -Syu`, network stopped working. Had to update
+`/etc/systemd/network/05-eth0.network` with the name of the adapter from
+`ip link` and then
+
+    systemctl enable systemd-networkd
+    systemctl restart systemd-networkd
+
+### "Dependency failed for dhcpcd on eth0."
+
+Really weird.
+
+    systemctl enable dhcpcd.service
