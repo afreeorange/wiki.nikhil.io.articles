@@ -15,10 +15,8 @@ guide).
 
 Once generated/updates, statistics in this database can be viewed:
 
--   Immediately with a CGI script (`awstats.pl`)
+-   Dynamically with a CGI script (`awstats.pl`)
 -   Via statically generated HTML files (`awstats_buildstaticpages.pl`)
--   With the prettier-looking [JAWStats](http://www.jawstats.com/) to
-    see your logs (by pointing it to `/var/lib/awstats`)
 
 AWStats is pretty ancient and can do a *lot* more, but as far as
 installation's concered, that's all you should know.
@@ -131,8 +129,6 @@ Same as with automating the database script: add to
             endscript
     }
 
-Might be worth putting those into a single script.
-
 Set up Nginx
 ------------
 
@@ -195,3 +191,37 @@ Apache tools:
     SALT="$(openssl rand -base64 3)";
     SHA1=$(printf "$PASSWORD$SALT" | openssl dgst -binary -sha1 | sed 's#$#'"$SALT"'#' | base64);
     printf "the_user:{SSHA}$SHA1\n"
+
+Arch Linux Notes
+----------------
+
+### Installation
+
+    pacman -Syu awstats
+
+### Configuration
+
+    perl /usr/share/awstats/tools/awstats_configure.pl
+
+Stuff ends up in `/etc/awstats`
+
+### Logrotate config
+
+    # /etc/logrotate.d/nginx
+    /var/log/nginx/*log {
+        compress
+        create 640 http log
+        missingok
+        sharedscripts
+        su http log
+        daily
+        delaycompress
+        notifempty
+        rotate 52
+        prerotate
+            perl /usr/share/awstats/tools/awstats_updateall.pl -awstatsprog=/usr/share/webapps/awstats/cgi-bin/awstats.pl now
+        endscript
+        postrotate
+            test ! -r /run/nginx.pid || kill -USR1 `cat /run/nginx.pid`
+        endscript
+    }
