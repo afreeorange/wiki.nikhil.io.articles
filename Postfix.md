@@ -185,18 +185,16 @@ Now configure Postfix to use these certificates for TLS
 
 Restart Postfix. As always, see `/var/log/maillog` for any errors.
 
-Now test. **Important** You have to use the OpenSSL client instead of
-telnet from this point on! Watch out for non-zero "Verify return codes".
-Avoid these by downloading the generated "`postfix.crt`" using it with
-your OpenSSL command.
+Now test. 
+
+**Important Stuff**
+* You have to use the OpenSSL client instead of `telnet` from this point on! 
+* Watch out for non-zero "Verify return codes". Avoid these by providing a full path to the system root certs. This is normally done via `openssl version -d`. On OS X, use "Keychain Access" to export all the stuff under "System Roots" into a single PEM file.
+* Keep the former telnet commands lowercase! Else, the client will renegotiate every time you type `RCPT TO`. [OpenSSL can waste your time like that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 
     openssl s_client -starttls smtp \  
-                     -CAfile /path/to/postfix.crt \  
+                     -CAfile /path/to/roots.pem \  
                      -connect example.com:25
-
-Another **important** warning is to *keep the former telnet commands
-lowercase*. Else, the client will renegotiate every time you type
-`RCPT TO`. [OpenSSL can waste your time like that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 
 ### Some restrictions
 
