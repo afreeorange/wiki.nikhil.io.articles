@@ -6,8 +6,8 @@
     -   Statically generated pages will be in
         `/var/www/html/statistics/pages`
 
-How it works
-------------
+How it works!
+-------------   
 
 AWStats is a Perl program that parses any log files you throw at it,
 then creates a text-based 'database' (in `/var/lib/awstats` in this
