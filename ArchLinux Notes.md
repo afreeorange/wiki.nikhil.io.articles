@@ -184,7 +184,105 @@ Copy certificates in PEM format _and ending with a `.pem` extension_ to `/etc/ss
 
 Google Chrome didn't seem to depend on the system store.
 
+Windows Fonts
+-------------
 
+From a Windows 7 system. Get them and rename so you can remove later if you'd like (`for f in *; do mv $f "Win7-"$f; done`)
+
+```bash
+@ECHO OFF
+CLS
+SET MYSHARE=%USERPROFILE%\Desktop\TTFONTS-ttf-win7-fonts
+MKDIR "%MYSHARE%"
+ECHO 1
+COPY "%WINDIR%\FONTS\arial.ttf" "%MYSHARE%\arial.ttf"
+COPY "%WINDIR%\FONTS\arialbd.ttf" "%MYSHARE%\arialbd.ttf"
+COPY "%WINDIR%\FONTS\ariali.ttf" "%MYSHARE%\ariali.ttf"
+COPY "%WINDIR%\FONTS\arialbi.ttf" "%MYSHARE%\arialbi.ttf"
+COPY "%WINDIR%\FONTS\comic.ttf" "%MYSHARE%\comic.ttf"
+COPY "%WINDIR%\FONTS\comicbd.ttf" "%MYSHARE%\comicbd.ttf"
+COPY "%WINDIR%\FONTS\cour.ttf" "%MYSHARE%\cour.ttf"
+COPY "%WINDIR%\FONTS\courbd.ttf" "%MYSHARE%\courbd.ttf"
+COPY "%WINDIR%\FONTS\couri.ttf" "%MYSHARE%\couri.ttf"
+COPY "%WINDIR%\FONTS\courbi.ttf" "%MYSHARE%\courbi.ttf"
+COPY "%WINDIR%\FONTS\gabriola.ttf" "%MYSHARE%\gabriola.ttf"
+COPY "%WINDIR%\FONTS\georgia.ttf" "%MYSHARE%\georgia.ttf"
+COPY "%WINDIR%\FONTS\georgiab.ttf" "%MYSHARE%\georgiab.ttf"
+COPY "%WINDIR%\FONTS\georgiai.ttf" "%MYSHARE%\georgiai.ttf"
+COPY "%WINDIR%\FONTS\georgiaz.ttf" "%MYSHARE%\georgiaz.ttf"
+COPY "%WINDIR%\FONTS\impact.ttf" "%MYSHARE%\impact.ttf"
+COPY "%WINDIR%\FONTS\times.ttf" "%MYSHARE%\times.ttf"
+COPY "%WINDIR%\FONTS\timesbd.ttf" "%MYSHARE%\timesbd.ttf"
+COPY "%WINDIR%\FONTS\timesi.ttf" "%MYSHARE%\timesi.ttf"
+COPY "%WINDIR%\FONTS\timesbi.ttf" "%MYSHARE%\timesbi.ttf"
+COPY "%WINDIR%\FONTS\trebuc.ttf" "%MYSHARE%\trebuc.ttf"
+COPY "%WINDIR%\FONTS\trebucbd.ttf" "%MYSHARE%\trebucbd.ttf"
+COPY "%WINDIR%\FONTS\trebucit.ttf" "%MYSHARE%\trebucit.ttf"
+COPY "%WINDIR%\FONTS\trebucbi.ttf" "%MYSHARE%\trebucbi.ttf"
+ECHO 25
+COPY "%WINDIR%\FONTS\verdana.ttf" "%MYSHARE%\verdana.ttf"
+COPY "%WINDIR%\FONTS\verdanab.ttf" "%MYSHARE%\verdanab.ttf"
+COPY "%WINDIR%\FONTS\verdanai.ttf" "%MYSHARE%\verdanai.ttf"
+COPY "%WINDIR%\FONTS\verdanaz.ttf" "%MYSHARE%\verdanaz.ttf"
+COPY "%WINDIR%\FONTS\webdings.ttf" "%MYSHARE%\webdings.ttf"
+COPY "%WINDIR%\FONTS\wingding.ttf" "%MYSHARE%\wingding.ttf"
+COPY "%WINDIR%\FONTS\sylfaen.ttf" "%MYSHARE%\sylfaen.ttf"
+COPY "%WINDIR%\FONTS\symbol.ttf" "%MYSHARE%\symbol.ttf"
+COPY "%WINDIR%\FONTS\calibri.ttf" "%MYSHARE%\calibri.ttf"
+COPY "%WINDIR%\FONTS\calibril.ttf" "%MYSHARE%\calibril.ttf"
+COPY "%WINDIR%\FONTS\calibrib.ttf" "%MYSHARE%\calibrib.ttf"
+COPY "%WINDIR%\FONTS\calibrii.ttf" "%MYSHARE%\calibrii.ttf"
+COPY "%WINDIR%\FONTS\calibrili.ttf" "%MYSHARE%\calibrili.ttf"
+COPY "%WINDIR%\FONTS\calibriz.ttf" "%MYSHARE%\calibriz.ttf"
+COPY "%WINDIR%\FONTS\cambria.ttc" "%MYSHARE%\cambria.ttc"
+COPY "%WINDIR%\FONTS\cambriab.ttf" "%MYSHARE%\cambriab.ttf"
+COPY "%WINDIR%\FONTS\cambriai.ttf" "%MYSHARE%\cambriai.ttf"
+COPY "%WINDIR%\FONTS\cambriaz.ttf" "%MYSHARE%\cambriaz.ttf"
+COPY "%WINDIR%\FONTS\candara.ttf" "%MYSHARE%\candara.ttf"
+COPY "%WINDIR%\FONTS\candarab.ttf" "%MYSHARE%\candarab.ttf"
+COPY "%WINDIR%\FONTS\candarai.ttf" "%MYSHARE%\candarai.ttf"
+COPY "%WINDIR%\FONTS\candaraz.ttf" "%MYSHARE%\candaraz.ttf"
+COPY "%WINDIR%\FONTS\consola.ttf" "%MYSHARE%\consola.ttf"
+COPY "%WINDIR%\FONTS\consolab.ttf" "%MYSHARE%\consolab.ttf"
+ECHO 49
+COPY "%WINDIR%\FONTS\consolai.ttf" "%MYSHARE%\consolai.ttf"
+COPY "%WINDIR%\FONTS\consolaz.ttf" "%MYSHARE%\consolaz.ttf"
+COPY "%WINDIR%\FONTS\constan.ttf" "%MYSHARE%\constan.ttf"
+COPY "%WINDIR%\FONTS\constanb.ttf" "%MYSHARE%\constanb.ttf"
+COPY "%WINDIR%\FONTS\constani.ttf" "%MYSHARE%\constani.ttf"
+COPY "%WINDIR%\FONTS\constanz.ttf" "%MYSHARE%\constanz.ttf"
+COPY "%WINDIR%\FONTS\corbel.ttf" "%MYSHARE%\corbel.ttf"
+COPY "%WINDIR%\FONTS\corbelb.ttf" "%MYSHARE%\corbelb.ttf"
+COPY "%WINDIR%\FONTS\corbeli.ttf" "%MYSHARE%\corbeli.ttf"
+COPY "%WINDIR%\FONTS\corbelz.ttf" "%MYSHARE%\corbelz.ttf"
+COPY "%WINDIR%\FONTS\lucon.ttf" "%MYSHARE%\lucon.ttf"
+COPY "%WINDIR%\FONTS\ariblk.ttf" "%MYSHARE%\ariblk.ttf"
+COPY "%WINDIR%\FONTS\l_10646.ttf" "%MYSHARE%\l_10646.ttf"
+COPY "%WINDIR%\FONTS\micross.ttf" "%MYSHARE%\micross.ttf"
+COPY "%WINDIR%\FONTS\pala.ttf" "%MYSHARE%\pala.ttf"
+COPY "%WINDIR%\FONTS\palab.ttf" "%MYSHARE%\palab.ttf"
+COPY "%WINDIR%\FONTS\palai.ttf" "%MYSHARE%\palai.ttf"
+COPY "%WINDIR%\FONTS\palabi.ttf" "%MYSHARE%\palabi.ttf"
+COPY "%WINDIR%\FONTS\tahoma.ttf" "%MYSHARE%\tahoma.ttf"
+COPY "%WINDIR%\FONTS\tahomabd.ttf" "%MYSHARE%\tahomabd.ttf"
+COPY "%WINDIR%\FONTS\framd.ttf" "%MYSHARE%\framd.ttf"
+COPY "%WINDIR%\FONTS\framdit.ttf" "%MYSHARE%\framdit.ttf"
+COPY "%WINDIR%\FONTS\segoepr.ttf" "%MYSHARE%\segoepr.ttf"
+COPY "%WINDIR%\FONTS\segoeprb.ttf" "%MYSHARE%\segoeprb.ttf"
+ECHO 73
+COPY "%WINDIR%\FONTS\segoesc.ttf" "%MYSHARE%\segoesc.ttf"
+COPY "%WINDIR%\FONTS\segoescb.ttf" "%MYSHARE%\segoescb.ttf"
+COPY "%WINDIR%\FONTS\segoeui.ttf" "%MYSHARE%\segoeui.ttf"
+COPY "%WINDIR%\FONTS\segoeuib.ttf" "%MYSHARE%\segoeuib.ttf"
+COPY "%WINDIR%\FONTS\segoeuii.ttf" "%MYSHARE%\segoeuii.ttf"
+COPY "%WINDIR%\FONTS\segoeuil.ttf" "%MYSHARE%\segoeuil.ttf"
+COPY "%WINDIR%\FONTS\segoeuiz.ttf" "%MYSHARE%\segoeuiz.ttf"
+COPY "%WINDIR%\FONTS\seguisb.ttf" "%MYSHARE%\seguisb.ttf"
+COPY "%WINDIR%\FONTS\seguisym.ttf" "%MYSHARE%\seguisym.ttf"
+PAUSE
+```
+
+---
 
 [Linode](http://linode.com) Notes
 ---------------------------------
