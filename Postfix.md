@@ -427,6 +427,7 @@ References
 *   [Cyrus SASL for Systems Administrators](http://www.sendmail.org/~ca/email/cyrus/sysadmin.html)
 *   [Postfix + SPF + CentOS6](http://www.thenoccave.com/2013/05/08/centos-6-postfix-spf-checking/)
 *   [Postfix FAQ](http://www.seaglass.com/postfix/faq.html#chbnc)
+*   [How to Set Up your Own Personal Email Server](http://aurellem.org/free/html/email.html) by Robert McIntyre
 
 Footnotes
 ---------
