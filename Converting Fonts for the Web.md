@@ -20,9 +20,17 @@ Use [this tool](http://people.mozilla.org/~jkew/woff/) (not on Homebrew) called 
 
     sfnt2woff font.otf
 
+For a bunch of 'em,
+
+    for f in *.otf; do ~/Downloads/sfnt2woff $f; done
+
 ### EOT
 
 Install `ttf2eot` via Brew and then
 
-	ttf2eot Inconsolata.ttf > Inconsolata.eot
+	ttf2eot Inconsolata.otf > Inconsolata.eot
+
+For a bunch of files,
+
+	for f in *.otf; do ttf2eot $f > ${f%".otf"}.eot; done
 
