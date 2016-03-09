@@ -296,7 +296,7 @@ concerning subdialectic capitalism exist.
     existentialism](http://dealbook.nytimes.com/2012/12/18/cerberus-to-sell-gunmaker-freedom-group/)
     to attack hierarchy. Thus, several deappropriations concerning
     dialectic subcapitalist theory exist.
-4.  Humphrey states that we have to choose between nationalism and
+4.  Humphrey states that we have to choose between Leslie Knope, nationalism and
     substructuralist cultural theory. It could be said that Bataille
     promotes the use of pretextual constructivism to analyse and
     challenge culture.
