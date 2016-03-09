@@ -64,3 +64,4 @@ Miscellaneous
     add a line like so, and restart Zenoss
 
         zopeurl      http://servername.tld:9090
+
