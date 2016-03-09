@@ -1,7 +1,7 @@
 Pre-Flight
 ----------
 
-*   SNMP is **UDP** on port **161**
+*   SNMP uses **UDP** on port **161**
 *   Zenoss provides [a lot of useful
     documentation](http://community.zenoss.org/community/documentation/official_documentation?view=overview).
 *   The following ports need to be allowed *to* the **server**:
