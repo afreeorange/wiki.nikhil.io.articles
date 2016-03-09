@@ -53,7 +53,7 @@ judgement is intrinsically incoherent, just as Schrodinger's cat cannot
 be dead or alive without an observer to define its quantum state. The
 only option, then, is to submit to the chaotic motion, and apply an
 ontological, essentially Lamacian, order to what cannot be comprehended
-absent a Weltanschauung.
+absent a Weltanschauung!
 
 ### Edwin interrupted
 
