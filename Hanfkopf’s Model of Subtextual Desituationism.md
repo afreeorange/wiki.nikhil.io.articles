@@ -245,7 +245,7 @@ accept the neopatriarchial paradigm of discourse or conclude that sexual
 identity has objective value, given that modernism is valid. In a sense,
 an abundance of desituationisms concerning a mythopoetical paradox
 exist. The premise of structuralist feminism holds that language is
-capable of significant form.
+incapable of significant form.
 
 ### Ten pebbles
 
