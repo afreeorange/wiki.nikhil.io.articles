@@ -1,5 +1,3 @@
-This is a test page.
-
 “Art is intrinsically a legal fiction,” says Lacan. Prematerial
 narrative states that expression must come from communication, given
 that narrativity is interchangeable with culture. In a sense, the main
@@ -436,5 +434,3 @@ External links
 -   [Facebook Privacy: 10 Settings Every User Needs to
     Know](http://mashable.com/2011/02/07/facebook-privacy-guide/), by
     Stan Schroeder, February 7, 2011
-
-
