@@ -58,6 +58,12 @@ Edit `/etc/modules-load.d/virtualbox.conf` to add these
     vboxsf
     vboxvideo
 
+### "virtualbox kernel service is not running"
+
+[Here's the issue](https://bugs.archlinux.org/task/40495). Happened after a system update. Fixed with
+
+    sudo pacman -S linux-headers
+
 Install X11 and Xfce4
 ---------------------
 
