@@ -142,6 +142,12 @@ To get the [Numix theme](https://wiki.archlinux.org/index.php/Compiz_configurati
 
 Add that to "Session and Startup". I had to kill it, _not save the session_, and log out. The default window manager is `xfwm4`.
 
+Time and Date
+-------------
+
+    timedatectl set-timezone America/Chicago
+
+
 The Trash Can
 -------------
 
@@ -202,6 +208,14 @@ CA Certificates
 Copy certificates in PEM format _and ending with a `.pem` extension_ to `/etc/ssl/certs`. Then, as root, run `update-ca-trust`.
 
 Google Chrome didn't seem to depend on the system store.
+
+Firewall
+--------
+
+[Adapted](/files/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables) 
+and things work as expected. Don't forget to [enable the service](https://wiki.archlinux.org/index.php/Iptables#Configuration_and_usage)
+
+    systemctl enable iptables.service
 
 Windows Fonts
 -------------
@@ -303,10 +317,10 @@ PAUSE
 
 ---
 
-[Linode](http://linode.com) Notes
----------------------------------
+Old [Linode](http://linode.com) Notes
+-------------------------------------
 
-## Separating out partitions
+### Separating out partitions
 
 I had separate disks for `/var` and `/var/log`. 
 
@@ -327,13 +341,13 @@ I had separate disks for `/var` and `/var/log`.
 * Make sure that the mounts are correctly mapped in your *Configuration Profile*
 * Boot up the minimal system
 
-## Packages
+### Packages
 
 *   Run `pacman -Syu` first!
 *   The `base-devel` collection isn't installed. A simple `pacman -S base-
     devel` will fix this.
 
-## Network
+### Network
 
 The `pacman` update will break networking due [a 
 bug](https://bugs.archlinux.org/task/41215) that may have been fixed in 
@@ -353,7 +367,7 @@ Then enable the appropriate service and restart the node
     systemctl enable systemd-networkd
     reboot
 
-## Hostname
+### Hostname
 
     hostnamectl set-hostname nikhil.io
 
@@ -373,11 +387,6 @@ Enable the service and reboot to test if you can SSH
 
     systemctl enable sshd.socket
     reboot
-
-Time and Date
--------------
-
-    timedatectl set-timezone America/Chicago
 
 Installation
 ------------
@@ -428,16 +437,8 @@ mkpart primary ext4 2GiB 100%
 set 2 boot on
 ```
 
-Firewall
---------
-
-[Adapted](/files/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables) 
-and things work as expected. Don't forget to [enable the service](https://wiki.archlinux.org/index.php/Iptables#Configuration_and_usage)
-
-    systemctl enable iptables.service
-
-`Package Management` and other stuff
-------------------------------------
+`Package Management`
+--------------------
 
 ### Official Repos
 
@@ -510,11 +511,6 @@ aur/pyenv-virtualenv 20151103-1 [installed] (0)
     pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)
 ```
 
-### Adding Mirrors
-
-`reflector` will fetch the latest mirrors based on some criteria you provide
-it (e.g. I want HTTPS and IPv6 only.) You can [do this
-online](https://www.archlinux.org/mirrorlist) as well. 
 
 Other Notes
 -----------
@@ -526,6 +522,12 @@ Other Notes
 *   Export `$EDITOR` when using `visudo` else you'll see [a screen full of
     "EOF"
     messages](https://bbs.archlinux.org/viewtopic.php?pid=796380#p796380).
+
+### Adding Mirrors
+
+`reflector` will fetch the latest mirrors based on some criteria you provide
+it (e.g. I want HTTPS and IPv6 only.) You can [do this
+online](https://www.archlinux.org/mirrorlist) as well. 
 
 ### `/tmp` size
 
