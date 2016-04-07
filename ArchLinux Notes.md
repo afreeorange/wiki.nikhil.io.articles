@@ -41,6 +41,19 @@ arch-chroot /mnt /bin/bash
 
 Then do everything else [the wiki asks you to do](https://wiki.archlinux.org/index.php/beginners'_guide#Locale)
 
+Compacting VDI Images
+---------------------
+
+You'll need [`zerofree`](https://frippery.org/uml/index.html). It works on ext4 filesystems as well. Install it on the VM, then reboot with an Arch LiveCD. Mount the system some place (e.g. `/mnt/vm`) as _read-only_ and zerofree it
+
+    mount -o ro /dev/sda2 /mnt/vm
+    zerofree /dev/sda2
+
+Now shutdown the VM (and remove the LiveCD). On the VirtualBox host (mine was Windows)
+
+    cd "C:\Program Files\Oracle\VirtualBox"
+    VBoxManage.exe modifyhd c:\path\to\thedisk.vdi --compact
+
 Install VirtualBox Guest Additions
 ----------------------------------
 
