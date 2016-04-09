@@ -13,8 +13,6 @@ conceptual paradigm of discourse’ to denote the common ground between
 identity](http://www.theonion.com/articles/report-it-okay-to-spend-rest-of-day-curled-in-feta,30741/)
 and society.
 
-SILLYPUTTY
-
 This is my boss, Jonathan Hart, a self-made millionaire, he's quite a
 guy. This is Mrs H., she's gorgeous, she's one lady who knows how to
 take care of herself. *By the way, my name is Max. I take care of both
