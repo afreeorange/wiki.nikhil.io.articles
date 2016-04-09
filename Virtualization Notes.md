@@ -34,11 +34,8 @@ You can only give a VM 4GiB of memory under QEMU
 
 Add a `noapic` to your kernel boot params.
 
-Sources
--------
+Resources
+---------
 
 *   <http://itscblog.tamu.edu/startup-guide-for-kvm-on-centos-6/>
 *   <http://eduardo-lago.blogspot.com/2012/01/how-to-install-kvm-and-libvirt-on.html>
-
-
-
