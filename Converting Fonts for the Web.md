@@ -2,7 +2,7 @@ I started with an OpenType file.
 
 ### TTF and SVG
 
-Install [FontForge](https://fontforge.github.io/en-US/) (on Homebrew) and then save this as a script
+Install [FontForge](https://fontforge.github.io/en-US/) (on Homebrew) and then save this as a script (`convert.pe`) and make it executable.
 
 ```bash
 Open($1)
