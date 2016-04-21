@@ -552,6 +552,12 @@ Setting `/tmp` to a fixed size is still good. But it seems to use half the
 RAM; with my VPS box, this is untenable. Since I get tons of storage (and very
 little memory), I resorted to creating a 5-10GiB partition just for `/tmp`.
 
+### "AddScreen/ScreenInit failed for driver 0"
+
+Add `iomem=relaxed` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`. Then generate a new grub config and initramfs with
+
+    grub-mkconfig -o /boot/grub/grub.cfg
+
 References
 ----------
 
