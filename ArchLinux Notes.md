@@ -322,6 +322,14 @@ Unicode in Terminal
 yaourt -S ttf-symbola
 ```
 
+Framebuffer Resolution
+----------------------
+
+Edit `/etc/default/grub`:
+
+    GRUB_GFXMODE=1024x768x32
+
+Then run `grub-mkconfig -o /boot/grub/grub.cfg` and reboot
 
 ---
 
