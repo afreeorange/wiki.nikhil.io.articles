@@ -315,6 +315,14 @@ COPY "%WINDIR%\FONTS\seguisym.ttf" "%MYSHARE%\seguisym.ttf"
 PAUSE
 ```
 
+Unicode in Terminal
+-------------------
+
+```
+yaourt -S ttf-symbola
+```
+
+
 ---
 
 Old [Linode](http://linode.com) Notes
