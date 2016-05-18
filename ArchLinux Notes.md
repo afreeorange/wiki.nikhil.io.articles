@@ -315,12 +315,11 @@ COPY "%WINDIR%\FONTS\seguisym.ttf" "%MYSHARE%\seguisym.ttf"
 PAUSE
 ```
 
-Unicode in Terminal
--------------------
+Emoji
+-----
 
-```
-yaourt -S ttf-symbola
-```
+Either install `ttf-symbola` or [`emojione-color-font`](https://github.com/eosrei/emojione-color-font)
+
 
 Framebuffer Resolution
 ----------------------
