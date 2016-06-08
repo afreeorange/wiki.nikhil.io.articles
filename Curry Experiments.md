@@ -1,4 +1,4 @@
-For base curry from which others may be derived.
+For a base curry from which others may be derived.
 
 Experiment One
 --------------
@@ -57,7 +57,7 @@ Experiment Two
 * Heat oil on high, add spices, cook for 45 seconds
 * Add onions, cook until super soft and browning
 * Add tomatoes, mix everything
-* Add salt, water, mix
+* Add salt and water, mix
 * Cook mostly covered for 35 mins
 * Remove lid, cook for 8-10 mins
 * Use blender to turn into a paste
