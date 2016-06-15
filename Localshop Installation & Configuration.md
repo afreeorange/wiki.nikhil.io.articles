@@ -1,7 +1,4 @@
-Localshop Installation & Configuration
-======================================
-
-You will need Python 2.7.11 for [localshop](http://localshop.readthedocs.io/).
+[localshop](https://github.com/mvantellingen/localshop) is a local PyPI server.
 
 Installation
 ------------
