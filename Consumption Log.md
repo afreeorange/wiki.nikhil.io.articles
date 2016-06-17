@@ -1,3 +1,4 @@
-* In The Loop 5/31/16
-* _Radiohead - A Moon Shaped Pool_ 6/1/16
-* Cape Fear 6/12/16
+* ["10% Happier" by Dan Harris](https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265423) - 5/15/16
+* In The Loop - 5/31/16
+* _Radiohead - A Moon Shaped Pool_ - 6/1/16
+* Cape Fear - 6/12/16
