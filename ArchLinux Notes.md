@@ -92,17 +92,17 @@ Then run `grub-mkconfig -o /boot/grub/grub.cfg` and reboot
 
 ### Firewall
 
-[Adapted](/files/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables) 
+[Adapted](/files/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables)
 and things work as expected. Don't forget to [enable the service](https://wiki.archlinux.org/index.php/Iptables#Configuration_and_usage)
 
     systemctl enable iptables.service
 
 ### Network
 
-The `pacman` update will break networking due [a 
-bug](https://bugs.archlinux.org/task/41215) that may have been fixed in 
-`systemd` v228 (as of this writing). Oh well. The fix is easy. Create a file 
-[like this](https://wiki.archlinux.org/index.php/Systemd-networkd#Wired_adapter_using_DHCP) 
+The `pacman` update will break networking due [a
+bug](https://bugs.archlinux.org/task/41215) that may have been fixed in
+`systemd` v228 (as of this writing). Oh well. The fix is easy. Create a file
+[like this](https://wiki.archlinux.org/index.php/Systemd-networkd#Wired_adapter_using_DHCP)
 for the interface you see in `ip link` (will start with "`en`")
 
     # /etc/systemd/network/enp0s4.network
@@ -121,7 +121,7 @@ Then enable the appropriate service and restart the node
 
     pacman -S openssh
 
-Change default port in `/etc/ssh/sshd_config` and disable root login. Then 
+Change default port in `/etc/ssh/sshd_config` and disable root login. Then
 [enable the "spawn on demand" `ssh.socket` service](https://wiki.archlinux.org/index.php/Secure_Shell#Daemon_management)
 and change the port to whatever you had earlier
 
@@ -134,8 +134,10 @@ Enable the service and reboot to test if you can SSH
     systemctl enable sshd.socket
     reboot
 
-VirtualBox Guest Additions
---------------------------
+VirtualBox Notes
+----------------
+
+### VirtualBox Guest Additions
 
     pacman -S virtualbox-guest-utils \
               virtualbox-guest-modules \
@@ -148,7 +150,7 @@ This is without an LTS kernel since I couldn't be bothered. After installation, 
 
 Edit `/etc/modules-load.d/virtualbox.conf` to add these
 
-    vboxguest 
+    vboxguest
     vboxsf
     vboxvideo
 
@@ -157,6 +159,19 @@ Edit `/etc/modules-load.d/virtualbox.conf` to add these
 [Here's the issue](https://bugs.archlinux.org/task/40495). Happened after a system update. Fixed with
 
     sudo pacman -Su linux-headers
+
+### Resizing
+
+Can only do this with VDIs and not VMDKs. To convert a VMDK (on Windows)
+
+    cd C:\Program Files\Oracle\VirtualBox
+    VBoxManage.exe clonehd <path to VMDK> <path to VDI> --format vdi
+
+Then can resize
+
+    VBoxManage.exe modifyhd <path to VDI> --resize 25000
+
+Then boot up VM. `parted` above version 2.4 [doesn't allow you to resize](https://www.gnu.org/software/parted/manual/html_node/Command-explanations.html#Command-explanations) although its `man` page lists it as an option :/ I used GParted instead to fill the rest of the partition and was a happy person. `fdisk` works too.
 
 X11
 ---
@@ -223,8 +238,8 @@ A bit 'heavy' compared to `netctl` but I was tired of fighting with the corporat
 
 Enable the service (else you'll get D-Bus errors when you run `nm-applet`)
 
-    systemctl enable NetworkManager.service    
-    systemctl start NetworkManager.service    
+    systemctl enable NetworkManager.service
+    systemctl start NetworkManager.service
 
 Reboot and log back in. You'll find the network manager in Applications -> Settings -> Network Connections
 
@@ -346,7 +361,7 @@ Now shutdown the VM (and remove the LiveCD). On the VirtualBox host (mine was Wi
     cd "C:\Program Files\Oracle\VirtualBox"
     VBoxManage.exe modifyhd c:\path\to\thedisk.vdi --compact
 
-### Dropbox 
+### Dropbox
 
 Install both the `dropbox` and `dropbox-cli` packages with `yaourt`. Some useful commands
 
@@ -378,7 +393,7 @@ Either install `ttf-symbola` or [`emojione-color-font`](https://github.com/eosre
 
 `reflector` will fetch the latest mirrors based on some criteria you provide
 it (e.g. I want HTTPS and IPv6 only.) You can [do this
-online](https://www.archlinux.org/mirrorlist) as well. 
+online](https://www.archlinux.org/mirrorlist) as well.
 
 ### `/tmp` size
 
