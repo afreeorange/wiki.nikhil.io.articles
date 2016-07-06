@@ -1,4 +1,4 @@
-My own, idiot-proof recipe based on a couple of YouTube videos.
+My own idiot-proof recipe based on a couple of YouTube videos.
 
 Ingredients
 -----------
