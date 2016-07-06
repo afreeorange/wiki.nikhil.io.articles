@@ -3,3 +3,7 @@
 * _Radiohead - A Moon Shaped Pool_ - 6/1/16 (8/10)
 * "Cape Fear" - 6/12/16 (8/10)
 * "Remember" - 6/22/16 (8/10)
+* "The Hunger Games" - 7/2/16 (8/10)
+* "The Hunger Games: Catching Fire" - 7/3/16 (7/10)
+* "The Hunger Games: Mockingjay - Part 1" - 7/4/16 (5/10)
+* "The Hunger Games: Mockingjay - Part 2" - 7/4/16 (5/10)
