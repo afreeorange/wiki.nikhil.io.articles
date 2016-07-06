@@ -13,6 +13,8 @@ Ingredients
 * 1 tsp cumin
 * 1 tsp coriander
 * 1 tsp chili Powder
+* 1 tsp cinnamon
+* 1 tsp green cardamoms
 * 1 tsp turmeric
 * 1/2 tbsp salt
 
