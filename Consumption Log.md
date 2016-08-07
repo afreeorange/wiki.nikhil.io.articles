@@ -7,4 +7,6 @@
 * "The Hunger Games: Catching Fire" - 7/3/16 (7/10)
 * "The Hunger Games: Mockingjay - Part 1" - 7/4/16 (5/10)
 * "The Hunger Games: Mockingjay - Part 2" - 7/4/16 (5/10)
-* "The Godfather" - 7/7/16 (11/10)
+* "The Godfather" - 7/7/16 (10/10)
+* "Black Coal, Thin Ice" - 8/7/16 (7/10)
+* "Mr. Robot" - Season 1 - 8/6/16 (7.5/10)
