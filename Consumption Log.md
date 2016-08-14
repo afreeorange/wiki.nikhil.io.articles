@@ -10,3 +10,4 @@
 * "The Godfather" - 7/7/16 (10/10)
 * "Black Coal, Thin Ice" - 8/7/16 (7/10)
 * "Mr. Robot" - Season 1 - 8/6/16 (7.5/10)
+* "The Nice Guys" - 8/14/16 (8.5/10)
