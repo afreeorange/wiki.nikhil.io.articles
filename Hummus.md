@@ -8,7 +8,7 @@ Ingredients
 
 * 15oz can of garbanzo beans (chickpeas)
 * 1/4 cup [tahini](Tahini)
-* 2 1/2 - 3 tbsp fresh lemon juice
+* 2 1/2 - 3 tsp fresh lemon juice
 * 1 tbsp olive oil
 * 2 tbsp water
 * 1 tsp cumin
