@@ -11,3 +11,8 @@
 * "Black Coal, Thin Ice" - 8/7/16 (7/10)
 * "Mr. Robot" - Season 1 - 8/6/16 (7.5/10)
 * "The Nice Guys" - 8/14/16 (8.5/10)
+* "Penny Dreadful" - Season 1 - 8/30/16 (9/10)
+* "Penny Dreadful" - Season 2 - 8/31/16 (7.5/10)
+* "Penny Dreadful" - Season 3 - 9/2/16 (5/10)
+* "Veep" - Season 4 - 9/4/16 (8/10)
+* "Holy Hell" (Documentary) - 9/4/16 (7/10)
