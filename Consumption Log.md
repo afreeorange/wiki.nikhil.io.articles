@@ -16,3 +16,4 @@
 * "Penny Dreadful" - Season 3 - 9/2/16 (5/10)
 * "Veep" - Season 4 - 9/4/16 (8/10)
 * "Holy Hell" (Documentary) - 9/4/16 (7/10)
+* ["The Antidote" by Oliver Burkeman](https://www.amazon.com/Antidote-Happiness-People-Positive-Thinking/dp/0865478015) - 9/16/16 (9/10)
