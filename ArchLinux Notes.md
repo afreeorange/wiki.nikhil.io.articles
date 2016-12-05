@@ -101,16 +101,10 @@ and things work as expected. Don't forget to [enable the service](https://wiki.a
 
 The `pacman` update will break networking due [a
 bug](https://bugs.archlinux.org/task/41215) that may have been fixed in
-`systemd` v228 (as of this writing). Oh well. The fix is easy. Create a file
-[like this](https://wiki.archlinux.org/index.php/Systemd-networkd#Wired_adapter_using_DHCP)
-for the interface you see in `ip link` (will start with "`en`")
+`systemd` v228 (as of this writing). Oh well. 
+For the interface you see in `ip link` (will start with "`en`")
 
-    # /etc/systemd/network/enp0s4.network
-    [Match]
-    Name=enp0s4
-
-    [Network]
-    DHCP=yes
+    systemctl enable dhcpcd@ens4.network
 
 Then enable the appropriate service and restart the node
 
