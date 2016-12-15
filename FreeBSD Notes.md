@@ -79,16 +79,42 @@ Collection"](http://www.freebsd.org/doc/handbook/ports-using.html)
 section of the manual if you forgot to install the tree. To update, just
 run `portsnap update`.
 
-### [Installing `bash`](http://www.cyberciti.biz/faq/freebsd-bash-installation/)
+### Installing stuff
 
 As root,
 
-    portsnap update extract  
-    cd /usr/ports/shells/bash  
-    make install clean  
-      
-    # Now change your shell  
-    chsh -s /usr/local/bin/bash nikhil
+```bash
+# Update ports tree and system packages
+portsnap fetch extract update
+freebsd-update fetch
+freebsd-update install
+
+# This installs pkg
+pkg install bash \
+            bash-completion \
+            chromium \
+            inconsolata-ttf \
+            numix-theme
+            rsync \
+            sudo \
+            tree \
+            vim \
+            xfce \
+            xorg \
+            git \
+
+# Get the kernel source for VirtualBox Guest Additions if applicable
+# Configure proxy in ~/.subversion/servers if needed
+svnlite checkout http://svn.freebsd.org/base/head /usr/src
+svnlite up /usr/src
+cd /usr/src
+make clean
+```
+
+#### No packages matching xxx available in the repository
+
+    rm /var/db/pkg/repo-*
+    pkg upgrade
 
 ### Installing `mkfile`
 
