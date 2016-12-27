@@ -73,3 +73,8 @@ HDMI black level: Low
 Film mode: Cinema Smooth  
 Black optimizer: Dark Room
 ```
+
+Repair
+------
+
+The power board broke around August 2015 and was under Samsung's warranty. Fixed by Tim Lucht of [Archer Home Center](http://www.archerhomecenter.com/). They're at (515)-993-4141 and are located at 618 Greene Street, Adel, Iowa.
