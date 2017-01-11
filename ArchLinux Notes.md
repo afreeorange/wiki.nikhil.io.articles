@@ -411,3 +411,9 @@ One option would be to rename. A better one would be to simply mask it
 Setting `/tmp` to a fixed size is still good. But it seems to use half the
 RAM; with my VPS box, this is untenable. Since I get tons of storage (and very
 little memory), I resorted to creating a 5-10GiB partition just for `/tmp`.
+
+### Pacman and GPG Proxies
+
+Corporate proxy blocked port 11371 (the default) that Pacman used to get
+its keys. Had to modify `/etc/pacman.d/gnupg/gpg.conf` and modify the 
+`keyserver` to `hkp://keyserver.kjsl.com:80`
