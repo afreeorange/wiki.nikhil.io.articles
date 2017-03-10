@@ -163,7 +163,11 @@ Can only do this with VDIs and not VMDKs. To convert a VMDK (on Windows)
 
 Then can resize
 
-    VBoxManage.exe modifyhd <path to VDI> --resize 25000
+    VBoxManage.exe modifyhd <path to VDI> --resize 25600
+
+That's 25,000 megabytes (25 x 1,024). Now _resize all snapshots_ with that same size!  
+
+    VBoxManage.exe modifyhd <path to snapshot> --resize 25600
 
 Then boot up VM. `parted` above version 2.4 [doesn't allow you to resize](https://www.gnu.org/software/parted/manual/html_node/Command-explanations.html#Command-explanations) although its `man` page lists it as an option :/ I used GParted instead to fill the rest of the partition and was a happy person. `fdisk` works too.
 
