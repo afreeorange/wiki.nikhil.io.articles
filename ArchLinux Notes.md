@@ -154,6 +154,16 @@ Edit `/etc/modules-load.d/virtualbox.conf` to add these
 
     sudo pacman -Su linux-headers
 
+### Cannot Initialize Multiple Displays
+
+Made sure that I had the latest versions of `virtualbox-guest-*` packages
+
+    [root@orc home]# pacman -Q | grep virtual
+    virtualbox-guest-modules-arch 5.1.16-1
+    virtualbox-guest-utils 5.1.16-1
+
+Then made sure that I could see my display in the output of `xrandr`. Then realized that I had to go "View" &rarr; "Virtual Screen 2" &rarr; "Enable" in the VirtualBox menu and felt a tad silly :flushed:
+
 ### Resizing
 
 Can only do this with VDIs and not VMDKs. To convert a VMDK (on Windows)
