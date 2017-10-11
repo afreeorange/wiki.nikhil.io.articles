@@ -40,3 +40,5 @@ print "I see %d %s" % (n, ['octopus', 'octopuses'][n!=1])
 import site; site.getsitepackages()
 ['/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages']
 ```
+
+Test Note
