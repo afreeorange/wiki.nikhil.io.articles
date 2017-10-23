@@ -430,7 +430,7 @@ little memory), I resorted to creating a 5-10GiB partition just for `/tmp`.
 
 Corporate proxy blocked port 11371 (the default) that Pacman used to get
 its keys. Had to modify `/etc/pacman.d/gnupg/gpg.conf` and modify the 
-`keyserver` to `hkp://keyserver.kjsl.com:80`
+`keyserver` to `hkps://hkps.pool.sks-keyservers.net:443`
 
 ### Key could not be looked up remotely
 
