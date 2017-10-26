@@ -44,18 +44,19 @@ import cx_Oracle
 with open('/tmp/HOSTALIASES', 'w') as f: f.write(f'{os.uname()[1]} localhost\n')
 
 # Oracle away!
-print(
-    cx_Oracle.connect(
-        'username',
-        'password',
-        cx_Oracle.makedsn(
-            'rds.amazonaws.com', 1521, 'SOME_SID',
-        )
-    ).cursor().execute('SELECT 42 FROM DUAL').fetchone()
-)
+def handler(event, context):
+    return str(
+        cx_Oracle.connect(
+            'username',
+            'password',
+            cx_Oracle.makedsn(
+                'rds.amazonaws.com', 1521, 'SOME_SID',
+            )
+        ).cursor().execute('SELECT 42 FROM DUAL').fetchone()
+    )
 ```
 
-Now `pip install cx_oracle -t my_lambda/` to install `cx_oracle` into that folder. Zip it up and make a Lambda.
+Now `pip install cx_oracle -t my_lambda/` to install `cx_oracle` into that folder. Zip it up and make a Lambda with `test.handler` as the... handler.
 
 ### Environment Variables
 
