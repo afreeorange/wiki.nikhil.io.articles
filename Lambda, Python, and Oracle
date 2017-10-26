@@ -71,3 +71,4 @@ You're all set!
 * Lambdas are not allowed to modify `/etc/hosts`
 * I used [this AMI](https://console.aws.amazon.com/ec2/v2/home#Images:visibility=public-images;search=amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2) to do all testing. See [this page](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html) for more information.
 * You don't need to set `LD_LIBRARY_PATH` since it already includes `/var/task/lib` (and your Lambda is executed from `/var/task`)
+* Uncompressed, you're looking at ~200MB for all those files (~65MB compressed). 
