@@ -56,5 +56,17 @@ Add that to a file, move it to `/etc/cron.d`. Make sure that:
 * The `#!/bin/sh` line exists and is first.
 * The permissions to 755.
 
+`crontab` Syntax
+----------------
 
+Stolen [from here](https://www.drupal.org/docs/7/setting-up-cron-for-drupal/configuring-cron-jobs-using-the-cron-command) since, even though I've done this for years, I cannot remember this for the life of me.
 
+```bash
+# +---------------- minute (0 - 59)
+# |  +------------- hour (0 - 23)
+# |  |  +---------- day of month (1 - 31)
+# |  |  |  +------- month (1 - 12)
+# |  |  |  |  +---- day of week (0 - 6) (Sunday=0)
+# |  |  |  |  |
+  *  *  *  *  *  command to be executed
+```
