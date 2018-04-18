@@ -1,5 +1,9 @@
 I started with an OpenType file.
 
+### The Easy Way
+
+Install [this via Homebrew](https://github.com/Folkloreatelier/homebrew-fonts) and convert away. It installs [this script](https://github.com/zoltan-dulac/css3FontConverter) and a bunch of dependencies.
+
 ### TTF and SVG
 
 Install [FontForge](https://fontforge.github.io/en-US/) (on Homebrew) and then save this as a script (`convert.pe`) and make it executable.
@@ -16,7 +20,7 @@ Run with
 
 ### WOFF
 
-Use [this tool](http://people.mozilla.org/~jkew/woff/) (not on Homebrew) called `sfnt2woff`
+Use [this tool](http://people.mozilla.org/~jkew/woff/) called `sfnt2woff`. **Edit**: That page is down. [Here's the source](https://github.com/bramstein/sfnt2woff)
 
     sfnt2woff font.otf
 
