@@ -20,7 +20,14 @@ brew install InstantClientTap/instantclient/instantclient-sdk
 brew install InstantClientTap/instantclient/instantclient-sqlplus
 ```
 
-Done!
+Done! To set up `tnsnames.ora`,
+
+```bash
+mkdir -p /usr/local/opt/instantclient-basic/network/admin
+touch /usr/local/opt/instantclient-basic/network/admin/tnsnames.ora
+```
+
+and add stuff to that file.
 
 ### Laborious Way
 
