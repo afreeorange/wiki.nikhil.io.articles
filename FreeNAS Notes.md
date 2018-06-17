@@ -1,104 +1,26 @@
-Notes
------
-
--   Drives from the same manufacturing batches are prone to
-    fail together. This is bad. So purchase drives from separate
-    websites/vendors to mix things up.
--   Be [careful with SATA port
-    multipliers](http://www.zdnet.com/are-sata-port-multipliers-safe-7000011897).
--   Storage is cheap, and RAIDZ2 is the way to go.
--   Picking components is essentially a balancing act of these factors:
-    -   Low power and/or small form-factor
-    -   High capacity
-    -   High redundancy
-    -   High performance
-    -   Low $$$
-    -   Expandability
--   Used FreeNAS 8.3
--   SMB was significantly slower than AFP.
--   Use [Memtest](http://www.memtest.org/#downiso) to test memory
-    after purchase.
--   Bought non-ECC memory without thinking and because it was super
-    cheap with a deal. [This isn't the most calamitous
-    thing](http://blog.brianmoses.net/2014/03/why-i-chose-non-ecc-ram-for-my-freenas.html).
--   Wrote [a small
-    script](https://github.com/afreeorange/zfs-timemachine) to snapshot
-    my Macs from the FreeNAS box. Did this by creating a new account,
-    setting the home folder in a ZFS filesystem, generating SSH keys,
-    putting them on Macs.
-    -   Runs as a cron job at midnight
-    -   Script needs full paths to `zfs`, `sudo`, `rsync`, etc.
-
-Gigabyte USB Boot Issues
-------------------------
-
-BIOS would 'forget' boot order. Configured USB stick as hard drive.
-Problem solved by [upgrading from F1 to
-F3](http://www.gigabyte.us/products/product-page.aspx?pid=4383&dl=1#bios).
-
-[FreeNAS Upgrade](http://doc.freenas.org/index.php/Upgrading_FreeNAS%C2%AE)
----------------------------------------------------------------------------
-
-[Downloaded GUI upgrade](http://www.freenas.org/download-releases.html)
-for v9.2 (x86-64). Backed up config, then applied.
-
-Got the dreaded "[Mounting failed with error
-19](http://forums.freenas.org/threads/mounting-failed-with-error-19.13620/page-4)"
-message no matter what I tried in BIOS (disabling XHCI, etc.) Plugging
-USB stick into a 2.0 port seemed to work. ZFS volume upgrade was quick
-and painless.
-
 Hardware
 --------
 
-I didn't care about size. Also wanted a mobo that has as many onboard
-SATA ports as possible. Lots of memory since ZFS [loves
-memory](https://wiki.freebsd.org/ZFSTuningGuide).
+Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resources/hardware-recommendations-guide.12/) to pick my components this time. Cheap shit causes headaches and I expect this build to last me a while.
 
-| Component        | Link                                                                                | Price   |
-|------------------|-------------------------------------------------------------------------------------|---------|
-| Case             | [NZXT Source 210](http://www.amazon.com/gp/product/B005869A7K)                      | $79.99  |
-| PSU              | [Rosewill Capstone 450W](http://www.amazon.com/gp/product/B006BCKDGW)               | $59.99  |
-| Motherboard      | [Gigabyte GA-F2A85XM-D3H](http://www.amazon.com/gp/product/B009O7YZ7O)              | $39.99  |
-| CPU              | [AMD A4-5300 APU 3.4Ghz](http://www.amazon.com/gp/product/B0095VPBM2)               | $49.99  |
-| Memory           | [Corsair Vengeance 16GB](http://www.amazon.com/gp/product/B006EWUO22)               | $129.99 |
-| Storage (x4)     | [Seagate Barracuda 3TB SATA 6 Gb/s](http://www.amazon.com/gp/product/B005T3GRLY)    | $120    |
-| FreeNAS stick    | [ADATA S102 8GB USB 3.0](http://www.amazon.com/gp/product/B005Y8BYOE)               | $20     |
-| Fan Filters (x4) | [Rosewill RFT-120](http://www.newegg.com/Product/Product.aspx?Item=N82E16811988015) | $4      |
+### Configuration
 
--   Used nylon 8-32 × ½ Phillips flat-head screws for the fan-filters.
+* SuperMicro [X11SSM-F-O](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm) Micro-ATX
+* Intel [Xeon E3-1230 V6 Kaby Lake](https://www.newegg.com/Product/Product.aspx?Item=N82E16819117788)
+* Seasonic [FOCUS Plus Series SSR-850PX 850W 80+ Platinum](https://www.newegg.com/Product/Product.aspx?Item=N82E16817151190)
+crucial
+* Crucial [16GB ECC Unbuffered](http://www.crucial.com/usa/en/x11ssm-f/CT7982341) memory (CT7982341)
+* 5 x Western Digital [4TB Red NAS Drives](https://www.wdc.com/products/internal-storage/wd-red.html)
+* [NZXT Source 210](http://www.amazon.com/gp/product/B005869A7K)
+* [Rosewill RFT-120](http://www.newegg.com/Product/Product.aspx?Item=N82E16811988015) fan filters. Used nylon 8-32 × ½ Phillips flat-head screws to install them.
+* An old Intel [80GB SSD Drive](https://www.amazon.com/Intel-SSDSA2CW080G3-Internal-Solid-State/dp/B00666SGRG)
 
-Software Configuration
-----------------------
+Ran `smartctl` short, conveyance, and long test with an ArchLinux ISO. Ran about 10 rounds of `memtest86` on the memory.
 
-### Sudoers
+Software
+--------
 
-Need to have NOPASSWD sudo access for my [backup
-scripts](https://github.com/afreeorange/zfs-timemachine). Created a user
-in the "wheel" group and added a cron job via the web interface. Bad
-part is that I have to do this with every update. Maybe a jail can solve
-this?
-
-    sudo su -
-
-    # Mount read-write
-    mount -wu /
-
-    # Edit sudoers file
-    chmod u+w /conf/base/etc/local/sudoers
-    echo -e "\n# For ZFS snapshots\n%wheel ALL=(ALL) NOPASSWD: ALL" >> /conf/base/etc/local/sudoers
-    chmod u-w /conf/base/etc/local/sudoers
-
-    # Mount read-only
-    mount -ru /
-
-    # Make sure to reboot when done
-
-References
-----------
-
--   <http://blog.brianmoses.net/2013/01/diy-nas-2013-edition.html>
-
-
-
-
+* FreeNAS 11
+* Followed [this guide](https://www.youtube.com/watch?v=z2q0FYqWaVo) to install [PiHole](https://pi-hole.net/)
+* [Tautulli](https://github.com/Tautulli/Tautulli-Wiki/wiki/Installation) and [Plex](http://www.freenas.org/blog/plex-on-freenas/) in separate Jails.
+* Time Machine for my Mac
