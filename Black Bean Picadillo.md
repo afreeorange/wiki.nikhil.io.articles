@@ -1,4 +1,4 @@
-[Via](www.goodhousekeeping.com)
+[Via](http://www.goodhousekeeping.com)
 
 ## Ingredients
 
