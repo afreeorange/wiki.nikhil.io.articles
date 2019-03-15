@@ -46,3 +46,12 @@ sudo usermod -a -G lpadmin pi
 ```
 
 Navigate to `http://pi:631`. You'll know what to do. 
+
+### AirPrint Support
+
+Easier than I thought it would be!
+
+```bash
+sudo apt-get install avahi-discover
+systemctl is-enabled avahi
+```
