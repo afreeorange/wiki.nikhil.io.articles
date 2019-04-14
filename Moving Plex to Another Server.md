@@ -21,7 +21,7 @@ Data is kept here
 
 ```bash
 # FreeBSD
-/usr/local/plexdata-plexpass
+/usr/local/plexdata-plexpass/Plex Media Server
 
 # Plex plugin
 /var/db/plexdata/Plex Media Server
