@@ -1,5 +1,5 @@
 Maintenance
-===========
+-----------
 
 ```bash
 # Upgrade PiHole and Gravity lists
@@ -10,7 +10,7 @@ pihole restartdns
 ```
 
 New [Regexes](https://docs.pi-hole.net/ftldns/regex/overview/)
-==============================================================
+--------------------------------------------------------------
 
 Added [this](https://github.com/mmotti/pihole-regex/blob/master/regex.list) to `/etc/pihole/regex.list`. Just looks for tracking keywords.
 
