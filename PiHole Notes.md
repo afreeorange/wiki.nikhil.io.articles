@@ -9,6 +9,13 @@ pihole -up && pihole -g
 pihole restartdns
 ```
 
+Logs
+----
+
+```bash
+tail -f /var/log/pihole.log
+```
+
 New [Regexes](https://docs.pi-hole.net/ftldns/regex/overview/)
 --------------------------------------------------------------
 
