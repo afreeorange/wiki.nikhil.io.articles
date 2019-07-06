@@ -21,11 +21,12 @@ Ingredients
 Preparation
 -----------
 
-* Heat oil on high, add spices, cook for 45 seconds
+* Heat oil on medium-high, add spices, cook for 45 seconds
+* Add ginger and garlic, cook for 2 minutes
 * Add onions, cook until super soft and browning
-* Add tomatoes, mix everything
+* Add tomatoes, cook until oil separates
 * Add salt and water, mix
-* Cook mostly covered for 35 mins
+* Cook at medium heat, mostly covered, for 35 mins
 * Remove lid, cook for 8-10 mins
 * Use blender to turn into a paste
 * Share and enjoy
