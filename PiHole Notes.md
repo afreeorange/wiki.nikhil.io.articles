@@ -50,3 +50,9 @@ Added [this](https://github.com/mmotti/pihole-regex/blob/master/regex.list) to `
 ```
 
 Then restart via `sudo service pihole-FTL restart`
+
+New Blocklists
+--------------
+
+Find a [big list here](https://firebog.net/). These go in `/etc/pihole/adlists.list`. Find the "ticked" lists [here](https://v.firebog.net/hosts/lists.php) (these are safe to add and won't cause issues.) 
+
