@@ -1,27 +1,42 @@
-Backup all datasets and snapshots in a Zpool to an external USB drive.
+Backup all datasets and snapshots in a Zpool to an external USB drive. [This person](https://www.ixsystems.com/community/threads/manually-on-demand-replicating-entire-main-pool-to-external-usb-drive-for-physical-offsite-emergency.79804/) has basically the same approach except that they're doing it via manual `cron` job.
 
 ```bash
+#!/usr/local/bin/bash
+
+# Run this as root. Get weird errors with zfs not being able to unmount
+# before receiving snapshots :/
+
+SOURCE_POOL="source"
+DESTINATION_POOL="backup"
+SNAPSHOT_LABEL="manual_monthly_backup"
+SNAPSHOT_LABEL_PREV="${SNAPSHOT_LABEL}_previous"
+
+# --- Initial Backup ---
+
 # First, take a snapshot of the pool to back up
 # I have underlying underlying datasets, so make this recursive
-zfs snapshot -r source_pool@manual_backup
+zfs snapshot -r "$SOURCE_POOL@$SNAPSHOT_LABEL"
 
 # Initial transfer. `pv` shows progress nicely. We
 # are backing up all datasets and their snapshots.
-zfs send -R source_pool@manual_backup | pv | zfs receive -vF destination_pool
+zfs send -R "$SOURCE_POOL@$SNAPSHOT_LABEL" | pv | zfs receive -vF $DESTINATION_POOL
+
+# --- All subsequent backups ---
 
 # Incremental backups! First, rename the old
-zfs rename -r source_pool@manual_backup source_pool@previous_backup
+zfs rename -r $SOURCE_POOL@$SNAPSHOT_LABEL $SOURCE_POOL@$SNAPSHOT_LABEL_PREV
 
 # Take a fresh new snapshot
-zfs snapshot -r source_pool@manual_backup
+zfs snapshot -r $SOURCE_POOL@$SNAPSHOT_LABEL
 
 # Send incrementals to the destination. The `-i` flag
 # will send the difference between the two arguments to
 # the destination.
 #
 # If all intermediary snapshots are required, use '-I'
-zfs send -R -i source_pool@previous_backup source_pool@manual_backup | pv | zfs receive -v destination_pool
+zfs send -R -i $SOURCE_POOL@$SNAPSHOT_LABEL_PREV $SOURCE_POOL@$SNAPSHOT_LABEL | pv | zfs receive -v $DESTINATION_POOL
 
-# Don't need the previous snapshot anymore... clean up
-zfs destroy -r source_pool@previous_backup
+# Don't need the previous snapshots anymore... clean up
+zfs destroy -r $SOURCE_POOL@$SNAPSHOT_LABEL_PREV
+zfs destroy -r $DESTINATION_POOL@$SNAPSHOT_LABEL_PREV
 ```
