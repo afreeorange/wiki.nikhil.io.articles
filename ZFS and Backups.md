@@ -40,3 +40,17 @@ zfs send -R -i $SOURCE_POOL@$SNAPSHOT_LABEL_PREV $SOURCE_POOL@$SNAPSHOT_LABEL | 
 zfs destroy -r $SOURCE_POOL@$SNAPSHOT_LABEL_PREV
 zfs destroy -r $DESTINATION_POOL@$SNAPSHOT_LABEL_PREV
 ```
+
+### `cron` Job
+
+From that forum post up top:
+
+```bash
+(
+    zfs rename -r mainpool@offsite-backup-new mainpool@offsite-backup-old;
+    zfs snapshot -r mainpool@offsite-backup-new;
+    zfs send -Ri mainpool@offsite-backup-old mainpool@offsite-backup-new | zfs recv -vFdu usbdrivepool;
+    zfs destroy -r mainpool@offsite-backup-old;
+    zfs destroy -r usbdrivepool@offsite-backup-old;
+) | mail -s "FreeNAS Replication to USB Drive" "myemail@example.com"
+```
