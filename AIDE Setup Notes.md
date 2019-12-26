@@ -1,3 +1,11 @@
+---
+tags:
+  - centos
+  - redhat
+  - linux
+  - guide
+---
+
 Installed [AIDE](http://aide.sourceforge.net/) `v0.13.1-6.el5_8.2` 
 on CentOS 5.8 x86\_64
 
