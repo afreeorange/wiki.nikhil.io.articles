@@ -34,7 +34,7 @@ zfs snapshot -r $SOURCE_POOL@$SNAPSHOT_LABEL
 # the destination.
 #
 # If all intermediary snapshots are required, use '-I'
-zfs send -R -i $SOURCE_POOL@$SNAPSHOT_LABEL_PREV $SOURCE_POOL@$SNAPSHOT_LABEL | pv | zfs receive -v $DESTINATION_POOL
+zfs send -R -i $SOURCE_POOL@$SNAPSHOT_LABEL_PREV $SOURCE_POOL@$SNAPSHOT_LABEL | pv | zfs receive -vF $DESTINATION_POOL
 
 # Don't need the previous snapshots anymore... clean up
 zfs destroy -r $SOURCE_POOL@$SNAPSHOT_LABEL_PREV
