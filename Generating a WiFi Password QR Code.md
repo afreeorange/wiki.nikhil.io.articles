@@ -14,7 +14,7 @@ pwgen -s 63 > "${SSID}.password.txt"
 qrencode \
   --size=15 \
   --output=${SSID}.png \
-  "WIFI:T:WPA;S:${SSID};P:$(cat 00wifi.txt);;"
+  "WIFI:T:WPA;S:${SSID};P:$(cat "${SSID}.password.txt");;"
 ```
 
 Goes without saying that should be displayed in a location that's not visible from, say, a window. On iOS, the camera app automagically recognizes the resulting QR code and asks if you'd like to join the network. 
