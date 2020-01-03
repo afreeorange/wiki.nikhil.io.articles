@@ -24,3 +24,23 @@ Software
 * Followed [this guide](https://www.youtube.com/watch?v=z2q0FYqWaVo) to install [PiHole](https://pi-hole.net/)
 * [Tautulli](https://github.com/Tautulli/Tautulli-Wiki/wiki/Installation) and [Plex](http://www.freenas.org/blog/plex-on-freenas/) in separate Jails.
 * Time Machine for my Mac
+
+Applications
+------------
+
+### Node Version Manager
+
+```bash
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
+# Install gmake
+pkg install gmake
+
+# Export compilers
+export CC=cc
+export CXX=c++
+
+# Install a version
+nvm install v12.14.0
+```
