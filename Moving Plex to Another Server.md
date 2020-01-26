@@ -1,11 +1,26 @@
-### Installing Plex
+Installation
+------------
 
 Did this in a FreeBSD jail for the FreeNAS plugin sucks.
 
 ```bash
+# Get more current updates to PMS
+mkdir -p /usr/local/etc/pkg/repos
+touch /usr/local/etc/pkg/repos/FreeBSD.conf
+```
+
+Add this to `FreeBSD.conf`
+
+```
+FreeBSD: {
+    url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest"
+}
+```
+
+```bash
 # Update system and install Plex
-pkg update
-pkg upgrade
+pkg update -f
+pkg upgrade -f
 pkg install plexmediaserver-plexpass
 
 # Installed here (if you have a PlexPass)
@@ -15,7 +30,8 @@ pkg install plexmediaserver-plexpass
 sysrc plexmediaserver_plexpass_enable=YES
 ```
 
-### Migrating Data
+Migration
+---------
 
 Data is kept here
 
@@ -39,6 +55,25 @@ Then
 * Clean Bundles, Empty Trash, Optimize Database
 * Make sure the server's accessible outside the network
 * Make sure Plex comes up when you reboot
+
+Downgrading
+-----------
+
+Had to downgrade from `v1.18.4.2171` to the last version that worked `v1.17.0.1709`. This was because I'd keep seeing the wonderful "_The transcoder exited due to an error_" message only on my Samsung TV. Nothing in the logs (except for the fact that the newer version required a `/home/plex/transcode` which didn't exist; creating this folder didn't help.) Gave up trying to solve the problem.
+
+```bash
+# Stop Plex
+service plexmediaserver_plexpass stop
+
+# Remove latest version
+pkg remove plexmediaserver-plexpass
+
+# Add the last one that works
+pkg add /var/cache/pkg/plexmediaserver-plexpass-1.17.0.1709.txz
+
+# Start Plex
+service plexmediaserver_plexpass start
+```
 
 References
 ----------
