@@ -54,10 +54,11 @@ Then restart via `sudo service pihole-FTL restart`
 New Blocklists
 --------------
 
-Find a [big list here](https://firebog.net/). These go in `/etc/pihole/adlists.list`. Find the "ticked" lists [here](https://v.firebog.net/hosts/lists.php) (these are safe to add and won't cause issues.) 
+Find a [big list here](https://firebog.net/). Find the "ticked" lists [here](https://v.firebog.net/hosts/lists.php) (these are safe to add and won't cause issues.) 
 
-SmartTV Blocklists
-------------------
+To install, go to Settings -> Blocklists and add them there. These _used_ to go in `/etc/pihole/adlists.list` but adding these via the UI is better since PiHole 5 will use SQLite instead of flat text files.
+
+### SmartTV Blocklists
 
 See [this GitHub gist](https://github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV.txt). I have Samsung TVs, so some caveats apply about blocking domains like `cdn.samsungcloudsolution.com` and (especially) `time.samsungcloudsolution.com`.
 
