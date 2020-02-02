@@ -42,11 +42,6 @@ Added [this](https://github.com/mmotti/pihole-regex/blob/master/regex.list) to `
 
 # Instart Logic
 (.*)\.g00\.(.*).
-
-# AMP, which no one asked for
-# Full list: https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
-^(.+\.)?amp\.cloudflare\.com$
-^(.+\.)?cdn\.ampproject\.org$
 ```
 
 Then restart via `sudo service pihole-FTL restart`
@@ -62,3 +57,6 @@ To install, go to Settings -> Blocklists and add them there. These _used_ to go 
 
 See [this GitHub gist](https://github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV.txt). I have Samsung TVs, so some caveats apply about blocking domains like `cdn.samsungcloudsolution.com` and (especially) `time.samsungcloudsolution.com`.
 
+### Google AMP 🙄
+
+Add [this list](https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt)
