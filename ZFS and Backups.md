@@ -1,15 +1,14 @@
 Backup all datasets and snapshots in a Zpool to an external USB drive. [This person](https://www.ixsystems.com/community/threads/manually-on-demand-replicating-entire-main-pool-to-external-usb-drive-for-physical-offsite-emergency.79804/) has basically the same approach except that they're doing it via manual `cron` job.
 
+_Run all this stuff as `root`_! Get weird errors with zfs not being able to unmount before receiving snapshots :/
+
 ```bash
 #!/usr/local/bin/bash
 
-# Run this as root. Get weird errors with zfs not being able to unmount
-# before receiving snapshots :/
-
-SOURCE_POOL="source"
-DESTINATION_POOL="backup"
-SNAPSHOT_LABEL="manual_monthly_backup"
-SNAPSHOT_LABEL_PREV="${SNAPSHOT_LABEL}_previous"
+export SOURCE_POOL="source"
+export DESTINATION_POOL="backup"
+export SNAPSHOT_LABEL="manual_monthly_backup"
+export SNAPSHOT_LABEL_PREV="${SNAPSHOT_LABEL}_previous"
 
 # --- Initial Backup ---
 
