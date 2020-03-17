@@ -4,7 +4,7 @@ Because this comes up a lot and I can't keep this shit straight 🤷‍♂️
 |                     Movie                      | Years +/- "_A New Hope_" | Released |
 |------------------------------------------------|--------------------------|----------|
 | Episode I: _The Phantom Menace_                | -32                      |     1999 |
-| Episode II: _ Attack of the Clones_            | -22                      |     2002 |
+| Episode II: _Attack of the Clones_             | -22                      |     2002 |
 | Episode III: _Revenge of the Sith_             | -19                      |     2005 |
 | _Solo: A Star Wars Story_                      | approx. -10              |     2018 |
 | _Rogue One: A Star Wars Story_                 | (moments before)         |     2016 |
