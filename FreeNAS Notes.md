@@ -25,8 +25,8 @@ Software
 * [Tautulli](https://github.com/Tautulli/Tautulli-Wiki/wiki/Installation) and [Plex](http://www.freenas.org/blog/plex-on-freenas/) in separate Jails.
 * Time Machine for my Mac
 
-Applications
-------------
+Notes
+-----
 
 ### Node Version Manager
 
@@ -43,4 +43,36 @@ export CXX=c++
 
 # Install a version
 nvm install v12.14.0
+```
+
+### Mounting NTFS Drives and Copying Things
+
+Needed to copy some media out for mum to a Micro SD card.
+
+```bash
+# See the status of loaded modules
+kldstat
+
+# Install the FUSE package for NTFS. Seemed to ship with FreeNAS 11 so
+# I didn't have to do this...
+pkg install fusefs-ntfs
+
+# Load the FUSE module
+kldload fuse
+
+# Show all the disks and their partitions.
+gpart show
+
+=>       63  970563521  da2  MBR  (463G)
+         63       1985       - free -  (993K)
+       2048  970561536    1  ntfs  (463G)
+
+# The "1" refers to the partition. Make sure it's formatted NTFS
+file -s /dev/da2s1
+
+# Mount it
+ntfs-3g /dev/da2s1 /mnt/windows
+
+# Unmount it
+unmount /mnt/windows
 ```
