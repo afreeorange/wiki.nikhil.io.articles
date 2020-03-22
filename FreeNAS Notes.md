@@ -86,3 +86,7 @@ Would see this in a Jail with mounted volumes:
 'Solved' by adding `--acls --no-perms` to the `rsync` command. Don't use `--archive` when dealing with custom ACLs.
 
 Threads: [1](https://www.ixsystems.com/community/threads/impaired-rsync-permissions-support-for-windows-datasets.43973/), [2](https://www.ixsystems.com/community/threads/rsync-mkstemp-failed-operation-not-permitted.43269/)
+
+### UniFi Controller
+
+It's all here `/usr/local/share/java/unifi`
