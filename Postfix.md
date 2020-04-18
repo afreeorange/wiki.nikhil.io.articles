@@ -400,7 +400,7 @@ Restart Postfix and Postgrey. You'll see something like this in
 `maillog` to make sure it's working:
 
     postgrey[12582]: action=pass, reason=client whitelist, client_name=mail-qc0-f169.google.com,   
-        client_address=209.85.216.169, sender=anand.nikhil@gmail.com, recipient=test@example.com
+        client_address=209.85.216.169, sender=foo@bar.com, recipient=test@example.com
 
 Miscellaneous
 -------------

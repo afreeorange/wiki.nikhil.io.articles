@@ -47,7 +47,7 @@ A general file looks like this:
     lock_subject_prefix =  
     unlock_subject_prefix =  
     from_addr = donotreply@svn.eng.uiowa.edu  
-    to_addr = nikhil-anand@uiowa.edu anand.nikhil@gmail.com  
+    to_addr = foo@uiowa.edu bar@gmail.com  
     reply_to = donotreply@svn.eng.uiowa.edu  
     generate_diffs = add copy modify  
     show_nonmatching_paths = yes  
