@@ -5,7 +5,7 @@ Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resourc
 
 ### Configuration
 
-* SuperMicro [X11SSM-F-O](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm) Micro-ATX
+* SuperMicro X11SSM-F-O Micro-ATX: [website](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm), [manual](https://public.nikhil.io/X11SSM-FO.pdf)
 * Intel [Xeon E3-1230 V6 Kaby Lake](https://www.newegg.com/Product/Product.aspx?Item=N82E16819117788)
 * Seasonic [FOCUS Plus Series SSR-850PX 850W 80+ Platinum](https://www.newegg.com/Product/Product.aspx?Item=N82E16817151190)
 crucial
