@@ -1,4 +1,4 @@
-Mama's recipt. A pulverized mix of these things. Need to figure out the proportions.
+Mama's recipe. A pulverized mix of these things. Need to figure out the proportions.
 
 Ingredients
 ===========
