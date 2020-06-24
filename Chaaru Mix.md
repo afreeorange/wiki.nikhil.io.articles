@@ -9,3 +9,4 @@ Ingredients
 * Turmeric
 * Toor Dal (Split [Pigeon Peas](https://en.wikipedia.org/wiki/Pigeon_pea))
 * Red Chillies
+* Tamarind Paste
