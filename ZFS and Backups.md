@@ -53,3 +53,27 @@ From that forum post up top:
     zfs destroy -r usbdrivepool@offsite-backup-old;
 ) | mail -s "FreeNAS Replication to USB Drive" "myemail@example.com"
 ```
+
+### Other Notes
+
+I ended up just making a small script that uses `rsync` and snapshots. Sample:
+
+```bash
+TIMESTAMP=$(date "+%Y-%m-%dT%H.%M.%S")
+
+zfs snapshot "backup/miscellaneous@$TIMESTAMP"
+rsync -avWHh --progress --stats /mnt/orangepool/miscellaneous/ /mnt/backup/miscellaneous/
+
+zfs snapshot "backup/media@$TIMESTAMP"
+rsync -avWHh --progress --stats /mnt/orangepool/media/ /mnt/backup/media/
+```
+
+Other useful commands:
+
+```bash
+# View snapshots for a particular pool
+zfs list -t snapshot -r mypool
+
+# Rename a snapshot
+zfs rename mypool/dataset_foo mypool/dataset_bar
+```
