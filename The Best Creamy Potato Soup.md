@@ -4,19 +4,20 @@ I am amazed by how well this first iteration turned out.
 
 For **each pound** of potatoes,
 
-* 3 cups vegetable broth
-* 1 tbsp unsalted butter
-* 1/2 cup cream
-* 1 1/2 tbsp salt
-* 1 1/2 tbsp pepper
+* 2 cups vegetable broth
+* 1 tbsp unsalted butter (healthy option: 1/2 each of olive oil and butter)
 * 1 tbsp garlic (yep)
+* 2/3 cream (healthy option: coconut milk)
+* 1/3 tbsp salt
+* 1/3 tbsp pepper
 * 1/2 tsp italian seasoning
 
 ### Prep
 
-Dice peeled potatoes. Pressure cook them with salt, cream, butter, and broth for about 10 minutes. Use a blender ([this is mine](https://www.kohls.com/product/prd-924305/calphalon-immersion-hand-blender.jsp)) to purée the mix while adding all other stuff. Add more broth to adjust until you have a consistency you like. Stuff face, then refrigerate for another day 💖
+Pressure cook diced potatoes[^skinning] with all ingredients for about 10 minutes. Use a blender ([this is mine](https://www.kohls.com/product/prd-924305/calphalon-immersion-hand-blender.jsp)) to purée the mix, adjusting consistency with veggie broth. Stuff face, then refrigerate for another day 💖
 
 ### Future Work
 
-* Try [Yukon Gold Potatoes](https://www.myrecipes.com/extracrispy/whats-the-difference-between-russet-red-and-yukon-gold-potatoes)
-* Try 1 tbsp olive oil (per pound) and dialing back the butter
+Try [Yukon Gold Potatoes](https://www.myrecipes.com/extracrispy/whats-the-difference-between-russet-red-and-yukon-gold-potatoes). The color's not very 'bright' which might be due to the skins and the vegetable broth.
+
+[^skinning]: You may or may not choose to skin them first 🤷‍♂️
