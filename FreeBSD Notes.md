@@ -259,6 +259,16 @@ Here are further resources:
 *   [ZFS and NFS on FreeBSD](http://misc.allbsd.de/Vortrag/EuroBSDCon_2007//Pawel_Jakub_Dawidek/eurobsdcon07_zfs.pdf)
 *   [NFS section of the FreeBSD manual](http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/network-nfs.html)
 
+### RC
+
+See all the `rcvar`s for each service with this
+
+```bash
+grep rcvar /usr/local/etc/rc.d/*
+```
+
+This is the stuff that would go into `/etc/rc.conf` (e.g. `nginx_enable="YES"`)
+
 ### Other Resources
 
 *   [ZFS Best Practices Guide](http://www.solarisinternals.com/wiki/index.php/ZFS_Best_Practices_Guide)
