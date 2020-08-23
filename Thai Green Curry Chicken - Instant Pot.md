@@ -9,7 +9,7 @@ Ingredients (Serves 4)
 * 1 shallot, thinly sliced
 * 1 tablespoon coconut oil
 * 1 tablespoon minced fresh ginger
-* 1/4 cup A cup Thai green chile paste
+* 1/4 cup Thai green chile paste
 * 1/4 cup chopped fresh cilantro leaves
 * 1/4 cup coarsely chopped roasted and salted cashews
 * 1/4 cup thinly sliced fresh basil leaves
