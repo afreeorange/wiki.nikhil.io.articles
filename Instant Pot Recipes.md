@@ -48,6 +48,7 @@ Random Recipe (Unknown Source)
 * 14 cup cashews
 
 SAUTE on NORMAL
+
 * Add oil
 * Add onions, 1 serrano pepper (seeded minced), ginger
 * Cook for 2 mins
