@@ -1,6 +1,3 @@
-Instant Pot Recipes
-===================
-
 The Base Stuff
 ---------------
 
@@ -37,3 +34,32 @@ Put it here since I cook this in one, but you won't need an InstantPot with this
 * Add pre-cooked rice and mix like a maniac to get an even color
 * Add salt to taste
 
+Random Recipe (Unknown Source)
+------------------------------
+
+* 1 tbsp coconut oil
+* 1 tbsp ginger
+* 1/2 tsp salt
+* 1 can (14oz) coconut milk
+* 1/4 cup thai paste
+* 4 lime wedges
+* 1/4 cup cilantro
+* 1/4 cup basil
+* 14 cup cashews
+
+SAUTE on NORMAL
+* Add oil
+* Add onions, 1 serrano pepper (seeded minced), ginger
+* Cook for 2 mins
+* Add Salt
+* Cook for 3 mins
+
+Press CANCEL
+
+* Add Coconut Milk, paste
+* Stir
+* Add carrots, sweet peppers, all other veggies
+
+MANUAL, HI PRESSURE for 4 minutes. De pressurize immediately!
+
+Top with cilantro, basil, cashews
