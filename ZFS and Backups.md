@@ -74,6 +74,9 @@ Other useful commands:
 # View snapshots for a particular pool
 zfs list -t snapshot -r mypool
 
+# View snapshot names only for a given pool (silences the header too)
+zfs list -r -t snapshot -o name -H backup
+
 # Rename a snapshot
 zfs rename mypool/dataset_foo mypool/dataset_bar
 ```
