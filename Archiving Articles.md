@@ -38,4 +38,4 @@ Saves _just_ the DOM. No styling. [Example](https://static-log.nikhil.io/c/colla
 
 ### Result
 
-ArchiveBox is awesome but I ended up using SingleFile for a good balance. Plus, 
+ArchiveBox is awesome but I ended up using SingleFile for a good balance. Plus, `readability-cli` had [some encoding issues](https://static-log.nikhil.io/c/collatz-in-ts.html). 
