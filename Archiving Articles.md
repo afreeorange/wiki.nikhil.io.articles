@@ -14,6 +14,18 @@ Not bad at all. Everything but the JavaScript, all scrunched into a... single fi
 # Use JsDOM instead of Chrome/Puppeteer to avoid JavaScript
 npm i -g jsdom
 npm i -g "gildas-lormeau/SingleFile#master"
+
+# Now just
+single-file \
+  --back-end jsdom \
+  https://blog.bitgate.cz/static-site-analytics-with-nginx-goaccess-no-js \
+  output.html
+
+# Can use Chrome (on macOS) like so
+single-file \
+  --browser-executable-path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  https://blog.bitgate.cz/static-site-analytics-with-nginx-goaccess-no-js \
+  output.html
 ```
 
 ### ArchiveBox
