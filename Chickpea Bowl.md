@@ -1,29 +1,26 @@
-# Chickpea Bowl
-
---Favorite of Allison Voshell
---https://pinchofyum.com/morrocan-spiced-chickpea-glow-bowl
+Favorite of Allison :) [Source](https://pinchofyum.com/morrocan-spiced-chickpea-glow-bowl).
 
 ## Ingredients
 
-* 1 TBSP olive oil
+* 1 tbsp olive oil
 * 1/4 cup chopped onion
 * 1 clove garlic, minced
-* 1 TBSP each – chili powder and cumin
+* 1 tbsp each – chili powder and cumin
 * 1 tsp each – turmeric and garam masala
 * 1 tsp sea salt
-* dash of each -cinnamon and cayenne (to taste)
-* 2 14 oz cans chickpeas
-* 2 14 oz cans fire roasted diced tomatoes
+* Dash of each: cinnamon and cayenne (to taste)
+* 2 1/4 oz cans chickpeas
+* 2 1/4 oz cans fire roasted diced tomatoes
 
 ### Optional Bowl Add-ins
 
-* cucumbers
-* couscous
-* mint, parsley, cilantro
-* yogurt or hummus
-* olive oil
-* lemon juice
-* toasted pita wedges
+* Cucumbers
+* Couscous
+* Mint, Parsley, Cilantro
+* Yogurt Or Hummus
+* Olive Oil
+* Lemon Juice
+* Toasted Pita Wedges
 
 ## Preparation
 
