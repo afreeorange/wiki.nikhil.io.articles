@@ -18,12 +18,11 @@ Sauteed the paste on low for about 2-3 minutes. Added the milk, switched to high
 
 **Note**: Keep the last can out and add it before you pressure cook so that you bring the temperature down. This avoids a `BURN` on the InstantPot...
 
-## Results and Notes
+## Results, Notes, TODO
 
 Veggies were not _al dente_ as I liked. Decent flavor.
 
-### TODO
-
+* Use coconut milk with the paste
 * Try 3 mins on low pressure
 * [Maesri](https://www.amazon.com/Maesri-Thai-Red-Curry-Paste/dp/B005MH0P5Q) or [Mae Ploy](https://www.amazon.com/Mae-Ploy-Curry-Paste-Large/dp/B0044PYPVC) come _highly_ recommended by folks on the internet
 * Try to separate out the fats from the coconut oil the next time

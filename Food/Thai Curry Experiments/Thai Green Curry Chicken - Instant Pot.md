@@ -2,7 +2,7 @@ Ingredients (Serves 4)
 ----------------------
 
 * 1 1/2 teaspoon salt
-* 1 14-ounce can coconut milk, shaken
+* 1 1/4 ounce can coconut milk, shaken
 * 1 medium yellow or red sweet pepper, cut into strips
 * 1 pound skinless, boneless chicken breast, thinly sliced
 * 1 serrano pepper, seeded and minced
