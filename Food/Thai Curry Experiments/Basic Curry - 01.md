@@ -14,7 +14,9 @@ Made this in an InstantPot.
 
 ## Preparation
 
-Sauteed the paste on low for about 2-3 minutes. Added the milk, switched to high and brought things to a boil. Added veggies and pressure cooked on low for 5 mins.
+Sauteed the paste on low for about 2-3 minutes. Added the milk, switched to high and brought things to a boil. Added veggies and other ingredients, gave the mix a nice stir, and pressure cooked on low for 5 mins.
+
+**Note**: Keep the last can out and add it before you pressure cook so that you bring the temperature down. This avoids a `BURN` on the InstantPot...
 
 ## Results and Notes
 
