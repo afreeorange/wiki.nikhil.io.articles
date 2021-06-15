@@ -27,3 +27,4 @@ Veggies were not _al dente_ as I liked. Decent flavor.
 * [Maesri](https://www.amazon.com/Maesri-Thai-Red-Curry-Paste/dp/B005MH0P5Q) or [Mae Ploy](https://www.amazon.com/Mae-Ploy-Curry-Paste-Large/dp/B0044PYPVC) come _highly_ recommended by folks on the internet
 * Try to separate out the fats from the coconut oil the next time
 * Use kaffir leaves
+* Try Tamarind
