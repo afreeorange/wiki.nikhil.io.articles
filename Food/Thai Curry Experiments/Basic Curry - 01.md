@@ -24,6 +24,9 @@ Veggies were not _al dente_ as I liked. Decent flavor.
 
 * Use coconut milk with the paste
 * Try to separate out the fats from the coconut oil the next time
+  * DO NOT SHAKE THE CAN. Use the separated out cream; it's rich in fat
+  * Good Thai coconut milk will have about 15-20% fats in it. Use this to develop flavors in the curry paste!
+  * Fry the fat, add the paste, reduce until it's about peanut-buttery-ish, then add more milk (and pressure cook the veggies)
 * Try 3 mins on low pressure
 * [Maesri](https://www.amazon.com/Maesri-Thai-Red-Curry-Paste/dp/B005MH0P5Q) or [Mae Ploy](https://www.amazon.com/Mae-Ploy-Curry-Paste-Large/dp/B0044PYPVC) come _highly_ recommended by folks on the internet
 * Use kaffir leaves
