@@ -3,7 +3,7 @@ Made this in an InstantPot.
 ## Ingredients
 
 * 4 cans of [_Thai Kitchen_ organic coconut milk](https://www.amazon.com/Thai-Kitchen-Red-Curry-Paste/dp/B007QR5EPQ)
-* 2 little things of [Thai Curry Paste](https://www.amazon.com/Thai-Kitchen-Red-Curry-Paste/dp/B007QR5EPQ)
+* 2 little things of [_Thai Kitchen_ Curry Paste](https://www.amazon.com/Thai-Kitchen-Red-Curry-Paste/dp/B007QR5EPQ)
 * 3 large peppers (red, yellow, green)
 * 1 large onion
 * 1 large potato
@@ -23,8 +23,8 @@ Sauteed the paste on low for about 2-3 minutes. Added the milk, switched to high
 Veggies were not _al dente_ as I liked. Decent flavor.
 
 * Use coconut milk with the paste
+* Try to separate out the fats from the coconut oil the next time
 * Try 3 mins on low pressure
 * [Maesri](https://www.amazon.com/Maesri-Thai-Red-Curry-Paste/dp/B005MH0P5Q) or [Mae Ploy](https://www.amazon.com/Mae-Ploy-Curry-Paste-Large/dp/B0044PYPVC) come _highly_ recommended by folks on the internet
-* Try to separate out the fats from the coconut oil the next time
 * Use kaffir leaves
 * Try Tamarind
