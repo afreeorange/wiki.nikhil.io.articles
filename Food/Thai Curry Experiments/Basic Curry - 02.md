@@ -12,8 +12,8 @@ Used the fat from the can to create a thick paste where the oil from the coconut
 
 ## Results, Notes, TODO
 
-* The taste was WAY TOO INTENSE.
-* There was WAY TOO MUCH oil.
+* The taste was _way too intense_.
+* There was _way too much_ oil.
 
 ### TODO
 
