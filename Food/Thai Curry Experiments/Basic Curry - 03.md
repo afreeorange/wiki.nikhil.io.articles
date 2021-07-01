@@ -16,6 +16,8 @@ Used half of one unshaken can to separate out the oils. Added the rest with othe
 
 * This was shit; insipid
 * Veggies were overcooked
+* Curry was _way_ too thick still
+* I will eat all of it, however
 
 ### TODO
 
