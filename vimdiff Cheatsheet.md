@@ -1,3 +1,5 @@
+Because these are what you'll be [using 80%+ of the time](https://en.wikipedia.org/wiki/Pareto_principle).
+
 |   Command   |                       Effect                       |
 |-------------|----------------------------------------------------|
 | `do`        | **Get** changes from other window                  |
