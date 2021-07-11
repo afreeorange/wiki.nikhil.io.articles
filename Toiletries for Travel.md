@@ -1,4 +1,8 @@
-You won't need all of these things. Adjust accordingly. 👉 Trick is to look for dry variants of things you'd normally use in liquid form. Look for wipes, rollers, sticks, chewables (like for mouthwash), and the like. They last longer too!
+👉 You won't need all of these things. Adjust accordingly.
+
+👉 Trick is to look for dry and/or compact variants of things you'd normally use in liquid form. Look for wipes, rollers, sticks, chewables (like for mouthwash), and the like. They last longer too!
+
+## The List
 
 ### First Aid, Medicine, et al
 
@@ -39,7 +43,6 @@ You won't need all of these things. Adjust accordingly. 👉 Trick is to look fo
 * Shampoo
 * Sunscreen
 * Toothpaste
-* Wet Wipes
 
 ### Plastics and Metals
 
@@ -52,5 +55,13 @@ You won't need all of these things. Adjust accordingly. 👉 Trick is to look fo
 * Toothbrush
 * Tweezers
 
-Neutrogena makes this sunscreen stick
-pick up a bar shampoo from somewhere like Lush
+## Notes
+
+* Neutrogena makes this sunscreen stick
+* Pick up a bar shampoo from somewhere like Lush
+
+TODO:
+
+* [ ] Containers for all these?
+* [ ] TSA Standards?
+* [ ] International Standards?
