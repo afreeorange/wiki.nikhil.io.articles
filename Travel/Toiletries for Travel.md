@@ -58,7 +58,9 @@
 ## Notes
 
 - Neutrogena makes this sunscreen in a stick
-- Pick up a bar shampoo from somewhere like Lush
+- Pick up a bar shampoo from somewhere [like Lush](https://www.lush.ca/en/hair/shampoo-bars/)
+- [Here's Sandalwood 'fragrance' in a tin](https://www.amazon.com/gp/product/B00MCSVLHE)
+- [Dr. Bronner's Lavender](https://www.amazon.com/Bronners-Pure-Castile-Soap-Lavender-Pack/dp/B01N3ZVEOW) can be used for body wash and laundry
 
 TODO:
 
