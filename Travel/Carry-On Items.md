@@ -1,5 +1,3 @@
-Meant to be comprehensive/everything-that-comes-to-mind. But pick and choose appropriately.
-
 - [ ] Books or E-Books
 - [ ] Camera
 - [ ] USB Car Adapter
@@ -21,7 +19,7 @@ Meant to be comprehensive/everything-that-comes-to-mind. But pick and choose app
 - [ ] House Keys
 - [ ] Insurance Cards
 - [ ] Itinerary
-- [ ] Keens
+- [ ] Light Footwear
 - [ ] Laptop/Tablet
 - [ ] Lip Balm
 - [ ] Macbook Pro + Adapter
