@@ -1,4 +1,4 @@
-Because annoying as fuck if you set up wireless printing. I'm assuming a PM at Brother thought this would save the planet.
+Because it's annoying as fuck if you set up wireless printing. I'm assuming a PM at Brother thought this would save the planet.
 
 - Go to **General Setup** -> <kbd>OK</kbd>
 - Scroll with arrow keys to **Ecology** -> <kbd>OK</kbd>
