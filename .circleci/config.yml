@@ -22,7 +22,7 @@ jobs:
           name: Installing Bock
           command: |
             pushd /home/circleci/bock
-            wget -O - https://public.nikhil.io/bock-linux.1.1.0.tgz | tar -xvzf -
+            wget -O - https://public.nikhil.io/bock-linux.tgz | tar -xvzf -
             node dist/src/index.js -a ~/project -o ~/output
             popd
 
