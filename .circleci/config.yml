@@ -5,7 +5,7 @@ orbs:
   aws-s3: circleci/aws-s3@2.0.0
 
 jobs:
-  build-and-deploy-log:
+  build-and-deploy-wiki:
     docker:
       # This is their "Next Generation" image
       # https://circleci.com/developer/images/image/cimg/node
@@ -32,6 +32,12 @@ jobs:
             pushd /home/circleci/bock
             node dist/src/index.js -a ~/project -o ~/output
 
+      - run:
+          name: Compressing
+          command: |
+            pushd /home/circleci/output
+            find . -type f -exec gzip -9 '{}' \; -exec mv '{}.gz' '{}' \;
+
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
@@ -48,7 +54,7 @@ workflows:
   version: 2
   main:
     jobs:
-      - build-and-deploy-log:
+      - build-and-deploy-wiki:
           # Don't care about running the above for anything other than pushes
           # to the master branch 🤷‍♂️
           filters:
