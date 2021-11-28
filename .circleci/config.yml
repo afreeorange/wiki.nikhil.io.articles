@@ -15,28 +15,28 @@ jobs:
       - checkout
 
       - run:
-          name: Making project folders
-          command: mkdir -p /home/circleci/{bock,output}
+          name: Making output folder
+          command: mkdir -p /home/circleci/output
 
       - run:
           name: Installing Bock
           command: |
-            pushd /home/circleci/bock
-            wget -O - https://public.nikhil.io/bock-linux.tgz | tar -xvzf -
-            node dist/src/index.js -a ~/project -o ~/output
+            pushd /home/circleci
+            wget https://public.nikhil.io/bock-linux
+            chmod +x bock-linux
             popd
 
       - run:
           name: Building
           command: |
-            pushd /home/circleci/bock
-            node dist/src/index.js -a ~/project -o ~/output
+            /home/circleci/bock-linux -a ~/project -o ~/output
 
       - run:
           name: Compressing
           command: |
             pushd /home/circleci/output
             find . -type f -exec gzip -9 '{}' \; -exec mv '{}.gz' '{}' \;
+            popd
 
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
