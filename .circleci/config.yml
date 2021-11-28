@@ -15,21 +15,22 @@ jobs:
       - checkout
 
       - run:
-          name: Making output folder
-          command: mkdir -p /home/circleci/output
+          name: Making project folders
+          command: mkdir -p /home/circleci/{bock,output}
 
       - run:
           name: Installing Bock
           command: |
-            pushd /home/circleci
-            wget https://public.nikhil.io/bock-linux
-            chmod +x bock-linux
+            pushd /home/circleci/bock
+            wget -O - https://public.nikhil.io/bock-linux.tgz | tar -xvzf -
             popd
 
       - run:
           name: Building
           command: |
-            /home/circleci/bock-linux -a ~/project -o ~/output
+            pushd /home/circleci/bock
+            node dist/src/index.js -a ~/project -o ~/output
+            popd
 
       - run:
           name: Compressing
