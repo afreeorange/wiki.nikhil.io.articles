@@ -37,7 +37,7 @@ Data is kept here
 
 ```bash
 # FreeBSD
-/usr/local/plexdata-plexpass/Plex Media Server
+/usr/local/plexdata-plexpass/Plex Media Server  
 
 # Plex plugin
 /var/db/plexdata/Plex Media Server
@@ -49,12 +49,11 @@ Sync that stuff to the new server before you start the Plex Daemon:
 service plexmediaserver_plexpass start
 ```
 
-Then
+Then go to the Plex Web UI
 
 * Log out and log back in
-* Clean Bundles, Empty Trash, Optimize Database
-* Make sure the server's accessible outside the network
-* Make sure Plex comes up when you reboot
+* Settings -> Manage -> Troubleshooting: Clean Bundles, Empty Trash, Optimize Database
+* Settings -> Remote Access: Make sure the server's accessible outside the network
 
 Downgrading
 -----------
