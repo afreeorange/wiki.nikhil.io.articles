@@ -53,6 +53,7 @@
 - Portable Mirror
 - Razors
 - Toothbrush
+- Electric Toothbrush extra heads
 - Tweezers
 
 ## Notes
