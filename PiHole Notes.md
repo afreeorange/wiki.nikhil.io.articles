@@ -7,6 +7,9 @@ pihole -up && pihole -g
 
 # Restart DNS Subsystem
 pihole restartdns
+
+# If it complains about an old version of the OS, skip the check
+curl -sSL https://install.pi-hole.net | PIHOLE_SKIP_OS_CHECK=true sudo -E bash
 ```
 
 Logs
