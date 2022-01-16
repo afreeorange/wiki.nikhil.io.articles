@@ -24,6 +24,8 @@ jobs:
           command: |
             pushd /home/circleci
             git clone git@github.com:afreeorange/node-bock.git bock
+            pwd
+            ls -lA
             yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
             popd
 
