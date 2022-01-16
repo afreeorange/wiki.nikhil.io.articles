@@ -6,6 +6,8 @@ orbs:
 
 jobs:
   build-and-deploy-wiki:
+    working_directory: /home/circleci/bock
+
     docker:
       # This is their "Next Generation" image
       # https://circleci.com/developer/images/image/cimg/node
