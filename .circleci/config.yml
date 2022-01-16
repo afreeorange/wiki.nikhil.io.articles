@@ -14,10 +14,10 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          name: 🗃 Restoring package cache
-          keys:
-            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      # - restore_cache:
+      #     name: 🗃 Restoring package cache
+      #     keys:
+      #       - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run:
           name: 🍺 Installing Bock
@@ -27,11 +27,11 @@ jobs:
             yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
             popd
 
-      - save_cache:
-          name: 💾 Saving package cache
-          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
+      # - save_cache:
+      #     name: 💾 Saving package cache
+      #     key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      #     paths:
+      #       - ~/.cache/yarn
 
       - run:
           name: 📓 Building Wiki
