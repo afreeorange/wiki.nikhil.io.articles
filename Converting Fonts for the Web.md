@@ -39,6 +39,10 @@ Run with
 
     fontforge -script name_of_script font.woff
 
+You can also use [FontSquirrel's excellent Online Generator](https://www.fontsquirrel.com/tools/webfont-generator).
+
+---
+
 ### Deprecated Stuff
 
 #### EOT (Deprecated Format)
