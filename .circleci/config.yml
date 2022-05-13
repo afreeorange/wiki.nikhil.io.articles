@@ -6,7 +6,7 @@ orbs:
 jobs:
   build-and-deploy-wiki:
     docker:
-      - image: cimg/go:1.18
+      - image: cimg/go:1.17
 
     steps:
       - checkout
