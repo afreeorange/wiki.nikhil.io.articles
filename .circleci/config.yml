@@ -6,8 +6,7 @@ orbs:
 jobs:
   build-and-deploy-wiki:
     docker:
-      - image: cimg/go:1.17
-
+      - image: cimg/go:1.18
     steps:
       - checkout
       - run:
@@ -25,7 +24,6 @@ jobs:
             pushd /home/circleci/output
             find . -type f -exec gzip -9 '{}' \; -exec mv '{}.gz' '{}' \;
             popd
-
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
