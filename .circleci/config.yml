@@ -18,7 +18,7 @@ jobs:
           name: 📓 Building Wiki
           command: |
             cd
-            bock -a ./project -o ./output
+            bock -a project -o output
       - run:
           name: 🗜 Compressing
           command: |
