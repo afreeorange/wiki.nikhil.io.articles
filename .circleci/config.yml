@@ -19,7 +19,6 @@ jobs:
           name: 📓 Building Wiki
           command: |
             ./bock-linux -a . -o /home/circleci/output
-            mkdir /home/circleci/output
       - run:
           name: 🗜 Compressing
           command: |
