@@ -12,28 +12,28 @@ jobs:
       - run:
           name: 🍺 Installing Bock
           command: |
-            wget https://public.nikhil.io/bock-linux
-            chmod +x bock-linux
+            wget -O /home/circleci/bin/bock https://public.nikhil.io/bock-linux
+            chmod +x /home/circleci/bin/bock
       - run:
           name: 📓 Building Wiki
           command: |
-            ./bock-linux -a . -o /home/circleci/output
-      # - run:
-      #     name: 🗜 Compressing
-      #     command: |
-      #       pushd /home/circleci/output
-      #       find . -type f -exec gzip -9 '{}' \; -exec mv '{}.gz' '{}' \;
-      #       popd
+            bock -a /home/circleci/project -o /home/circleci/output
+      - run:
+          name: 🗜 Compressing
+          command: |
+            pushd /home/circleci/output
+            find . -type f -exec gzip -9 '{}' \; -exec mv '{}.gz' '{}' \;
+            popd
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           from: /home/circleci/output
           to: "s3://docker.nikhil.io/"
-          # arguments: |
-          #   --delete \
-          #   --size-only \
-          #   --content-encoding gzip
+          arguments: |
+            --delete \
+            --size-only \
+            --content-encoding gzip
 
 workflows:
   version: 2
