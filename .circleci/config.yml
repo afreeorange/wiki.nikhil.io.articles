@@ -1,49 +1,24 @@
 version: 2.1
 
 orbs:
-  # https://circleci.com/developer/orbs/orb/circleci/aws-s3
   aws-s3: circleci/aws-s3@2.0.0
 
 jobs:
   build-and-deploy-wiki:
     docker:
-      # This is their "Next Generation" image
-      # https://circleci.com/developer/images/image/cimg/node
-      - image: cimg/node:14.15.2
+      - image: cimg/go:1.18
 
     steps:
       - checkout
-
-      # - restore_cache:
-      #     name: 🗃 Restoring package cache
-      #     keys:
-      #       - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-
       - run:
           name: 🍺 Installing Bock
           command: |
-            git clone git@github.com:afreeorange/node-bock.git /home/circleci/bock
-            pushd /home/circleci/bock
-            yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
-            popd
-
-      # - save_cache:
-      #     name: 💾 Saving package cache
-      #     key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      #     paths:
-      #       - ~/.cache/yarn
-
+            wget https://public.nikhil.io/bock-linux
+            chmod +x bock-linux
       - run:
           name: 📓 Building Wiki
           command: |
-            mkdir /home/circleci/output
-            pushd /home/circleci/bock
-            npx ts-node -T src/index.ts \
-                --article-root /home/circleci/project \
-                --output-folder /home/circleci/output \
-                --prettify
-            popd
-
+            ./bock-linux -a . -o /home/circleci/output
       - run:
           name: 🗜 Compressing
           command: |
@@ -56,10 +31,9 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           from: /home/circleci/output
-          to: "s3://wiki.nikhil.io/"
+          to: "s3://docker.nikhil.io/"
           arguments: |
             --delete \
-            --exclude "*.DS_Store*" \
             --size-only \
             --content-encoding gzip
 
