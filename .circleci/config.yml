@@ -18,6 +18,9 @@ jobs:
           name: 📓 Building Wiki
           command: |
             cd
+            echo "---"
+            bock -v
+            echo "---"
             bock -a project -o output
       - run:
           name: 🗜 Compressing
