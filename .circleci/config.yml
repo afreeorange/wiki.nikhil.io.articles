@@ -18,10 +18,8 @@ jobs:
           name: 📓 Building Wiki
           command: |
             cd
-            echo "---"
             bock -v
-            echo "---"
-            bock -a project -o output
+            bock -a /home/circleci/project -o /home/circleci/output
       - run:
           name: 🗜 Compressing
           command: |
