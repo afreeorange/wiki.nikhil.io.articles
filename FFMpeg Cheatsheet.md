@@ -187,3 +187,15 @@ ffmpeg -r 1/5 -i img%03d.png -c:v libx264 -vf fps=25 -pix_fmt yuv420p out.mp4
 ````
 ffmpeg -i in.mp4 -map_metadata -1 -metadata title="My Title" -c:v copy -c:a copy out.mp4
 ````
+
+## With `yt-dlp`, make a clip of a video
+
+`-ss` is the start time, and `-s` is the duration. More info [here](https://old.reddit.com/r/youtubedl/wiki/howdoidownloadpartsofavideo).
+
+```
+yt-dlp \
+  -f 18 \
+  --external-downloader ffmpeg \
+  --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -t 00:00:5.00" \
+  "https://www.youtube.com/watch?v=-5ZIQ0bDlU8"
+```
