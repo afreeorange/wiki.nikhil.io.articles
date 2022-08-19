@@ -34,7 +34,6 @@ jobs:
           to: "s3://wiki.nikhil.io/"
           arguments: |
             --delete \
-            --size-only \
             --content-encoding gzip
 
 workflows:
