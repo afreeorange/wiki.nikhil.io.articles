@@ -19,7 +19,7 @@ jobs:
           command: |
             cd
             bock -v
-            bock -a /home/circleci/project -o /home/circleci/output
+            bock -a /home/circleci/project -o /home/circleci/output -r -j
       - run:
           name: 🗜 Compressing
           command: |
