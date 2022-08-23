@@ -12,7 +12,7 @@ jobs:
       - run:
           name: 🍺 Installing Bock
           command: |
-            wget -O /home/circleci/bin/bock https://public.nikhil.io/bock-linux-x86_64
+            wget -O /home/circleci/bin/bock https://public.nikhil.io/bock-Linux-x86_64
             chmod +x /home/circleci/bin/bock
       - run:
           name: 📓 Building Wiki
