@@ -1,4 +1,4 @@
-Saved some notes [from here](https://replicate.com/blog/run-stable-diffusion-on-m1-mac) about how to run them on my Mac.
+Saved some notes [from here](https://replicate.com/blog/run-stable-diffusion-on-m1-mac) on how to run this on my Mac (a MacBook Pro 16-inch, 2021, M1 Max, 32GB RAM).
 
 I needed Python 3.10; using the 3.11 (beta) version didn't work. Got a bunch of OpenBLAS-related compilation errors. I just used `pyenv` to create a virtual environment.
 
