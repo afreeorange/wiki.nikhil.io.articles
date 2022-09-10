@@ -32,3 +32,10 @@ python scripts/txt2img.py \
 ls -l outputs/txt2img-samples/
 ```
 
+### Explanation
+
+Here's [a nice basic overview of diffusion](https://www.youtube.com/watch?v=RGBNdD3Wn-g). [This video](https://www.youtube.com/watch?v=J87hffSMB60) goes a bit more into depth.
+
+### UIs
+
+I found [two](https://github.com/sd-webui/stable-diffusion-webui) web [UIs](https://github.com/sd-webui/stable-diffusion-webui) that might work well.
