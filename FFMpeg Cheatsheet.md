@@ -192,10 +192,18 @@ ffmpeg -i in.mp4 -map_metadata -1 -metadata title="My Title" -c:v copy -c:a copy
 
 `-ss` is the start time, and `-s` is the duration. More info [here](https://old.reddit.com/r/youtubedl/wiki/howdoidownloadpartsofavideo).
 
-```
+```bash
+# Using seconds
 yt-dlp \
   -f 18 \
   --external-downloader ffmpeg \
-  --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -t 00:00:5.00" \
+  --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -t 5" \
+  "https://www.youtube.com/watch?v=-5ZIQ0bDlU8"
+
+# Using timestamp
+yt-dlp \
+  -f 18 \
+  --external-downloader ffmpeg \
+  --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -to 00:05:23.00" \
   "https://www.youtube.com/watch?v=-5ZIQ0bDlU8"
 ```
