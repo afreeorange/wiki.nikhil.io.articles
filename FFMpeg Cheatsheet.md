@@ -198,12 +198,12 @@ yt-dlp \
   -f 18 \
   --external-downloader ffmpeg \
   --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -t 5" \
-  "https://www.youtube.com/watch?v=-5ZIQ0bDlU8"
+  "https://www.youtube.com/watch?v=rSc9xYPMAQY"
 
 # Using timestamp
 yt-dlp \
   -f 18 \
   --external-downloader ffmpeg \
   --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -to 00:05:23.00" \
-  "https://www.youtube.com/watch?v=-5ZIQ0bDlU8"
+  "https://www.youtube.com/watch?v=rSc9xYPMAQY"
 ```
