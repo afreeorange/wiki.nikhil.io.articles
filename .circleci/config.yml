@@ -35,6 +35,13 @@ jobs:
           arguments: |
             --delete \
             --content-encoding gzip
+      - run:
+          name: Invalidating CloudFront distribution
+          command: |
+            aws cloudfront create-invalidation \
+              --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} \
+              --paths '/index.html'
+
 
 workflows:
   version: 2
