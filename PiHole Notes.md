@@ -1,5 +1,4 @@
-Maintenance
------------
+## Maintenance
 
 ```bash
 # Upgrade PiHole and Gravity lists
@@ -12,49 +11,25 @@ pihole restartdns
 curl -sSL https://install.pi-hole.net | PIHOLE_SKIP_OS_CHECK=true sudo -E bash
 ```
 
-Logs
-----
+## Logs
 
 ```bash
 tail -f /var/log/pihole.log
 ```
 
-New [Regexes](https://docs.pi-hole.net/ftldns/regex/overview/)
---------------------------------------------------------------
+## New Lists
 
-Added [this](https://github.com/mmotti/pihole-regex/blob/master/regex.list) to `/etc/pihole/regex.list`. Just looks for tracking keywords.
+To install, go to Settings -> Blocklists and add them there. Then go to Tools -> Update Gravity.
 
-```
-# https://github.com/mmotti/pihole-regex/blob/master/regex.list
-^(.+[-_.])??adse?rv(er?|ice)?s?[0-9]*[-.]
-^(.+[-_.])??m?ad[sxv]?[0-9]*[-_.]
-^(.+[-_.])??xn--
-^adim(age|g)s?[0-9]*[-_.]
-^adtrack(er|ing)?[0-9]*[-.]
-^advert(s|is(ing|ements?))?[0-9]*[-_.]
-^aff(iliat(es?|ion))?[-.]
-^analytics?[-.]
-^banners?[-.]
-^beacons?[0-9]*[-.]
-^count(ers?)?[0-9]*[-.]
-^pixels?[-.]
-^stat(s|istics)?[0-9]*[-.]
-^telemetry[-.]
-^track(ers?|ing)?[0-9]*[-.]
-^traff(ic)?[-.]
+Historical Note: These _used_ to go in `/etc/pihole/adlists.list` but, since PiHole 5+ will use SQLite instead of flat text files, you gotta add these via the UI.
 
-# Instart Logic
-(.*)\.g00\.(.*).
-```
+### Regexes
 
-Then restart via `sudo service pihole-FTL restart`
+Here's [an overview](https://docs.pi-hole.net/ftldns/regex/overview/). Added [this list](https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list).
 
-New Blocklists
---------------
+### Additional Blocklists
 
-Find a [big list here](https://firebog.net/). Find the "ticked" lists [here](https://v.firebog.net/hosts/lists.php) (these are safe to add and won't cause issues.) 
-
-To install, go to Settings -> Blocklists and add them there. These _used_ to go in `/etc/pihole/adlists.list` but adding these via the UI is better since PiHole 5 will use SQLite instead of flat text files.
+Find a [big list here](https://firebog.net/). Find the "ticked" lists [here](https://v.firebog.net/hosts/lists.php) (these are safe to add and won't cause issues.)
 
 ### SmartTV Blocklists
 
@@ -62,4 +37,4 @@ See [this GitHub gist](https://github.com/Perflyst/PiHoleBlocklist/blob/master/S
 
 ### Google AMP 🙄
 
-Add [this list](https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt)
+Add [this list](https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt).
