@@ -17,6 +17,13 @@ curl -sSL https://install.pi-hole.net | PIHOLE_SKIP_OS_CHECK=true sudo -E bash
 tail -f /var/log/pihole.log
 ```
 
+## Re/Set Password
+
+```
+# If you hit enter here, the web interface will not require a password 
+pihole -a -p
+```
+
 ## New Lists
 
 To install, go to Settings -> Blocklists and add them there. Then go to Tools -> Update Gravity.
