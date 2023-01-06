@@ -1,7 +1,5 @@
 Migrated from FreeBSD v11 to Ubuntu Server 22.04. These are some notes from my migration.
 
----
-
 ## Hardware
 
 Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resources/hardware-recommendations-guide.12/) to pick my components this time. Cheap shit causes headaches and I expect this build to last me a while.
@@ -16,8 +14,6 @@ Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resourc
 * An old Intel [80GB SSD Drive](https://www.amazon.com/Intel-SSDSA2CW080G3-Internal-Solid-State/dp/B00666SGRG)
 
 Ran [`smartctl`](https://forums.freenas.org/index.php?threads/hard-drive-burn-in-testing-discussion-thread.21451/) short, conveyance, and long test with an ArchLinux ISO. [Two](https://www.orderfactory.com/articles/New-HDD-Testing.html) [more](https://github.com/Spearfoot/disk-burnin-and-testing/blob/master/disk-burnin.sh) resources on drive testing. Ran about 10 rounds of `memtest86` on the memory.
-
----
 
 ## Backups
 
