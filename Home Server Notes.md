@@ -373,6 +373,28 @@ Setting up Samba shares was rather easy in `/etc/samba/smb.conf`.
 
 See [the options](https://github.com/jimsalterjrs/sanoid/wiki/Sanoid#options) for more info on each. Note that the defaults are `/usr/share/sanoid/sanoid.defaults.conf`.
 
+## Glances
+
+```
+sudo apt install glances
+```
+
+Then added this to `/etc/systemd/system/glances.service`
+
+```
+[Unit]
+Description = Glances in Web Server Mode
+After = network.target
+
+[Service]
+ExecStart = /usr/bin/glances -w -t 5 -B 0.0.0.0
+
+[Install]
+WantedBy = multi-user.target
+```
+
+Then had to follow [this thing](https://github.com/nicolargo/glances/issues/2021#issuecomment-1197831157) to get it to not display a blank page... :/
+
 ## Miscellaneous Notes
 
 - I use DuckDNS for Dynamic DNS
