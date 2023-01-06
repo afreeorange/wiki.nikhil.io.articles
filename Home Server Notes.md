@@ -64,6 +64,20 @@ sudo apt install openssh-server
 apt install ntp
 ```
 
+### Disable Swap
+
+The installer created an 8GB swapfile for some reason...
+
+```
+# Check if enabled
+sudo swapon --show
+
+# Disable if so
+sudo swapoff -a
+
+# Now edit /etc/fstab to remove swap
+```
+
 ### Firewall
 
 Used `ufw` that shipped with Ubuntu. It does the trick.
