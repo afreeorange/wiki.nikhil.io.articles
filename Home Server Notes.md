@@ -47,6 +47,7 @@ sudo apt install \
     ntp \
     awscli \
     silversearcher-ag \
+    unrar-free \
     ncdu \
     tree
 
@@ -288,7 +289,10 @@ Constrained on router to assign same IP based on MAC. Docker appears to assign `
 Meant for this to be headless but I am a lazy person. Used my lovely XFCE4 and [TigerVNC](https://tigervnc.org/).
 
 ```bash
-sudo apt install xfce4 tigervnc-standalone-server
+sudo apt install \
+    xfce4 \
+    tigervnc-standalone-server \
+    thunar-archive-plugin
 
 # Set the password for the current (NON-ROOT) user
 vncpasswd
