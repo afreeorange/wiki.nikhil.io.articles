@@ -338,7 +338,7 @@ Note that you will have to adjust the bit depth/quality on your viewer. This is 
 
 [This](https://superuser.com/a/1400920) was an excellent guide! Also see [this](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/).
 
-Setting up Samba shares was rather easy in `/etc/samba/smb.conf`.
+Setting up Samba shares was rather easy in `/etc/samba/smb.conf`. Make sure you [do this to prevent Guest Access](https://unix.stackexchange.com/a/562999).
 
 ### Sanoid
 
