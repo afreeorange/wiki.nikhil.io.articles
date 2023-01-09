@@ -1,4 +1,4 @@
-`ufw` is a simple wrapper around `iptables` ([which can be rather complicated](https://github.com/afreeorange/iptables)).
+`ufw` is a simple wrapper around `iptables` ([which can be rather complicated](https://github.com/afreeorange/iptables)). You can view all the rules the CLI adds in `/etc/ufw/user.rules`
 
 ### Adding Rules and Enabling
 
