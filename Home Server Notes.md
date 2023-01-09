@@ -1,5 +1,7 @@
 Migrated from FreeBSD v11 to Ubuntu Server 22.04. These are some notes from my migration.
 
+---
+
 ## Hardware
 
 Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resources/hardware-recommendations-guide.12/) to pick my components this time. Cheap shit causes headaches and I expect this build to last me a while.
@@ -7,13 +9,15 @@ Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resourc
 * SuperMicro X11SSM-F-O Micro-ATX: [website](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm), [manual](https://public.nikhil.io/X11SSM-FO.pdf)
 * Intel [Xeon E3-1230 V6 Kaby Lake](https://www.newegg.com/Product/Product.aspx?Item=N82E16819117788)
 * Seasonic [FOCUS Plus Series SSR-850PX 850W 80+ Platinum](https://www.newegg.com/Product/Product.aspx?Item=N82E16817151190)
-* 4 x Crucial [16GB ECC Unbuffered](http://www.crucial.com/usa/en/x11ssm-f/CT7982341) memory (`CT7982341`: DDR4-2133MHz PC4-17000 ECC Unbuffered CL15 288-Pin DIMM 1.2V Dual Rank Memory Module) = 64GB memory - Finding additional memory was a _nightmare_.
+* Crucial [16GB ECC Unbuffered](http://www.crucial.com/usa/en/x11ssm-f/CT7982341) memory (`CT7982341`: DDR4-2133MHz PC4-17000 ECC Unbuffered CL15 288-Pin DIMM 1.2V Dual Rank Memory Module) - Finding additional memory was a _nightmare_.
 * 5 x Western Digital [4TB Red NAS Drives](https://www.wdc.com/products/internal-storage/wd-red.html)
 * [NZXT Source 210](http://www.amazon.com/gp/product/B005869A7K)
 * [Rosewill RFT-120](http://www.newegg.com/Product/Product.aspx?Item=N82E16811988015) fan filters. Used nylon 8-32 × ½ Phillips flat-head screws to install them.
-* [Samsung 860 PRO 256GB 2.5 Inch SATA III Internal SSD (MZ-76P256BW)](https://www.newegg.com/samsung-860-pro-series-256gb/p/N82E16820147685) for the boot drive.
+* An old Intel [80GB SSD Drive](https://www.amazon.com/Intel-SSDSA2CW080G3-Internal-Solid-State/dp/B00666SGRG)
 
 Ran [`smartctl`](https://forums.freenas.org/index.php?threads/hard-drive-burn-in-testing-discussion-thread.21451/) short, conveyance, and long test with an ArchLinux ISO. [Two](https://www.orderfactory.com/articles/New-HDD-Testing.html) [more](https://github.com/Spearfoot/disk-burnin-and-testing/blob/master/disk-burnin.sh) resources on drive testing. Ran about 10 rounds of `memtest86` on the memory.
+
+---
 
 ## Backups
 
@@ -47,7 +51,6 @@ sudo apt install \
     ntp \
     awscli \
     silversearcher-ag \
-    unrar-free \
     ncdu \
     tree
 
@@ -61,23 +64,9 @@ sudo apt install openssh-server
 apt install ntp
 ```
 
-### Disable Swap
-
-The installer created an 8GB swapfile for some reason...
-
-```
-# Check if enabled
-sudo swapon --show
-
-# Disable if so
-sudo swapoff -a
-
-# Now edit /etc/fstab to remove swap
-```
-
 ### Firewall
 
-Used `ufw` that shipped with Ubuntu. It does the trick.
+[Used `ufw`](/ufw_Notes) that shipped with Ubuntu. It's a wrapper around `iptables`, is simple enough, and does the trick.
 
 ### Login Logo
 
@@ -289,10 +278,7 @@ Constrained on router to assign same IP based on MAC. Docker appears to assign `
 Meant for this to be headless but I am a lazy person. Used my lovely XFCE4 and [TigerVNC](https://tigervnc.org/).
 
 ```bash
-sudo apt install \
-    xfce4 \
-    tigervnc-standalone-server \
-    thunar-archive-plugin
+sudo apt install xfce4 tigervnc-standalone-server
 
 # Set the password for the current (NON-ROOT) user
 vncpasswd
@@ -376,28 +362,6 @@ Setting up Samba shares was rather easy in `/etc/samba/smb.conf`.
 ```
 
 See [the options](https://github.com/jimsalterjrs/sanoid/wiki/Sanoid#options) for more info on each. Note that the defaults are `/usr/share/sanoid/sanoid.defaults.conf`.
-
-## Glances
-
-```
-sudo apt install glances
-```
-
-Then added this to `/etc/systemd/system/glances.service`
-
-```
-[Unit]
-Description = Glances in Web Server Mode
-After = network.target
-
-[Service]
-ExecStart = /usr/bin/glances -w -t 5 -B 0.0.0.0
-
-[Install]
-WantedBy = multi-user.target
-```
-
-Then had to follow [this thing](https://github.com/nicolargo/glances/issues/2021#issuecomment-1197831157) to get it to not display a blank page... :/
 
 ## Miscellaneous Notes
 
