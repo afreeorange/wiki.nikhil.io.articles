@@ -6,6 +6,7 @@ NOTE: I've updated this for macOS Monterey. The instructions should be the same.
 
 1. Go to System Preferences &rarr; Right-click on Kensingtonworks &rarr; Remove
 2. Finder &rarr; Go to Folder &rarr; `~/Library/Preferences`
+2. Finder &rarr; Go to Folder &rarr; `~/Library/Application Support` and remove the folder `KensingtonWorks`
 3. Remove `com.kensington.kensingtonworks2.app.plist` and `TbwSettings.json`
 4. Run Finder &rarr; Applications &rarr; Utilities &rarr; KensingtonWorks Uninstaller
 5. Restart!
