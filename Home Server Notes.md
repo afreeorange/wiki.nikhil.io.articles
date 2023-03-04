@@ -214,8 +214,8 @@ You will need a UID and GID that the containers run as. On a base Ubuntu Server 
 Created separate configurations for each of the services.
 
 ```bash
-# Start the container in the background (-d)
-docker compose -f /path/to/service.yml -p service up -d
+# Start the container with the service name in the background (-d)
+docker compose -f /path/to/service.yml -p service_name up -d
 
 # Stop the container
 docker compose -f /path/to/service.yml down
@@ -229,6 +229,22 @@ docker logs --follow <Container ID>
 # Check if a container is set to start at boot
 docker inspect <container_id> | restart -A 5
 ```
+
+When you make changes to the configuration YAML files, merely restarting the containers will not apply the changes! Say you made a change to the Plex server
+
+```bash
+# Find out the name of the service
+docker ps
+
+# Assume it's called `plex`. Now stop it
+docker compose -f /orangepool/docker/plex.yml -p plex stop
+
+# Make your changes to the config YAML, and then bring **another** container back up!
+docker compose -f /orangepool/docker/plex.yml -p plex up -d
+
+# **** THIS WILL NOT APPLY CHANGES! ****
+docker compose -f /orangepool/docker/plex.yml -p plex start
+````
 
 [Review this](https://stackoverflow.com/a/67335047) for the differences between `always`, `unless-stopped`, etc.
 
