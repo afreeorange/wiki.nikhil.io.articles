@@ -50,6 +50,7 @@ sudo apt install \
     yadm \
     ntp \
     awscli \
+    neovim \
     silversearcher-ag \
     ncdu \
     tree
