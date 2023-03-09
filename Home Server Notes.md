@@ -65,6 +65,30 @@ sudo apt install openssh-server
 apt install ntp
 ```
 
+### NeoVim
+
+Needed to build this from source since v0.8+ has Lua support and is pretty freaking awesome and the version of Ubuntu I installed only ships with v0.6 :/
+
+```bash
+# Install prereqs
+sudo apt-get install \
+    ninja-build gettext \
+    libtool-bin \
+    cmake \
+    g++ \
+    pkg-config \
+    unzip \
+    curl
+    
+# Build!
+cd
+git clone https://github.com/neovim/neovim.git
+cd neovim
+git checkout release-0.8
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+```
+
 ### Firewall
 
 [Used `ufw`](/ufw_Notes) that shipped with Ubuntu. It's a wrapper around `iptables`, is simple enough, and does the trick.
