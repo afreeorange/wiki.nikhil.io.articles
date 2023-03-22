@@ -138,6 +138,22 @@ shnsplit -o flac -f file.cue file.flac
 cuetag.sh file.cue split-track*.flac
 ```
 
+## Issues with Beets
+
+I'd run `beet update` and get this weirdness
+
+```
+The Beatles - The Capitol Albums, Vol. 1 - If I Fell (mono)
+  albumtype: compilation -> a
+  albumtypes: album; compilation -> ['a', 'l', 'b', 'u', 'm', ';', ' ', 'c', 'o', 'm', 'p', 'i', 'l', 'a', 't', 'i', 'o', 'n']
+```
+
+Was able to 'fix' this temporarily based on [this issue](https://laxmicontestgame.com/?_=%2Fbeetbox%2Fbeets%2Fpull%2F4582%23MEFDg0OUwunSMl5Y8erm91wq#issuecomment-1445023493):
+
+```bash
+beet mbsync 'albumtypes::^\['
+```
+
 ## References and Notes
 
 ### The Frustrating State of AppleScript

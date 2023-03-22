@@ -50,6 +50,7 @@ sudo apt install \
     yadm \
     ntp \
     awscli \
+    neovim \
     silversearcher-ag \
     ncdu \
     tree
@@ -62,6 +63,30 @@ sudo apt install openssh-server
 
 # Will install the NTP service and enable it as well.
 apt install ntp
+```
+
+### NeoVim
+
+Needed to build this from source since v0.8+ has Lua support and is pretty freaking awesome and the version of Ubuntu I installed only ships with v0.6 :/
+
+```bash
+# Install prereqs
+sudo apt-get install \
+    ninja-build gettext \
+    libtool-bin \
+    cmake \
+    g++ \
+    pkg-config \
+    unzip \
+    curl
+    
+# Build!
+cd
+git clone https://github.com/neovim/neovim.git
+cd neovim
+git checkout release-0.8
+make CMAKE_BUILD_TYPE=Release
+sudo make install
 ```
 
 ### Firewall
@@ -358,23 +383,35 @@ Setting up Samba shares was rather easy in `/etc/samba/smb.conf`. Make sure you 
 
 ### Sanoid
 
-[Nice little Perl script](https://github.com/jimsalterjrs/sanoid) to automate ZFS snapshotting. `apt install sanoid` installs a `cron` script in `/etc/cron.d/sanoid`. Configuation in `/etc/sanoid/sanoid.conf` was as simple as this.
+[Nice little Perl script](https://github.com/jimsalterjrs/sanoid) to automate ZFS snapshotting. `apt install sanoid` installs a `cron` script in `/etc/cron.d/sanoid`. Configuation in `/etc/sanoid/sanoid.conf` was as simple as this. I want snapshots of all child datasets _except_ for one and this is what my config looked like ([reference](https://github.com/jimsalterjrs/sanoid/issues/627#issue-837657066)).
 
 ```
 [tank]
   use_template = base
   recursive = yes
 
+[tank/dataset-to-exclude]
+  use_template = none
+
 # --- Templates ---
 
 [template_base]
+  autoprune = yes
+  autosnap = yes
+  daily = 30
   frequently = 0
   hourly = 0
-  daily = 30
   monthly = 12
   yearly = 1
-  autosnap = yes
-  autoprune = yes
+
+[template_none]
+  autoprune = no
+  autosnap = no
+  daily = 0
+  frequently = 0
+  hourly = 0
+  monthly = 0
+  yearly = 0
 ```
 
 See [the options](https://github.com/jimsalterjrs/sanoid/wiki/Sanoid#options) for more info on each. Note that the defaults are `/usr/share/sanoid/sanoid.defaults.conf`.
