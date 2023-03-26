@@ -80,3 +80,20 @@ zfs list -r -t snapshot -o name -H backup
 # Rename a snapshot
 zfs rename mypool/dataset_foo mypool/dataset_bar
 ```
+
+Importing and renaming pools:
+
+```bash
+# View importable pools
+zpool import
+
+# Import a pool
+zpool import my-pool
+
+# If you messed up a pool's name, export it...
+zpool export my-polo
+
+# ... and import it with the correct name
+zpool import my-polo my-pool
+```
+
