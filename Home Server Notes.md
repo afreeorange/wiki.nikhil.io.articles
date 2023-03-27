@@ -53,6 +53,8 @@ sudo apt install \
     neovim \
     silversearcher-ag \
     ncdu \
+    fzf \
+    fd-find \
     tree
 
 # This is annoying
@@ -447,6 +449,15 @@ WantedBy = multi-user.target
 - I use DuckDNS for Dynamic DNS
 - No password on PiHole via `sudo pihole -a -p` followed by an <kbd>Enter</kbd>. It's how you set a password as well.
 - Found myself not being able to run more than two containers at once. [Docker Compose is strange](https://stackoverflow.com/a/39489432). Each `docker compose up` command needs to be given its own `-p`
+- To list the contents of a package, `dpkg-query -L package-name`
+- Needed to add this to get `fzf` working
+
+```bash
+# shellcheck source=/dev/null
+if [[ $(uname) == "Linux" ]]; then
+  [[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && source /usr/share/doc/fzf/examples/key-bindings.bash
+fi
+```
 
 ### Reset HomeBridge password
 
