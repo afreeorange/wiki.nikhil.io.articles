@@ -468,6 +468,30 @@ Else you can find it in `/var/lib/docker/volumes/homebridge` if running in Docke
 
 Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8581`
 
+### exFAT on Backup Drive
+
+Wanted to use an 8TB external drive for backups. Didn't have much luck getting stuff formatted by `gparted` and `fdisk` and `mkfs` to work on macOS (i.e., it wouldn't recognize the partitions on the drive) so just used Disk Utility to format it. 
+
+```bash
+# List all physical disks. The flag removes loops devices.
+lsblk -e7
+
+# or, for a longer and better view,
+fdisk -l
+
+# Mount the disk
+mount -o uid=1000,gid=1001,umask=002 /dev/sdg2 /backup-02
+```
+
+`rsync` with the `-a` flag will preserve permissions. This would give me `chgrp operation not permitted` errors. This is because exFAT does not support permissions 🤷‍♂️. So,
+
+```bash
+# I'm lazy and don't want to look up the exact options. Hence the
+# "add everything and remove what I don't need" flags here:
+
+rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
+```
+
 ## References
 
 - [Migrating FreeNAS ZFS Pools to Ubuntu](https://drechsel.xyz/posts/how-to-migrate-existing-freenas-zfs-pools-to-ubuntu-1804-and-higher/)
@@ -477,4 +501,3 @@ Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8
 - https://runnable.com/docker/docker-compose-networking
 - https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/
 - [Ansible NAS](https://github.com/davestephens/ansible-nas)
-
