@@ -18,7 +18,7 @@ jobs:
           name: 📓 Building Wiki
           command: |
             cd
-            bock -v
+            bock --version
             bock --in=/home/circleci/project --out=/home/circleci/output --with-raw-markdown-files --with-json-files
       - run:
           name: 🗜 Compressing
