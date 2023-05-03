@@ -9,7 +9,7 @@ Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resourc
 * SuperMicro X11SSM-F-O Micro-ATX: [website](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm), [manual](https://public.nikhil.io/X11SSM-FO.pdf)
 * Intel [Xeon E3-1230 V6 Kaby Lake](https://www.newegg.com/Product/Product.aspx?Item=N82E16819117788)
 * Seasonic [FOCUS Plus Series SSR-850PX 850W 80+ Platinum](https://www.newegg.com/Product/Product.aspx?Item=N82E16817151190)
-* Crucial [16GB ECC Unbuffered](http://www.crucial.com/usa/en/x11ssm-f/CT7982341) memory (`CT7982341`: DDR4-2133MHz PC4-17000 ECC Unbuffered CL15 288-Pin DIMM 1.2V Dual Rank Memory Module) - Finding additional memory was a _nightmare_.
+* 4 x Crucial [16GB ECC Unbuffered](http://www.crucial.com/usa/en/x11ssm-f/CT7982341) memory (`CT7982341`: DDR4-2133MHz PC4-17000 ECC Unbuffered CL15 288-Pin DIMM 1.2V Dual Rank Memory Module) - Finding additional memory was a _nightmare_.
 * 5 x Western Digital [4TB Red NAS Drives](https://www.wdc.com/products/internal-storage/wd-red.html)
 * [NZXT Source 210](http://www.amazon.com/gp/product/B005869A7K)
 * [Rosewill RFT-120](http://www.newegg.com/Product/Product.aspx?Item=N82E16811988015) fan filters. Used nylon 8-32 × ½ Phillips flat-head screws to install them.
@@ -468,6 +468,30 @@ Else you can find it in `/var/lib/docker/volumes/homebridge` if running in Docke
 
 Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8581`
 
+### exFAT on Backup Drive
+
+Wanted to use an 8TB external drive for backups. Didn't have much luck getting stuff formatted by `gparted` and `fdisk` and `mkfs` to work on macOS (i.e., it wouldn't recognize the partitions on the drive) so just used Disk Utility to format it. 
+
+```bash
+# List all physical disks. The flag removes loops devices.
+lsblk -e7
+
+# or, for a longer and better view,
+fdisk -l
+
+# Mount the disk
+mount -o uid=1000,gid=1001,umask=002 /dev/sdg2 /backup-02
+```
+
+`rsync` with the `-a` flag will preserve permissions. This would give me `chgrp operation not permitted` errors. This is because exFAT does not support permissions 🤷‍♂️. So,
+
+```bash
+# I'm lazy and don't want to look up the exact options. Hence the
+# "add everything and remove what I don't need" flags here:
+
+rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
+```
+
 ## References
 
 - [Migrating FreeNAS ZFS Pools to Ubuntu](https://drechsel.xyz/posts/how-to-migrate-existing-freenas-zfs-pools-to-ubuntu-1804-and-higher/)
@@ -477,4 +501,3 @@ Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8
 - https://runnable.com/docker/docker-compose-networking
 - https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/
 - [Ansible NAS](https://github.com/davestephens/ansible-nas)
-
