@@ -81,7 +81,7 @@ sudo apt-get install \
     pkg-config \
     unzip \
     curl
-    
+
 # Build!
 cd
 git clone https://github.com/neovim/neovim.git
@@ -318,10 +318,13 @@ Constrained on router to assign same IP based on MAC. Docker appears to assign `
 
 ### Desktop Environment
 
-Meant for this to be headless but I am a lazy person. Used my lovely XFCE4 and [TigerVNC](https://tigervnc.org/).
+Meant for this to be headless but I am a lazy person. Used my lovely XFCE4 and [TigerVNC](https://tigervnc.org/). Two important notes:
+
+1. You'll have to restart the VNC Server if you log out of your session. There [are solutions](https://unix.stackexchange.com/questions/43398/is-it-possible-to-keep-a-vnc-server-alive-after-log-out) but I did not use them.
+2. This configuration will only allow connections on `localhost`. You'll need an SSH tunnel to the server.
 
 ```bash
-sudo apt install xfce4 tigervnc-standalone-server
+sudo apt install xfce4 tigervnc-standalone-server firefox
 
 # Set the password for the current (NON-ROOT) user
 vncpasswd
@@ -349,17 +352,16 @@ cat <<EOF > /etc/systemd/system/vncserver@.service
 Description=Remote desktop service (VNC)
 After=syslog.target network.target
 
+# DO NOT BE ROOT FFS. The '-localhost' flag is important too.
 [Service]
 Type=simple
 User=nikhil
 Group=wheel
 WorkingDirectory=/home/nikhil
-PAMName=login
 
 ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill :%i > /dev/null 2>&1 || :'
-ExecStart=/usr/bin/vncserver :%i -alwaysshared -fg
+ExecStart=/usr/bin/vncserver -localhost :%i
 ExecStop=/usr/bin/vncserver -kill :%i
-PIDFile=/home/%u/.vnc/%H%i.pid
 
 [Install]
 WantedBy=multi-user.target
@@ -370,6 +372,9 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable vncserver@1
 sudo systemctl start vncserver@1
+
+# See some startup logs
+journalctl -u vncserver@1 -f
 
 # Now on the client, create an SSH tunnel
 ssh -p 3227 -L 5901:127.0.0.1:5901 -N -f -l nikhil 192.168.1.10
@@ -470,7 +475,7 @@ Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8
 
 ### exFAT on Backup Drive
 
-Wanted to use an 8TB external drive for backups. Didn't have much luck getting stuff formatted by `gparted` and `fdisk` and `mkfs` to work on macOS (i.e., it wouldn't recognize the partitions on the drive) so just used Disk Utility to format it. 
+Wanted to use an 8TB external drive for backups. Didn't have much luck getting stuff formatted by `gparted` and `fdisk` and `mkfs` to work on macOS (i.e., it wouldn't recognize the partitions on the drive) so just used Disk Utility to format it.
 
 ```bash
 # List all physical disks. The flag removes loops devices.
