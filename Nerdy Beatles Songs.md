@@ -75,9 +75,7 @@ Sitting in his UNIX LAN
 Making all his UNIX  plans For nobody ...
 Making all his UNIX  plans For nobody.
 
-
-
-WRITE IN C ("Let it Be")
+### WRITE IN C ("Let it Be")
 
 When I find my code in tons of trouble,
 Friends and colleagues come to me,
