@@ -548,13 +548,7 @@ Pin: origin *
 Pin-Priority: -1
 EOF
 
-# cat <<EOF | sudo tee /etc/apt/preferences.d/pin-xalt7x-chromium-deb-vaapi
-# Package: *
-# Pin: release o=LP-PPA-xalt7x-chromium-deb-vaapi
-# Pin-Priority: 1337
-# EOF
-# sudo add-apt-repository ppa:xalt7x/chromium-deb-vaapi
-
+# Make sure we're not using Snap for Firefox
 cat <<EOF | sudo tee /etc/apt/preferences.d/firefox-no-snap
 Package: firefox*
 Pin: release o=Ubuntu*
@@ -565,7 +559,19 @@ sudo add-apt-repository ppa:mozillateam/ppa
 # Install things
 sudo apt update
 sudo apt install firefox
-sudo apt install chromium-browser
+```
+
+### Installing Google Chrome
+
+Note: do this after uninstalling snap.
+
+```bash
+sudo wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmour -o /usr/share/keyrings/google_linux_signing_key.gpg
+
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google_linux_signing_key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
+
+sudo apt update
+sudo apt install google-chrome-stable
 ```
 
 ## References
