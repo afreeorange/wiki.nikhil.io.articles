@@ -497,6 +497,83 @@ mount -o uid=1000,gid=1001,umask=002 /dev/sdg2 /backup-02
 rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
 ```
 
+### Remove Snap
+
+Runs in containers, checks for updates four times a day without my permission, is another thing Canonical can stop forcing us to use. Sources: [1](http://blog.pagefault-limited.co.uk/remove-snapd-from-ubuntu-kubuntu-20-04-and-restore-chromium-apt-deb-package), [2](https://haydenjames.io/remove-snap-ubuntu-22-04-lts/), [3](https://www.baeldung.com/linux/snap-remove-disable)
+
+```bash
+# Stop the service. You will have errors removing each snap if you don't.
+sudo systemctl stop snapd
+
+# List things to remove
+snap list | grep -v "^Name" | awk {'print "sudo snap remove " $1'}
+
+# Remove each one.
+sudo snap remove bare
+sudo snap remove core20
+sudo snap remove core22
+sudo snap remove cups
+sudo snap remove gnome-3-38-2004
+sudo snap remove gtk-common-themesÏ
+sudo snap remove lxd
+sudo snap remove snapd
+
+# Disable things
+sudo systemctl disable snapd.service
+sudo systemctl disable snapd.socket
+sudo systemctl disable snapd.seeded.service
+sudo systemctl disable snapd.autoimport.service
+sudo systemctl disable snapd.apparmor.service
+
+# AppArmor things
+sudo rm -rf /etc/apparmor.d/usr.lib.snapd.snap-confine.real
+sudo systemctl start apparmor.service
+
+# Find a list of snap mounts and remove them
+df | grep snap | awk {'print "sudo umount " $6'}
+
+# Purge snap
+sudo apt purge snapd
+
+# Clean things up
+rm -rf ~/snap
+sudo rm -rf /snap
+sudo rm -rf /var/snap
+sudo rm -rf /var/lib/snapd
+
+# Create configs for future installs like Firefox and Chromium
+cat <<EOF | sudo tee /etc/apt/preferences.d/snapd
+Package: snapd
+Pin: origin *
+Pin-Priority: -1
+EOF
+
+# Make sure we're not using Snap for Firefox
+cat <<EOF | sudo tee /etc/apt/preferences.d/firefox-no-snap
+Package: firefox*
+Pin: release o=Ubuntu*
+Pin-Priority: -1
+EOF
+sudo add-apt-repository ppa:mozillateam/ppa
+
+# Install things
+sudo apt update
+sudo apt install firefox
+```
+
+### Installing Google Chrome
+
+Note: do this after uninstalling snap.
+
+```bash
+sudo wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmour -o /usr/share/keyrings/google_linux_signing_key.gpg
+
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google_linux_signing_key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
+
+sudo apt update
+sudo apt install google-chrome-stable
+```
+
 ## References
 
 - [Migrating FreeNAS ZFS Pools to Ubuntu](https://drechsel.xyz/posts/how-to-migrate-existing-freenas-zfs-pools-to-ubuntu-1804-and-higher/)

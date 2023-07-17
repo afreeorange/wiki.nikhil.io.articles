@@ -156,6 +156,11 @@ beet mbsync 'albumtypes::^\['
 
 ## References and Notes
 
+### Other Peoples' Attempts
+
+- [A fast & powerful iTunes replacement with mpd, ncmpcpp, beets, and Alfred](http://ssrubin.com/posts/music-library-with-mpd-ncmpcpp-beets.html)
+- [Beets and iTunes](https://randomgeekery.org/post/2017/10/beets-and-itunes/)
+
 ### The Frustrating State of AppleScript
 
 You can script things in macOS in AppleScript or JavaScript. The [documentation](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1) is old and pretty garbage and you'll have to rely on Google and SO to do things.
