@@ -316,6 +316,26 @@ Constrained on router to assign same IP based on MAC. Docker appears to assign `
 
 [This is how you specify an external default network](https://github.com/docker/compose-cli/issues/1856#issuecomment-1108552064) in Docker Compose.
 
+Some other notes:
+
+- AFAICT you cannot edit networks. You gotta remove and add them.
+- To stop the Docker service, you must run `sudo systemctl stop docker.socket` (note the socket part!)
+- When you try to remove a network and get the "[has active endpoints](https://github.com/moby/moby/issues/17217)" error,
+
+```bash
+# Get a list of all the containers and look for the "Name"
+docker network inspect my-macvlan
+
+# Now make sure you remove all the endpoints. Let's say the container
+# name is "ubooquity". Note that this is NOT the endpoint ID!
+docker network disconnect -f my-macvlan ubooquity
+
+# Now remove the VLAN
+docker network rm -f my-macvlan
+```
+
+Now re-run all the steps above and _remember to **remove** all containers and start them_! You cannot just restart them and expect them to work!
+
 ### Desktop Environment
 
 Meant for this to be headless but I am a lazy person. Used my lovely XFCE4 and [TigerVNC](https://tigervnc.org/). Two important notes:
