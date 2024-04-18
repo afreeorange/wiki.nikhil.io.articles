@@ -92,7 +92,7 @@ Then run `grub-mkconfig -o /boot/grub/grub.cfg` and reboot
 
 ### Firewall
 
-[Adapted](/files/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables)
+[Adapted](/assets/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables)
 and things work as expected. Don't forget to [enable the service](https://wiki.archlinux.org/index.php/Iptables#Configuration_and_usage)
 
     systemctl enable iptables.service
@@ -101,7 +101,7 @@ and things work as expected. Don't forget to [enable the service](https://wiki.a
 
 The `pacman` update will break networking due [a
 bug](https://bugs.archlinux.org/task/41215) that may have been fixed in
-`systemd` v228 (as of this writing). Oh well. 
+`systemd` v228 (as of this writing). Oh well.
 For the interface you see in `ip link` (will start with "`en`")
 
     systemctl enable dhcpcd@ens4.network
@@ -175,7 +175,7 @@ Then can resize
 
     VBoxManage.exe modifyhd <path to VDI> --resize 25600
 
-That's 25,000 megabytes (25 x 1,024). Now _resize all snapshots_ with that same size!  
+That's 25,000 megabytes (25 x 1,024). Now _resize all snapshots_ with that same size!
 
     VBoxManage.exe modifyhd <path to snapshot> --resize 25600
 
@@ -429,7 +429,7 @@ little memory), I resorted to creating a 5-10GiB partition just for `/tmp`.
 ### Pacman and GPG Proxies
 
 Corporate proxy blocked port 11371 (the default) that Pacman used to get
-its keys. Had to modify `/etc/pacman.d/gnupg/gpg.conf` and modify the 
+its keys. Had to modify `/etc/pacman.d/gnupg/gpg.conf` and modify the
 `keyserver` to `hkps://hkps.pool.sks-keyservers.net:443`
 
 ### Key could not be looked up remotely

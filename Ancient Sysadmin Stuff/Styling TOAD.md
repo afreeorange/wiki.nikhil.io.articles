@@ -8,13 +8,13 @@ For the SQL Query Editor
 
 View → Toad Options → Editor → Behaviour → Code templates → Import
 
-[Get it](/files/TOAD_Editor_Template.txt)
+[Get it](/assets/TOAD_Editor_Template.txt)
 
 Fixed-width Font for Table Views
 --------------------------------
 
 View → Toad Options → Data Grids → Visual → Edit Styles → Import
 
-[Get it](/files/TOAD_Table_Fixed_Width.INI)
+[Get it](/assets/TOAD_Table_Fixed_Width.INI)
 
 Then pick "Fixed-Width".
