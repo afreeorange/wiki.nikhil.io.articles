@@ -6,6 +6,14 @@ For a lovely little Prusa Mini+ ❤️
 - If you are not using your 3d printer, park it and COVER IT. Remove the filament and keep it in a sealed plastic bag! Dust is an enemy.
 - After a while, lube the printer's arms. Don't overdo it. A little dab is enough. Sewing oil works fine if you run out of the supplied Prusa paste.
 
+### Nozzle Height
+
+- Top: Adjusted the height as it was printing.
+- Middle: This led to shit results... height was not small enough.
+- Bottom: Ideal height 🥲
+
+![Effect of Nozzle Height](/assets/3d-printing-nozzle-height.jpg)
+
 ## Resources
 
 ### 3d Models
