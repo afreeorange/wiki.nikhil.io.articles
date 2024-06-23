@@ -29,6 +29,8 @@ CONTROLLER_URI="https://192.168.1.3:8443"
 COOKIE_PATH="./cookie.txt"
 CURL_COMMAND="curl -s -S --cookie ${COOKIE_PATH} --cookie-jar ${COOKIE_PATH} --insecure "
 
+MAC_ADDRESS="aa:bb:cc:dd:ee:ff"
+
 login() {
     ${CURL_COMMAND} \
         -H "Content-Type: application/json" \
@@ -45,7 +47,7 @@ kick_the_fucking_printer() {
     response=$(${CURL_COMMAND} \
         -H "Content-Type: application/json" \
         -X POST \
-        --data-binary "{\"cmd\":\"kick-sta\",\"mac\":\"ac:d5:64:e8:25:de\"}" \
+        --data-binary "{\"cmd\":\"kick-sta\",\"mac\":\"$MAC_ADDRESS\"}" \
         $CONTROLLER_URI'/api/s/default/cmd/stamgr' \
         --compressed)
 
