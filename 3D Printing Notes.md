@@ -21,3 +21,4 @@ For a lovely little Prusa Mini+ ❤️
 
 - [TinkerCAD](https://www.tinkercad.com/) - Easy to use, awesome.
 - [Fusion360](https://www.autodesk.com/products/fusion-360/personal) - Free for personal use but complicated for beginners.
+- [OnShape](https://www.onshape.com/en/) - Looks complicated.
