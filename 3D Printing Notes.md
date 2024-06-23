@@ -24,10 +24,10 @@ In addition to the bed's flatness, this is a good culprit for shitprints. Right 
 
 ### Marketplaces and the like
 
-- (Resource) https://www.thingiverse.com/
-- (Resource) https://www.printables.com/
-- (Resource) https://thangs.com/
-- (Resource) https://www.tinkercad.com/things
+- https://www.thingiverse.com/
+- https://www.printables.com/
+- https://thangs.com/
+- https://www.tinkercad.com/things
 
 ### Editors
 
@@ -41,4 +41,8 @@ In addition to the bed's flatness, this is a good culprit for shitprints. Right 
 - https://www.multiboard.io/
 - [UniFi Mini Rack](https://old.reddit.com/r/homelab/comments/7p245e/ubiquiti_unifi_3d_printed_mini_rack_sneak_peek/?st=JSH0E0I5&sh=8a2b3660). Here's [another model](https://community.ui.com/stories/UniFi-Home-Setup/7522fee1-7e5d-49b2-ad2d-0c62a13ff0b0?page=1).
 - [TinTin Rocket!](https://www.printables.com/model/87249-large-tintin-rocket/files)
+
+### Other
+
+- [Firmware Updates et al](https://help.prusa3d.com/downloads) (copy BBF file, hit reset)
 
