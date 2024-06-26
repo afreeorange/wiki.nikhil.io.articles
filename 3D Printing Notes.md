@@ -10,6 +10,10 @@ For a lovely little Prusa Mini+ ❤️
 
 Keep the filament in a sealed plastic bag! Dust is an enemy. I tried [these bags](https://www.amazon.com/gp/product/B08QHMSYY3?psc=1) as a way to keep the filament moisture-free. People have reported that they don't do this and just use Ziploc bags with the original dessicant. I am a bit nuts.
 
+### The Sock
+
+This is a silicone condom around the nozzle. It's cheap and a no-brainer. [This is what I got](https://www.amazon.com/dp/B09KZJ8M5R). Helps with a bunch of things but primarily: (1) the filament won't stick to the nozzle which is nice and (2) it insulates the nozzle so you get a relatively consistent temperature when printing (esp when you increase the speed).
+
 ### Nozzle Offset
 
 In addition to the bed's flatness, this is a good culprit for shitprints. Right now, I'm rocking **-1.128**.
