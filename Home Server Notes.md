@@ -21,7 +21,7 @@ Ran [`smartctl`](https://forums.freenas.org/index.php?threads/hard-drive-burn-in
 
 ## Backups
 
-Made sure to do this to two external, encrypted drives. All datasets and snapshots.
+Made sure to do this to two external, encrypted drives. All datasets and snapshots. See [these](/ZFS_and_Backups) [two](/ZFS_Notes) pages for more notes.
 
 ## Image
 
