@@ -19,10 +19,6 @@ Ran [`smartctl`](https://forums.freenas.org/index.php?threads/hard-drive-burn-in
 
 ---
 
-## Backups
-
-Made sure to do this to two external, encrypted drives. All datasets and snapshots. See [these](/ZFS_and_Backups) [two](/ZFS_Notes) pages for more notes.
-
 ## Image
 
 Got it [from here](https://ubuntu.com/download/server). Verified via:
@@ -165,21 +161,6 @@ sudo zpool upgrade -a
 
 # See when a snapshot is created. You can get other properties this way as well.
 sudo zfs get creation -t snapshot tank/dataset
-```
-
-### Removing Encryption on Backup Drive
-
-TODO: Finish this section.
-
-```shell
-# Get the ID of the drives. It will look like
-#
-#      gptid/66e2c3c2-2786-11ea-bc58-ac1f6b83246e.eli
-#
-zpool status
-
-# Assume that my pool is called `backup`
-zpool offline backup gptid/66e2c3c2-2786-11ea-bc58-ac1f6b83246e.eli
 ```
 
 ### Groups
@@ -493,30 +474,6 @@ Else you can find it in `/var/lib/docker/volumes/homebridge` if running in Docke
 
 Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8581`
 
-### exFAT on Backup Drive
-
-Wanted to use an 8TB external drive for backups. Didn't have much luck getting stuff formatted by `gparted` and `fdisk` and `mkfs` to work on macOS (i.e., it wouldn't recognize the partitions on the drive) so just used Disk Utility to format it.
-
-```bash
-# List all physical disks. The flag removes loops devices.
-lsblk -e7
-
-# or, for a longer and better view,
-fdisk -l
-
-# Mount the disk
-mount -o uid=1000,gid=1001,umask=002 /dev/sdg2 /backup-02
-```
-
-`rsync` with the `-a` flag will preserve permissions. This would give me `chgrp operation not permitted` errors. This is because exFAT does not support permissions 🤷‍♂️. So,
-
-```bash
-# I'm lazy and don't want to look up the exact options. Hence the
-# "add everything and remove what I don't need" flags here:
-
-rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
-```
-
 ### Remove Snap
 
 Runs in containers, checks for updates four times a day without my permission, is another thing Canonical can stop forcing us to use. Sources: [1](http://blog.pagefault-limited.co.uk/remove-snapd-from-ubuntu-kubuntu-20-04-and-restore-chromium-apt-deb-package), [2](https://haydenjames.io/remove-snap-ubuntu-22-04-lts/), [3](https://www.baeldung.com/linux/snap-remove-disable)
@@ -592,6 +549,49 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google_linux_sig
 
 sudo apt update
 sudo apt install google-chrome-stable
+```
+
+## Backups
+
+Made sure to do this to two external, encrypted drives. All datasets and snapshots. See [these](/ZFS_and_Backups) [two](/ZFS_Notes) pages for more notes.
+
+### Removing Encryption on Backup Drive
+
+TODO: Finish this section.
+
+```shell
+# Get the ID of the drives. It will look like
+#
+#      gptid/66e2c3c2-2786-11ea-bc58-ac1f6b83246e.eli
+#
+zpool status
+
+# Assume that my pool is called `backup`
+zpool offline backup gptid/66e2c3c2-2786-11ea-bc58-ac1f6b83246e.eli
+```
+
+### exFAT on Backup Drive
+
+Wanted to use an 8TB external drive for backups. Didn't have much luck getting stuff formatted by `gparted` and `fdisk` and `mkfs` to work on macOS (i.e., it wouldn't recognize the partitions on the drive) so just used Disk Utility to format it.
+
+```bash
+# List all physical disks. The flag removes loops devices.
+lsblk -e7
+
+# or, for a longer and better view,
+fdisk -l
+
+# Mount the disk
+mount -o uid=1000,gid=1001,umask=002 /dev/sdg2 /backup-02
+```
+
+`rsync` with the `-a` flag will preserve permissions. This would give me `chgrp operation not permitted` errors. This is because exFAT does not support permissions 🤷‍♂️. So,
+
+```bash
+# I'm lazy and don't want to look up the exact options. Hence the
+# "add everything and remove what I don't need" flags here:
+
+rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
 ```
 
 ## References
