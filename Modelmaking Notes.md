@@ -24,3 +24,12 @@ Heavy-Three lines
 Spray Regulator:
 Fine-Stamped with XF or F
 Medium-Stamped with IL or Blan
+
+## References
+
+- [All about glue](http://www.hobbytownduluth.com/hobby-tools/glues-faq.html)
+- [Devin J Poore's 1/32 Colonial Viper MKII build](http://www.devinjpoore.com/blog/?cat=13). Here's [another build](https://modelkitsreview.com/1-32-moebius-colonial-viper-mk-ii/).
+- [All About Paint Brushes](http://www.scalemodelguide.com/painting-weathering/painting-guide/all-about-paint-brushes/)
+- https://zerobxu.wordpress.com/2008/03/10/hand-painting-with-tamiya-acrylics/
+- [Building the SR-71 and its Variants in 1/48 scale by Don Fogal](http://hyperscale.com/2009/features/sr71df_6.htm)
+- [Modeler's Toolbox](http://www.swannysmodels.com/Toolbox.html)
