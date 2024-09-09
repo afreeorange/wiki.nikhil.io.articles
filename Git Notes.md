@@ -31,6 +31,28 @@ Everything git writes is just a blob. There's no binary/text types.
 
 The reflog does not contain all commits.
 
+## Snippets
+
+### List the Largest Files in a Repo
+
+```bash
+# Here's one way. It's supposed to be *BLAZINGLY FAST*
+git rev-list --objects --all |
+  git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+  sed -n 's/^blob //p' |
+  sort --numeric-sort --key=2 |
+  cut -c 1-12,41- |
+  $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+
+# Here's another. It's simpler to read.
+git rev-list --objects --all \
+  | grep "$(git verify-pack -v .git/objects/pack/*.idx \
+           | sort -k 3 -n \
+           | tail -10 \
+           | awk '{print$1}')"
+```
+
 ## References
 
 * [Advanced Git: Graphs, Hashes, and Compression, Oh My!](https://www.youtube.com/watch?v=ig5E8CcdM9g)
+
