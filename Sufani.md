@@ -2,11 +2,8 @@ One of my favorite songs. By 17th Century mystic and poet Baba Bulleh Shah. The 
 
 ---
 
-_Diva Bal Ke Mita Le Hanera Ni_
-Light a candle and extinguish the darkness
-
-_Kulli Vichon Ni Yaar Lab Le_
-Find your beloved in his dwelling
+_O Bolo Poora Tolo Poora Sat Sirre Tere Lage_
+Practice what you preach, weigh the truth, beware that it does not come back to haunt you
 
 _O Na Kar Maan Rupaiye Waala Ban Ban Ke Na Bage_
 Don't be proud of your wealth, you'll never tire of accumulating it
@@ -14,8 +11,11 @@ Don't be proud of your wealth, you'll never tire of accumulating it
 _Khara Khota Tu Parakheya Jaave Pave Sharif De Aage_
 You keep inspecting to see what is real and what is fake
 
-_O Bolo Poora Tolo Poora Sat Sirre Tere Lage_
-Practice what you preach, weigh the truth, beware that it does not come back to haunt you
+_Diva Bal Ke Mita Le Hanera Ni_
+Light a candle and extinguish the darkness
+
+_Kulli Vichon Ni Yaar Lab Le_
+Find your beloved in his dwelling
 
 _Bulleh Shah Tu Kaudi Ho Ja Vatta Mul Na Lage_
 Bulleh Shah become worthless so that you cannot be appraised
