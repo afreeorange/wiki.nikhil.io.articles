@@ -2,17 +2,17 @@
 
 ---
 
-A list of useful commands for the ffmpeg command line tool.
-
-Download FFmpeg: https://www.ffmpeg.org/download.html
-
-Full documentation: https://www.ffmpeg.org/ffmpeg.html
-
 ## Basic conversion
 
 ````
 ffmpeg -i in.mp4 out.avi
 ````
+
+## See a List of Codecs
+
+```bash
+ffmpeg -codecs
+```
 
 ### Remux an MKV file into MP4
 
@@ -57,7 +57,6 @@ ffmpeg -i in0.mp4 -i in1.mp4 -c copy -map 0:0 -map 1:1 -shortest out.mp4
 - With [-c copy](http://ffmpeg.org/ffmpeg.html#Stream-copy) the streams will be `stream copied`, not re-encoded, so there will be no quality loss. If you want to re-encode, see [FFmpeg Wiki: H.264 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/H.264).
 - The `-shortest` option will cause the output duration to match the duration of the shortest input stream.
 - See the [`-map` option documentation](http://ffmpeg.org/ffmpeg.html#Advanced-options) for more info.
-
 
 ## Concat demuxer
 
@@ -207,3 +206,4 @@ yt-dlp \
   --external-downloader-args "ffmpeg_i:-ss 00:04:56.00 -to 00:05:23.00" \
   "https://www.youtube.com/watch?v=rSc9xYPMAQY"
 ```
+
