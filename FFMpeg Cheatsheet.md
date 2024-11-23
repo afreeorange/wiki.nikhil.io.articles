@@ -207,3 +207,53 @@ yt-dlp \
   "https://www.youtube.com/watch?v=rSc9xYPMAQY"
 ```
 
+## Creating Time-Lapse Videos
+
+```bash
+# Reduce to a smaller size (1080p) since
+# "MPEG-1 does not support resolutions above 4095x4095"
+for image in *.JPG; do ffmpeg -i $image -vf scale=1920:-1 ${image%.JPG}.PNG; done
+
+# Create a movie!
+ffmpeg -f image2 -pattern_type glob -i "*.PNG" output.mpg
+
+# A lossless movie!
+ffmpeg -pattern_type glob -i "*.PNG" -c:v mjpeg -qscale:v 0 output.mov
+```
+
+## Convert FLAC to M4A
+
+This is for macOS. You'll need FFMpeg with [this encoder](https://github.com/mstorsjo/fdk-aac). The 'regular' FFMPeg from HomeBrew will not work for [reasons](https://stackoverflow.com/a/55108365).
+
+👉 Do _not_ install `fdk-aac-encoder` to fix this issue!
+
+```bash
+brew tap homebrew-ffmpeg/ffmpeg
+
+# or 'upgrade'. The "--HEAD" will fetch the latest release.
+# Might save you trouble with ImageMagick versions.
+brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --HEAD
+
+# Convert!
+find . -name '*.flac' -exec sh -c 'ffmpeg -i "$1" -c:a libfdk_aac -b:a 320k "${1%.flac}.m4a"' _ {} \;
+```
+
+### Problems
+
+#### ImageMagick Version
+
+Just install the latest ImageMagick and FFmpeg with `--HEAD`.
+
+#### Could not find tag for codec h264 in stream #0 codec
+
+FFmpeg is [trying to transcode any cover art](https://stackoverflow.com/a/52370948). To fix, just add a `-c:v copy` to the command above.
+
+---
+
+## References
+
+- [Scaling with ffmpeg](https://trac.ffmpeg.org/wiki/Scaling%20(resizing)%20with%20ffmpeg)
+- [Video from images](http://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence)
+- [Making a lossless movie](http://stackoverflow.com/questions/4839303/convert-image-sequence-to-lossless-movie)
+
+
