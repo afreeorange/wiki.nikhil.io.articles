@@ -21,4 +21,6 @@ Green will continue to blink.
 
 _Within 30 seconds_, go back to car and press opener against the thing for quick flash green. You’re done.
 
-![Source](https://www.youtube.com/watch?v=vMSW5hRDVUI)
+---
+
+[Source](https://www.youtube.com/watch?v=vMSW5hRDVUI)
