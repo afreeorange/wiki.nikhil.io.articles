@@ -317,6 +317,18 @@ docker network rm -f my-macvlan
 
 Now re-run all the steps above and _remember to **remove** all containers and start them_! You cannot just restart them and expect them to work!
 
+#### Notes on ArchiveBox
+
+Needed to run a command inside the running container and did this:
+
+```bash
+sudo docker exec -it archivebox /bin/bash
+
+# Inside the container, you cannot be root
+su archivebox
+archivebox manage createsuperuser
+```
+
 ### Desktop Environment
 
 Meant for this to be headless but I am a lazy person. Used my lovely XFCE4 and [TigerVNC](https://tigervnc.org/). Two important notes:
