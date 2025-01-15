@@ -1,0 +1,6 @@
+- 1:2 Cups Rice Vinegar:Water
+- 1 1/2 Tbsp Sugar
+- 2 Tsp Salt
+- 1 Tsp Oregano
+- 1 Cinnamon Stick
+- 1 Bay Leaf
