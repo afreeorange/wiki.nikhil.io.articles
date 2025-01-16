@@ -1,14 +1,28 @@
+- [TOC](#toc)
+  - [Bluetooth](#bluetooth)
+  - [Shortcuts](#shortcuts)
+    - [Navigation and System Controls](#navigation-and-system-controls)
+    - [Arrow Keys](#arrow-keys)
+    - [Special Functions](#special-functions)
+    - [Layout and OS Switching](#layout-and-os-switching)
+    - [Factory Restore](#factory-restore)
+  - [Problems](#problems)
+    - [Missing Tilde and Backtick :/](#missing-tilde-and-backtick-)
+    - [Connecting Wirelessly](#connecting-wirelessly)
+
+---
+
 [Here's the manual](/assets/PC66_Manual.pdf).
 
 ## Bluetooth
 
-1. <kbd>Fn</kbd> + <kbd>Home</kbd>
-2. Now press
+1. <kbd>Fn</kbd> + <kbd>Home</kbd> until LED is solid blue.
+2. Now press any one of these to enter Pairing Mode.
    - <kbd>PgUp</kbd> for Device 1
    - <kbd>PgDn</kbd> for Device 2
    - <kbd>End</kbd> for Device 3
 
-To switch, use <kbd>Fn</kbd> + <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, or <kbd>End</kbd> to switch between devices
+Youc an now use <kbd>Fn</kbd> + <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, or <kbd>End</kbd> to switch between devices
 
 ## Shortcuts
 
@@ -71,8 +85,83 @@ To switch, use <kbd>Fn</kbd> + <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, or <kbd>End</kb
 
 ## Problems
 
-The I use the tilde <kbd>~</kbd> and backtick <kbd>`</kbd> keys a lot. They're _physically_ missing on this keyboard and it's a PITA.
+### Missing Tilde and Backtick :/
 
-Virtually/not physically when _not_ connected via a cable, macOS will think this is an Apple-made Keyboard. [This has apparently been a problem since macOS Ventura](https://discussions.apple.com/thread/254485490?sortBy=rank).
+The I use the tilde <kbd>~</kbd> and backtick <kbd>`</kbd> keys a lot. They're _physically_ missing on this keyboard and it's a PITA. On macOS, this means that I cannot use <kbd>Command</kbd>+<kbd>`</kbd> to "move focus to the next window" (i.e. cycling between instances of the same app).
 
-Because a trillion-dollar company does not have the bloody wisdom to _leave things that work alone_. Karabiner _may_ be the solution here. Will update this after I am able to remap.
+The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little, I mapped it to tilde/backtick. Then mapped <kbd>Ctrl</kbd>+<kbd>Esc</kbd> to the _real_ <kbd>Esc</kbd>. Pure Value™. Here's the config:
+
+```json
+{
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" },
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Map Esc to ~ and `",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape"
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Map Ctrl+Esc to Esc",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": ["control"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Remap (Command + Esc) to (Command + Backtick) so you can 'Move focus to next window'",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": ["command"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": ["command"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+### Connecting Wirelessly
+
+When _not_ connected via a cable, macOS will think this is an Apple-made Keyboard. [This has apparently been a problem since macOS Ventura](https://discussions.apple.com/thread/254485490?sortBy=rank). The Karabiner config above addresses this issue as well 🌸
