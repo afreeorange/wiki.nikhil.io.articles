@@ -73,7 +73,7 @@ Youc an now use <kbd>Fn</kbd> + <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, or <kbd>End</k
 
 ### Missing Tilde and Backtick :/
 
-The I use the tilde <kbd>~</kbd> and backtick <kbd>`</kbd> keys a lot. They're _physically_ missing on this keyboard and it's a PITA. On macOS, this means that I cannot use <kbd>Command</kbd>+<kbd>`</kbd> to "move focus to the next window" (i.e. cycling between instances of the same app).
+The I use the tilde and backtick keys a lot. They're _physically_ missing on this keyboard and it's a PITA. On macOS, this means that I cannot use <kbd>Command</kbd>+<kbd>`</kbd> to "move focus to the next window" (i.e. cycling between instances of the same app).
 
 The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little, I mapped it to tilde/backtick. Then mapped <kbd>Ctrl</kbd>+<kbd>Esc</kbd> to the _real_ <kbd>Esc</kbd>. Pure Value™. Here's the config:
 
