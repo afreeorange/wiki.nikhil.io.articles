@@ -1,17 +1,3 @@
-- [TOC](#toc)
-  - [Bluetooth](#bluetooth)
-  - [Shortcuts](#shortcuts)
-    - [Navigation and System Controls](#navigation-and-system-controls)
-    - [Arrow Keys](#arrow-keys)
-    - [Special Functions](#special-functions)
-    - [Layout and OS Switching](#layout-and-os-switching)
-    - [Factory Restore](#factory-restore)
-  - [Problems](#problems)
-    - [Missing Tilde and Backtick :/](#missing-tilde-and-backtick-)
-    - [Connecting Wirelessly](#connecting-wirelessly)
-
----
-
 [Here's the manual](/assets/PC66_Manual.pdf).
 
 ## Bluetooth
