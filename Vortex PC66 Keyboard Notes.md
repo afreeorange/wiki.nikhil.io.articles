@@ -75,7 +75,11 @@ Youc an now use <kbd>Fn</kbd> + <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, or <kbd>End</k
 
 The I use the tilde and backtick keys a lot. They're _physically_ missing on this keyboard and it's a PITA. On macOS, this means that I cannot use <kbd>Command</kbd>+<kbd>`</kbd> to "move focus to the next window" (i.e. cycling between instances of the same app).
 
-The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little, I mapped it to tilde/backtick. Then mapped <kbd>Ctrl</kbd>+<kbd>Esc</kbd> to the _real_ <kbd>Esc</kbd>. Pure Value™. Here's the config:
+The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little, I mapped it to tilde/backtick. Then mapped <kbd>Ctrl</kbd>+<kbd>Esc</kbd> to the _real_ <kbd>Esc</kbd>. Pure Value™.
+
+I also had to take care that this config was _only_ applied to my shiny new keyboard and not the built-in one. For this, Karabiner Elements informed me that the Product ID was 592, and the Vendor ID was 1452.
+
+Here's the config:
 
 ```json
 {
@@ -98,6 +102,17 @@ The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little,
                   {
                     "key_code": "grave_accent_and_tilde"
                   }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "product_id": 592,
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
                 ]
               }
             ]
@@ -117,12 +132,23 @@ The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little,
                   {
                     "key_code": "escape"
                   }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "product_id": 592,
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
                 ]
               }
             ]
           },
           {
-            "description": "Remap (Command + Esc) to (Command + Backtick) so you can 'Move focus to next window'",
+            "description": "Map (Command + Esc) to (Command + Backtick) so you can 'Move focus to next window'",
             "manipulators": [
               {
                 "type": "basic",
@@ -136,6 +162,17 @@ The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little,
                   {
                     "key_code": "grave_accent_and_tilde",
                     "modifiers": ["command"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "product_id": 592,
+                        "vendor_id": 1452
+                      }
+                    ]
                   }
                 ]
               }
