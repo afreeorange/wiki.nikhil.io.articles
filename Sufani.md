@@ -22,3 +22,9 @@ Bulleh Shah become worthless so that you cannot be appraised
 
 _Kulli  Vichon Ni Yaar Lab Le_
 Find your beloved in his dwelling
+
+---
+
+The penultimate line reminded me of this:
+
+![A cartoon from the Simpsons that says They Can't Use You If You're Useless](/assets/sufani.png)
