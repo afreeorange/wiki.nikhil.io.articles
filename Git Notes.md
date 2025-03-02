@@ -52,7 +52,93 @@ git rev-list --objects --all \
            | awk '{print$1}')"
 ```
 
+## Large File Storage (LFS)
+
+Initialize with
+
+```bash
+git lfs install
+```
+
+Then add a `.gitattributes` file:
+
+```bash
+# Image files
+*.bmp filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+
+# Audio files
+*.aac filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+
+# Video files
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.mkv filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# Document files
+*.doc filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.ppt filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+
+# Archive files
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.tar filter=lfs diff=lfs merge=lfs -text
+*.gz filter=lfs diff=lfs merge=lfs -text
+*.rar filter=lfs diff=lfs merge=lfs -text
+
+# Font files
+*.woff filter=lfs diff=lfs merge=lfs -text
+*.woff2 filter=lfs diff=lfs merge=lfs -text
+*.eot filter=lfs diff=lfs merge=lfs -text
+
+# Other binary files
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.iso filter=lfs diff=lfs merge=lfs -text
+```
+
+Migrate existing repos with
+
+```bash
+git lfs migrate import --everything --include="*.bmp,*.gif,*.jpeg,*.jpg,*.png,*.tiff,*.webp,*.aac,*.flac,*.mp3,*.wav,*.avi,*.mkv,*.mov,*.mp4,*.doc,*.docx,*.pdf,*.ppt,*.pptx,*.zip,*.tar,*.gz,*.rar,*.woff,*.woff2,*.eot,*.exe,*.dll,*.bin,*.iso"
+```
+
+Now the `.git` folder _might_ be larger than before, which _sort of_ beats the whole point. This might be because:
+
+- When you migrate files to LFS, Git keeps the original history alongside the new LFS pointers until garbage collection runs. You essentially have both versions temporarily stored.
+- Git LFS maintains its own metadata structures in the `.git/lfs` directory.
+- The migration process creates entries in Git's reflog, which tracks reference changes.
+
+You can run Garbage Collection with
+
+```bash
+git gc --aggressive --prune=now
+```
+
+This has worked for me pretty well.
+
+👉 To _completely_ remove old binary files from history (!!! REWRITES HISTORY !!!)
+
+```bash
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch path/to/files/*" --prune-empty --tag-name-filter cat -- --all
+git reflog expire --expire=now --all
+git gc --aggressive --prune=now
+```
+
+I'd make a backup.
+
 ## References
 
 * [Advanced Git: Graphs, Hashes, and Compression, Oh My!](https://www.youtube.com/watch?v=ig5E8CcdM9g)
-
