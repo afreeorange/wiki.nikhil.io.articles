@@ -3,6 +3,10 @@
 - servicecenter@terrus.com
 - (515) 471 - 4428
 
+## HOA Rules and Regulations
+
+[This is the latest version](/assets/e5w-rules.pdf).
+
 ## Lighting
 
 | Fixture               | Bulb                                            | Notes                                                                              |
