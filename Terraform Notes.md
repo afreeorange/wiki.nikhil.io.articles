@@ -87,6 +87,39 @@ The _giant_ PITAs are:
 
 There's a dependency chain here that you could make better with the scripts.
 
+### ACM, SSL, and Subdomains
+
+Here, I add a new domain `*.foo.nikhil.io` to the ACM resource:
+
+```golang
+resource "aws_acm_certificate" "nikhil_io_bundle" {
+  domain_name       = "nikhil.io"
+  subject_alternative_names = [
+    "*.foo.nikhil.io",
+    "*.nikhil.io",
+    "nikhil.io",
+  ]
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+```
+
+What this will do is create a _new_ bundle that it will then attempt to update any CloudFront (or other resource) that uses `acm.aws_acm_certificate.nikhil_io_bundle`.
+
+However, this will fail since the new subdomain hasn't been verified (either via DNS or email). You will need to do this first, and then _adopt_ the new bundle (else running `terraform apply` will recreate another bundle!)
+
+```bash
+# First remove the old bundle from state
+terraform state rm aws_acm_certificate.nikhil_io_bundle
+
+# Now adopt the new bundle using its ARN
+terraform import aws_acm_certificate.nikhil_io_bundle arn:aws:acm:us-east-1:11223344556677:certificate/8B55DC74-06E4-456E-ABC0-9A17EADAB553
+
+# Now run terraform apply...
+```
+
 ### Resources and References
 
 * Use [GraphViz](https://dreampuf.github.io/GraphvizOnline) online to see pretty dependency graphs
