@@ -1,5 +1,3 @@
-# Modern CLI Tool Alternatives
-
 ## File System Navigation & Management
 
 | Old    | Modern                                                                            | Language |
