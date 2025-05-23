@@ -1,4 +1,4 @@
-One of my favorite songs. By 18th Century mystic and poet Baba Bulleh Shah. The version that's remixed is sung by Bibi Swaran Nooran, Master Dilbahar Sohan Lal. Nooran might be the grandma of the Nooran Sisters. [Source](https://deewanis.blogspot.com/2012/02/samples.html). [This guy](https://www.instagram.com/sounds_of_solace/) made a mix that's [popular with belly dancers](https://www.youtube.com/watch?v=SMzLR0kBN20) and anime fans 🤷‍♂️ There's also [this sampling CD](https://archive.org/details/zero-g-deepest-india) (?) which has other cool stuff as well.
+One of my favorite songs. By 17th Century mystic and poet Baba Bulleh Shah. The version that's remixed is sung by Bibi Swaran Nooran, Master Dilbahar Sohan Lal. Nooran might be the grandma of the Nooran Sisters. [Source](https://deewanis.blogspot.com/2012/02/samples.html). [This guy](https://www.instagram.com/sounds_of_solace/) made a mix that's [popular with belly dancers](https://www.youtube.com/watch?v=SMzLR0kBN20) and anime fans 🤷‍♂️ There's also [this sampling CD](https://archive.org/details/zero-g-deepest-india) (?) which has other cool stuff as well.
 
 ---
 
