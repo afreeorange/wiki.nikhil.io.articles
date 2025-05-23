@@ -73,3 +73,5 @@ Note: You'll need to `ssh-add ~/.ssh/key_id` for `gitui` to push to remote on ma
 There's [`uutils/coreutils`](https://github.com/uutils/coreutils) which just replaces all GNU Coreutils with Rust reimplemntations 🤷‍♂️ Seems risky. They do note that "some options might be missing or different behavior might be experienced". I have a lot `bash` scripts that depend on stable implementations and won't be using this one (again, they do note that "differences with GNU are treated as bugs"). Maybe one day.
 
 [`fselect`](https://github.com/jhspetersson/fselect) allows you to search your filesystem with SQL-like queries!
+
+`starship` allows you to customize your `bash` (or other) prompts. Written in Rust and is advertized to be [_blazingly fast_](https://starship.rs/).
