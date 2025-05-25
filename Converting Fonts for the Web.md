@@ -1,8 +1,7 @@
-### Encode and Decode
-
-#### Encode
+## Base64 Encoding
 
 ```bash
+# Encode
 function dataurl() {
     local MIMETYPE
     MIMETYPE=$(file -b --mime-type "$1")
@@ -14,16 +13,18 @@ function dataurl() {
 }
 ```
 
-#### Decode
+## WOFF2 &rarr; TTF
+
+On macOS,
 
 ```bash
-#!/bin/bash
+brew install woff2
 
-ENCODED_FILE=$1
-sed 's/data:application\/font-woff;base64,//g' "$ENCODED_FILE" | base64 -D > "${ENCODED_FILE%%.*}.woff"
+# This will create your-font.ttf
+woff2_decompress your-font.woff2
 ```
 
-### WOFF, WOFF2, TTF, OTF, and SVG
+## The FontForge Swiss-Army Knife 🧀
 
 Install [FontForge](https://fontforge.github.io/en-US/) (on Homebrew) and then save this as a script (`convert.pe`) and make it executable. Now you can convert whatever you'd like.
 
@@ -37,15 +38,22 @@ Generate($1:r + ".svg")
 
 Run with
 
-    fontforge -script name_of_script font.woff
+```bash
+fontforge -script name_of_script font.woff
+```
 
 You can also use [FontSquirrel's excellent Online Generator](https://www.fontsquirrel.com/tools/webfont-generator).
 
+
+## Online Utilities
+
+I've not had much luck with local conversions and end up using some online tool like [ConvertIO](https://convertio.co/font-converter/) or [CloudConvert](https://cloudconvert.com/).
+
 ---
 
-### Deprecated Stuff
+## Deprecated Stuff
 
-#### EOT (Deprecated Format)
+### EOT (Don't use this; use WOFF2)
 
 Install `ttf2eot` via Brew and then
 
@@ -55,6 +63,6 @@ For a bunch of files,
 
 	for f in *.otf; do ttf2eot $f > ${f%".otf"}.eot; done
 
-#### Utilities
+### FontConverter (Unmaintained)
 
 Install [this via Homebrew](https://github.com/Folkloreatelier/homebrew-fonts) and convert away. It installs [this script](https://github.com/zoltan-dulac/css3FontConverter) and a bunch of dependencies.
