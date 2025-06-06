@@ -1,4 +1,4 @@
-[[toc]]
+[TOC]
 
 ## Project Gld2-Zluhs
 
