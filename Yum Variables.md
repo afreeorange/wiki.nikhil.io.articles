@@ -1,11 +1,13 @@
-Listing
--------
+### Listing
 
-    python -c 'import yum, pprint; yb = yum.YumBase(); pprint.pprint(yb.conf.yumvar, width=1)'
+```bash
+python -c 'import yum, pprint; yb = yum.YumBase(); pprint.pprint(yb.conf.yumvar, width=1)'
+```
 
-Creating
---------
+### Creating
 
 E.g. `$osname`
 
-    echo "Scientific Linux" > /etc/yum/vars/osname
+```bash
+echo "Scientific Linux" > /etc/yum/vars/osname
+```
