@@ -9,7 +9,7 @@
 
 ## HVAC
 
-Unit is on the roof. Any maintenance personnel will need roof access. It's a _Lennox Package Rooftop Unit_ on the northmost end of the building. The disconnect box is marked on the outside with the unit number.
+Unit is on the roof. #5608G11033, manufactured 2008 (that's what the "08" in the number means). Any maintenance personnel will need roof access. It's a _Lennox Package Rooftop Unit_ on the northmost end of the building. The disconnect box is marked on the outside with the unit number.
 
 ### June 13, 2025
 
