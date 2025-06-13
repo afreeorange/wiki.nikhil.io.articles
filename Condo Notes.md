@@ -1,7 +1,7 @@
 ## Maintenance Requests
 
 - servicecenter@terrus.com
-- (515) 471 - 4428
+- (515) 471-4428
 
 ## HOA Rules and Regulations
 
@@ -9,11 +9,15 @@
 
 ## HVAC
 
-Unit is on the roof. #5608G11033, manufactured 2008 (that's what the "08" in the number means). Any maintenance personnel will need roof access. It's a _Lennox Package Rooftop Unit_ on the northmost end of the building. The disconnect box is marked on the outside with the unit number.
+- _Lennox Package Rooftop Unit_ on Northmost End of roof.
+- Serial `5608G11033`, manufactured 2008 (that's what the "08" in the number means)
+- Model `TGA036S2-PKG` (the "03" means it's a 3-ton unit)
+
+Any maintenance personnel will need roof access. The disconnect box is marked on the outside with the unit number.
 
 ### June 13, 2025
 
-A capacitor was busted and needed replacemen (they typically last about 10-15 years). The compressor was very hot and needed to cool down. Worked with [Lozier Heating and Cooling](https://www.lozierheatingcooling.com/) for a satisfactory resolution. Highly recommended.
+A capacitor was busted and needed replacemen (they typically last about 10-15 years). The compressor was very hot and needed to cool down. Worked with [Lozier Heating and Cooling](https://www.lozierheatingcooling.com/) for a satisfactory resolution. Highly recommended. The replacement will outlive the unit and Lozier provides a guarantee.
 
 ## Lighting
 
@@ -32,7 +36,7 @@ A capacitor was busted and needed replacemen (they typically last about 10-15 ye
 
 1,248ft^2^
 
-![](/assets/e5w-floorplan.jpg)
+![E5W Floorplan](/assets/e5w-floorplan.jpg)
 
 ## Old Website
 
