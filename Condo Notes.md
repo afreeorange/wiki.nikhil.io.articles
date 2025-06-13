@@ -7,6 +7,14 @@
 
 [This is the latest version](/assets/e5w-rules.pdf).
 
+## HVAC
+
+Unit is on the roof. Any maintenance personnel will need roof access. It's a _Lennox Package Rooftop Unit_ on the northmost end of the building. The disconnect box is marked on the outside with the unit number.
+
+### June 13, 2025
+
+A capacitor was busted and needed replacemen (they typically last about 10-15 years). The compressor was very hot and needed to cool down. Worked with [Lozier Heating and Cooling](https://www.lozierheatingcooling.com/) for a satisfactory resolution. Highly recommended.
+
 ## Lighting
 
 | Fixture               | Bulb                                            | Notes                                                                              |
