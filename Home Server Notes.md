@@ -6,7 +6,7 @@ Migrated from FreeBSD v11 to Ubuntu Server 22.04. These are some notes from my m
 
 Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resources/hardware-recommendations-guide.12/) to pick my components this time. Cheap shit causes headaches and I expect this build to last me a while.
 
-* SuperMicro X11SSM-F-O Micro-ATX: [website](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm), [manual](https://public.nikhil.io/X11SSM-FO.pdf)
+* SuperMicro X11SSM-F-O Micro-ATX: [website](https://www.supermicro.com/products/motherboard/Xeon/C236_C232/X11SSM-F.cfm), [manual](/assets/X11SSM-FO-manual.pdf), [quick reference]([manual](/assets/X11SSM-FO-quick-reference.pdf))
 * Intel [Xeon E3-1230 V6 Kaby Lake](https://www.newegg.com/Product/Product.aspx?Item=N82E16819117788)
 * Seasonic [FOCUS Plus Series SSR-850PX 850W 80+ Platinum](https://www.newegg.com/Product/Product.aspx?Item=N82E16817151190)
 * 4 x Crucial [16GB ECC Unbuffered](http://www.crucial.com/usa/en/x11ssm-f/CT7982341) memory (`CT7982341`: DDR4-2133MHz PC4-17000 ECC Unbuffered CL15 288-Pin DIMM 1.2V Dual Rank Memory Module) - Finding additional memory was a _nightmare_.
@@ -609,9 +609,10 @@ rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
 ## References
 
 - [Migrating FreeNAS ZFS Pools to Ubuntu](https://drechsel.xyz/posts/how-to-migrate-existing-freenas-zfs-pools-to-ubuntu-1804-and-higher/)
-- [Fantastic Overview of macvlans](https://gdevillele.github.io/engine/userguide/networking/get-started-macvlan/)
-- https://www.linuxtechi.com/create-use-macvlan-network-in-docker/
-- https://github.com/sarunas-zilinskas/docker-compose-macvlan/blob/master/docker-compose.yml
-- https://runnable.com/docker/docker-compose-networking
-- https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/
+- Mac VLANs
+  - [Fantastic Overview](https://gdevillele.github.io/engine/userguide/networking/get-started-macvlan/)
+  - [2 Minutes to Docker MacVLAN Networking – A Beginners Guide](https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/)
+  - [How to Create and Use MacVLAN Network in Docker](https://www.linuxtechi.com/create-use-macvlan-network-in-docker/)
+  - [Docker Compose Sample](https://github.com/sarunas-zilinskas/docker-compose-macvlan/blob/master/docker-compose.yml)
+  - [Docker Compose Networking Overview](https://runnable.com/docker/docker-compose-networking)
 - [Ansible NAS](https://github.com/davestephens/ansible-nas)
