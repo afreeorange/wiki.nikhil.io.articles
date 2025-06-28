@@ -46,9 +46,7 @@ A capacitor was busted and needed replacemen (they typically last about 10-15 ye
 
 ### Blinds
 
-RollEase™ is the name of the company that makes them. You can purchase similar parts off Amazon.
-
-### Possible Flooring Options
-
-- [Premier Performance Maple Natural Acrylic Infused Engineered Hardwood](https://www.flooranddecor.com/available-in-store-only/premier-performance-maple-natural-acrylic-infused-engineered-hardwood-100827716.html)
-- [Premium Carbonized Solid Bamboo](https://www.flooranddecor.com/eco-forest/premium-carbonized-solid-bamboo-100892876.html)
+- **Blinds**: RollEase™ is the name of the company that makes them. You can purchase similar parts off Amazon.
+- **Flooring**: [Premier Performance Maple Natural Acrylic Infused Engineered Hardwood](https://www.flooranddecor.com/available-in-store-only/premier-performance-maple-natural-acrylic-infused-engineered-hardwood-100827716.html)
+- **Flooring**: [Premium Carbonized Solid Bamboo](https://www.flooranddecor.com/eco-forest/premium-carbonized-solid-bamboo-100892876.html)
+- **Patio**: [Three-piece furniture set](https://www.lowes.com/pd/Fun-Orange-3-Piece-Patio-Bistro-Set-of-Foldable-Square-Table-and-Chairs-in-Red/5015138107)
