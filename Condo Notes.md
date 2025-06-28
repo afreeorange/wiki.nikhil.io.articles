@@ -34,10 +34,21 @@ A capacitor was busted and needed replacemen (they typically last about 10-15 ye
 
 ## Floor Plan
 
-1,248ft^2^
+1,248ft²
 
 ![E5W Floorplan](/assets/e5w-floorplan.jpg)
 
 ## Old Website
 
 - [E5W.info](https://web.archive.org/web/20171024185401/http://www.e5w.info/)
+
+## Other Stuff
+
+### Blinds
+
+RollEase™ is the name of the company that makes them. You can purchase similar parts off Amazon.
+
+### Possible Flooring Options
+
+- [Premier Performance Maple Natural Acrylic Infused Engineered Hardwood](https://www.flooranddecor.com/available-in-store-only/premier-performance-maple-natural-acrylic-infused-engineered-hardwood-100827716.html)
+- [Premium Carbonized Solid Bamboo](https://www.flooranddecor.com/eco-forest/premium-carbonized-solid-bamboo-100892876.html)
