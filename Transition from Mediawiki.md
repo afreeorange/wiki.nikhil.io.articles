@@ -2,12 +2,10 @@
 
 Used `python-markdown` as the converter.
 
-* [Nice extension bundle](http://facelessuser.github.io/pymdown-extensions/).
-    Used all of it.
+* [Nice extension bundle](http://facelessuser.github.io/pymdown-extensions/). Used all of it.
 * [List of 3^rd^ Party Extensions for `python-markdown`](https://github.com/waylan/Python-Markdown/wiki/Third-Party-Extensions)
 * [Base16](https://chriskempson.github.io/base16/#default) [Pygments CSS](https://github.com/idleberg/base16-pygments) for code-highlighting
-* [A discussion](http://lepture.com/en/2014/markdown-parsers-in-python) of
-    popular Python Markdown parsers.
+* [A discussion](http://lepture.com/en/2014/markdown-parsers-in-python) of popular Python Markdown parsers.
 * [Basscss](http://www.basscss.com/docs/base-reset/) looks interesting
 
 ## Exporting MediaWiki Content
