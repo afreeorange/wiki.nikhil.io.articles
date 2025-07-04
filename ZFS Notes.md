@@ -10,6 +10,9 @@ zfs list -r -t snapshot -o name -H mypool
 # Rename a snapshot
 zfs rename mypool/dataset_foo mypool/dataset_bar
 
+# View the space used by snapshots and the pool
+zfs get used,usedds,usedbysnapshots,usedrefreserv orangepool/media
+
 # Look for zpools
 zfs import
 
