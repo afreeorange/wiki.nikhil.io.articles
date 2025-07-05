@@ -1,3 +1,41 @@
+## Fixing Font Families
+
+In case they're all over the place for each style. Run with `fontforge -script fix.py`.
+
+```python
+import fontforge
+import sys
+
+fonts = [
+    ("Eina02-Bold.ttf", "Bold"),
+    ("Eina02-BoldItalic.ttf", "Bold Italic"),
+    ("Eina02-Light.ttf", "Light"),
+    ("Eina02-LightItalic.ttf", "Light Italic"),
+    ("Eina02-Regular.ttf", "Regular"),
+    ("Eina02-RegularItalic.ttf", "Regular Italic"),
+    ("Eina02-SemiBold.ttf", "SemiBold"),
+    ("Eina02-SemiboldItalic.ttf", "SemiBold Italic")
+]
+
+for filename, style in fonts:
+    font = fontforge.open(filename)
+
+    # Set family name
+    font.familyname = "Eina02"
+    font.fontname = filename.replace(".ttf", "")
+    font.fullname = f"Eina02 {style}"
+
+    # Set TTF names
+    font.appendSFNTName("English (US)", "Family", "Eina02")
+    font.appendSFNTName("English (US)", "SubFamily", style)
+    font.appendSFNTName("English (US)", "Preferred Family", "Eina02")
+    font.appendSFNTName("English (US)", "Preferred Styles", style)
+
+    # Generate the corrected font
+    font.generate(f"fixed_{filename}")
+    font.close()
+```
+
 ## Base64 Encoding
 
 ```bash
