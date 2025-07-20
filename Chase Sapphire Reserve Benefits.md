@@ -15,7 +15,11 @@ At-a-glance benefits with hyperlinks for enhanced consumerism 🥰
 
 ### Food
 
-- $300 of DoorDash Credit and Free [DashPass](https://help.doordash.com/consumers/s/article/Chase-Partnership?language=en_US#DPBenefits) - Activate by Dec. 31, 2027.
+- DoorDash
+  - Total of $300 annually.
+  - $5 _per month_ on restaurants.
+  - $10 _per month_ on groceries.
+  - Free [DashPass](https://help.doordash.com/consumers/s/article/Chase-Partnership?language=en_US#DPBenefits) - Activate by Dec. 31, 2027.
 - $150 _every six months_ at [these locations](https://www.opentable.com/visa-dining-program).
 - 3x Points on takeout and delivery.
 
@@ -25,9 +29,11 @@ At-a-glance benefits with hyperlinks for enhanced consumerism 🥰
 - $250 for AppleTV+ and Apple Music - Activation needed.
 - $10 _per month_ for Lyft rides (plus 5x Points per ride) - No carryover!
 
-There are a few other benefits if you spend more than \$75,000 a year ($6,250 a month, average).
+There are a few other benefits if you spend more than $75,000 a year (6,250 a month, average).
 
 ## From the Email
+
+<div style="overflow-x: auto;">
 
 | **Category**            | **Benefit**                 | **Details**                                                                                        |
 | ----------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -49,10 +55,12 @@ There are a few other benefits if you spend more than \$75,000 a year ($6,250 a 
 |                         | $300 StubHub                | Annual statement credits for concert/event tickets                                                 |
 |                         | $120 Peloton                | Annual credits for Peloton memberships + 10x points on hardware/accessories                        |
 |                         | $120 Lyft                   | Annual in-app credits + 5x points on Lyft rides                                                    |
-|                         | $420 DoorDash               | \$300 in DoorDash promos + $120 DashPass membership annually                                        |
+|                         | $420 DoorDash               | \$300 in DoorDash promos + \$120 DashPass membership annually                                        |
 | **Other**               | No Foreign Transaction Fees | Spend anywhere, globally                                                                           |
 | **Annual Fee**          | $795                        | Adjusted on your anniversary date                                                                  |
 | **Authorized User Fee** | $195                        | Per user                                                                                           |
+
+</div>
 
 ## References
 
