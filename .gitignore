@@ -1,3 +1,6 @@
-__bock*
 .DS_Store
-
+__bock*
+bock
+build
+build.sh
+deploy.sh
