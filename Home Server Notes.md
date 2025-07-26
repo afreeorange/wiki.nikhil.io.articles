@@ -438,16 +438,15 @@ See [the options](https://github.com/jimsalterjrs/sanoid/wiki/Sanoid#options) fo
 
 ### Glances
 
-Type `glances -V` to see some info about the version and the log file. The one installed via `apt` needed some surgery.
+Glances v3 won't work with Ubuntu Server v24 LTS. You need v4 and need to `pip install` the damn thing. Type `glances -V` to see some info about the version and the log file.
 
 ```bash
-export GLANCES_VERSION="3.2.4.2"
-wget https://github.com/nicolargo/glances/archive/refs/tags/v${GLANCES_VERSION}.tar.gz
-tar zxvf v${GLANCES_VERSION}.tar.gz
-sudo cp -r glances-${GLANCES_VERSION}/glances/outputs/static/public/ /usr/lib/python3/dist-packages/glances/outputs/static
+sudo apt -y gcc lm-sensors wireless-tools
+mise install python@3.13.5
+pip install --user 'glances[all]'
 ```
 
-Here's the service definition
+Here's the service definition:
 
 ```bash
 # /etc/systemd/system/glances.service
@@ -456,7 +455,7 @@ Description = Glances in Web Server Mode
 After = network.target
 
 [Service]
-ExecStart = /usr/bin/glances -w -t 5 -B 0.0.0.0 -p 8080
+ExecStart = /root/.local/share/mise/installs/python/3.13.5/bin/glances -w -t 5 -B 0.0.0.0 -p 8080
 
 [Install]
 WantedBy = multi-user.target
