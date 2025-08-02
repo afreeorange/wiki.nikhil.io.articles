@@ -71,7 +71,7 @@
 69. [ ] Tootsie (1982)
 70. [ ] A Clockwork Orange (1971)
 71. [ ] Saving Private Ryan (1998)
-  72. [ ] The Shawshank Redemption (1994)
+72. [ ] The Shawshank Redemption (1994)
 73. [ ] Butch Cassidy and the Sundance Kid (1969)
 74. [ ] The Silence of the Lambs (1991)
 75. [ ] In the Heat of the Night (1967)
@@ -100,5 +100,3 @@
 98. [ ] Yankee Doodle Dandy (1942)
 99. [ ] Toy Story (1995)
 100. [ ] Ben-Hur (1959)
-
-
