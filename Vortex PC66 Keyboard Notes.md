@@ -85,35 +85,28 @@ Here's the config:
 {
   "profiles": [
     {
-      "name": "Default profile",
-      "selected": true,
-      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" },
       "complex_modifications": {
         "rules": [
           {
             "description": "Map Esc to ~ and `",
             "manipulators": [
               {
-                "type": "basic",
-                "from": {
-                  "key_code": "escape"
-                },
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde"
-                  }
-                ],
                 "conditions": [
                   {
-                    "type": "device_if",
                     "identifiers": [
                       {
                         "product_id": 592,
-                        "vendor_id": 1452
+                        "vendor_id": 1452,
+                        "is_keyboard": true,
+                        "is_pointing_device": false
                       }
-                    ]
+                    ],
+                    "type": "device_if"
                   }
-                ]
+                ],
+                "from": { "key_code": "escape" },
+                "to": [{ "key_code": "grave_accent_and_tilde" }],
+                "type": "basic"
               }
             ]
           },
@@ -121,29 +114,25 @@ Here's the config:
             "description": "Map Ctrl+Esc to Esc",
             "manipulators": [
               {
-                "type": "basic",
-                "from": {
-                  "key_code": "escape",
-                  "modifiers": {
-                    "mandatory": ["control"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
                 "conditions": [
                   {
-                    "type": "device_if",
                     "identifiers": [
                       {
                         "product_id": 592,
-                        "vendor_id": 1452
+                        "vendor_id": 1452,
+                        "is_keyboard": true,
+                        "is_pointing_device": false
                       }
-                    ]
+                    ],
+                    "type": "device_if"
                   }
-                ]
+                ],
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": { "mandatory": ["control"] }
+                },
+                "to": [{ "key_code": "escape" }],
+                "type": "basic"
               }
             ]
           },
@@ -151,12 +140,22 @@ Here's the config:
             "description": "Map (Command + Esc) to (Command + Backtick) so you can 'Move focus to next window'",
             "manipulators": [
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "identifiers": [
+                      {
+                        "product_id": 592,
+                        "vendor_id": 1452,
+                        "is_keyboard": true,
+                        "is_pointing_device": false
+                      }
+                    ],
+                    "type": "device_if"
+                  }
+                ],
                 "from": {
                   "key_code": "escape",
-                  "modifiers": {
-                    "mandatory": ["command"]
-                  }
+                  "modifiers": { "mandatory": ["command"] }
                 },
                 "to": [
                   {
@@ -164,22 +163,15 @@ Here's the config:
                     "modifiers": ["command"]
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "product_id": 592,
-                        "vendor_id": 1452
-                      }
-                    ]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           }
         ]
-      }
+      },
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     }
   ]
 }
