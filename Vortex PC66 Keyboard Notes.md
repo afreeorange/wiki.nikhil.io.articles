@@ -79,101 +79,111 @@ The solution was the lovely Karabiner 🥰 Since I use <kbd>Esc</kbd> so little,
 
 I also had to take care that this config was _only_ applied to my shiny new keyboard and not the built-in one. For this, Karabiner Elements informed me that the Product ID was 592, and the Vendor ID was 1452.
 
-Here's the config:
+Here's the config. The device ignored at the end of it is my Kensington Wireless Trackball which creates a virtual keyboard for some reason. I needed to ignore it to get button combos to work (e.g. Button3+Button4 = Mission Control)
 
 ```json
 {
-  "profiles": [
-    {
-      "complex_modifications": {
-        "rules": [
-          {
-            "description": "Map Esc to ~ and `",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "identifiers": [
-                      {
-                        "product_id": 592,
-                        "vendor_id": 1452,
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Map Esc to ~ and `",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "is_keyboard": true,
+                                                "is_pointing_device": false,
+                                                "product_id": 592,
+                                                "vendor_id": 1452
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": { "key_code": "escape" },
+                                "to": [{ "key_code": "grave_accent_and_tilde" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map Ctrl+Esc to Esc",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "is_keyboard": true,
+                                                "is_pointing_device": false,
+                                                "product_id": 592,
+                                                "vendor_id": 1452
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map (Command + Esc) to (Command + Backtick) so you can 'Move focus to next window'",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "is_keyboard": true,
+                                                "is_pointing_device": false,
+                                                "product_id": 592,
+                                                "vendor_id": 1452
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": false
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
-                "from": { "key_code": "escape" },
-                "to": [{ "key_code": "grave_accent_and_tilde" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map Ctrl+Esc to Esc",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "identifiers": [
-                      {
-                        "product_id": 592,
-                        "vendor_id": 1452,
-                        "is_keyboard": true,
-                        "is_pointing_device": false
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "escape",
-                  "modifiers": { "mandatory": ["control"] }
-                },
-                "to": [{ "key_code": "escape" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map (Command + Esc) to (Command + Backtick) so you can 'Move focus to next window'",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "identifiers": [
-                      {
-                        "product_id": 592,
-                        "vendor_id": 1452,
-                        "is_keyboard": true,
-                        "is_pointing_device": false
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "escape",
-                  "modifiers": { "mandatory": ["command"] }
-                },
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde",
-                    "modifiers": ["command"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          }
-        ]
-      },
-      "name": "Default profile",
-      "selected": true,
-      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
-    }
-  ]
+                        "product_id": 65535,
+                        "vendor_id": 1149
+                    },
+                    "ignore": true
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
 }
 ```
 
