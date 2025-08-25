@@ -39,3 +39,5 @@ gpg --import my_key.priv.asc
 gpg --list-keys
 gpg --list-secret-keys
 ```
+
+You can now [upload your key to OpenPGP.org](https://keys.openpgp.org/upload). Here's a [Usage Guide](https://keys.openpgp.org/about/usage).
