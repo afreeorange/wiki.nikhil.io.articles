@@ -6,7 +6,17 @@ Did all of this on macOS 13.2.1 (Ventura)
 
 ## Working with Beets
 
-Just random notes and not a comprehensive guide. The documentation is great.
+Just random notes and not a comprehensive guide. The documentation is nice.
+
+### Installation on macOS
+
+Python has an _absolute dogshit_ packaging and distribution story. Shameful, really. `uv` is one of the best things to happen to it. `beets` v2.4 is broken, so use an earlier one.
+
+```bash
+uvx --from beets@2.2 beet --help
+```
+
+You'll get a bunch of errors about missing dependencies: Flask, `requests`, `pylast`, `discogs_client`. Ignore them. Or install globally if shit like this bothers you.
 
 ### Basic Configuration
 
