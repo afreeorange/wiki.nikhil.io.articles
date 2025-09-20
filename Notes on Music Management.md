@@ -2,21 +2,27 @@ I used [Beets](https://beets.readthedocs.io/en/stable/index.html) to reorganize 
 
 I have about ~24,000 tracks and spent a cumulative of a week importing them into Beets. It uses the lovely and amazing SQLite for its database, and not some bullshit proprietary format, making it possible to write [all sorts of UIs](https://github.com/afreeorange/rosolli) on top of it ❤️
 
-Did all of this on macOS 13.2.1 (Ventura)
+Did all of this on macOS 15 (Sequoia) and beets v2.4.
 
 ## Working with Beets
 
-Just random notes and not a comprehensive guide. The documentation is nice.
+Just random notes and not a comprehensive guide. [The documentation](https://beets.readthedocs.io/en/stable/reference/index.html) is nice and [the FAQ is great](https://beets.readthedocs.io/en/latest/faq.html).
 
-### Installation on macOS
+### Installation
 
-Python has an _absolute dogshit_ packaging and distribution story. Shameful, really. `uv` is one of the best things to happen to it. `beets` v2.4 is broken, so use an earlier one.
+You can simply `pip install beets`. But certain [plugins](https://beets.readthedocs.io/en/stable/plugins/index.html) you may have defined in your Beets YAML config file won't work.
 
 ```bash
-uvx --from beets@2.2 beet --help
-```
+# Install with pip's extras features.
+# Will install in global Python (which I manage with mise-en-place).
+pip intall "beets[convert,discogs,duplicates,edit,embedart,fetchart,fromfilename,fuzzy,info,lastgenre,lyrics,mbsync,missing,play,web]"
 
-You'll get a bunch of errors about missing dependencies: Flask, `requests`, `pylast`, `discogs_client`. Ignore them. Or install globally if shit like this bothers you.
+# To run directly with UV. Note that plugins (like Discogs) won't work.
+uvx --from beets@2 beet --help
+
+# Now make sure you have ffmpeg
+brew install ffmpeg
+```
 
 ### Basic Configuration
 
@@ -54,7 +60,7 @@ convert:
     extension: mp3
 
 discogs:
-    user_token: iHoejCCcOBhqOKZPnFTZlJCcyhZzLyaaryPiOinZ
+    user_token: someUserTokenYouShouldntPublish
     index_tracks: yes
 
 edit:
@@ -66,10 +72,6 @@ edit:
         - title
         - genre
 ```
-
-- Discogs was _extremely_ helpful, especially with Indian stuff and radio shows.
-- Set `EDITOR="subl -w"` before running `beet edit foo` since [multiple cursors](https://vimeo.com/401631075?embedded=true&source=vimeo_logo&owner=27762735) save a lot of time when editing tag data.
-- [The Beets FAQ](https://beets.readthedocs.io/en/latest/faq.html) is great
 
 ### Searching and Listing Things
 
@@ -150,19 +152,51 @@ cuetag.sh file.cue split-track*.flac
 
 ## Issues with Beets
 
-I'd run `beet update` and get this weirdness
+I'd run `beet update --pretend` and get this weirdness.
 
 ```
-The Beatles - The Capitol Albums, Vol. 1 - If I Fell (mono)
-  albumtype: compilation -> a
-  albumtypes: album; compilation -> ['a', 'l', 'b', 'u', 'm', ';', ' ', 'c', 'o', 'm', 'p', 'i', 'l', 'a', 't', 'i', 'o', 'n']
+George Martin and George Martin Orchestra - Yellow Submarine - Yellow Submarine in Pepperland
+  bitrate_mode:  -> CBR
+  albumtypes: album; soundtrack -> a; l; b; u; m; ;;  ; s; o; u; n; d; t; r; a; c; k
+  albumtype: soundtrack -> a
+  mb_artistids:  -> 26fa8b67-6c7f-406c-ad64-a1d070092df2
+  mb_albumartistids:  -> b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d
 ```
 
-Was able to 'fix' this temporarily based on [this issue](https://laxmicontestgame.com/?_=%2Fbeetbox%2Fbeets%2Fpull%2F4582%23MEFDg0OUwunSMl5Y8erm91wq#issuecomment-1445023493):
+This is some kind of bug from Beets v1. Was able to fix this _mostly_ based on [this issue](https://github.com/beetbox/beets/pull/4582#issuecomment-1445023493):
 
 ```bash
-beet mbsync 'albumtypes::^\['
+# Check if this affects you
+beet ls -a 'albumtypes::^\[' data_source:musicbrainz
+
+# If it does, sync them from MusicBrainz again
+beet mbsync 'albumtypes::^\[' data_source:musicbrainz
+
+# What about non-MusicBrainz?
+beet ls -a 'albumtypes::^\[' ^data_source:musicbrainz
+
+# Fix those too
+beet modify -a 'albumtypes::^\[' ^data_source:musicbrainz albumtypes=""
+
+# Check if it worked
+beet write --pretend
+
+# It will try and correct things:
+#
+# Shobha Gurtu - Jana Gana Mana - Jana Gana Mana [Shobha Gurtu]
+#   mb_artistids: b48bfd71-15c0-4d3f-b2c8-de13b2cdd100 ->
+#   mb_albumartistids: e0bba708-bdd3-478d-84ea-c706413bedab ->
+#   albumtype: a -> compilation
+#   albumtypes: a; l; b; u; m; ;;  ; c; o; m; p; i; l; a; t; i; o; n -> album; compilation
+
+# Write it (unsure if this does things to ALL files...)
+beet write
+
+# Check (got nothing at the end so something worked)
+beet update --pretend
 ```
+
+I still see a `mbsync: Recording ID not found` and don't really care at this point. Here's [the entry for the `update` command](https://beets.readthedocs.io/en/stable/reference/cli.html#update).
 
 ## References and Notes
 
