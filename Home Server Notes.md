@@ -143,6 +143,9 @@ This fixed the issue. I don't know what `netplan` is. I see YAML and smell 'Ente
 ### Importing the Zpools
 
 ```bash
+# Look for all disks
+lsblk -o NAME,SIZE,MODEL,SERIAL
+
 # Look for zpools
 sudo zfs import
 
@@ -565,6 +568,32 @@ sudo apt install google-chrome-stable
 ## Backups
 
 Made sure to do this to two external, encrypted drives. All datasets and snapshots. See [these](/ZFS_and_Backups) [two](/ZFS_Notes) pages for more notes.
+
+### Creating an Encrypted Backup Disk
+
+```bash
+# Make sure it's the right disk
+sudo lsblk -o name,size,model
+
+# Wipe all filesystems
+sudo wipefs -a /dev/sdg
+
+# Create the Zpool. aes-256-gcm is the default for passphrase.
+# Using gzip compression.
+sudo zpool create \
+  -O encryption=on \
+  -O keyformat=passphrase \
+  -O compression=lz4 \
+  -O keylocation=prompt \
+  -O xattr=sa \
+  -O atime=off \
+  backup-03 /dev/sdg
+
+# Export. Re-import, unlock to write to disk.
+sudo zfs export backup-03
+sudo zfs import backup-03
+sudo zfs load-key -r backup-03
+```
 
 ### Removing Encryption on Backup Drive
 
