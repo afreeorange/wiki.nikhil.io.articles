@@ -590,9 +590,15 @@ sudo zpool create \
   backup-03 /dev/sdg
 
 # Export. Re-import, unlock to write to disk.
-sudo zfs export backup-03
-sudo zfs import backup-03
+sudo zpool export backup-03
+sudo zpool import backup-03
 sudo zfs load-key -r backup-03
+
+# Lock the drive
+sudo zfs unload-key -r backup-03
+
+# Change the key
+sudo zfs change-key backup-03
 ```
 
 ### Removing Encryption on Backup Drive
