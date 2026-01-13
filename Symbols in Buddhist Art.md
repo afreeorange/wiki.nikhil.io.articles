@@ -1,3 +1,3 @@
-![](/buddhist-symbols/buddhist-symbols-1.JPG)
-![](/buddhist-symbols/buddhist-symbols-2.JPG)
-![](/buddhist-symbols/buddhist-symbols-3.JPG)
+![](/assets/buddhist-symbols/buddhist-symbols-1.jpg)
+![](/assets/buddhist-symbols/buddhist-symbols-2.jpg)
+![](/assets/buddhist-symbols/buddhist-symbols-3.jpg)
