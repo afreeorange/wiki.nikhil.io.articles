@@ -10,6 +10,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: 📦 Initializing Git LFS
+          command: |
+            git lfs install
+            git lfs pull
+      - run:
           name: 🍺 Installing Bock
           command: |
             wget -O /home/circleci/bin/bock https://public.nikhil.io/bock-Linux-x86_64
