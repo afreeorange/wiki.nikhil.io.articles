@@ -2,6 +2,8 @@ Migrated from FreeBSD v11 to Ubuntu Server 22.04. These are some notes from my m
 
 ---
 
+[[toc]]
+
 ## Hardware
 
 Read the [Community Hardware Guide](https://forums.freenas.org/index.php?resources/hardware-recommendations-guide.12/) to pick my components this time. Cheap shit causes headaches and I expect this build to last me a while.
