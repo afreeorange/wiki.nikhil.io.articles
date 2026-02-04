@@ -18,7 +18,7 @@ _Kulli Vichon Ni Yaar Lab Le_
 Find your beloved in his dwelling
 
 _Bulleh Shah Tu Kaudi Ho Ja Vatta Mul Na Lage_
-Bulleh Shah become worthless so that you cannot be appraised
+Bulleh Shah become so worthless you cannot be appraised
 
 _Kulli  Vichon Ni Yaar Lab Le_
 Find your beloved in his dwelling
