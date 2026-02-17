@@ -42,6 +42,11 @@ A capacitor was busted and needed replacemen (they typically last about 10-15 ye
 
 - [E5W.info](https://web.archive.org/web/20171024185401/http://www.e5w.info/)
 
+## Possible Carpet
+
+![](/assets/condo-carpet-1.jpeg)
+![](/assets/condo-carpet-2.jpeg)
+
 ## Other Stuff
 
 ### Blinds
