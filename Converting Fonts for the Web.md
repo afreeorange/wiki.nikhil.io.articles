@@ -82,7 +82,6 @@ fontforge -script name_of_script font.woff
 
 You can also use [FontSquirrel's excellent Online Generator](https://www.fontsquirrel.com/tools/webfont-generator).
 
-
 ## Online Utilities
 
 I've not had much luck with local conversions and end up using some online tool like [ConvertIO](https://convertio.co/font-converter/) or [CloudConvert](https://cloudconvert.com/).
