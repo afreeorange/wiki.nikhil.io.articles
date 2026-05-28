@@ -16,10 +16,7 @@ At-a-glance benefits with hyperlinks for enhanced consumerism 🥰
 ### Food
 
 - DoorDash
-  - Total of $300 annually.
-  - $5 _per month_ on restaurants.
-  - $10 _per month_ on groceries.
-  - Free [DashPass](https://help.doordash.com/consumers/s/article/Chase-Partnership?language=en_US#DPBenefits) - Activate by Dec. 31, 2027.
+  - Total of $300 annually.   - $5 _per month_ on restaurants.   - $10 _per month_ on groceries.   - Free [DashPass](https://help.doordash.com/consumers/s/article/Chase-Partnership?language=en_US#DPBenefits) - Activate by Dec. 31, 2027.
 - $150 _every six months_ at [these locations](https://www.opentable.com/visa-dining-program).
 - 3x Points on takeout and delivery.
 
