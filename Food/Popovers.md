@@ -1,9 +1,6 @@
-You'll need [a popover
-pan](http://www.amazon.com/Chicago-Metallic-Stick-6-Cup-Popover/dp/B003YL3DWO)
-for this.
+You'll need [a popover pan](http://www.amazon.com/Chicago-Metallic-Stick-6-Cup-Popover/dp/B003YL3DWO) for this.
 
-Ingredients
------------
+## Ingredients
 
 *   2 large eggs
     [(\~½ cup)](http://whatscookingamerica.net/Eggs/EggEquivalent.htm)
@@ -13,8 +10,7 @@ Ingredients
 *   1 tsp salt
 *   1 tbsp butter at *room temperature*
 
-Preparation
------------
+## Preparation
 
 ### Batter
 
@@ -37,9 +33,4 @@ Preparation
 *   After 20 minutes, reduce temperature to 350F
 *   Bake for another 15-17 minutes
 
-Stuff face with resulting awesomeness immediately. Have friends
-available. They taste like shit when microwaved/heated later (even when
-stored in ziploc.)
-
-
-
+Stuff face with resulting awesomeness immediately. Have friends available. They taste like shit when microwaved/heated later (even when stored in ziploc.)
