@@ -4,7 +4,6 @@ import re
 from bs4 import BeautifulSoup
 import requests
 
-
 def get_rating(season, episode):
     endpoint = f"https://www.rottentomatoes.com/tv/game-of-thrones/s{season}/e{episode}"
     r = requests.get(endpoint)
@@ -15,10 +14,8 @@ def get_rating(season, episode):
 
     return re.search(r"width\:(\d+)%;", p.attrs["style"])[1]
 
-
 def make_episode_list(episodes):
     return [f"{_:02d}" for _ in range(1, episodes + 1)]
-
 
 SEASONS_AND_EPISODES = (
     ("01", make_episode_list(10)),
