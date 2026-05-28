@@ -1,5 +1,4 @@
-Queues
-------
+## Queues
 
 -   **u** - Unknown
 -   **a** - Alarm (load threshold reached)
@@ -11,8 +10,7 @@ Queues
 -   **S** - Suspended by subordination
 -   **E** - Error! `sge_execd` can't reach shepherd
 
-Jobs
-----
+## Jobs
 
 ### States
 
@@ -35,7 +33,7 @@ Jobs
 <th>Category</th>
 <th>State</th>
 <th>SGE Letter Code</th>
-</tr>    
+</tr>
 </thead>
 <tr>
 <td valign="top" rowspan="7">Pending</td>
@@ -112,8 +110,7 @@ Jobs
 </tr>
 </table>
 
-Sources
--------
+## Sources
 
 -   [SGE 6 Usage for
     Users (NASA)](http://ceres.larc.nasa.gov/documents/presentations/05-SGE-6-Usage-For-Users.pdf)
