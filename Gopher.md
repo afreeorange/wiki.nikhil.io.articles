@@ -19,5 +19,3 @@ sudo mkdir -p /var/gopher
 ```
 
 ## Testing
-
-
