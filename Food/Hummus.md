@@ -1,7 +1,6 @@
 I love [Oasis](http://oasisfalafel.com/index.html) in Iowa City. I miss their hummus. Instead of whinging, I decided to make some myself. After many a failure and garbanzo-sacrifice, I'm happy with this recipe. People I serve it to are quite pleased as well.
 
-Ingredients
------------
+## Ingredients
 
 * 15oz can of chickpeas
 * 1/4 cup tahini
@@ -14,8 +13,7 @@ Ingredients
 
 If "liquid from the can" sounds terrible, get some fresh chickpeas and let them soak for 24-36 hours. *Don't throw away the water!* Use it to adjust the hummus' consistency.
 
-Preparation
------------
+## Preparation
 
 Super simple. Fire up your food processor (I used a [Calphalon hand blender](http://www.amazon.com/Calphalon-Electrics-Immersion-Hand-Blender/dp/B005NGQWYE))
 
