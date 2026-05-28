@@ -19,4 +19,3 @@ window.location.search: "?query=1"
 ```
 
 [Via](https://stackoverflow.com/a/54691801)
-
