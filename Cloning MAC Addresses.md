@@ -1,9 +1,6 @@
-On RHEL-based systems
----------------------
+## On RHEL-based systems
 
-If your interface is `eth0`, edit `/etc/sysconfig/network-scripts/ifcfg-eth0`. 
-If you see a `HWADDR` param, comment it out and add 
-`MACADDR=xx:xx:xx:xx:xx:xx`. Here's a sample:
+If your interface is `eth0`, edit `/etc/sysconfig/network-scripts/ifcfg-eth0`. If you see a `HWADDR` param, comment it out and add `MACADDR=xx:xx:xx:xx:xx:xx`. Here's a sample:
 
 ```bash
 DEVICE=eth0  
@@ -20,11 +17,9 @@ Then restart the network service for this to take effect:
 
     service network restart
 
-On BSD-based systems
---------------------
+## On BSD-based systems
 
-If your interface is `igb0`, add a file called `/etc/start_if.igb0` to
-specify the cloned MAC:
+If your interface is `igb0`, add a file called `/etc/start_if.igb0` to specify the cloned MAC:
 
     ifconfig igb0 ether 00:12:79:45:89:df
 
