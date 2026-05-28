@@ -46,7 +46,6 @@
 | DNS monitoring   | [dnspeep](https://github.com/jvns/dnspeep)          | Rust     |
 | `httpie`         | [xh](https://github.com/ducaale/xh)                 | Rust     |
 
-
 ## File & Directory Tools
 
 | Old            | Modern                                   | Language |
