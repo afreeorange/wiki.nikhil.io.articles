@@ -49,8 +49,7 @@
 
 ### 2. Cook the Legumes
 - **Cannellini beans:**
-  Cook in a steel pot over direct heat until soft (~1 hour).
-  Blend into a smooth cream with extra virgin olive oil.
+  Cook in a steel pot over direct heat until soft (~1 hour).   Blend into a smooth cream with extra virgin olive oil.
 
 - **Chickpeas & Sorana beans:**
   Cook in earthenware pots with garlic, sage, and olive oil at **120–130°C** in the oven for **1.5 hours**.
@@ -61,17 +60,10 @@
 
 ### 4. Prepare Vegetables
 - Dice into uniform squares:
-  - Savoy cabbage
-  - Black kale
-  - Zucchini
-  - Leek
-  - Celery stalks
-  - Potatoes
+  - Savoy cabbage   - Black kale   - Zucchini   - Leek   - Celery stalks   - Potatoes
 
 - Julienne:
-  - Spinach
-  - Chard
-  - Their stems
+  - Spinach   - Chard   - Their stems
 
 ### 5. Make Broth
 - Simmer vegetable trimmings in water to create a light, flavorful broth.
@@ -89,10 +81,7 @@
 
 ### 8. Combine Components
 - Stir in:
-  - Cooked farro
-  - Chickpeas
-  - Sorana beans
-  - Cannellini bean cream
+  - Cooked farro   - Chickpeas   - Sorana beans   - Cannellini bean cream
 - Adjust seasoning with salt and black pepper.
 
 ### 9. Finish & Serve
