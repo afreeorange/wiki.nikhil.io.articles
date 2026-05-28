@@ -1,5 +1,3 @@
-[TOC]
-
 ## Project Gld2-Zluhs
 
 The idea was easy-peasy.
