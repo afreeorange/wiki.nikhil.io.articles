@@ -1,15 +1,13 @@
-Nodes
------
+## Nodes
 
 #### All nodes (and info)
 
-    qhost  
-      
-    # Get a list of all compute nodes  
+    qhost
+
+    # Get a list of all compute nodes
     qhost | grep compute | awk '{print $1}'
 
-Queues
-------
+## Queues
 
 ### Viewing all Queues
 
@@ -19,31 +17,29 @@ Queues
 
 #### Single Queue
 
-    # Enabling a queue  
-    qmod -e all.q@compute-1-3.local  
-      
-    # Disabling a queue  
-    qmod -d all.q@compute-1-3.local  
-      
-    # Clearing error state  
+    # Enabling a queue
+    qmod -e all.q@compute-1-3.local
+
+    # Disabling a queue
+    qmod -d all.q@compute-1-3.local
+
+    # Clearing error state
     qmod -c all.q@compute-1-3.local
 
 #### All Queues
 
-    # Enable all.q on all nodes  
-    qmod -e '*'  
-      
-    # Disable all.q on all nodes  
-    qmod -d '*'  
-      
-    # Clear all.q on all nodes  
+    # Enable all.q on all nodes
+    qmod -e '*'
+
+    # Disable all.q on all nodes
+    qmod -d '*'
+
+    # Clear all.q on all nodes
     qmod -c '*'
 
-You can also disable a single queue on all nodes by replacing ` '*'`
-with the name of the queue.
+You can also disable a single queue on all nodes by replacing ` '*'` with the name of the queue.
 
-Jobs
-----
+## Jobs
 
 ### All jobs currently running or in queue
 
@@ -51,11 +47,10 @@ Jobs
 
 ### Details on a particular job
 
-    # E.g. Job ID is 568798  
+    # E.g. Job ID is 568798
     qstat -explain c -j 568798
 
-Miscellanea
------------
+## Miscellanea
 
 ### SGE Variables
 
@@ -63,18 +58,17 @@ All GE vars are in `/opt/gridengine/default/common`
 
 ### Backups
 
-    # Use this to backup (prefer tarball)  
+    # Use this to backup (prefer tarball)
     inst_sge -bup
 
-    # Use this restore  
+    # Use this restore
     inst_sge -rst
 
 ### Restarting the SGE Service
 
     service sgemaster.$(hostname -s) stop
 
-Sources
--------
+## Sources
 
 -   [How to Administer Sun Grid
     Engine](http://biowiki.org/HowToAdministerSunGridEngine)
