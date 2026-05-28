@@ -1,4 +1,4 @@
-Install via the highly-regarded `curl` and `bash` combo. 
+Install via the highly-regarded `curl` and `bash` combo.
 
 ```bash
 curl -L https://install.pivpn.io | bash
@@ -47,4 +47,3 @@ PresharedKey = <Whatever_This_is>
 AllowedIPs = 0.0.0.0/0
 Endpoint = 171.172.173.174:58120
 ```
-
