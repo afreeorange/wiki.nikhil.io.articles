@@ -1,7 +1,6 @@
 For a base curry from which others may be derived.
 
-Ingredients
------------
+## Ingredients
 
 * 4 large tomatoes
 * 4 medium-large onions
@@ -18,8 +17,7 @@ Ingredients
 * 1/2 tsp cardamom
 * 1/2 tsp black pepper
 
-Preparation
------------
+## Preparation
 
 * Heat oil on medium-high, add spices, cook for 45 seconds
 * Add ginger and garlic, cook for 2 minutes
