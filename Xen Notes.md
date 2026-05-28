@@ -1,5 +1,4 @@
-Background
-----------
+## Background
 
 *   Vanilla installation of Xen v3.0.3 on `hypervisor.example.com`.
     All defaults.
@@ -9,11 +8,9 @@ Background
     but I think you should get a newer processor and run KVM if using
     CentOS 6 to save yourself the trouble.
 
-Glossary
---------
+## Glossary
 
 Not meant to be complete.
-
 
 |                                  Term                                  |                                                                              Explanation                                                                              |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,18 +23,14 @@ Not meant to be complete.
 | `virsh`                                                                | A Red Hat-designed shell to manage VM's. Differs from `xm` in that it can manage QEMU and HVM-based domU's as well since it's based on the `libvirt` API.             |
 | `virt-install` and `virt-manager`                                      | Management and provisioning tools based on `libvirt`/                                                                                                                 |
 
-Installation
-------------
+## Installation
 
-    yum groupinstall Xen  
+    yum groupinstall Xen
     yum install python-virtinst qemu*
 
-The first installs the Xen-enabled kernel, Xen daemon, virtualization
-libraries, etc. Make sure that (a) SELinux is disabled, and (b) that you
-reboot into the Xen kernel before doing anything else.
+The first installs the Xen-enabled kernel, Xen daemon, virtualization libraries, etc. Make sure that (a) SELinux is disabled, and (b) that you reboot into the Xen kernel before doing anything else.
 
-The First VM
-------------
+## The First VM
 
 ### Preparing the `dom0`
 
@@ -51,29 +44,24 @@ The First VM
 
 ### Creating the VM
 
-`virt-manager` is the easiest way to do things. You can do a
-command-line install via `virt-install`. Here's a sample command that
-creates a 64-bit VM called "devel1" running CentOS 6 with two virtual
-CPUs and 1.2GB of RAM. Observe that I explicitly specify the MAC
-address.
+`virt-manager` is the easiest way to do things. You can do a command-line install via `virt-install`. Here's a sample command that creates a 64-bit VM called "devel1" running CentOS 6 with two virtual CPUs and 1.2GB of RAM. Observe that I explicitly specify the MAC address.
 
-    virt-install \  
-    --name=devel1 \  
-    --arch=x86_64 \  
-    --vcpus=2 --check-cpu \  
-    --ram=1200 \  
-    --disk path=/dev/xenspace/devel1 \  
-    --mac=00:0C:29:1A:98:D5 \  
-    --os-type=linux \  
-    --os-variant=rhel6 \  
-    --location=http://hypervisor.example.com/install/6/x86_64/ \  
-    --debug \  
+    virt-install \
+    --name=devel1 \
+    --arch=x86_64 \
+    --vcpus=2 --check-cpu \
+    --ram=1200 \
+    --disk path=/dev/xenspace/devel1 \
+    --mac=00:0C:29:1A:98:D5 \
+    --os-type=linux \
+    --os-variant=rhel6 \
+    --location=http://hypervisor.example.com/install/6/x86_64/ \
+    --debug \
     --nographics
 
-Once the VM is installed, it's a good idea to save the kickstart files.
-Here's a sample:
+Once the VM is installed, it's a good idea to save the kickstart files. Here's a sample:
 
-    # Modified by Nikhil Anand 
+    # Modified by Nikhil Anand
     install
     url --url http://hypervisor.example.com/install/6/x86_64/
     lang en_US.UTF-8
@@ -105,20 +93,17 @@ Here's a sample:
     fipscheck
     device-mapper-multipath
 
-If you ever wanted to reinstall the VM, you can now append a flag with
-the (HTTP downloadable) path to the kickstart file:
+If you ever wanted to reinstall the VM, you can now append a flag with the (HTTP downloadable) path to the kickstart file:
 
     -x "ks=http://hypervisor.example.com/kickstarts/centos-6.ks"
 
-HVM Support
------------
+## HVM Support
 
 You can find if your processor supports HVM by issuing
 
     egrep '^flags.*(vmx|svm)' /proc/cpuinfo
 
-Network Topologies
-------------------
+## Network Topologies
 
 Xen offers the following:
 
@@ -126,68 +111,49 @@ Xen offers the following:
 *   NAT-ted
 *   Routed
 
-It's unusual (and crazy) to use all three on a given dom0 instance. The
-default is bridged networking. The `brctl` command is used to manage
-network bridges.
+It's unusual (and crazy) to use all three on a given dom0 instance. The default is bridged networking. The `brctl` command is used to manage network bridges.
 
-In our case, the router hands out DHCP leases depending on MAC
-addresses. This is why I didn't have to do anything other than specify
-the MAC address in a domU's config:
+In our case, the router hands out DHCP leases depending on MAC addresses. This is why I didn't have to do anything other than specify the MAC address in a domU's config:
 
     vif = [ "mac=00:50:56:78:0a:1b,bridge=xenbr0,script=vif-bridge" ]
 
-More exotic configurations are possible. You can, for example, specify
-two virtual interfaces (`vif`'s), with public and private IPs. In this
-case, the `route` and `iptables` commands become important, since you'll
-have to set up routes and masquerading.
+More exotic configurations are possible. You can, for example, specify two virtual interfaces (`vif`'s), with public and private IPs. In this case, the `route` and `iptables` commands become important, since you'll have to set up routes and masquerading.
 
-Edit `/etc/xen/xend-config.sxp` to set up these configs. For instance,
-if you only had a routed config, you'd comment out every other
-`network-script` and `vif-script` other than these:
+Edit `/etc/xen/xend-config.sxp` to set up these configs. For instance, if you only had a routed config, you'd comment out every other `network-script` and `vif-script` other than these:
 
-    #(network-script network-route)  
+    #(network-script network-route)
     #(vif-script     vif-route)
 
-PyGRUB
-------
+## PyGRUB
 
-`virt-install` removes the `kernel` and `ramdisk` lines from a domU's
-config file and adds this instead:
+`virt-install` removes the `kernel` and `ramdisk` lines from a domU's config file and adds this instead:
 
     bootloader = "/usr/bin/pygrub"
 
-PyGRUB itself will look for the [*first partition or LVM container* that
-contain the kernel and init image](http://wiki.xen.org/xenwiki/PyGrub).
+PyGRUB itself will look for the [*first partition or LVM container* that contain the kernel and init image](http://wiki.xen.org/xenwiki/PyGrub).
 
-I made an error of using the [CentOS project-supplied kernel and
-ramdisk](http://mirror.centos.org/centos/5/os/x86_64/images/xen/), which
-were good for an install, but useless when the domU was rebooted.
+I made an error of using the [CentOS project-supplied kernel and ramdisk](http://mirror.centos.org/centos/5/os/x86_64/images/xen/), which were good for an install, but useless when the domU was rebooted.
 They're built specifically for installation :)
 
-"Could not connect to localhost:8000"
--------------------------------------
+## "Could not connect to localhost:8000"
 
-You may see this when using `virt-install` or `virt-manager`. Edit
-`/etc/xen/xend-config.sxp` and make sure these lines are uncommented:
+You may see this when using `virt-install` or `virt-manager`. Edit `/etc/xen/xend-config.sxp` and make sure these lines are uncommented:
 
-    (xend-http-server yes)  
-    (xend-port 8000)  
+    (xend-http-server yes)
+    (xend-port 8000)
     (xend-address localhost)
 
 And restart the Xen daemon.
 
-Logging
--------
+## Logging
 
-You're supposed to be able to edit `/etc/sysconfig/xend`, uncomment this
-line and see logs in `/var/log/xen/console`
+You're supposed to be able to edit `/etc/sysconfig/xend`, uncomment this line and see logs in `/var/log/xen/console`
 
     XENCONSOLED_LOG_DIR=/var/log/xen/console
 
 Didn't work for me.
 
-Miscellaneous
--------------
+## Miscellaneous
 
 ### "Guest name already in use"
 
