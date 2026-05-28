@@ -1,5 +1,4 @@
-Pre-Flight
-----------
+## Pre-Flight
 
 *   SNMP uses **UDP** on port **161**
 *   Zenoss provides [a lot of useful
@@ -12,13 +11,11 @@ Pre-Flight
 |  514 | UDP      | Inbound syslog       |
 |  162 | UDP      | Inbound SNMP Traps   |
 
-Installation
-------------
+## Installation
 
 ### Zenoss Server
 
-**Note**: Zenoss does *not* like special characters in the MySQL root
-password.
+**Note**: Zenoss does *not* like special characters in the MySQL root password.
 
 ```bash
 # Install necessary packages; MySQL and net-snmp are required  
@@ -33,20 +30,15 @@ rpm -ivh zenoss-3.2.0.el5.i386.rpm
 service zenoss start
 ```
 
-This sets up *everything*. Go get some tea; this shall take a
-while. Then navigate to `http://<FQDN>:8080` to finish setup. [This
-book](http://www.amazon.com/Zenoss-Core-Network-System-Monitoring/dp/1849511586)
-is your friend, friend.
+This sets up *everything*. Go get some tea; this shall take a while. Then navigate to `http://<FQDN>:8080` to finish setup. [This book](http://www.amazon.com/Zenoss-Core-Network-System-Monitoring/dp/1849511586) is your friend, friend.
 
-Uninstallation
---------------
+## Uninstallation
 
 Navigate to the directory where Zenoss was installed.
 
     [root@zenoss zenoss]# ./uninstall
 
-Miscellaneous
--------------
+## Miscellaneous
 
 *   Edit `/opt/zenoss/etc/zope.conf` and edit the `address` under `<http-server>`.
 *   Don't change the default directory (`/usr/local/zenoss`)
@@ -56,7 +48,7 @@ Miscellaneous
     This is probably all you need to get started.
 *   Change admin password like so:
 
-        su - zenoss  
+        su - zenoss
         /usr/local/zenoss/zenoss/bin/zenpass
 
 *   If you have a non-default port, your email alerts will still use the
@@ -64,4 +56,3 @@ Miscellaneous
     add a line like so, and restart Zenoss
 
         zopeurl      http://servername.tld:9090
-
