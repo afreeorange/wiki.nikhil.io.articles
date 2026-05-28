@@ -9,5 +9,3 @@
 ### Linux
 
     ~/.config/google-chrome/Default/User StyleSheets
-
-
