@@ -11,7 +11,6 @@ Your goal is **25-40 grams** of fiber each day. I got this from my doctor.
 | Raisin Bran        | 1 cup  | 7g              |
 | Shredded Wheat     | 1 cup  | 6g              |
 
-
 ### Legumes / Beans
 
 |        Source       | Serving | Amount of Fiber |
