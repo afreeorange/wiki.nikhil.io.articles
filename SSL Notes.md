@@ -5,11 +5,11 @@
 *   How to configure [certificate chains for
     Nginx](http://nginx.org/en/docs/http/configuring_https_servers.html#chains).
 
-        Your Certificate  
-        Root CA  
-        Intermediate 1  
-        Intermediate 2  
-        .  
+        Your Certificate
+        Root CA
+        Intermediate 1
+        Intermediate 2
+        .
         .
 
 *   Test the [SSL config on your
