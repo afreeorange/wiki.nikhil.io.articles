@@ -19,4 +19,3 @@ $HOME/.jupyter/custom/custom.js
 ```
 
 Note that this is for the web interface that you get from running `jupyter-lab`. [The VSCode plugin](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter#review-details) (which is far superior to the web interface) _will not_ respect these settings!
-
