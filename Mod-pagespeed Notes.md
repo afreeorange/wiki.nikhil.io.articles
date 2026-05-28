@@ -1,24 +1,20 @@
-In this guide, I'll be installing `mod_pagespeed` on a 64-bit CentOS 5.5
-system. The host is `example.com`.
+In this guide, I'll be installing `mod_pagespeed` on a 64-bit CentOS 5.5 system. The host is `example.com`.
 
-Installation
-------------
+## Installation
 
-Grab [the most appropriate RPM](http://code.google.com/speed/page-speed/download.html)
-and install it.
+Grab [the most appropriate RPM](http://code.google.com/speed/page-speed/download.html) and install it.
 
     rpm -ivh https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-beta_current_x86_64.rpm
 
 This is the RPM manifest on a 64-bit system:
 
-    /etc/cron.daily/mod-pagespeed  
-    /etc/httpd/conf.d/pagespeed.conf  
-    /usr/lib64/httpd/modules/mod_pagespeed.so  
-    /var/www/mod_pagespeed/cache  
+    /etc/cron.daily/mod-pagespeed
+    /etc/httpd/conf.d/pagespeed.conf
+    /usr/lib64/httpd/modules/mod_pagespeed.so
+    /var/www/mod_pagespeed/cache
     /var/www/mod_pagespeed/files
 
-Testing
--------
+## Testing
 
 To check for a proper install, you can do two things:
 
@@ -29,14 +25,14 @@ To check for a proper install, you can do two things:
 
 Let's use `wget`:
 
-    wget -O - --server-response http://example.com/home/index.php > /dev/null 
+    wget -O - --server-response http://example.com/home/index.php > /dev/null
 
 Here's the response:
 
     --2011-01-05 09:01:36--  http://example.com/home/index.php
     Resolving example.com... 128.255.22.132
     Connecting to example.com|128.255.22.132|:80... connected.
-    HTTP request sent, awaiting response... 
+    HTTP request sent, awaiting response...
       HTTP/1.1 200 OK
       Date: Wed, 05 Jan 2011 15:01:36 GMT
       Server: Apache/2.2.3 (CentOS)
@@ -48,34 +44,25 @@ Here's the response:
       Content-Type: text/html; charset=UTF-8
     Length: 4657 (4.5K) [text/html]
     Saving to: `STDOUT'
-    
-    100%[========================================>] 4,657       --.-K/s   in 0s      
-    
+
+    100%[========================================>] 4,657       --.-K/s   in 0s
+
     2011-01-05 09:01:36 (211 MB/s) - `-' saved [4657/4657]
 
-The `X-Mod-Pagespeed` header should tell you that pagespeed is in
-action.
+The `X-Mod-Pagespeed` header should tell you that pagespeed is in action.
 
-Tweaking Pagespeed
-------------------
+## Tweaking Pagespeed
 
-Pagespeed has 18 'filters' with which you can tweak for performance. For
-example, I can remove all HTML comments with this filter in
-`/etc/httpd/conf.d/pagespeed.conf`
+Pagespeed has 18 'filters' with which you can tweak for performance. For example, I can remove all HTML comments with this filter in `/etc/httpd/conf.d/pagespeed.conf`
 
     ModPagespeedEnableFilters remove_comments
 
-To see a "before-and-after", append `?ModPagespeed=off` to any page
-served up. [This page](http://www.modpagespeed.com/) does a good job of
-explaining other filters. You can also check the documentation.
+To see a "before-and-after", append `?ModPagespeed=off` to any page served up. [This page](http://www.modpagespeed.com/) does a good job of explaining other filters. You can also check the documentation.
 
 ### Viewing statistics
 
-The `/etc/httpd/conf.d/pagespeed.conf` config defines
-`/mod_pagespeed_statistics` as a page where you can take a look at
-pagspeed's statistics.
+The `/etc/httpd/conf.d/pagespeed.conf` config defines `/mod_pagespeed_statistics` as a page where you can take a look at pagspeed's statistics.
 
-Sources
--------
+## Sources
 
 *   [Installing mod\_pagespeed on CentOS (cPanel/WHM)](https://fusi0n.org/linux/installing-googles-mod_pagespeed-on-centos-with-cpanel-and-whm)
