@@ -12,12 +12,12 @@ Go [here](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) 
 * `libociei.so`
 * `libons.so`
 
-Then, you'll have to install `libaio` on your system and copy `libaio.so.1` into "lib". 
+Then, you'll have to install `libaio` on your system and copy `libaio.so.1` into "lib".
 
 ### But I'm Lazy
 
 OK. I've [cached all that here](http://public.nikhil.io/oracle_client_minimum.tgz).
- 
+
 ### App Structure
 
 ```
@@ -72,4 +72,4 @@ You're all set!
 * Lambdas are not allowed to modify `/etc/hosts`
 * I used [this AMI](https://console.aws.amazon.com/ec2/v2/home#Images:visibility=public-images;search=amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2) to do all testing. See [this page](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html) for more information.
 * You don't need to set `LD_LIBRARY_PATH` since it already includes `/var/task/lib` (and your Lambda is executed from `/var/task`)
-* Uncompressed, you're looking at ~200MB for all those files (~65MB compressed). 
+* Uncompressed, you're looking at ~200MB for all those files (~65MB compressed).
