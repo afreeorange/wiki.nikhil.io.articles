@@ -1,13 +1,11 @@
-The Prompt Variable
--------------------
+## The Prompt Variable
 
 ```bash
 user@ubuntu:~# echo $PS1 
 ${debian_chroot:+($debian_chroot)}\\[\033[01;32m\\]\u@\h\\[\033[00m\\]:\\[\033[01;34m\\]\w\\[\03300m\\]\$
 ```
 
-Making Sense of the Above
--------------------------
+## Making Sense of the Above
 
 ### Flags
 
@@ -65,8 +63,7 @@ To color anything,
 * Prefix with `[33[<Color>m\]`
 * Suffix with `\[33[00m\]`
 
-For example, to color the directory's basename (`\W`) yellow (`1;33`),
-you'd have this:
+For example, to color the directory's basename (`\W`) yellow (`1;33`), you'd have this:
 
 ```bash
 # Exploded to illustrate  
