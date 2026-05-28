@@ -1,5 +1,4 @@
-Created a jail in the FreeNAS interface using the Ports template
-(called... "Ports". Particularly creative evening.)
+Created a jail in the FreeNAS interface using the Ports template (called... "Ports". Particularly creative evening.)
 
 ```bash
 # View jails  
