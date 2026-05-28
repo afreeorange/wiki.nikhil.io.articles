@@ -1,4 +1,4 @@
-My new favorite thing. 
+My new favorite thing.
 
 ### Preparation
 
@@ -14,7 +14,7 @@ Now bake them for a good 25 minutes. Then check on them and turn them over. Bake
 
 ### A Table
 
-Found this on my internet searches. I cook all my veggies in a medley and haven't yet had the time to try these recommendations. 
+Found this on my internet searches. I cook all my veggies in a medley and haven't yet had the time to try these recommendations.
 
 | Type                                                | Duration (mins) |
 |-----------------------------------------------------|-----------------|
