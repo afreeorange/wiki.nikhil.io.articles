@@ -5,14 +5,13 @@
 | Session Service              |  139 | TCP                   |
 | SMB                          |  445 | TCP Input, UDP Output |
 
-Observations
-------------
+## Observations
 
 These are the contents of `/etc/services`:
 
-    netbios-ns 137/udp   # NetBIOS Name Service  
-    netbios-dgm 138/udp  # NetBIOS Datagram Service  
-    netbios-ssn 139/tcp  # NetBIOS Session Service  
+    netbios-ns 137/udp   # NetBIOS Name Service
+    netbios-dgm 138/udp  # NetBIOS Datagram Service
+    netbios-ssn 139/tcp  # NetBIOS Session Service
     microsoft-ds 445/tcp # Microsoft Directory Service
 
 These are the ports that the Samba server listens on. A few things here:
@@ -23,8 +22,7 @@ These are the ports that the Samba server listens on. A few things here:
 3.  UDP 137 and 138 are serviced by `nmbd`
 4.  TCP 139 and 445 are serviced by `smbd`
 
-Sources
--------
+## Sources
 
 -   [Active Directory and Firewall
     Ports](http://geekswithblogs.net/TSCustomiser/archive/2007/05/09/112357.aspx)
