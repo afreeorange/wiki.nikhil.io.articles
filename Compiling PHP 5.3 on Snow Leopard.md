@@ -1,5 +1,4 @@
-PCRE
-----
+## PCRE
 
 ```bash
 curl ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.20.tar.gz -O
@@ -9,8 +8,7 @@ cd pcre-8.20
 make && make install DESTDIR=/src/pcre/pcre-local
 ```
 
-libjpeg
--------
+## libjpeg
 
 ```bash
 cd ..
@@ -21,8 +19,7 @@ ln -s `which glibtool` ./libtool
 ./configure –enable-shared && make && sudo make install
 ```
 
-PHP
----
+## PHP
 
 ```bash
 # Download PHP
@@ -58,11 +55,6 @@ make install
 apachectl restart
 ```
 
-Sources
--------
+## Sources
 
 * <http://www.gen-x-design.com/archives/recompiling-php-5-3-on-snow-leopard-with-freetype-support/>
-
-
-
-
