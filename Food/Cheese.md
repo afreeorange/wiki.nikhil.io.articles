@@ -9,4 +9,3 @@ As good as a triple creme can get. The rind is a bit bitter. Not very nice when 
 ### Sartori Bellavitano
 
 Excellent with sunny-side up eggs. Rubbed with herbes de provence. Oily, fatty, lovely.
-
