@@ -92,4 +92,3 @@ Things I am yet to check out. Things I saw in museums or were recommended to me 
 * [Citizen Rebel Pilot](https://www.citizenwatch.com/us/en/product/JG2108-52W.html)
 * [James Smith Umbrella](https://www.james-smith.co.uk/product-category/umbrellas/gents-umbrellas/solid-stick/)
 * Modular shelving - Burrow
-
