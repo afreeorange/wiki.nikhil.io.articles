@@ -1,8 +1,6 @@
-You'll use *your* public key to administer the gitolite server[^1]. I
-saved mine in `/tmp/nikhil.pub`.
+You'll use *your* public key to administer the gitolite server[^1]. I saved mine in `/tmp/nikhil.pub`.
 
-Installation
-------------
+## Installation
 
     # Create a gitolite service account and switch to it
     useradd git
@@ -20,8 +18,7 @@ Installation
 
     # That's it! :)
 
-Administration
---------------
+## Administration
 
     # Clone the admin repository
     git clone git@example.com:gitolite-admin
@@ -37,16 +34,13 @@ Administration
     git commit -m "Added blah repo"
     git push
 
-If you see anything weird when cloning the Gitolite admin repository,
-hose everything and start over:
+If you see anything weird when cloning the Gitolite admin repository, hose everything and start over:
 
     rm -rf ~/.gitolite* ~/bin/* ~/projects.list ~/repositories
 
-Miscellaneous
--------------
+## Miscellaneous
 
-If running SSH on a different port, an SSH config file is your friend.
-Here's a sample `~/.ssh/config`
+If running SSH on a different port, an SSH config file is your friend. Here's a sample `~/.ssh/config`
 
     Host gitserver
         Hostname example.com
@@ -60,8 +54,7 @@ Then clone with
     git clone gitserver:gitolite-admin
     git clone gitserver:my-repository
 
-Footnotes
----------
+## Footnotes
 
 [^1]: You can simply use `~/.ssh/id_rsa.pub` in your home folder.
     Generate with `ssh-keygen -t rsa`.
