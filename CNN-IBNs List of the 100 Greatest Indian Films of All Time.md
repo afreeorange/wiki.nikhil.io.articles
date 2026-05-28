@@ -20,16 +20,19 @@ The brilliant Bengali comedy directed by Tapan Sinha remains a cult classic even
 
 **Black Friday** (2004)
 
-Based on the 1993 Bombay blasts, Anurag Kashyap's Hindi film attempts to recreate the event. The film ran into controversy over the subject and was stalled for two years. But, it turned out to be one of the most acclaimed films after its release in 2004. 
+Based on the 1993 Bombay blasts, Anurag Kashyap's Hindi film attempts to recreate the event. The film ran into controversy over the subject and was stalled for two years. But, it turned out to be one of the most acclaimed films after its release in 2004.
 
 **Guide** (1965)
 
-The film broke several norms. Vijay Anand's path breaking film was a progressive film and broke a few myths about the quintessential heroine of Hindi cinema. 
-Maqbool (2003)</b>:Dark, passionate story of lust, love, power and revenge. Vishal Bhardwaj's screen adaptation of Shakespeare's Macbeth had some powerful actors in star cast. And each character played his or her role to perfection in this Hindi film.
+The film broke several norms. Vijay Anand's path breaking film was a progressive film and broke a few myths about the quintessential heroine of Hindi cinema.
+
+**Maqbool** (2003)
+
+Dark, passionate story of lust, love, power and revenge. Vishal Bhardwaj's screen adaptation of Shakespeare's Macbeth had some powerful actors in star cast. And each character played his or her role to perfection in this Hindi film.
 
 **Munnabhai MBBS** (2003)
 
-The story of a goon who wants to become a doctor forms the crux of Rajkumar Hirani's 'Munnabhai MBBS'. This Hindi film which stars Sanjay Dutt and Arshad Warsi in the lead roles provides comic relief through its story and performances. 
+The story of a goon who wants to become a doctor forms the crux of Rajkumar Hirani's 'Munnabhai MBBS'. This Hindi film which stars Sanjay Dutt and Arshad Warsi in the lead roles provides comic relief through its story and performances.
 
 **Ek Duuje Ke Liye** (1981)
 
@@ -45,7 +48,7 @@ Did you know that 'Padosan' was directed by Jyoti Swaroop? The premise of 'Pados
 
 **Pushpak Vimana** (1987)
 
-Directed by Singeetham Srinivasa Rao, the film is a silent black comedy. This Hindi film tells the story of an unemployed young man (Kamal Haasan) who takes on the identity of a rich man. The film is known for recasting the silent film form. 
+Directed by Singeetham Srinivasa Rao, the film is a silent black comedy. This Hindi film tells the story of an unemployed young man (Kamal Haasan) who takes on the identity of a rich man. The film is known for recasting the silent film form.
 
 **Sagara Sangamam** (1983)
 
@@ -61,7 +64,7 @@ Tapan Sinha's Jhinder Bandi marked two crucial events in Bengali cinema. It feat
 
 **Dilwale Dulhaniya Le Jayenge** (1995)
 
-Aditya Chopra gave romance a new lease of life with this romantic drama. The love between Raj(Shah Rukh Khan) and Simran (Kajol) echoed through the hearts of the youth of the 90s and became a cult. Raj refuses to elope with Simran but instead decides to win over the hearts of her family makes this Hindi film all the more memorable.  
+Aditya Chopra gave romance a new lease of life with this romantic drama. The love between Raj(Shah Rukh Khan) and Simran (Kajol) echoed through the hearts of the youth of the 90s and became a cult. Raj refuses to elope with Simran but instead decides to win over the hearts of her family makes this Hindi film all the more memorable.
 
 **Shiva** (1989)
 
@@ -77,7 +80,7 @@ Rabindranath Tagore's  story was already a classic when the film was made. But i
 
 **Jaane Bhi Do Yaaron** (1983)
 
-A dark satire on the corruption in politics and bureaucracy, Kundan Shah's Hindi film is high on comic relief. Two photographers take on a project with a tabloid to expose the dealings between a builder and a Municipal commissioner.   
+A dark satire on the corruption in politics and bureaucracy, Kundan Shah's Hindi film is high on comic relief. Two photographers take on a project with a tabloid to expose the dealings between a builder and a Municipal commissioner.
 
 **Manoos** (1939)
 
@@ -121,7 +124,7 @@ One of National Award winning Bengali director Rituparno Ghosh's best works, the
 
 **Pyaasa** (1957)
 
-The most soulful romantic Hindi film ever made. Guru Dutt's film featuring him and Waheeda Rehman was poetic and tragic tale of struggling poet, trying to make his works known and a prostitute who is in love with and eventually helps him get his poems published. 
+The most soulful romantic Hindi film ever made. Guru Dutt's film featuring him and Waheeda Rehman was poetic and tragic tale of struggling poet, trying to make his works known and a prostitute who is in love with and eventually helps him get his poems published.
 
 **Maro Charitra** (1978)
 
@@ -145,7 +148,7 @@ The Marathi film was directed and co-produced by renowned filmmaker Jabbar Patel
 
 **Kaagaz Ke Phool** (1959)
 
-Guru Dutt's film turned out to be a disaster at the box office. The Hindi film revolves around a film director and his relationship with a new actress whom he recruits for his upcoming film. The story of pain and loneliness helped the film achieve cult status. 
+Guru Dutt's film turned out to be a disaster at the box office. The Hindi film revolves around a film director and his relationship with a new actress whom he recruits for his upcoming film. The story of pain and loneliness helped the film achieve cult status.
 
 **Salaam Bombay** (1988)
 
@@ -153,7 +156,7 @@ From thieves to drug peddlers, the film chronicles the life of children living o
 
 **Hazaaron Khwahishen Aisi** (2003)
 
-Sudhir Mishra's most acclaimed Hindi film is set in the backdrop of Emergency in India in 1970s. This film tells the story of love, betrayal and aspirations through the lives of three friends. 
+Sudhir Mishra's most acclaimed Hindi film is set in the backdrop of Emergency in India in 1970s. This film tells the story of love, betrayal and aspirations through the lives of three friends.
 
 **Vihir** (2010)
 
@@ -173,11 +176,11 @@ The epic Marathi film, directed by Paresh Mokashi, depicts the struggle of Dadas
 
 **Do Aankhen Barah Haath** (1957)
 
-V Shantaram's films were always known to make a mark for themselves and this Hindi film was no different. The story of a jailor who takes six deadly prisoners into his custody to change them into men of virtue is not just moving but also a memorable one. It became the first Indian film to win a Golden Globe Award. 
+V Shantaram's films were always known to make a mark for themselves and this Hindi film was no different. The story of a jailor who takes six deadly prisoners into his custody to change them into men of virtue is not just moving but also a memorable one. It became the first Indian film to win a Golden Globe Award.
 
 **Raja Harishchandra** (1913)
 
-Who can forget India's first feature film? Dadasaheb Phalke gave Indians their first first silent and full-length feature film in 1913. Based on the life of King Harischandra, the film was path breaking in more than one ways. 
+Who can forget India's first feature film? Dadasaheb Phalke gave Indians their first first silent and full-length feature film in 1913. Based on the life of King Harischandra, the film was path breaking in more than one ways.
 
 **Shankarabharanam** (1979)
 
@@ -209,7 +212,7 @@ Based on a short story by Ismat Chugtai, MS Sathyu's film narrated the story of 
 
 **Anand** (1971)
 
-Directed by Hrishikesh Mukherjee, 'Anand' is one of the most popular Hindi films of all time. Backed by some powerful performances by Amitabh Bachchan and Rajesh Khanna and a heartwarming story by Mukerhjee, the film teaches an important lesson of life.  
+Directed by Hrishikesh Mukherjee, 'Anand' is one of the most popular Hindi films of all time. Backed by some powerful performances by Amitabh Bachchan and Rajesh Khanna and a heartwarming story by Mukerhjee, the film teaches an important lesson of life.
 
 **Padatik** (1973)
 
@@ -285,7 +288,7 @@ Thanneer, Thanneer narrated the experience of drought affecting a village in sou
 
 **Sholay** (1975)
 
-Ramesh Sippy's film had everything. Action, romance, drama, comedy- all in right proportion and perhaps that's what makes 'Sholay' a complete film. No matter how small a character was, each stood out and became a cult in this Hindi film. 
+Ramesh Sippy's film had everything. Action, romance, drama, comedy- all in right proportion and perhaps that's what makes 'Sholay' a complete film. No matter how small a character was, each stood out and became a cult in this Hindi film.
 
 **Deool** (2011)
 
@@ -305,7 +308,7 @@ Almost every big name of Telugu, Tamil and Kannada film industry was associated 
 
 **Pakeezah** (1972)
 
-Kamal Amrohi took almost 14 years to complete the shooting of 'Pakeezah' due to his changing relationship with Meena Kumari. The film turned out to be flop but with the death of Meena Kumari, the film later catapulted to success. The Hindi film revolves around the story of a courtesan and combined some popular dialogues and powerful performances. It has turned out to be a cult classic. 
+Kamal Amrohi took almost 14 years to complete the shooting of 'Pakeezah' due to his changing relationship with Meena Kumari. The film turned out to be flop but with the death of Meena Kumari, the film later catapulted to success. The Hindi film revolves around the story of a courtesan and combined some popular dialogues and powerful performances. It has turned out to be a cult classic.
 
 **Thoovanathumbikal** (1987)
 
@@ -313,7 +316,7 @@ The cult Malayalam film was a romantic story featuring Mohanlal, Parvathy and Su
 
 **Samskara** (1970)
 
-Based on a story by UR Ananthamurthy, this Kannada film directed by Pattabhi Rama Reddy dealt with the sensitive caste issue. Considered as a path breaking film, 'Samskara' heralded a the era of parallel cinema in Kannada film industry. 
+Based on a story by UR Ananthamurthy, this Kannada film directed by Pattabhi Rama Reddy dealt with the sensitive caste issue. Considered as a path breaking film, 'Samskara' heralded a the era of parallel cinema in Kannada film industry.
 
 **Sandesham** (1991)
 
@@ -325,7 +328,7 @@ Girish Karnad's Kannada film was a violent rural drama about rivalry between two
 
 **Ranganayaki** (1981)
 
-Very few films in Indian cinema have explored the Oedipus complex. This Kannada film, directed by Puttanna Kanagal, explored the story of an actress who unknowingly falls in love with her own son. 
+Very few films in Indian cinema have explored the Oedipus complex. This Kannada film, directed by Puttanna Kanagal, explored the story of an actress who unknowingly falls in love with her own son.
 
 **Nayak** (1966)
 
@@ -345,15 +348,15 @@ Directed by BR Chopra, the Hindi film featured Dilip Kumar, Vyjayanthimala, Ajit
 
 **Mother India** (1957)
 
-Taking inspiration from his 1940 film 'Aurat', director Mehboob Khan remade the film in 1957 as 'Mother India'. The film revolves around the story of Radha (Nargis) who struggles to raise her sons in the absence of her husband and survive against a money-lender. With some powerful performances by Nargis, Sunil Dutt and Rajendra Kumar, 'Mother India' became the first Hindi film to be nominated for the Oscars. 
+Taking inspiration from his 1940 film 'Aurat', director Mehboob Khan remade the film in 1957 as 'Mother India'. The film revolves around the story of Radha (Nargis) who struggles to raise her sons in the absence of her husband and survive against a money-lender. With some powerful performances by Nargis, Sunil Dutt and Rajendra Kumar, 'Mother India' became the first Hindi film to be nominated for the Oscars.
 
 **Ghatashraddha** (1977)
 
-A path-breaking film by director Girish Kasaravalli, this Kannada film is the only Indian film at the Film Archive of Paris. This is the story of a little boy who befriends a pregnant widow. The film was a poignant take on the orthodox society and how widows are treated. 
+A path-breaking film by director Girish Kasaravalli, this Kannada film is the only Indian film at the Film Archive of Paris. This is the story of a little boy who befriends a pregnant widow. The film was a poignant take on the orthodox society and how widows are treated.
 
 **Awaara** (1951)
 
-Raj Kapoor was all of 26 when he made 'Awaara'- a film on stark divide that exists in the society, between the rich and the poor. Starring Raj Kapoor and Nargis in the lead roles, the Hindi film paved way for other films of this pair together. It also featured Prithviraj Kapoor, as Raj Kapoor's onscreen father. 
+Raj Kapoor was all of 26 when he made 'Awaara'- a film on stark divide that exists in the society, between the rich and the poor. Starring Raj Kapoor and Nargis in the lead roles, the Hindi film paved way for other films of this pair together. It also featured Prithviraj Kapoor, as Raj Kapoor's onscreen father.
 
 **Meera** (1945)
 
