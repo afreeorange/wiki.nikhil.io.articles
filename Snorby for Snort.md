@@ -1,17 +1,12 @@
-Pre-Flight
-----------
+## Pre-Flight
 
 -   Installation was on a 32-bit CentOS 5.6 box.
 -   I'm assuming that you have a MySQL database already set up.
 -   The Snorby Root is `/opt/snorby`
 
-Compiling ImageMagick
----------------------
+## Compiling ImageMagick
 
-Snorby requires a version that the yum repos do not (predictably) have.
-Your best option is to compile from the source ([or from an
-SRPM](http://www.imagemagick.org/Usage/api/#building)
-[\[2](http://en.citizendium.org/wiki/User:Dan_Nessett/Technical/Upgrade_to_1.16#ImageMagick_6.6.2-10)\]):
+Snorby requires a version that the yum repos do not (predictably) have. Your best option is to compile from the source ([or from an SRPM](http://www.imagemagick.org/Usage/api/#building) [\[2](http://en.citizendium.org/wiki/User:Dan_Nessett/Technical/Upgrade_to_1.16#ImageMagick_6.6.2-10)\]):
 
     yum -y groupinstall "Development Tools"
     wget -O - ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick.tar.gz | tar -xzvf -
@@ -20,8 +15,7 @@ SRPM](http://www.imagemagick.org/Usage/api/#building)
     make
     make install
 
-Installation Log
-----------------
+## Installation Log
 
     # Install Git & Development Libs
     yum -y install git gcc gcc-c++ curl-devel httpd-devel \
@@ -32,9 +26,9 @@ Installation Log
 
     # Compile and Install Ruby
     wget ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.gz
-    tar -xvzf ruby-1.9.2-p0.tar.gz 
-    cd ruby-1.9.2-p0 
-    ./configure 
+    tar -xvzf ruby-1.9.2-p0.tar.gz
+    cd ruby-1.9.2-p0
+    ./configure
     make && make install
     cd ..
     rm -rf ruby-1.9.2-p0*
@@ -72,19 +66,18 @@ Installation Log
 
 Now add this to `/etc/httpd/conf.d/passenger.conf`:
 
-    LoadModule passenger_module /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7/ext/apache2/mod_passenger.so  
-    PassengerRoot /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7  
+    LoadModule passenger_module /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7/ext/apache2/mod_passenger.so
+    PassengerRoot /usr/local/lib/ruby/gems/1.9.1/gems/passenger-3.0.7
     PassengerRuby /usr/local/bin/ruby
 
 Now add this to `/opt/snorby/public/.htaccess`:
 
-    RailsBaseURI /snorby  
+    RailsBaseURI /snorby
     PassengerAppRoot /opt/snorby
 
 ### Preparing MySQL
 
-Edit `/opt/snorby/config/database.yml` to match your MySQL connection
-params.
+Edit `/opt/snorby/config/database.yml` to match your MySQL connection params.
 
 *   **Maintaining spacing is bloody important** and will save you a lot
     of grief.
@@ -99,34 +92,29 @@ Go to `/opt/snorby` and set up the databases:
 
 ### Reconfiguring MySQL
 
-You can now remove `root` from the database config. Create a user (I
-called mine "snorby") and a password with full privileges to the
-"snorby" database.
+You can now remove `root` from the database config. Create a user (I called mine "snorby") and a password with full privileges to the "snorby" database.
 
-Errors
-------
+## Errors
 
 ### EZPrint error
 
-    "http://github.com/mephux/ezprint.git (at rails3) is not checked out.   
-     Please run bundle install (Bundler::GitError)" 
+    "http://github.com/mephux/ezprint.git (at rails3) is not checked out.
+     Please run bundle install (Bundler::GitError)"
 
-This [has been documented](https://github.com/Snorby/snorby/issues/6).
-Go to the Snorby root and do this:
+This [has been documented](https://github.com/Snorby/snorby/issues/6). Go to the Snorby root and do this:
 
-    cd /opt/snorby  
-    bundle pack  
+    cd /opt/snorby
+    bundle pack
     bundle install --path vender/cache
 
-Take note that it's vend**e**r and not vend**o**r. I'm guessing this was
-a developer typo.
+Take note that it's vend**e**r and not vend**o**r. I'm guessing this was a developer typo.
 
 ### undefined method [] for nil:NilClass
 
-    [root@example snorby]# rake snorby:setup RAILS_ENV=production  
-    (in /opt/snorby)  
-    rake aborted!  
-     undefined method []' for nil:NilClass 
+    [root@example snorby]# rake snorby:setup RAILS_ENV=production
+    (in /opt/snorby)
+    rake aborted!
+     undefined method []' for nil:NilClass
 
 This went away after I actually indented `config/database.yml` properly.
 
@@ -153,18 +141,16 @@ make
 make install
 ```
 
-When you go to `/opt/snorby` and pull up the Rails console, you
-shouldn't have any errors:
+When you go to `/opt/snorby` and pull up the Rails console, you shouldn't have any errors:
 
-    [root@example snorby]# rails c  
-    Loading development environment (Rails 3.0.5)  
+    [root@example snorby]# rails c
+    Loading development environment (Rails 3.0.5)
     irb(main):001:0>
 
 You can manually start the worker using these commands:
 
-    Snorby::Worker.stop      # Stop The Snorby Worker  
-    Snorby::Worker.start     # Start The Snorby Worker  
+    Snorby::Worker.stop      # Stop The Snorby Worker
+    Snorby::Worker.start     # Start The Snorby Worker
     Snorby::Worker.restart   # Restart The Snorby Worker
 
-If you have Rails installed, the application should automagically start
-the worker threads.
+If you have Rails installed, the application should automagically start the worker threads.
