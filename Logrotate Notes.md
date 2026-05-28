@@ -1,8 +1,6 @@
-This is a quick overview of `logrotate` which... umm... rotates log
-files. This was written for CentOS/RHEL 5.5.
+This is a quick overview of `logrotate` which... umm... rotates log files. This was written for CentOS/RHEL 5.5.
 
-Pertinent Files & Directories
------------------------------
+## Pertinent Files & Directories
 
 |                    File/Dir                   |                                                                  Purpose                                                                   |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -11,11 +9,9 @@ Pertinent Files & Directories
 | `/etc/logrotate.conf` and `/etc/logrotate.d/` | Rotation defaults if they are not defined for specific daemons. You can add rotate configs to this file, or put them in `/etc/logrotate.d` |
 | `/var/lib/logrotate.status`                   | Show when the specified log files were last rotated.                                                                                       |
 
-Logrotate Options
------------------
+## Logrotate Options
 
-Quite simple, really. The `man` page elucidates all available options.
-Here's a quick table of what the most commonly used ones do.
+Quite simple, really. The `man` page elucidates all available options. Here's a quick table of what the most commonly used ones do.
 
 |              Option             |                                                              Purpose                                                               |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -50,11 +46,9 @@ You'll see these used with Apache, for instance.
 | `sharedscripts` | Make sure that the script(s) specified in `prerotate` and/or `postrotate` run just ''once'' (i.e. not for ''every'' logfile) |
 | `delaycompress` | Don't compress yesterday's logfile (if daily... you get the picture)                                                         |
 
-Example
--------
+## Example
 
-Here's a real-world application of the above. I want to rotate an
-already huge log of OpenVPN connections (\~32M in size) like so:
+Here's a real-world application of the above. I want to rotate an already huge log of OpenVPN connections (\~32M in size) like so:
 
 *   I want to maintain **60 days** worth of logs
 *   Logfile **size doesn't matter** to me
@@ -63,45 +57,39 @@ already huge log of OpenVPN connections (\~32M in size) like so:
 *   They should be **organized**; older logfiles should be **in a
     separate directory**
 
-The logfile is at `/var/log/openvpn/connections.log`. Here's the
-configuration file I created for the above. It's `/etc/logrotate.d/openvpn`:
+The logfile is at `/var/log/openvpn/connections.log`. Here's the configuration file I created for the above. It's `/etc/logrotate.d/openvpn`:
 
-    /var/log/openvpn/connections.log {  
-        daily  
-        rotate 60  
-        dateext  
-        compress  
-        olddir /var/log/openvpn/old  
-      
-        nomail  
-        missingok  
-        notifempty  
-        delaycompress  
-        create 640 root root  
+    /var/log/openvpn/connections.log {
+        daily
+        rotate 60
+        dateext
+        compress
+        olddir /var/log/openvpn/old
+
+        nomail
+        missingok
+        notifempty
+        delaycompress
+        create 640 root root
     }
 
 To test this, I run:
 
     logrotate -d /etc/logrotate.d/openvpn
 
-The `-d` switch runs it in verbose, debug, dry-run mode (i.e. nothing
-actually happens.)
+The `-d` switch runs it in verbose, debug, dry-run mode (i.e. nothing actually happens.)
 
-Other Stuff
------------
+## Other Stuff
 
 ### Leopard and Snow Leopard
 
-These use a new utility called `newsyslog`. It is invoked every minute
-by:
+These use a new utility called `newsyslog`. It is invoked every minute by:
 
     /System/Library/LaunchDaemons/com.apple.newsyslog.plist
 
-The config file for this is `/etc/newsyslog.conf` and is kinda nicer
-than `logrotate`'s config :)
+The config file for this is `/etc/newsyslog.conf` and is kinda nicer than `logrotate`'s config :)
 
-Sources
--------
+## Sources
 
 -   [Logrotate Examples](http://www.thegeekstuff.com/2010/07/logrotate-examples/)
 -   [Using logrotate to manage log files](http://linuxers.org/howto/howto-use-logrotate-manage-log-files)
