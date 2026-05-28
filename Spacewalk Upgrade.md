@@ -1,11 +1,10 @@
 Written for Spacewalk 1.7
 
-Back up everything
-------------------
+## Back up everything
 
     cd /root/
     mkdir spacewalk-backup; cd spacewalk-backup
-    tar -czvf etc.sysconfig.rhn.tgz /etc/sysconfig/rhn 
+    tar -czvf etc.sysconfig.rhn.tgz /etc/sysconfig/rhn
     tar -czvf etc.rhn.tgz /etc/rhn
     tar -czvf etc.jabberd.tgz /etc/jabberd
 
@@ -35,15 +34,13 @@ Use this script
 
     pg_dump -U spaceuser -d spaceschema --password | bzip2 > spaceschema.backup.bz2
 
-Set up the new Spacewalk Repository
------------------------------------
+## Set up the new Spacewalk Repository
 
     rpm -Uvh http://spacewalk.redhat.com/yum/1.5/RHEL/5/x86_64/spacewalk-repo-1.5-1.el5.noarch.rpm
 
 This will modify /etc/yum.repos.d/spacewalk.repo to point at version 1.5.
 
-Upgrade
--------
+## Upgrade
 
     # Stop the Spacewalk service
     /usr/sbin/spacewalk-service stop
@@ -61,11 +58,10 @@ Upgrade
     # Update the configuration (use XE for SID, spacewalk/spacewalk for user/pass)
     spacewalk-setup --disconnected --upgrade
 
-    # Enable monitoring and monitoring scout 
+    # Enable monitoring and monitoring scout
     /usr/share/spacewalk/setup/upgrade/rhn-enable-monitoring.pl --enable-scout
 
-Cleaning up
------------
+## Cleaning up
 
     # Clean RHN cache
     rm -rf /var/cache/rhn/satsync
@@ -74,7 +70,6 @@ Cleaning up
     # Clean jabberd
     rm -f /var/lib/jabberd/db/*
 
-Restart Spacewalk
------------------
+## Restart Spacewalk
 
     /usr/sbin/spacewalk-service start
