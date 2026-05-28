@@ -16,6 +16,5 @@ The 512 byte sector is composed of three parts:
 * 64 bytes for the partition table
 * 2 bytes are persistent
 
-When restoring, these numbers become important. If restoring to a
-partition of the *exact size*, use `bs=512` for backup and restore.
+When restoring, these numbers become important. If restoring to a partition of the *exact size*, use `bs=512` for backup and restore.
 Else, *you have to use* `bs=446`. This is vitally important.
