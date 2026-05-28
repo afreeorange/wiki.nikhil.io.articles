@@ -1,5 +1,4 @@
-Quick notes
------------
+## Quick notes
 
 *   Good idea to send logs to a central, secure log collection server
     *   Better if the server is on another, private network
@@ -11,8 +10,7 @@ Quick notes
     loghost does not know the source IP
     *   This is fixed by using something like `syslog-ng`
 
-Anatomy of `/etc/syslog.conf`
------------------------------
+## Anatomy of `/etc/syslog.conf`
 
 Two parts: A *selector* and an *action*. TODO: Convert to HTML...
 
@@ -40,9 +38,9 @@ Two parts: A *selector* and an *action*. TODO: Convert to HTML...
     * *<br /><small>(for all)</small>
     </code>
     |valign="top"|
-    <code> 
+    <code>
     * emerg<br /><small>(system unavailable)</small>
-    * alert<br /><small>(immediate action required)</small> 
+    * alert<br /><small>(immediate action required)</small>
     * crit<br /><small>(critical condition)</small>
     * err<br /><small>(error)</small>
     * warning<br /><small>(what it says)</small>
@@ -52,27 +50,25 @@ Two parts: A *selector* and an *action*. TODO: Convert to HTML...
     </code><br /><small>(Importance, descending)</small>
     |valign="top"|
     <code>
-    * /complete/path/of/some/file 
+    * /complete/path/of/some/file
     * /dev/console
     * -/complete/path/of/some/file<br /><small>(Don't flush file each time; better performance but risks loss of some log info.)</small>
-    * username1[,username2 ...] 
+    * username1[,username2 ...]
     * *<br /><small>(all logged in users)</small>
     * @remotehost.org
     * |/path/to/named/pipe<br /><small>(To send output to a command you must create a named pipe, say /var/lib/cmd.pipe with the mkfifo command. Then start the command with cmd </var/lib/cmd.pipe.)</small>
     </code>
     |}
 
-
 ### Notes & Examples
 
 *   *Cannot* create new facilities. Need to use `local{0,7}`
 *   Syslog assumes that the program sending it logs knows how to do so.
-*   See [the
-    PDF](Media:Logging,_Log_File_Rotation,_and_Syslog_Tutorial.pdf "wikilink")
+*   See the
+    PDF
     for examples of selectors
 
-Logger
-------
+## Logger
 
 I use this to quickly test/view a facility or priority
 
@@ -81,9 +77,8 @@ I use this to quickly test/view a facility or priority
 *   The default selector is `user.info`
 *   The default tag is `logger`.
 
-Sources
--------
+## Sources
 
-*   [Logging, Log File Rotation, and Syslog Tutorial](Media:Logging,_Log_File_Rotation,_and_Syslog_Tutorial.pdf "wikilink")
+*   Logging, Log File Rotation, and Syslog Tutorial
 *   [System Logging Explained in Linux](http://linuxhelp.blogspot.com/2005/09/system-logging-explained-in-linux.html)
 *   [Unix/Linux System Administration - Syslog Module](http://fog.ccsf.cc.ca.us/~gboyd/cs260a/online/syslog/introduction.html)
