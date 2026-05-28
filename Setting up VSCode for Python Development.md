@@ -46,7 +46,7 @@ For the next steps, and on a Mac, type <kbd>Cmd</kbd>+<kbd>,</kbd> to open up yo
 
 #### Use `black`
 
-Search for `python.formatting.provider` and choose black. 
+Search for `python.formatting.provider` and choose black.
 
 You might like to format automagically on save. To do this, search for `editor.formatOnSave`.
 
