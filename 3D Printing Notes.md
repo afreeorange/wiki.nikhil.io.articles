@@ -49,4 +49,3 @@ In addition to the bed's flatness, this is a good culprit for shitprints. Right 
 ### Other
 
 - [Firmware Updates et al](https://help.prusa3d.com/downloads) (copy BBF file, hit reset)
-
