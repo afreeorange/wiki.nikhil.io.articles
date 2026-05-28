@@ -1,11 +1,6 @@
-Set up with [Postfix](Postfix "wikilink"), Postgrey,
-[Dovecot](Dovecot "wikilink"), Cyrus SASL, [ClamAV](ClamAV "wikilink"),
-[SpamAssassin](SpamAssassin "wikilink"),
-[Amavisd-new](Amavisd-new "wikilink"), and
-[Fail2Ban](Fail2Ban_for_Dovecot "wikilink") on CentOS 6.4.
+Set up with Postfix, Postgrey, Dovecot, Cyrus SASL, ClamAV, SpamAssassin, Amavisd-new, and Fail2Ban on CentOS 6.4.
 
-Here's [a great guide](http://www.shisaa.jp/postset/mailserver-1.html)
-([cached](:File:Shisaa_-_Mailserver.pdf "wikilink")).
+Here's [a great guide](http://www.shisaa.jp/postset/mailserver-1.html) (cached).
 
 ### Billy Gorbachev's options:
 
@@ -27,5 +22,4 @@ Here's [a great guide](http://www.shisaa.jp/postset/mailserver-1.html)
 -   Add a TXT SPF record for your domain, including your servers,
     followed by "-all"
 
-Several of these changes can be made (SPF record, DROP, GnuPG) without
-modifying your existing setup.
+Several of these changes can be made (SPF record, DROP, GnuPG) without modifying your existing setup.
