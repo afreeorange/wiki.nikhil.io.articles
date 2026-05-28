@@ -1,15 +1,13 @@
 Found this in an old notebook I had. Don't remember who gave it to me.
 
-Ingredients
------------
+## Ingredients
 
 * Rice
 * 1:1.5 ratio of rice:water
 * 1 tbsp butter (unsalted)
 * 1 tsp salt
 
-Preparation
------------
+## Preparation
 
 * Mix everything, set heat to high
 * When simmering, stir, turn heat to low
