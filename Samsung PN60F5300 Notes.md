@@ -1,4 +1,4 @@
-*   BestBuy [lists the TV](http://www.bestbuy.com/site/samsung-60-class-59-9-10-diag--plasma-1080p-hdtv-black/8182045.p?id=1218864995544&skuid=8182045&sellerId) 
+*   BestBuy [lists the TV](http://www.bestbuy.com/site/samsung-60-class-59-9-10-diag--plasma-1080p-hdtv-black/8182045.p?id=1218864995544&skuid=8182045&sellerId)
     as "PN60F5300**A**FXZA" but with a UPC code of
     [887276963693](http://www.upcindex.com/887276963693) which
     corresponds to "PN60F5300**B**FXZA".
@@ -74,7 +74,6 @@ Film mode: Cinema Smooth
 Black optimizer: Dark Room
 ```
 
-Repair
-------
+## Repair
 
 The power board broke around August 2015 and was under Samsung's warranty. Fixed by Tim Lucht of [Archer Home Center](http://www.archerhomecenter.com/). They're at (515)-993-4141 and are located at 618 Greene Street, Adel, Iowa.
