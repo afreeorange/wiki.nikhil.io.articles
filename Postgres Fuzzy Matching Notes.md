@@ -143,18 +143,4 @@ Reveals:
 
 `SIMILAR TO` has been rewritten with a regular expression (`~`).
 
-[1]: https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE
-[2]: https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP
-[3]: https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP
-[4]: https://www.postgresql.org/docs/current/functions-matching.html
-[5]: https://www.postgresql.org/docs/current/functions-string.html#FUNCTIONS-STRING-OTHER
-[6]: https://www.postgresql.org/docs/current/spgist-builtin-opclasses.html#SPGIST-BUILTIN-OPCLASSES-TABLE
-[7]: https://www.postgresql.org/docs/15/release-15.html#id-1.11.6.5.5.3.4
-[8]: https://www.postgresql.org/docs/current/pgtrgm.html
-[9]: https://www.postgresql.org/docs/current/functions-textsearch.html
-[10]: https://www.postgresql.org/docs/9.1/release-9-1.html
-[11]: https://stackoverflow.com/a/68385039/939860
-[12]: https://www.postgresql.org/docs/current/indexes-opclass.html
-[13]: https://www.postgresql.org/docs/current/pgtrgm.html#PGTRGM-OP-TABLE
-[14]: https://www.postgresql.org/docs/current/textsearch.html
-[15]: https://www.postgresql.org/docs/current/fuzzystrmatch.html
+[1]: https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE [2]: https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP [3]: https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP [4]: https://www.postgresql.org/docs/current/functions-matching.html [5]: https://www.postgresql.org/docs/current/functions-string.html#FUNCTIONS-STRING-OTHER [6]: https://www.postgresql.org/docs/current/spgist-builtin-opclasses.html#SPGIST-BUILTIN-OPCLASSES-TABLE [7]: https://www.postgresql.org/docs/15/release-15.html#id-1.11.6.5.5.3.4 [8]: https://www.postgresql.org/docs/current/pgtrgm.html [9]: https://www.postgresql.org/docs/current/functions-textsearch.html [10]: https://www.postgresql.org/docs/9.1/release-9-1.html [11]: https://stackoverflow.com/a/68385039/939860 [12]: https://www.postgresql.org/docs/current/indexes-opclass.html [13]: https://www.postgresql.org/docs/current/pgtrgm.html#PGTRGM-OP-TABLE [14]: https://www.postgresql.org/docs/current/textsearch.html [15]: https://www.postgresql.org/docs/current/fuzzystrmatch.html
