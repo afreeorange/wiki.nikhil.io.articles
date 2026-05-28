@@ -1,7 +1,6 @@
 My own idiot-proof recipe based on a couple of YouTube videos.
 
-Ingredients
------------
+## Ingredients
 
 * 2 lbs spinach
 * 1 medium onion
@@ -18,8 +17,7 @@ Ingredients
 * 1 tsp turmeric
 * 1/2 tbsp salt
 
-Preparation
------------
+## Preparation
 
 ### Reduce Spinach
 
