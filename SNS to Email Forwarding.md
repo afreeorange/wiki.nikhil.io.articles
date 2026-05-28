@@ -17,10 +17,8 @@ from email.mime.base import MIMEBase
 import email.utils
 import urllib.parse
 
-
 s3 = boto3.client('s3')
 ses = boto3.client('ses')
-
 
 def lambda_handler(event, context):
     bucket = event['Records'][0]['s3']['bucket']['name']
