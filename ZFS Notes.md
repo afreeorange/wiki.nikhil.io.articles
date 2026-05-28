@@ -133,4 +133,3 @@ zpool export my-polo
 # ... and import it with the correct name
 zpool import my-polo my-pool
 ```
-
