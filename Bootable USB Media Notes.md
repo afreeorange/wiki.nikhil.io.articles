@@ -1,7 +1,6 @@
 Assume that your USB disk's drive letter is **D:**
 
-CentOS/Fedora Bootable Installation Key
----------------------------------------
+## CentOS/Fedora Bootable Installation Key
 
 * Clear all partitions with `fdisk`
 * Create a 100M primary, bootable ('a' key), FAT ('t' and then 'b')
@@ -10,7 +9,7 @@ CentOS/Fedora Bootable Installation Key
     space
 * Write changes and then issue:
 
-        mkfs -t vfat /dev/<FAT Partition>  
+        mkfs -t vfat /dev/<FAT Partition>
         mkfs /dev/<Linux Partition>
 
 * Install `livecd-tools`
@@ -21,38 +20,31 @@ CentOS/Fedora Bootable Installation Key
 * Mount the *Linux partition* and copy the ISO file
 * You're set. [Thanks, brah](http://lists.centos.org/pipermail/centos/2010-April/093806.html).
 
-On Windows
-----------
+## On Windows
 
 ### Step 1 : Use `diskpart` to create bootable media
 
-    diskpart   
+    diskpart
     select disk 1
-    clean   
-    create partition primary   
-    select partition 1   
-    active   
-    format fs=fat32   
-    assign   
+    clean
+    create partition primary
+    select partition 1
+    active
+    format fs=fat32
+    assign
     exit
 
-For the step highlighted above, use `list disk` to make sure that your
-USB stick is, indeed, **disk 1**. At this point, the USB stick has a
-primary partition and should be bootable. However, it doesn't have
-anything to *boot* per se.
+For the step highlighted above, use `list disk` to make sure that your USB stick is, indeed, **disk 1**. At this point, the USB stick has a primary partition and should be bootable. However, it doesn't have anything to *boot* per se.
 
 ### Step 2 : Use `xcopy` to copy over the files to be booted
 
-From the directory containing the boot files (these could be Windows
-installation files, for example), issue:
+From the directory containing the boot files (these could be Windows installation files, for example), issue:
 
     xcopy *.* /s/e/f D:\
 
-Where **D:** is the drive letter of your USB stick. Et voila! Install
-away!
+Where **D:** is the drive letter of your USB stick. Et voila! Install away!
 
-Other notes and resources
--------------------------
+## Other notes and resources
 
 * [Unetbootin](http://unetbootin.sourceforge.net/) is a great tool for
     bootable USB on Windows and Linux (GUI only)
@@ -69,4 +61,3 @@ Other notes and resources
         also exist!
 * An excellent idea would be to [roll everything into one using
     GRUB](http://www.neowin.net/forum/index.php?showtopic=621496)
-
