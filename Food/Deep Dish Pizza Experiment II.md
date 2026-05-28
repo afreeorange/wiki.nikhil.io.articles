@@ -1,5 +1,4 @@
-Ingredients
------------
+## Ingredients
 
 * 2 cups all-purpose flour
 * 1 1/3 cup water
@@ -7,15 +6,11 @@ Ingredients
 * 1 tbsp olive oil
 * 1 tsp salt
 
-Preparation
------------
+## Preparation
 
 ### Dough
 
-Mixed all ingredients in a bowl with a spoon. Coated cast-iron skillet with
-bacon grease. Poured the mixture into skillet. Wet fingers and spread the
-dough to cover the skillet (mostly) evenly. Covered in shrink wrap and waited
-until dough was sufficiently risen (eyeballed it).
+Mixed all ingredients in a bowl with a spoon. Coated cast-iron skillet with bacon grease. Poured the mixture into skillet. Wet fingers and spread the dough to cover the skillet (mostly) evenly. Covered in shrink wrap and waited until dough was sufficiently risen (eyeballed it).
 
 ### Bake
 
@@ -32,9 +27,6 @@ until dough was sufficiently risen (eyeballed it).
 * Turn on electric stove at highest setting (700F center, 500F outer)
 * Place skillet on stove for 3-4 minutes
 
-Results
--------
+## Results
 
-Need the bottom to be better, more evenly heated. Imagine that cast-iron
-pizza can be made entirely on the stove. Need to research recipes.
-
+Need the bottom to be better, more evenly heated. Imagine that cast-iron pizza can be made entirely on the stove. Need to research recipes.
