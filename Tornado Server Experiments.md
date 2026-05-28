@@ -9,7 +9,6 @@ from tornado.options import (
 )
 import tornado.web
 
-
 class SyncHandler(tornado.web.RequestHandler):
     """Simple request handler that blocks the IOLoop
     """
@@ -78,7 +77,6 @@ from tornado.options import (
     parse_command_line
 )
 import tornado.web
-
 
 # Create a thread pool
 import concurrent
