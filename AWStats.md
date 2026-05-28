@@ -6,23 +6,18 @@
     -   Statically generated pages will be in
         `/var/www/html/statistics/pages`
 
-How it works!
--------------   
+## How it works!
 
-AWStats is a Perl program that parses any log files you throw at it,
-then creates a text-based 'database' (in `/var/lib/awstats` in this
-guide).
+AWStats is a Perl program that parses any log files you throw at it, then creates a text-based 'database' (in `/var/lib/awstats` in this guide).
 
 Once generated/updates, statistics in this database can be viewed:
 
 -   Dynamically with a CGI script (`awstats.pl`)
 -   Via statically generated HTML files (`awstats_buildstaticpages.pl`)
 
-AWStats is pretty ancient and can do a *lot* more, but as far as
-installation's concered, that's all you should know.
+AWStats is pretty ancient and can do a *lot* more, but as far as installation's concered, that's all you should know.
 
-Pre-Flight
-----------
+## Pre-Flight
 
 ```bash
 # Create requisite folders
@@ -39,21 +34,17 @@ chown -R apache:apache /usr/local/awstats
 perl /usr/local/awstats/tools/awstats_configure.pl
 ```
 
-[Here's the transcript](:File:awstats-install-transcript.txt "wikilink"). All I
-needed from it was a sample config file for the `example.com` domain.
+Here's the transcript. All I needed from it was a sample config file for the `example.com` domain.
 
-Set up a Configuration
-----------------------
+## Set up a Configuration
 
-Modify `/etc/awstats/awstats.example.com.conf` to edit the path to the
-Nginx access log file.
+Modify `/etc/awstats/awstats.example.com.conf` to edit the path to the Nginx access log file.
 
     LogFile="/var/log/nginx/example.com.access.log"
 
 Modify other parameters later.
 
-Populate the AWStats 'Database'
--------------------------------
+## Populate the AWStats 'Database'
 
     perl /usr/local/awstats/wwwroot/cgi-bin/awstats.pl -update -config=example.com
 
@@ -63,8 +54,7 @@ This is done with:
 
     /usr/local/awstats/tools/awstats_updateall.pl now
 
-which you should add to `/etc/logrotate.d/nginx` as a pre-rotation
-script
+which you should add to `/etc/logrotate.d/nginx` as a pre-rotation script
 
     /var/log/nginx/*.log {
             daily
@@ -83,33 +73,27 @@ script
             endscript
     }
 
-Stats will be updated the next time any of those log files are rotated.
-You can also add a `cron` entry:
+Stats will be updated the next time any of those log files are rotated. You can also add a `cron` entry:
 
     0 * * * * /usr/local/awstats/tools/awstats_updateall.pl now > /dev/null 2>&1
 
-Set up Static Pages
--------------------
+## Set up Static Pages
 
-You don't have to set up *both* the CGI-BIN viewer and static pages BTW.
-You could simply generate static pages and not allow any FastCGI
-execution.
+You don't have to set up *both* the CGI-BIN viewer and static pages BTW. You could simply generate static pages and not allow any FastCGI execution.
 
 A single script generates static pages:
 
-    /usr/local/awstats/tools/awstats_buildstaticpages.pl \  
-                    -update \  
-                    -config=example.com \  
-                    -dir=/var/www/html/statistics.example.com/pages \  
+    /usr/local/awstats/tools/awstats_buildstaticpages.pl \
+                    -update \
+                    -config=example.com \
+                    -dir=/var/www/html/statistics.example.com/pages \
                     -awstatsprog=/usr/local/awstats/wwwroot/cgi-bin/awstats.pl
 
-Try it out and you'll see a bunch of HTML files in
-`/var/www/html/statistics.example.com/pages`
+Try it out and you'll see a bunch of HTML files in `/var/www/html/statistics.example.com/pages`
 
 ### Automation
 
-Same as with automating the database script: add to
-`/etc/logrotate.d/nginx`:
+Same as with automating the database script: add to `/etc/logrotate.d/nginx`:
 
     /var/log/nginx/*.log {
             daily
@@ -129,11 +113,9 @@ Same as with automating the database script: add to
             endscript
     }
 
-Set up Nginx
-------------
+## Set up Nginx
 
-AWStats 7.4 ships with a PHP wrapper that Nginx can hand to a FastCGI
-process (PHP-FPM in this case).
+AWStats 7.4 ships with a PHP wrapper that Nginx can hand to a FastCGI process (PHP-FPM in this case).
 
 ### Configuration
 
@@ -178,22 +160,19 @@ process (PHP-FPM in this case).
 
 ### Protect Pages
 
-Enable SSL (even with a shitty self-signed certificate), listen on port
-443, then add this to your `server` definition:
+Enable SSL (even with a shitty self-signed certificate), listen on port 443, then add this to your `server` definition:
 
     auth_basic            "Restricted";
     auth_basic_user_file  passwords;
 
-And here's how you could generate passwords without the full suite of
-Apache tools:
+And here's how you could generate passwords without the full suite of Apache tools:
 
     PASSWORD="ThePassword";
     SALT="$(openssl rand -base64 3)";
     SHA1=$(printf "$PASSWORD$SALT" | openssl dgst -binary -sha1 | sed 's#$#'"$SALT"'#' | base64);
     printf "the_user:{SSHA}$SHA1\n"
 
-Arch Linux Notes
-----------------
+## Arch Linux Notes
 
 ### Installation
 
