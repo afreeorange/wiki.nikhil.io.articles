@@ -255,5 +255,3 @@ FFmpeg is [trying to transcode any cover art](https://stackoverflow.com/a/523709
 - [Scaling with ffmpeg](https://trac.ffmpeg.org/wiki/Scaling%20(resizing)%20with%20ffmpeg)
 - [Video from images](http://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence)
 - [Making a lossless movie](http://stackoverflow.com/questions/4839303/convert-image-sequence-to-lossless-movie)
-
-
