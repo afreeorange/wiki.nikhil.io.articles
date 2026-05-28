@@ -1,6 +1,5 @@
 Because this comes up a lot and I can't keep this shit straight 🤷‍♂️
 
-
 |                     Movie                      | Years +/- "_A New Hope_" | Released |
 |------------------------------------------------|--------------------------|----------|
 | Episode I: _The Phantom Menace_                | -32                      |     1999 |
