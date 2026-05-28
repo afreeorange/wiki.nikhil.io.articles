@@ -1,19 +1,17 @@
-Pre-Flight
-----------
+## Pre-Flight
 
 * The Spacewalk server is **spacewalk.example.com**
     * CentOS 5.5 i386
 * The client to be registered is **client.example.com**
     * CentOS 5.5 i386
 
-Preparing the Client for Registration
--------------------------------------
+## Preparing the Client for Registration
 
 ### Install the necessary packages
 
 On CentOS 5
 
-    rpm -Uvh http://spacewalk.redhat.com/yum/1.3/RHEL/5/i386/spacewalk-client-repo-1.3-1.el5.noarch.rpm  
+    rpm -Uvh http://spacewalk.redhat.com/yum/1.3/RHEL/5/i386/spacewalk-client-repo-1.3-1.el5.noarch.rpm
     yum install rhn-client-tools rhn-check rhn-setup rhnsd m2crypto yum-rhn-plugin
 
 ### Install the Spacewalk server certificate
@@ -33,13 +31,11 @@ I only changed the values of `serverURL` and `sslCACert`:
 
 ### Install EPEL
 
-You'll get GPG key signing errors (like "Public key for blah is not
-installed") otherwise:
+You'll get GPG key signing errors (like "Public key for blah is not installed") otherwise:
 
     rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-4.noarch.rpm
 
-Register the client to the Spacewalk server
--------------------------------------------
+## Register the client to the Spacewalk server
 
 Make sure you have two things:
 
@@ -50,8 +46,7 @@ Then issue:
 
     rhnreg_ks --activationkey=1-d31a1b9465e576d5250de5da356b00a0
 
-Setting up Provisioning
------------------------
+## Setting up Provisioning
 
 Install these packages:
 
@@ -61,33 +56,26 @@ Enable the provisioning action on the client:
 
     rhn-actions-control --enable-all
 
-Read the `man` page for more fine-tuning. Now make sure that `osad` and
-`rhnsd` are running:
+Read the `man` page for more fine-tuning. Now make sure that `osad` and `rhnsd` are running:
 
-    service osad start  
-    chkconfig --level 345 osad on  
-    service rhnsd start  
+    service osad start
+    chkconfig --level 345 osad on
+    service rhnsd start
     chkconfig --level 345 rhnsd on
 
 You should be all set now.
 
-Setting up Monitoring
----------------------
+## Setting up Monitoring
 
 Install the `rhnmd` package and make sure it's running:
 
-    yum -y install rhnmd  
-    service rhnmd start  
+    yum -y install rhnmd
+    service rhnmd start
     chkconfig --level 345 rhnmd on
 
-Make sure that the client firewall allows connections from port 4545
-(default).
+Make sure that the client firewall allows connections from port 4545 (default).
 
-Installing this package creates a new user called `nocpulse`, whose
-homedir is `/var/lib/nocpulse`. Now ask for the `nocpulse-identity`
-public key from the server and put it in
-`/var/lib/nocpulse/.ssh/authorized_keys`. Provided you've set up the
-server properly, you should be all set now.
+Installing this package creates a new user called `nocpulse`, whose homedir is `/var/lib/nocpulse`. Now ask for the `nocpulse-identity` public key from the server and put it in `/var/lib/nocpulse/.ssh/authorized_keys`. Provided you've set up the server properly, you should be all set now.
 
 ### Errors and Miscellanea
 
@@ -99,8 +87,7 @@ Make sure that you ran `rhn-actions-control`.
 
     osad -N -v -v -v -v
 
-Unregistering a Client
-----------------------
+## Unregistering a Client
 
 Open `/etc/yum/pluginconf.d/rhnplugin.conf` and change
 
@@ -114,11 +101,6 @@ You may also want to clean up and reinstall RHN-related packages
 
     yum remove rhn*
 
-Sources
--------
+## Sources
 
 * [Registering Clients - Spacewalk Wiki](https://fedorahosted.org/spacewalk/wiki/RegisteringClients)
-
-
-
-
