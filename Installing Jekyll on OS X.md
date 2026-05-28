@@ -19,7 +19,7 @@
 
         gem install jekyll
 
-*   Test. I did it by running `jekyll serve` from a 
+*   Test. I did it by running `jekyll serve` from a
     [Bootstrap](http://getbootstrap.com/) download[^2].
 
 ### Footnotes
