@@ -24,11 +24,11 @@ NOTE: I OCR'd this from two images I found a while ago. Forget where I saw them.
 
 ### Preparation
 
-Bring 2 quarts / 2 liters of water to the boil in a large pot, adding 2 teaspoons salt. Add the pasta shells, one at a time, to the water while stirring to keep the shells from sticking to the bottom of the pan. After the water comes back to a boil, cook the pasta for about 10 more minutes, continuing to stir occasionally to prevent the pasta from sticking to the pan. Move the pot of pasta to a sink where you can run cold water into the pot to cool the shells. Remove the pasta with your hand and set it aside to drain in a colander. 
+Bring 2 quarts / 2 liters of water to the boil in a large pot, adding 2 teaspoons salt. Add the pasta shells, one at a time, to the water while stirring to keep the shells from sticking to the bottom of the pan. After the water comes back to a boil, cook the pasta for about 10 more minutes, continuing to stir occasionally to prevent the pasta from sticking to the pan. Move the pot of pasta to a sink where you can run cold water into the pot to cool the shells. Remove the pasta with your hand and set it aside to drain in a colander.
 
 Preheat the oven to 350 degrees F / 175 degrees C / gas mark 4. In a large bowl, combine the pumpkin, almonds, and nutmeg, plus salt and pepper to taste. Put about two tablespoons of the mixture into each pasta shell. Arrange the shells, open-side up and about 1/2 inch apart, in a lightly greased (with olive oil) 9x13-inch baking dish. Cover with aluminum foil that has been oiled very lightly on the bottom.
 
-Bake for about 30 minutes or until the pumpkin is heated through. 
+Bake for about 30 minutes or until the pumpkin is heated through.
 
 While the pasta shells are baking, brown the butter in a flying pan over medium heat, stirring constantly and being careful not to let it burn. Add the garlic and sauté until it becomes translucent. Remove from heat. In a separate frying pan (with no oil), lightly toast the breaderumbs. Add breadcrumbs and sage to the garlic-butter mixture and mixture and mix thoroughly using a fork.
 
