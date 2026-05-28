@@ -23,4 +23,3 @@ TODO
 - 2-3 tbsp yoghurt as cream replacement
 
 Blend and enjoy.
-
