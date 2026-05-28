@@ -1,4 +1,4 @@
-Head to [the download page](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) (login required since Oracle is terrible) and download these files 
+Head to [the download page](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) (login required since Oracle is terrible) and download these files
 
     instantclient-basic-macos.x64-12.2.0.1.0-2.zip
     instantclient-sdk-macos.x64-12.2.0.1.0-2.zip
@@ -6,8 +6,8 @@ Head to [the download page](http://www.oracle.com/technetwork/topics/intel-macso
 
 Make sure that you get the 64-bit versions (for 64-bit Pythons), else you'll see something like this at import
 
-    ImportError: dlopen(/Users/nikhil/.pyenv/versions/manifold-api/lib/python2.7/site-packages/cx_Oracle.so, 2): Symbol not found: _OCIAttrGet  
-      Referenced from: /Users/nikhil/.pyenv/versions/manifold-api/lib/python2.7/site-packages/cx_Oracle.so  
+    ImportError: dlopen(/Users/nikhil/.pyenv/versions/manifold-api/lib/python2.7/site-packages/cx_Oracle.so, 2): Symbol not found: _OCIAttrGet
+      Referenced from: /Users/nikhil/.pyenv/versions/manifold-api/lib/python2.7/site-packages/cx_Oracle.so
       Expected in: flat namespace
 
 ### Easy Way
