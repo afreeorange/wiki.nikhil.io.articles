@@ -104,7 +104,6 @@ sudo make install
 | |__| | | \ \  / ____ \| |\  | |__| | |____ ____) | |____| | \ \  \  /  | |____| | \ \
  \____/|_|  \_\/_/    \_\_| \_|\_____|______|_____/|______|_|  \_\  \/   |______|_|  \_\
 
-
 ```
 
 Updated this in `/etc/update-motd.d`
@@ -483,10 +482,8 @@ fi
 
 ### Reset HomeBridge password
 
-Remove `auth.json` in `/var/lib/homebridge` if installed on a RaspberryPi.
-Else you can find it in `$HOME/.homebridge`.
-Else you can find it in `/var/lib/docker/volumes/homebridge` if running in Docker.
-(Else just reinstall the damn thing and keep better track of your passwords...)
+Remove `auth.json` in `/var/lib/homebridge` if installed on a RaspberryPi. Else you can find it in `$HOME/.homebridge`.
+Else you can find it in `/var/lib/docker/volumes/homebridge` if running in Docker. (Else just reinstall the damn thing and keep better track of your passwords...)
 
 Then `sudo systemctl restart homebridge.service`. It's on `http://192.168.1.75:8581`
 
@@ -646,9 +643,5 @@ rsync -avWHh --no-perms --no-owner --no-group --progress /source/ /backup/
 
 - [Migrating FreeNAS ZFS Pools to Ubuntu](https://drechsel.xyz/posts/how-to-migrate-existing-freenas-zfs-pools-to-ubuntu-1804-and-higher/)
 - Mac VLANs
-  - [Fantastic Overview](https://gdevillele.github.io/engine/userguide/networking/get-started-macvlan/)
-  - [2 Minutes to Docker MacVLAN Networking – A Beginners Guide](https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/)
-  - [How to Create and Use MacVLAN Network in Docker](https://www.linuxtechi.com/create-use-macvlan-network-in-docker/)
-  - [Docker Compose Sample](https://github.com/sarunas-zilinskas/docker-compose-macvlan/blob/master/docker-compose.yml)
-  - [Docker Compose Networking Overview](https://runnable.com/docker/docker-compose-networking)
+  - [Fantastic Overview](https://gdevillele.github.io/engine/userguide/networking/get-started-macvlan/)   - [2 Minutes to Docker MacVLAN Networking – A Beginners Guide](https://collabnix.com/2-minutes-to-docker-macvlan-networking-a-beginners-guide/)   - [How to Create and Use MacVLAN Network in Docker](https://www.linuxtechi.com/create-use-macvlan-network-in-docker/)   - [Docker Compose Sample](https://github.com/sarunas-zilinskas/docker-compose-macvlan/blob/master/docker-compose.yml)   - [Docker Compose Networking Overview](https://runnable.com/docker/docker-compose-networking)
 - [Ansible NAS](https://github.com/davestephens/ansible-nas)
