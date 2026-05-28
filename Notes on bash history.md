@@ -1,25 +1,19 @@
-There are three totally wonderful things you can do to enhance the
-utility of your `.bash_history` file. Add this block to your `.bashrc`:
+There are three totally wonderful things you can do to enhance the utility of your `.bash_history` file. Add this block to your `.bashrc`:
 
       # Keep 10,000 commands worth of history
       export HISTSIZE=10000
-      
+
       # Make 10,000 lines more awesome by erasing duplicate commands
       export HISTCONTROL=erasedups
-      
+
       # Don't lose command history from across many sessions
       shopt -s histappend
 
-By itself, the last option appends that particular bash process' history
-to `.bash_history` at the end of the session. But combined with the
-`HISTCONTROL` option, it's more like an intelligent 'merge' than a
-senseless append. Neato! Recursive searches with `Ctrl + r` will be
-*much* better from now.
+By itself, the last option appends that particular bash process' history to `.bash_history` at the end of the session. But combined with the `HISTCONTROL` option, it's more like an intelligent 'merge' than a senseless append. Neato! Recursive searches with `Ctrl + r` will be *much* better from now.
 
 ### Other stuff you could do
 
-To see your history file, you can either `vi` it like a caveman, or be a
-hip 80s dude by issuing this:
+To see your history file, you can either `vi` it like a caveman, or be a hip 80s dude by issuing this:
 
       history
 
@@ -36,14 +30,11 @@ Now I can just run that long `find` command by merely issuing:
 
       !884
 
-You can actually merge histories across two or more 'live' sessions by
-hand:
+You can actually merge histories across two or more 'live' sessions by hand:
 
       history -a; history -n
 
-I've read of people having this happen automagically by setting the
-`PROMPT_COMMAND` variable to the snippet above. Setting this variable
-executes its value before each new prompt.
+I've read of people having this happen automagically by setting the `PROMPT_COMMAND` variable to the snippet above. Setting this variable executes its value before each new prompt.
 
       PROMPT_COMMAND="history -a; history -n"
 
