@@ -1,17 +1,8 @@
-[TOC]
+Host is **svn.example.com**. There are basically two ways of serving up a subversion repository. One uses `svnserve`, a lightweight server (default port 3690). The other is leveraging Apache (`httpd`) via the WebDAV protocol.
 
-Host is **svn.example.com**. There are basically two ways of serving up
-a subversion repository. One uses `svnserve`, a lightweight server
-(default port 3690). The other is leveraging Apache (`httpd`) via the
-WebDAV protocol.
+The latter is more complex. But it is extremely flexible in terms of administration and is the basis for this setup guide. I will be setting up a single repository at `https://svn.example.com/repository` with SSL, LDAP-based authentication, and project-specific access control.
 
-The latter is more complex. But it is extremely flexible in terms of
-administration and is the basis for this setup guide. I will be setting
-up a single repository at `https://svn.example.com/repository` with SSL,
-LDAP-based authentication, and project-specific access control.
-
-Installation
-------------
+## Installation
 
 ### Getting the RPM
 
@@ -21,149 +12,119 @@ I'm putting the SVN root in /home/svn as well. This can be anywhere.
 
 This will install Apache and other dependencies as well.
 
-    service httpd start  
+    service httpd start
     chkconfig --level 345 httpd on
 
-Make sure it's working, and that `iptables` is not causing any issues.
-You can use `nmap` for this purpose or just go to
+Make sure it's working, and that `iptables` is not causing any issues. You can use `nmap` for this purpose or just go to
 <http://svn.example.com>.
 
 ### Preparing `subversion.conf`
 
-Installing the packages will create a new apache configuration directive
-in `/etc/httpd/conf.d` called `subversion.conf`. You need to edit this
-file to set up the location of the repository.
+Installing the packages will create a new apache configuration directive in `/etc/httpd/conf.d` called `subversion.conf`. You need to edit this file to set up the location of the repository.
 
 First uncomment these files if they've not been uncommented:
 
-    LoadModule dav_svn_module     modules/mod_dav_svn.so  
+    LoadModule dav_svn_module     modules/mod_dav_svn.so
     LoadModule authz_svn_module   modules/mod_authz_svn.so
 
 Define the SVN root:
 
-    <Location /repository>  
-            DAV svn  
-            SVNPath /home/svn/repository  
+    <Location /repository>
+            DAV svn
+            SVNPath /home/svn/repository
     </Location>
 
 Now you can add simple authentication or use LDAP.
 
-Configuration
--------------
+## Configuration
 
 ### Simple Authentication
 
-This uses basic `htpasswd` based authentication. Passwords may be sent
-in the clear if you don't enable SSL. You can also use digest-based
-authentication which is slightly more secure.
+This uses basic `htpasswd` based authentication. Passwords may be sent in the clear if you don't enable SSL. You can also use digest-based authentication which is slightly more secure.
 
-For this scheme, our `/etc/httpd/conf.d/subversion.conf` file will have
-the following directive:
+For this scheme, our `/etc/httpd/conf.d/subversion.conf` file will have the following directive:
 
-    <Location /repository>  
-            DAV svn  
-            SVNPath /home/svn/repository  
-              
-            # Simple authentication  
-            AuthType Basic  
-            AuthName "SVN Server"  
-            AuthUserFile /home/svn/basic-authentication  
-            Require valid-user  
+    <Location /repository>
+            DAV svn
+            SVNPath /home/svn/repository
+
+            # Simple authentication
+            AuthType Basic
+            AuthName "SVN Server"
+            AuthUserFile /home/svn/basic-authentication
+            Require valid-user
     </Location>
 
-Here, we use /home/svn/authorized-users to authenticate. Create this
-file and add a user with:
+Here, we use /home/svn/authorized-users to authenticate. Create this file and add a user with:
 
-    [root@svn ~]# htpasswd -cm /home/svn/authorized-users testuser  
-    New password:   
-    Re-type new password:   
+    [root@svn ~]# htpasswd -cm /home/svn/authorized-users testuser
+    New password:
+    Re-type new password:
     Adding password for user testuser
 
 ### Setting up the repository
 
     svnadmin create /home/svn/repository
 
-Make absolutely sure that Apache owns this directory and its
-descendants!
+Make absolutely sure that Apache owns this directory and its descendants!
 
     chown -R apache:apache /home/svn/repository
 
 ### Testing the Configuration
 
-At this point, you should have a repo accessible via Apache, with
-password sent in clear text (we'll change that). I went to
-`http://svn.example.com` and saw the image to the right after entering
-my credentials for testuser.
+At this point, you should have a repo accessible via Apache, with password sent in clear text (we'll change that). I went to `http://svn.example.com` and saw the image to the right after entering my credentials for testuser.
 
-Excellent! Test it now! I tested this config with Eclipse (with the
-Subclipse plugin.)
+Excellent! Test it now! I tested this config with Eclipse (with the Subclipse plugin.)
 
 ### Securing with SSL
 
-To secure stuff with SSL, generate or use a certificate and enable
-Apache with `mod_ssl`. Change `subversion.conf` so that all traffic on
-port 80 is redirected to port 443 (which uses the certs we've created.)
+To secure stuff with SSL, generate or use a certificate and enable Apache with `mod_ssl`. Change `subversion.conf` so that all traffic on port 80 is redirected to port 443 (which uses the certs we've created.)
 
-     <VirtualHost *:80>  
-             ServerName svn.example.com  
-             RewriteEngine On  
-             RewriteRule .* https://svn.example.com%{REQUEST_URI} [L,R=301]  
+     <VirtualHost *:80>
+             ServerName svn.example.com
+             RewriteEngine On
+             RewriteRule .* https://svn.example.com%{REQUEST_URI} [L,R=301]
      </VirtualHost>
 
 Restart `httpd` and you're good to go!
 
 ### LDAP integration
 
-In this example, I will be using **directory.example.com** as the (Open
-Directory-based) LDAP provider. Change the basic authentication scheme
-to match this:
+In this example, I will be using **directory.example.com** as the (Open Directory-based) LDAP provider. Change the basic authentication scheme to match this:
 
-     # # If using some CA file  
-     # LDAPTrustedMode NONE    
-     # LDAPTrustedGlobalCert CA_DER /etc/pki/tls/certs/root_ca.crt  
+     # # If using some CA file
+     # LDAPTrustedMode NONE
+     # LDAPTrustedGlobalCert CA_DER /etc/pki/tls/certs/root_ca.crt
      # LDAPVerifyServerCert off
 
-     # Define the repository location  
-     <Location /repository>  
-             DAV svn  
-             SVNPath /home/svn/repository  
-       
-             # Integrate with LDAP server  
-             AuthType Basic  
-             AuthBasicProvider ldap  
-             AuthName "SVN Server"  
-             AuthzLDAPAuthoritative off  
-             AuthLDAPURL "(ldap://directory.example.com/cn=users,dc=directory,dc=example,dc=com?uid?sub)?(objectClass=*)"  
-             Require valid-user  
-             AuthzSVNAccessFile /home/svn/repository/conf/authz  
+     # Define the repository location
+     <Location /repository>
+             DAV svn
+             SVNPath /home/svn/repository
+
+             # Integrate with LDAP server
+             AuthType Basic
+             AuthBasicProvider ldap
+             AuthName "SVN Server"
+             AuthzLDAPAuthoritative off
+             AuthLDAPURL "(ldap://directory.example.com/cn=users,dc=directory,dc=example,dc=com?uid?sub)?(objectClass=*)"
+             Require valid-user
+             AuthzSVNAccessFile /home/svn/repository/conf/authz
      </Location>
 
-**It is important** that you set `AuthBasicProvider ldap`. If not,
-Apache will look for a password file and not even bother to authenticate
-against your LDAP server. You'll also see something like this when
-restarting the `httpd` daemon:
+**It is important** that you set `AuthBasicProvider ldap`. If not, Apache will look for a password file and not even bother to authenticate against your LDAP server. You'll also see something like this when restarting the `httpd` daemon:
 
     Invalid command 'AuthLDAPAuthoritative', perhaps misspelled or defined by a module not included in the server configuration
 
-I had terrible luck with setting `AuthzLDAPAuthoritative` to "on". You
-can read the Apache `mod_authnz_ldap` page for more information on these
-directives. They're quite flexible when configuring multiple
-repositories, with respect to user and group access.
+I had terrible luck with setting `AuthzLDAPAuthoritative` to "on". You can read the Apache `mod_authnz_ldap` page for more information on these directives. They're quite flexible when configuring multiple repositories, with respect to user and group access.
 
-Now that you have a single repository, you can fine tune access with the
-`AuthzSVNAccessFile` directive. By default, and when you use
-`svnadmin create`, you get an `authz` file in your repository's `conf`
-folder. In the Apache configuration above, it's the file I've used to
-tweak folder access.
+Now that you have a single repository, you can fine tune access with the `AuthzSVNAccessFile` directive. By default, and when you use `svnadmin create`, you get an `authz` file in your repository's `conf` folder. In the Apache configuration above, it's the file I've used to tweak folder access.
 
-Project Management within a Repository
---------------------------------------
+## Project Management within a Repository
 
 ### Creating a project
 
-This is very simple. It's vitally important that your project folder
-contains three sub-folders: **trunk**, **branches** and **tags**. All
-the code you want to check into the repository must be in **trunk**.
+This is very simple. It's vitally important that your project folder contains three sub-folders: **trunk**, **branches** and **tags**. All the code you want to check into the repository must be in **trunk**.
 
 #### Step 1: Create the required directory structure
 
@@ -178,18 +139,13 @@ the code you want to check into the repository must be in **trunk**.
     cd /tmp
     svn import newproject https://svn.example.com/repository/myproject --message "Initial import" --username myuser
 
-Observe that my project is called `newproject` on my local machine but
-is `myproject` on the SVN server. You may or may not choose to do this,
-but the option is available.
+Observe that my project is called `newproject` on my local machine but is `myproject` on the SVN server. You may or may not choose to do this, but the option is available.
 
-You may get a dialog about the certificate used to secure the
-transaction. Accept the key permanently. You will then be required to
-supply a password.
+You may get a dialog about the certificate used to secure the transaction. Accept the key permanently. You will then be required to supply a password.
 
 #### Step 4: Working with your project
 
-Most typical CVS actions should apply (prefixed with an `svn` of
-course.) For example, to check out the project created above.
+Most typical CVS actions should apply (prefixed with an `svn` of course.) For example, to check out the project created above.
 
     svn checkout https://username@svn.example.com/repository/myproject
 
@@ -197,23 +153,18 @@ The Google teems with SVN cheatsheets.
 
 ### Modifying Access Control
 
-**Important**: Only root can do this. Talk to your friendly sysadmin for
-project-specific access control. By default, your newly created project
-will be world accessible (i.e. to *all authenticated* users.)
+**Important**: Only root can do this. Talk to your friendly sysadmin for project-specific access control. By default, your newly created project will be world accessible (i.e. to *all authenticated* users.)
 
-Here's an example where I created a folder for a rather sinister project
-called `thiswillendpoorly` and have given write access only to user
-`nanand` and read access to `machrist`. *The leading slash is
-important!*
+Here's an example where I created a folder for a rather sinister project called `thiswillendpoorly` and have given write access only to user `nanand` and read access to `machrist`. *The leading slash is important!*
 
-    # Deny world access to repository root (noone needs to get a project listing)  
-    [/]  
-    * =  
-      
-    # Allow only Nikhil and Mark to access this terrible project (Mark can only read)  
-    [/thiswillendpoorly]  
-    nanand = rw  
-    machrist = r  
+    # Deny world access to repository root (noone needs to get a project listing)
+    [/]
+    * =
+
+    # Allow only Nikhil and Mark to access this terrible project (Mark can only read)
+    [/thiswillendpoorly]
+    nanand = rw
+    machrist = r
     * =
 
 If you had multiple repositories, you would need to:
@@ -223,26 +174,20 @@ If you had multiple repositories, you would need to:
 
 Here's an example:
 
-    [repository1:/path]  
-    user1 = rw  
-    user2 = r  
-      
-    [repository2:/path]  
+    [repository1:/path]
+    user1 = rw
+    user2 = r
+
+    [repository2:/path]
     * = rw
 
-If you specified a path without specifying the repository, the filter is
-applied across *all* repositories! This [is explained
-here](http://svnbook.red-bean.com/en/1.0/svn-book.html#svn-ch-6-sect-4.4.2).
+If you specified a path without specifying the repository, the filter is applied across *all* repositories! This [is explained here](http://svnbook.red-bean.com/en/1.0/svn-book.html#svn-ch-6-sect-4.4.2).
 
-Miscellaneous
--------------
+## Miscellaneous
 
 ### Special note about LDAP groups
 
-You cannot do LDAP group-based authentication in SVN with the `authz`
-file. However, I've seen [a python
-script](http://www.thoughtspark.org/node/26) which can import LDAP
-groups.
+You cannot do LDAP group-based authentication in SVN with the `authz` file. However, I've seen [a python script](http://www.thoughtspark.org/node/26) which can import LDAP groups.
 
 ### Few pointers on multiple repository configuration
 
@@ -257,18 +202,14 @@ groups.
 
 ### Configuring for use with Self-Signed Certificates
 
-Assuming that your Root CA is called **`root_ca.crt`**. Create and edit
-`/etc/sysconfig/servers` to add the following:
+Assuming that your Root CA is called **`root_ca.crt`**. Create and edit `/etc/sysconfig/servers` to add the following:
 
-    [global]  
+    [global]
     ssl-authority-files = /etc/pki/tls/certs/root_ca.crt
 
-The other option is to use the system-wide keystore at
-`/etc/pki/tls/certs/ca-bundle.crt` by appending the ASCII version to the
-end of this file.
+The other option is to use the system-wide keystore at `/etc/pki/tls/certs/ca-bundle.crt` by appending the ASCII version to the end of this file.
 
-Resources
----------
+## Resources
 
 *   [mod\_authnz\_ldap directives - Apache page](http://httpd.apache.org/docs/2.1/mod/mod_authnz_ldap.html)
 *   [Subversion on CentOS (Wiki)](http://wiki.centos.org/HowTos/Subversion)
