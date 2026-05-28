@@ -4,5 +4,3 @@
         cmd /c del %userprofile%\AppData\Local\IconCache.db /a
 
 *   File -> New Task -> `explorer`
-
-
