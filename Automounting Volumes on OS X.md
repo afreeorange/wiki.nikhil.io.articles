@@ -1,5 +1,4 @@
-OS X (client) will only mount external drives on user login (and not
-reboot). To correct this,
+OS X (client) will only mount external drives on user login (and not reboot). To correct this,
 
 ```bash
 sudo defaults write /Library/Preferences/SystemConfiguration/autodiskmount AutomountDisksWithoutUserLogin -bool true
