@@ -1,7 +1,6 @@
 On CentOS 7.2. With proxy and user namespace support.
 
-Installation
-------------
+## Installation
 
 To enable user namespace support in the kernel,
 
@@ -22,8 +21,7 @@ Then install and start the service
     systemctl enable docker.service
     systemctl start docker.service
 
-Configuration
--------------
+## Configuration
 
 Create this if it doesn't exist
 
@@ -58,13 +56,11 @@ Then create the subordinate user and group ranges
     echo 'dockremap:100000:65535' >> /etc/subuid
     echo 'dockremap:100000:65535' >> /etc/subgid
 
-Working with Docker
--------------------
+## Working with Docker
 
 Here's [a fantastic cheatsheet](https://github.com/wsargent/docker-cheat-sheet). Here's [a shorter one](https://coderwall.com/p/2es5jw/docker-cheat-sheet-with-examples).
 
-Shared Volumes
---------------
+## Shared Volumes
 
 Create one in a container and give it a memorable name
 
@@ -74,5 +70,5 @@ Now have other containers use it
 
     docker run -ti --volumes-from mystuff_container centos:latest /bin/bash
 
-* These are persistent and won't go away when you stop a container. Yay! You can see this by using `docker inspect` to figure out where that volume is (usually in `/var/lib/docker` some place) and taking a look inside. 
-* Using the same image saves on disk space, [according to the documentation](https://docs.docker.com/engine/userguide/containers/dockervolumes). 
+* These are persistent and won't go away when you stop a container. Yay! You can see this by using `docker inspect` to figure out where that volume is (usually in `/var/lib/docker` some place) and taking a look inside.
+* Using the same image saves on disk space, [according to the documentation](https://docs.docker.com/engine/userguide/containers/dockervolumes).
