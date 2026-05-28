@@ -46,16 +46,13 @@ Now add STP with:
 
     brctl stp vnet0 on
 
-Firewall Rules
---------------
+## Firewall Rules
 
-Make sure that you've set up the proper forwarding rules with IPTables.
-Don't use a general free-for-all like this, though:
+Make sure that you've set up the proper forwarding rules with IPTables. Don't use a general free-for-all like this, though:
 
     iptables -A FORWARD -m state --state NEW -j ACCEPT
 
-References
-----------
+## References
 
 * [A most **excellent** overview of the `brctl`
     command](http://www.lainoox.com/bridge-brctl-tutorial-linux/).
