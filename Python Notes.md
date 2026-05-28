@@ -1,5 +1,4 @@
-Miscellaneous
--------------
+## Miscellaneous
 
 ### Custom CA Bundle with `requests`
 
@@ -7,8 +6,7 @@ Set this environment variable and request away as usual:
 
     export REQUESTS_CA_BUNDLE="/path/to/ca-bundle.pem"
 
-Tricks
-------
+## Tricks
 
 ### Check dictionary for multiple keys
 
