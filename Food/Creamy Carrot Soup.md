@@ -19,4 +19,4 @@ Used Instant Pot to pressure-cook carrots, with _half_ the broth and all the gin
 
 * Try 1/2 tsp each of the curry and masala powders. This thing is a bit spicy.
 * Try some turmeric for it's good for you 💕
-* 
+*
