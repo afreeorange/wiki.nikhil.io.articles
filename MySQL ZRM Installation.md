@@ -1,5 +1,4 @@
-Pre-flight
-----------
+## Pre-flight
 
 Generated random passwords for backup user with this small script:
 
@@ -9,8 +8,7 @@ Generated random passwords for backup user with this small script:
         echo -e "GRANT LOCK TABLES, SELECT, RELOAD, SUPER ON *.* TO 'backupuser'@'backup.example.com' IDENTIFIED BY '$password';"
     done
 
-CentOS/RHEL
------------
+## CentOS/RHEL
 
 ### On client
 
@@ -35,9 +33,7 @@ The MySQL user's homedir is `/var/lib/mysql`. This is nice.
 
 ### On backup server
 
-Created a backup config for client in
-`/etc/mysql-zrm/backupset-client/mysql-zrm.conf`. Here's a sample
-compressed, encrypted, selective backup that is rotated every 30 days.
+Created a backup config for client in `/etc/mysql-zrm/backupset-client/mysql-zrm.conf`. Here's a sample compressed, encrypted, selective backup that is rotated every 30 days.
 The passphrase is not the SQL backup password.
 
     # MySQL connection params
@@ -58,8 +54,7 @@ The passphrase is not the SQL backup password.
     # Retention policy
     retention-policy="30D"
 
-OS X Server
------------
+## OS X Server
 
 ### On Client
 
@@ -83,17 +78,10 @@ OS X Server
 
 ### On backup server
 
-Config was the same as CentOS/RHEL, except that I added the `ssh-user`
-param:
+Config was the same as CentOS/RHEL, except that I added the `ssh-user` param:
 
 ` ssh-user=mysqlbackupuser`
 
-Problems
---------
+## Problems
 
-MySQL v5.0.95 is not compiled with support for profiling (the "SHOW
-PROFILES" command.) This is the `--enable-profiling` tag at
-compile-time. Strange, considering that the previous version (v5.0.77)
-had support for profiling. The upshot is that you can't select
-individual databases to be backed up if you're running 5.0.95. The
-Webtatic and Remi repos have MySQL 5.5+ if you're desperate.
+MySQL v5.0.95 is not compiled with support for profiling (the "SHOW PROFILES" command.) This is the `--enable-profiling` tag at compile-time. Strange, considering that the previous version (v5.0.77) had support for profiling. The upshot is that you can't select individual databases to be backed up if you're running 5.0.95. The Webtatic and Remi repos have MySQL 5.5+ if you're desperate.
