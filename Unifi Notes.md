@@ -290,7 +290,6 @@ This data was extracted from the javascript of the site.
 | UXSDM    | uap  | UWB-XG                | WiFi BaseStation XG               |
 | p2N      | uap  | PICOM2HP              | PicoStation M2 HP                 |
 
-
 | DPI Category Code | Name                       |
 | ----------------- | -------------------------- |
 | 0                 | Instant messaging          |
