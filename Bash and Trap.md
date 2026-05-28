@@ -1,5 +1,4 @@
-Extremely useful in scripting. For a full listing of signals, use
-`kill -l`. Here's a sample script:
+Extremely useful in scripting. For a full listing of signals, use `kill -l`. Here's a sample script:
 
 ```bash
 #!/bin/bash
