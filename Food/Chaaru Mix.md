@@ -1,7 +1,6 @@
 Mama's recipe. A pulverized mix of these things. Need to figure out the proportions.
 
-Ingredients
-===========
+# Ingredients
 
 * Coriander
 * Cumin
