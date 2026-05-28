@@ -1,9 +1,6 @@
-[TOC]
-
 Notes from installing ArchLinux on VirtualBox to use as a development machine at work.
 
-Installation
-------------
+## Installation
 
 ```bash
 parted /dev/sda
@@ -44,8 +41,7 @@ arch-chroot /mnt /bin/bash
 
 Then do everything else [the wiki asks you to do](https://wiki.archlinux.org/index.php/beginners'_guide#Locale)
 
-Configuration
--------------
+## Configuration
 
 ### Time and Date
 
@@ -92,16 +88,13 @@ Then run `grub-mkconfig -o /boot/grub/grub.cfg` and reboot
 
 ### Firewall
 
-[Adapted](/assets/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables)
-and things work as expected. Don't forget to [enable the service](https://wiki.archlinux.org/index.php/Iptables#Configuration_and_usage)
+[Adapted](/assets/archlinux-firewall.txt) an [old project](https://github.com/afreeorange/iptables) and things work as expected. Don't forget to [enable the service](https://wiki.archlinux.org/index.php/Iptables#Configuration_and_usage)
 
     systemctl enable iptables.service
 
 ### Network
 
-The `pacman` update will break networking due [a
-bug](https://bugs.archlinux.org/task/41215) that may have been fixed in
-`systemd` v228 (as of this writing). Oh well.
+The `pacman` update will break networking due [a bug](https://bugs.archlinux.org/task/41215) that may have been fixed in `systemd` v228 (as of this writing). Oh well.
 For the interface you see in `ip link` (will start with "`en`")
 
     systemctl enable dhcpcd@ens4.network
@@ -115,9 +108,7 @@ Then enable the appropriate service and restart the node
 
     pacman -S openssh
 
-Change default port in `/etc/ssh/sshd_config` and disable root login. Then
-[enable the "spawn on demand" `ssh.socket` service](https://wiki.archlinux.org/index.php/Secure_Shell#Daemon_management)
-and change the port to whatever you had earlier
+Change default port in `/etc/ssh/sshd_config` and disable root login. Then [enable the "spawn on demand" `ssh.socket` service](https://wiki.archlinux.org/index.php/Secure_Shell#Daemon_management) and change the port to whatever you had earlier
 
     # systemctl edit sshd.socket
     [Socket]
@@ -128,8 +119,7 @@ Enable the service and reboot to test if you can SSH
     systemctl enable sshd.socket
     reboot
 
-VirtualBox Notes
-----------------
+## VirtualBox Notes
 
 ### VirtualBox Guest Additions
 
@@ -181,8 +171,7 @@ That's 25,000 megabytes (25 x 1,024). Now _resize all snapshots_ with that same 
 
 Then boot up VM. `parted` above version 2.4 [doesn't allow you to resize](https://www.gnu.org/software/parted/manual/html_node/Command-explanations.html#Command-explanations) although its `man` page lists it as an option :/ I used GParted instead to fill the rest of the partition and was a happy person. `fdisk` works too.
 
-X11
----
+## X11
 
 ### Installation
 
@@ -354,8 +343,7 @@ COPY "%WINDIR%\FONTS\seguisym.ttf" "%MYSHARE%\seguisym.ttf"
 PAUSE
 ```
 
-Other Stuff
------------
+## Other Stuff
 
 ### Compacting VDI Images
 
@@ -399,22 +387,15 @@ Either install `ttf-symbola` or [`emojione-color-font`](https://github.com/eosre
 
 ### Adding Mirrors
 
-`reflector` will fetch the latest mirrors based on some criteria you provide
-it (e.g. I want HTTPS and IPv6 only.) You can [do this
-online](https://www.archlinux.org/mirrorlist) as well.
+`reflector` will fetch the latest mirrors based on some criteria you provide it (e.g. I want HTTPS and IPv6 only.) You can [do this online](https://www.archlinux.org/mirrorlist) as well.
 
 ### `/tmp` size
 
-This is set to a small, fixed size which is [a good
-thing](http://superuser.com/a/619398). To install stuff, read the docs about
-some way to set the temporary folder. For example, `pyenv` allows you to
-export `$TMPDIR` before installation. I use `/var/tmp`
+This is set to a small, fixed size which is [a good thing](http://superuser.com/a/619398). To install stuff, read the docs about some way to set the temporary folder. For example, `pyenv` allows you to export `$TMPDIR` before installation. I use `/var/tmp`
 
     TMPDIR=/var/tmp pyenv install 3.5.1
 
-However, this can be a little annoying. `systemd` is the one that creates this
-mount (since I couldn't find it in `/etc/fstab`... since I *created* it myself
-with `genfstab`!) with this
+However, this can be a little annoying. `systemd` is the one that creates this mount (since I couldn't find it in `/etc/fstab`... since I *created* it myself with `genfstab`!) with this
 
     /usr/lib/systemd/system/tmp.mount
 
@@ -422,15 +403,11 @@ One option would be to rename. A better one would be to simply mask it
 
     systemctl mask tmp.mount
 
-Setting `/tmp` to a fixed size is still good. But it seems to use half the
-RAM; with my VPS box, this is untenable. Since I get tons of storage (and very
-little memory), I resorted to creating a 5-10GiB partition just for `/tmp`.
+Setting `/tmp` to a fixed size is still good. But it seems to use half the RAM; with my VPS box, this is untenable. Since I get tons of storage (and very little memory), I resorted to creating a 5-10GiB partition just for `/tmp`.
 
 ### Pacman and GPG Proxies
 
-Corporate proxy blocked port 11371 (the default) that Pacman used to get
-its keys. Had to modify `/etc/pacman.d/gnupg/gpg.conf` and modify the
-`keyserver` to `hkps://hkps.pool.sks-keyservers.net:443`
+Corporate proxy blocked port 11371 (the default) that Pacman used to get its keys. Had to modify `/etc/pacman.d/gnupg/gpg.conf` and modify the `keyserver` to `hkps://hkps.pool.sks-keyservers.net:443`
 
 ### Key could not be looked up remotely
 
