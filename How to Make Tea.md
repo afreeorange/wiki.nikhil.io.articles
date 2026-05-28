@@ -20,8 +20,7 @@ As pointed out 'warming the pot' is a common practice whereby a small amount of 
 
 ## On Mugs
 
-Teacups and saucers are only used to impress people that you do not want to come to your house.
-Use a mug. 
+Teacups and saucers are only used to impress people that you do not want to come to your house. Use a mug.
 
 * Mugs should be large, clean and most importantly **yours**
 * Not your Dad's
@@ -38,7 +37,7 @@ Some people have got the time to make loose leaf tea. Well done you. How was art
 
 ## On Brewing
 
-One teabag per person and one for the pot. Do not deviate from this method. You do not know better. Again taste varies for the strength of your tea. 
+One teabag per person and one for the pot. Do not deviate from this method. You do not know better. Again taste varies for the strength of your tea.
 
 It is vital, VITAL that you do not over brew the tea. Some of the naturally stronger teas like Yorkshire should not be brewed for long as they will become bitter.
 
@@ -47,13 +46,13 @@ It is vital, VITAL that you do not over brew the tea. Some of the naturally stro
 * Don't play Angry Birds.
 * STAY. THE. FUCK. THERE.
 
-If you have used a teapot, after a minute use a spoon to stir a few times. Brewing time should be around 4 minutes. Pour a little out into your mug to check the strength. If it is the colour of a dark ale such as [Otter](http://2.bp.blogspot.com/_vTnoeMChUZ4/TQ46GNA7CkI/AAAAAAAAD04/DkZL5S4NyHw/s1600/Otter+Ale+2010.jpg) then the tea is at a good strength.  
+If you have used a teapot, after a minute use a spoon to stir a few times. Brewing time should be around 4 minutes. Pour a little out into your mug to check the strength. If it is the colour of a dark ale such as [Otter](http://2.bp.blogspot.com/_vTnoeMChUZ4/TQ46GNA7CkI/AAAAAAAAD04/DkZL5S4NyHw/s1600/Otter+Ale+2010.jpg) then the tea is at a good strength.
 
 If you have used a mug stirring regularly is fine. A good indicator of when your tea has reached a good strength is that you can only see the top 1/2 inch of the teabag due to the darkness of your beverage.
 
 ## On Milk
 
-People vary in their taste for strong tea. 
+People vary in their taste for strong tea.
 While brewing strength is important milk will also lower the strength of your tea. Add it slowly, preferably from a small jug rather than from an ungainly 6 pint milk bottle. You do not want to make a mess, that would be unseemly.
 Some people say that you **must** add milk first before adding tea. Some people also believe that pluto isn't a planet. Fuck those people.
 I have found that it makes very little difference. Much in the same way that if you were dropped into hot liquid you would scream the same amount as if you had boiling liquid poured onto you.
@@ -61,8 +60,7 @@ I have found that it makes very little difference. Much in the same way that if 
 ## On Sugar
 
 This component is widely debated.
-Some will take enough sugar to cause diabetes within a two mile radius.
-The great undecided populous will take somewhere between the most infuriating of measures (just a little bit) and what they call 3 teaspoons, which, due to the ever changing laws of science could mean practically any amount.
+Some will take enough sugar to cause diabetes within a two mile radius. The great undecided populous will take somewhere between the most infuriating of measures (just a little bit) and what they call 3 teaspoons, which, due to the ever changing laws of science could mean practically any amount.
 Those enlightened few will ask for no sugar. This, apart from being a lot easier to measure, is also the most refreshing way to enjoy tea. I have yet to come across anyone who drinks tea with sugar to be anything less than abhorrent.
 Of course I say all this in jest. Drink tea as you like it. I would encourage you to try it without sugar for one week. If you remain stoically unaffected then you may return to your faux tea with my faux blessing.
 
@@ -73,12 +71,11 @@ Also, if you are an OAP, you are allowed to drink tea as sweet as you like with 
 ## On Biscuits
 
 Digestives or hobnobs.
-Rich teas are a sick joke and are a trap for those of you who dunk biscuits in your tea.
-If you must have chocolate coated biscuits then choose a dark chocolate variety, these will leave less chocolate on your fingers.
+Rich teas are a sick joke and are a trap for those of you who dunk biscuits in your tea. If you must have chocolate coated biscuits then choose a dark chocolate variety, these will leave less chocolate on your fingers.
 
 ## On Etiquette
 
-* Tea is a social drink, before you make it enquire as to whether anyone else would like one in the vicinity. 
+* Tea is a social drink, before you make it enquire as to whether anyone else would like one in the vicinity.
 * Drink at your leisure, coffee is for abusing when deadlines approach
 * Biscuits should be served on a side plate
 * If you make any mess while making tea clear up after yourself
