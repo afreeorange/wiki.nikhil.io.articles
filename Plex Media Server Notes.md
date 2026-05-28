@@ -1,5 +1,4 @@
-Installation
-------------
+## Installation
 
 Did this in a FreeBSD jail for the FreeNAS plugin sucks.
 
@@ -30,8 +29,7 @@ pkg install plexmediaserver-plexpass
 sysrc plexmediaserver_plexpass_enable=YES
 ```
 
-Migration
----------
+## Migration
 
 Data is kept here
 
@@ -55,8 +53,7 @@ Then go to the Plex Web UI
 * Settings -> Manage -> Troubleshooting: Clean Bundles, Empty Trash, Optimize Database
 * Settings -> Remote Access: Make sure the server's accessible outside the network
 
-Downgrading
------------
+## Downgrading
 
 Had to downgrade from `v1.18.4.2171` to the last version that worked `v1.17.0.1709`. This was because I'd keep seeing the wonderful "_The transcoder exited due to an error_" message only on my Samsung TV. Nothing in the logs (except for the fact that the newer version required a `/home/plex/transcode` which didn't exist; creating this folder didn't help.) Gave up trying to solve the problem.
 
@@ -74,8 +71,7 @@ pkg add /var/cache/pkg/plexmediaserver-plexpass-1.17.0.1709.txz
 service plexmediaserver_plexpass start
 ```
 
-References
-----------
+## References
 
 * [Where is the Plex Media Server data directory located?](https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/)
 * [Moving your Plex install to another system](https://support.plex.tv/articles/201370363-move-an-install-to-another-system/)
