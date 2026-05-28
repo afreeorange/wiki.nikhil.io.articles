@@ -1,89 +1,71 @@
-[TOC]
-
 Written for CentOS 6.4, Postfix 2.6.6.
 
 *   Server is `example.com`.
 *   Mail users map to local accounts (i.e., in `/etc/passwd`).
 *   DNS looks like this:
 
-        [me@example.com ~]$ dig example.com -t MX +short  
+        [me@example.com ~]$ dig example.com -t MX +short
         10 mail.example.com.
 
 *   Made sure that reverse DNS is set up properly.
 
-Overview
---------
+## Overview
 
-Things were easier to set up after understanding these things, even
-cursorily[^1].
+Things were easier to set up after understanding these things, even cursorily[^1].
 
 ### Mail Transfer - Basic Idea
 
-Lots of formal abbreviations! They are, luckily enough, [quite
-sensible](http://dev.mutt.org/trac/wiki/MailConcept). Here's the basic
-flow:
+Lots of formal abbreviations! They are, luckily enough, [quite sensible](http://dev.mutt.org/trac/wiki/MailConcept). Here's the basic flow:
 
-    Sender > Server > Server > ... > Server > Receiver  
+    Sender > Server > Server > ... > Server > Receiver
     (MUA)    (MTA)    (MTA)          (MTA)     (MUA)
 
 You can be a bit more granular:
 
-       Sender   >  Server > Server > ... >   Server     | Delivery |  >   Receiver  
+       Sender   >  Server > Server > ... >   Server     | Delivery |  >   Receiver
     (MUA > MSA)    (MTA)    (MTA)          (MTA > MDA)  | complete |     (MRA > MUA)
 
 (MDAs, when local, are also called LDAs.)
 
-This separation of purpose is good since you can use [a variety of
-applications and
-topologies](http://twiki.org/cgi-bin/view/Wikilearn/EmailServerSketches)
-at each stage. Lot of possibilities. E.g.
+This separation of purpose is good since you can use [a variety of applications and topologies](http://twiki.org/cgi-bin/view/Wikilearn/EmailServerSketches) at each stage. Lot of possibilities. E.g.
 
-    Sender > Postfix > Procmail > Clam Anti-Virus > SpamAssassin > Procmail > Fetchmail > Receiver  
+    Sender > Postfix > Procmail > Clam Anti-Virus > SpamAssassin > Procmail > Fetchmail > Receiver
     (MUA)    (MTA)     (                       MDA                        )     (MRA)       (MUA)
 
 ### Open Relays
 
-Where it is not required to (1) authenticate to your server, and/or (2)
-be in the same network as the server to send email. This is very bad for
-public-facing mail servers. From a simpler time when there were very few
-email servers and everybody was nice to each other.
+Where it is not required to (1) authenticate to your server, and/or (2) be in the same network as the server to send email. This is very bad for public-facing mail servers. From a simpler time when there were very few email servers and everybody was nice to each other.
 
 ### Mailbox Formats
 
-There are [quite a few](http://wiki2.dovecot.org/MailboxFormat), each
-with its own pros and cons. I personally like [Maildir](http://wiki2.dovecot.org/MailboxFormat/Maildir).
+There are [quite a few](http://wiki2.dovecot.org/MailboxFormat), each with its own pros and cons. I personally like [Maildir](http://wiki2.dovecot.org/MailboxFormat/Maildir).
 
-Installation
-------------
+## Installation
 
-    yum install postfix cyrus-sasl  
+    yum install postfix cyrus-sasl
     ln -s /usr/sbin/sendmail.postfix /etc/alternatives/mta --force
 
-Configuration
--------------
+## Configuration
 
 ### The Basics
 
-Postfix ships with sane and secure defaults. Here's stuff I changed in
-`/etc/postfix/main.cf`
+Postfix ships with sane and secure defaults. Here's stuff I changed in `/etc/postfix/main.cf`
 
 First set the hostname and domain
 
-    myhostname = example.com  
+    myhostname = example.com
     mydomain = $myhostname
 
 Mail from this server will come from this domain.
 
     myorigin = $mydomain
 
-Accept mail on specified interface[^2] and all protocols (IPv4 and
-IPv6[^3])
+Accept mail on specified interface[^2] and all protocols (IPv4 and IPv6[^3])
 
-    inet_interfaces = all  
+    inet_interfaces = all
     inet_protocols = all
 
-This server will think itself the final MTA (in the chain above) for
-these domains:
+This server will think itself the final MTA (in the chain above) for these domains:
 
     mydestination = $mydomain, localhost
 
@@ -99,8 +81,7 @@ Change the banner for fun (and no version information)
 
     smtpd_banner = $myhostname ESMTP Why, hello there!
 
-Now edit `[http://www.postfix.org/master.5.html /etc/postfix/master.cf]`
-to enable the submission port[^5].
+Now edit `[http://www.postfix.org/master.5.html /etc/postfix/master.cf]` to enable the submission port[^5].
 
     submission inet n       -       n       -       -       smtpd
 
@@ -110,50 +91,50 @@ Uncomment any options ("-o"); we'll take care of these in later.
 
 Restart the postfix service. Then from another computer,
 
-    orangebox:~$ telnet example.com 25  
-    Trying 96.126.123.32...  
-    Connected to example.com.  
-    Escape character is '^]'.  
-    EHLO example.com  
-    250-example.com  
-    250-PIPELINING  
-    250-SIZE 10240000  
-    250-VRFY  
-    250-ETRN  
-    250-ENHANCEDSTATUSCODES  
-    250-8BITMIME  
-    250 DSN  
-    MAIL FROM: testuser@internet.com  
-    250 2.1.0 Ok  
-    RCPT TO: me@example.com  
-    250 2.1.5 Ok  
-    DATA  
-    354 End data with <CR><LF>.<CR><LF>  
-    Subject: Hello!  
-    How have you been?  
-    .  
-    250 2.0.0 Ok: queued as 7602C72C2  
+    orangebox:~$ telnet example.com 25
+    Trying 96.126.123.32...
+    Connected to example.com.
+    Escape character is '^]'.
+    EHLO example.com
+    250-example.com
+    250-PIPELINING
+    250-SIZE 10240000
+    250-VRFY
+    250-ETRN
+    250-ENHANCEDSTATUSCODES
+    250-8BITMIME
+    250 DSN
+    MAIL FROM: testuser@internet.com
+    250 2.1.0 Ok
+    RCPT TO: me@example.com
+    250 2.1.5 Ok
+    DATA
+    354 End data with <CR><LF>.<CR><LF>
+    Subject: Hello!
+    How have you been?
+    .
+    250 2.0.0 Ok: queued as 7602C72C2
     QUIT
 
 This should:
 
 *   Work for a valid user
 
-        MAIL FROM: postmaster@example.com  
+        MAIL FROM: postmaster@example.com
         250 2.1.0 Ok
 
 *   Not work an invalid user
 
-        RCPT TO: nonexistent@example.com  
+        RCPT TO: nonexistent@example.com
         550 5.1.1 <nonexistent@example.com>: Recipient address rejected: User unknown in local recipient table
 
 *   Deliver a mail to your home folder! The "`Maildir`" folder will be
     created automagically.
 
-        ~/Maildir  
-         ├── cur  
-         ├── new  
-         │   └── 1377029606.Vca00I4025fM640219.example.com  
+        ~/Maildir
+         ├── cur
+         ├── new
+         │   └── 1377029606.Vca00I4025fM640219.example.com
          └── tmp
 
 But this is done insecurely. Let's fix that.
@@ -162,60 +143,57 @@ But this is done insecurely. Let's fix that.
 
 Generate a self-signed certificate[^6]
 
-    openssl req -new -x509 \  
-                -newkey rsa:4096 \  
-                -days 3650 \  
-                -nodes \  
-                -out /etc/pki/tls/certs/dovecot.crt \  
+    openssl req -new -x509 \
+                -newkey rsa:4096 \
+                -days 3650 \
+                -nodes \
+                -out /etc/pki/tls/certs/dovecot.crt \
                 -keyout /etc/pki/tls/private/dovecot.key
 
     chmod o= /etc/pki/tls/private/dovecot.pem
 
 Now configure Postfix to use these certificates for TLS
 
-    smtp_tls_security_level = may  
-    smtpd_tls_security_level = may  
-    smtpd_tls_cert_file = /etc/pki/tls/certs/postfix.crt  
-    smtpd_tls_key_file = /etc/pki/tls/private/postfix.key  
-    smtpd_tls_auth_only = yes  
-    smtpd_tls_loglevel = 3  
-    smtpd_tls_received_header = yes  
-    smtpd_tls_session_cache_timeout = 3600s  
+    smtp_tls_security_level = may
+    smtpd_tls_security_level = may
+    smtpd_tls_cert_file = /etc/pki/tls/certs/postfix.crt
+    smtpd_tls_key_file = /etc/pki/tls/private/postfix.key
+    smtpd_tls_auth_only = yes
+    smtpd_tls_loglevel = 3
+    smtpd_tls_received_header = yes
+    smtpd_tls_session_cache_timeout = 3600s
     tls_random_source = dev:/dev/urandom
 
 Restart Postfix. As always, see `/var/log/maillog` for any errors.
 
-Now test. 
+Now test.
 
 **Important Stuff**
-* You have to use the OpenSSL client instead of `telnet` from this point on! 
+* You have to use the OpenSSL client instead of `telnet` from this point on!
 * Watch out for non-zero "Verify return codes". Avoid these by providing a full path to the system root certs. This is normally done via `openssl version -d`. On OS X, use "Keychain Access" to export all the stuff under "System Roots" into a single PEM file.
 * Keep the former telnet commands lowercase! Else, the client will renegotiate every time you type `RCPT TO`. [OpenSSL can waste your time like that](http://archives.neohapsis.com/archives/postfix/2007-01/1334.html)!
 
-    openssl s_client -starttls smtp \  
-                     -CAfile /path/to/roots.pem \  
+    openssl s_client -starttls smtp \
+                     -CAfile /path/to/roots.pem \
                      -connect example.com:25
 
 ### Some restrictions
 
-Stepping throught the telnet output in the previous section, start
-adding some restrictions to the client connection[^7]:
+Stepping throught the telnet output in the previous section, start adding some restrictions to the client connection[^7]:
 
     smtpd_client_restrictions = reject_unknown_client_hostname, permit
 
 Then the [`HELO`](http://www.postfix.org/postconf.5.html#smtpd_helo_restrictions) command
 
-    smtpd_helo_required = yes  
+    smtpd_helo_required = yes
     smtpd_helo_restrictions = reject_unknown_helo_hostname, reject_non_fqdn_helo_hostname, reject_invalid_helo_hostname, permit
 
 [`MAIL FROM`](http://www.postfix.org/postconf.5.html#smtpd_sender_restrictions)
 
-    smtpd_sender_login_maps = pcre:/etc/postfix/login_maps.pcre  
+    smtpd_sender_login_maps = pcre:/etc/postfix/login_maps.pcre
     smtpd_sender_restrictions = reject_non_fqdn_sender, reject_sender_login_mismatch, reject_unknown_sender_domain, permit
 
-And finally, [`RCPT TO`](http://www.postfix.org/postconf.5.html#smtpd_recipient_restrictions)
-This will allow you to relay messages (i.e. send email to *other*
-domains) if you're SASL-authenticated.
+And finally, [`RCPT TO`](http://www.postfix.org/postconf.5.html#smtpd_recipient_restrictions) This will allow you to relay messages (i.e. send email to *other* domains) if you're SASL-authenticated.
 
     smtpd_recipient_restrictions = permit_sasl_authenticated, reject_unauth_destination, permit
 
@@ -225,21 +203,19 @@ Add this to `/etc/postfix/login_maps.pcre`[^8].
 
 Test away! You should see good errors like:
 
-    450 4.1.8 <askljdas@lksjdklfsdjf.com>: Sender address rejected: Domain not found  
-    450 4.7.1 <blarghhh>: Helo command rejected: Host not found  
+    450 4.1.8 <askljdas@lksjdklfsdjf.com>: Sender address rejected: Domain not found
+    450 4.7.1 <blarghhh>: Helo command rejected: Host not found
     553 5.7.1 <me@example.com>: Sender address rejected: not logged in
 
-Now add a way in which you an log in to the server remotely to send
-messages through it.
+Now add a way in which you an log in to the server remotely to send messages through it.
 
 ### SASL Authentication
 
-Will use [Cyrus](http://cyrusimap.web.cmu.edu/docs/cyrus-sasl/2.1.23/).
-Postfix [uses it by default](http://www.postfix.org/SASL_README.html#server_sasl_enable).
+Will use [Cyrus](http://cyrusimap.web.cmu.edu/docs/cyrus-sasl/2.1.23/). Postfix [uses it by default](http://www.postfix.org/SASL_README.html#server_sasl_enable).
 You can see what other libraries Postfix was compiled with support for as well:
 
     [root@example ~]# postconf -a
-    cyrus  
+    cyrus
     dovecot
 
 Install Cyrus
@@ -249,17 +225,16 @@ Install Cyrus
 You can then see what authentication methods Cyrus supports:
 
     [root@example !]# saslauthd -v
-    saslauthd 2.1.23  
+    saslauthd 2.1.23
     authentication mechanisms: getpwent kerberos5 pam rimap shadow ldap
 
 Install the appropriate package. Since I'm using plain auth,
 
     yum install cyrus-sasl-plain
 
-Since we're dealing with local accounts, let's tell Cyrus to use
-`/etc/shadow`. Open `/etc/sysconfig/saslauthd`:
+Since we're dealing with local accounts, let's tell Cyrus to use `/etc/shadow`. Open `/etc/sysconfig/saslauthd`:
 
-    SOCKETDIR=/var/run/saslauthd  
+    SOCKETDIR=/var/run/saslauthd
     MECH=shadow
     FLAGS=
 
@@ -278,22 +253,21 @@ Test!
 
 Now tell Postfix to use Cyrus in `/etc/postfix/main.cf`
 
-    smtpd_sasl_auth_enable = yes  
+    smtpd_sasl_auth_enable = yes
     smtpd_sasl_type = cyrus
 
-Set [some security
-options](http://www.postfix.org/SASL_README.html#smtpd_sasl_security_options)
+Set [some security options](http://www.postfix.org/SASL_README.html#smtpd_sasl_security_options)
 
     smtpd_sasl_security_options = noanonymous
 
 Restart the Postfix service. Test:
 
-    [root@toolkit ~]# openssl s_client -starttls smtp -CAfile /path/to/postfix.crt -connect example.com:25  
-    (Certificate, connection info)  
-    ---  
-    250 DSN  
-    helo example.com**  
-    250 example.com  
+    [root@toolkit ~]# openssl s_client -starttls smtp -CAfile /path/to/postfix.crt -connect example.com:25
+    (Certificate, connection info)
+    ---
+    250 DSN
+    helo example.com**
+    250 example.com
     auth plain An8o0tjsHojfDausWtzblk4bnZA
     235 2.7.0 Authentication successful
 
@@ -301,109 +275,92 @@ Generate the funky MD5 output with your username and password:
 
     echo -ne '\000user\000password' | base64
 
-Preventing Spam, Bad Email, and DOS Attacks
--------------------------------------------
+## Preventing Spam, Bad Email, and DOS Attacks
 
 ### Using Blocklists
 
-Change `smtpd_recipient_restrictions` to add some blocklists[^9] and
-other stringent policies:
+Change `smtpd_recipient_restrictions` to add some blocklists[^9] and other stringent policies:
 
-    smtpd_recipient_restrictions =   
-      permit_sasl_authenticated,   
-      reject_invalid_hostname,   
-      reject_non_fqdn_sender,  
-      reject_non_fqdn_recipient,  
-      reject_unauth_destination,  
-      reject_rbl_client zen.spamhaus.org,  
-      reject_rbl_client psbl.surriel.com,  
-      reject_rbl_client bl.spamcop.net,  
+    smtpd_recipient_restrictions =
+      permit_sasl_authenticated,
+      reject_invalid_hostname,
+      reject_non_fqdn_sender,
+      reject_non_fqdn_recipient,
+      reject_unauth_destination,
+      reject_rbl_client zen.spamhaus.org,
+      reject_rbl_client psbl.surriel.com,
+      reject_rbl_client bl.spamcop.net,
       permit
 
-Most residential IPs are banned by blocklists, so keep that in mind when
-testing your setup:
+Most residential IPs are banned by blocklists, so keep that in mind when testing your setup:
 
     554 5.7.1 Service unavailable; Client host [173.29.77.33] blocked using zen.spamhaus.org;
-    http://www.spamhaus.org/query/bl?ip=173.29.77.33  
+    http://www.spamhaus.org/query/bl?ip=173.29.77.33
 
 ### Using SPF
 
-[Sender Policy Framework](http://www.openspf.org/Project_Overview)
-prevents fake sender addresses from your domain. It's a great idea and
-is something everyone should do[^10].
+[Sender Policy Framework](http://www.openspf.org/Project_Overview) prevents fake sender addresses from your domain. It's a great idea and is something everyone should do[^10].
 
-To empower Postfix with SPF, first install some required packages from
-EPEL:
+To empower Postfix with SPF, first install some required packages from EPEL:
 
     yum install perl-core perl-Mail-SPF --enablerepo=epel
 
-I'm going to try [the Perl implementation of
-SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^11] Download,
-extract, move to a good place:
+I'm going to try [the Perl implementation of SPF](https://launchpad.net/postfix-policyd-spf-perl/). [^11] Download, extract, move to a good place:
 
-    tar -xvzf postfix-policyd-spf-perl-2.010.tar.gz  
-    cd postfix-policyd-spf-perl-2.010  
+    tar -xvzf postfix-policyd-spf-perl-2.010.tar.gz
+    cd postfix-policyd-spf-perl-2.010
     mv postfix-policyd-spf-perl /usr/local/bin/
 
 Now set up `/etc/postfix/main.cf`. Add to `smtpd_recipient_restrictions`
 
-    # Other options not shown for brevity  
-    smtpd_recipient_restrictions =   
-      check_policy_service unix:private/policy-spf,  
+    # Other options not shown for brevity
+    smtpd_recipient_restrictions =
+      check_policy_service unix:private/policy-spf,
       policy_time_limit = 3600 # Default is 1000; too short[^12]
 
 Then add to `/etc/postfix/master.cf`
 
-    policy-spf unix  -       n       n       -       0       spawn  
+    policy-spf unix  -       n       n       -       0       spawn
         user=nobody  argv=/usr/bin/perl /usr/local/bin/postfix-policyd-spf-perl
 
-Restart the service. Send yourself an email from another service Gmail,
-and look for SPF output in `/var/log/maillog`
+Restart the service. Send yourself an email from another service Gmail, and look for SPF output in `/var/log/maillog`
 
 ### Some Limits on Interaction
 
 The first setting is the denominator for the "limit"s
 
-    # Connection limits  
-    anvil_rate_time_unit = 120s  
-    smtpd_client_connection_rate_limit = 2400  
-    smtpd_client_message_rate_limit = 12000  
+    # Connection limits
+    anvil_rate_time_unit = 120s
+    smtpd_client_connection_rate_limit = 2400
+    smtpd_client_message_rate_limit = 12000
     smtpd_error_sleep_time = 60
 
 ### Prevent Abuse
 
-[Greylisting](http://en.wikipedia.org/wiki/Greylisting) is a great
-approach to fighting spam. The idea is that spammy mail servers do not
-respect the RFC spec that, if an email couldn't be delivered initially,
-they are to re-attempt delivery later.
+[Greylisting](http://en.wikipedia.org/wiki/Greylisting) is a great approach to fighting spam. The idea is that spammy mail servers do not respect the RFC spec that, if an email couldn't be delivered initially, they are to re-attempt delivery later.
 
-[Postgrey](http://postgrey.schweikert.ch/) works well for this. By
-default, it asks MTAs to attempt redelivery in 5 minutes.
+[Postgrey](http://postgrey.schweikert.ch/) works well for this. By default, it asks MTAs to attempt redelivery in 5 minutes.
 
-    yum install postgrey  
-    service postgrey start  
+    yum install postgrey
+    service postgrey start
     chkconfig postgrey on
 
-This will run on a Unix socket. The next step is to get Postfix to use
-it. Edit `/etc/postfix/main.cf`.
+This will run on a Unix socket. The next step is to get Postfix to use it. Edit `/etc/postfix/main.cf`.
 
-    # Other options not shown for brevity  
-    smtpd_recipient_restrictions =  
+    # Other options not shown for brevity
+    smtpd_recipient_restrictions =
         check_policy_service unix:postgrey/socket
 
-I lowered the default wait time to a minute by creating
-`/etc/sysconfig/postgrey` and adding this:
+I lowered the default wait time to a minute by creating `/etc/sysconfig/postgrey` and adding this:
 
     OPTIONS=$OPTIONS" --delay=60"
 
-Restart Postfix and Postgrey. You'll see something like this in
-`maillog` to make sure it's working:
+Restart Postfix and Postgrey. You'll see something like this in `maillog` to make sure it's working:
 
-    postgrey[12582]: action=pass, reason=client whitelist, client_name=mail-qc0-f169.google.com,   
+    postgrey[12582]: action=pass, reason=client whitelist, client_name=mail-qc0-f169.google.com,
         client_address=209.85.216.169, sender=foo@bar.com, recipient=test@example.com
 
-Miscellaneous
--------------
+## Miscellaneous
 
 ### "warning: dict\_nis\_init:"
 
@@ -413,11 +370,9 @@ Disable NIS lookups
 
 ### "Relay Access Denied"
 
-Usually [something](http://serverfault.com/questions/321864/postfix-relay-access-denied)
-quite [simple](http://serverfault.com/questions/192354/postfix-sasl-relay-access-denied-when-sending-from-outside-the-network).
+Usually [something](http://serverfault.com/questions/321864/postfix-relay-access-denied) quite [simple](http://serverfault.com/questions/192354/postfix-sasl-relay-access-denied-when-sending-from-outside-the-network).
 
-References
-----------
+## References
 
 *   [Email agent infrastructure](http://en.wikipedia.org/wiki/E-mail_agent_(infrastructure))
 *   [How email works](http://en.kioskea.net/contents/116-how-email-works-mta-mda-mua)
@@ -429,8 +384,7 @@ References
 *   [Postfix FAQ](http://www.seaglass.com/postfix/faq.html#chbnc)
 *   [How to Set Up your Own Personal Email Server](http://aurellem.org/free/html/email.html) by Robert McIntyre
 
-Footnotes
----------
+## Footnotes
 
 [^1]: [The Linode page](https://library.linode.com/mailserver) on mail
     servers is also a great overview
@@ -460,7 +414,7 @@ Footnotes
 [^8]: From [ServerFault](http://serverfault.com/a/318432). Postfix can
     use a *lot* more formats for controlled envelopes. See the output of
     `postconf -m`. For instance, I initally used this file (Specified
-    with `hash:/path/to/file`):  
+    with `hash:/path/to/file`):
 
         # Envelope sender Owner
         me@example.com    me
