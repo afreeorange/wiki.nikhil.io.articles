@@ -3,7 +3,7 @@ Some notes on using the service which, as of this writing, offers
 - The lowest fees: $0.005 GB/Month
 - 10GB for free
 - Free data egress [through CloudFlare's CDN and Edge Network](https://www.backblaze.com/blog/backblaze-and-cloudflare-partner-to-provide-free-data-transfer/) which is something I'll explore soon.
-- [A CLI client](https://www.backblaze.com/b2/docs/quick_command_line.html) 
+- [A CLI client](https://www.backblaze.com/b2/docs/quick_command_line.html)
 
 ### Installation
 
@@ -35,4 +35,3 @@ b2 upload-file my-bucket/ riffraff.tgz
 # Upload a file and call it something else
 b2 upload-file my-bucket/ riffraff.tgz foobar.tgz
 ```
-
