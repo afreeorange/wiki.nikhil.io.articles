@@ -256,16 +256,7 @@ Cook onion and garlic in large pot until translucent. Add curry and mustard and 
 Cut cabbage into 1 square inch pieces, placing into bus tub. After each layer of cabbage, sprinkle 1/4 C salt. Cover bus tub in plastic wrap and let sit overnight.
 
 ### Kimchi
-1 full bus tub cured cabbage
-2 C garlic
-1 C ginger, peeled and sliced
-2 C daikon, peeled and sliced
-1 C gochujang
-2 C k flake
-1/2 C mushroom seasoning
-2 C water
-1 Qt carrot, peeled and shredded
-1/2 bag green onion, sliced
+1 full bus tub cured cabbage 2 C garlic 1 C ginger, peeled and sliced 2 C daikon, peeled and sliced 1 C gochujang 2 C k flake 1/2 C mushroom seasoning 2 C water 1 Qt carrot, peeled and shredded 1/2 bag green onion, sliced
 
 Squeeze cabbage dry and transfer to new bus tub. Add garlic, ginger, daikon, and water to food processor and puree. Place puree, gochujang, k flake and mushroom seasoning in bowl, mix well. Add mixture, green onion, and carrot to cabbage and mix thoroughly. Store overnight.
 
