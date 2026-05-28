@@ -24,8 +24,7 @@ Here's the diff. You'll just say `Listen 631` so you'll listen on all interfaces
 ```diff
 16,17c16
 < #Listen localhost:631
-< Listen 631
----
+## < Listen 631
 > Listen localhost:631
 33d31
 <   Allow @Local
