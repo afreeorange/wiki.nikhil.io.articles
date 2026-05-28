@@ -1,7 +1,4 @@
-[TOC]
-
-Rolls
------
+## Rolls
 
 ### List installed rolls
 
@@ -11,65 +8,59 @@ Rolls
 
 You'll usually get an ISO file. Let's call it rocks-roll.iso
 
-    # Appending clean=1 will remove any older rolls of same name  
-    rocks add roll rocks-roll.iso  
-      
-    # This should now show the newly added roll  
-    rocks list roll  
-      
-    # Enable the roll  
-    rocks enable roll sge  
-      
-    # Rebuild the distro  
-    cd /export/rocks/install  
-    rocks create distro  
-      
-    # Run the roll; generates a setup shell script  
-    rocks run roll rocks-roll > /tmp/rocks-roll-setup.sh  
+    # Appending clean=1 will remove any older rolls of same name
+    rocks add roll rocks-roll.iso
+
+    # This should now show the newly added roll
+    rocks list roll
+
+    # Enable the roll
+    rocks enable roll sge
+
+    # Rebuild the distro
+    cd /export/rocks/install
+    rocks create distro
+
+    # Run the roll; generates a setup shell script
+    rocks run roll rocks-roll > /tmp/rocks-roll-setup.sh
     sh -x /tmp/rocks-roll-setup.sh
 
-Note: When installing the SGE roll, I had errors about not finding the
-"TRANS.TBL" file. Manually copying it
-`/export/rocks/install/rolls/sge/5.3/x86_64/RedHat/RPMS` solved the
-problem. Strange...
+Note: When installing the SGE roll, I had errors about not finding the "TRANS.TBL" file. Manually copying it `/export/rocks/install/rolls/sge/5.3/x86_64/RedHat/RPMS` solved the problem. Strange...
 
 ### Remove a roll
 
-    # Disable and remove the roll  
-    rocks disable roll sge  
-    rocks remove roll sge  
-      
-    # Rebuild the distro  
-    cd /export/rocks/install  
+    # Disable and remove the roll
+    rocks disable roll sge
+    rocks remove roll sge
+
+    # Rebuild the distro
+    cd /export/rocks/install
     rocks create distro
 
-Nodes
------
+## Nodes
 
 ### Running a command on all nodes
 
-This is far better than some `bash` cleverness since it's done
-*simultaneously* (and not sequentially).
+This is far better than some `bash` cleverness since it's done *simultaneously* (and not sequentially).
 
     rocks run host command="yum -y install gcc44*"
 
 ### Testing the Kickstart File
 
-    /state/partition1/rocks/install/sbin/kickstart.cgi -c compute-0-1 > compute-0-1.configuration.ml  
-      
-    # This is better  
+    /state/partition1/rocks/install/sbin/kickstart.cgi -c compute-0-1 > compute-0-1.configuration.ml
+
+    # This is better
     rocks list host profile compute-0-1 > compute-0-1.xml
 
 ### Installing a Node
 
-    insert-ethers  
-    # Wait for the node to come up, for ROCKS to assign it a name & IP,  
+    insert-ethers
+    # Wait for the node to come up, for ROCKS to assign it a name & IP,
     # and for an asterisk like "(*)"
 
 ### Assign a desired name to a node
 
-`insert-ethers` does things very sequentially. If you have another set
-of nodes that you want to number differently:
+`insert-ethers` does things very sequentially. If you have another set of nodes that you want to number differently:
 
     insert-ethers --rack=1 --rank=14
 
@@ -91,9 +82,9 @@ You can also shoot it from the frontend
 
 #### If node is unavailable
 
-    rocks set host boot compute-0-1 action=install  
-      
-    # After the node has kickstarted; not doing this will result in infinite install loop  
+    rocks set host boot compute-0-1 action=install
+
+    # After the node has kickstarted; not doing this will result in infinite install loop
     rocks set host boot compute-0-1 action=os
 
 ### Removing a Node
@@ -108,12 +99,12 @@ I'm using ROCKS 5.3 on an x86\_64 server.
 *   Now edit `/export/rocks/install/site-profiles/5.3/nodes/extend-compute.xml`
     and add the package name like so:
 
-        <package>R</package>  
+        <package>R</package>
         <package>libRmath</package>
 
 *   Then:
 
-        cd /export/rocks/install  
+        cd /export/rocks/install
         rocks create distro
 
 ### Change IP address
@@ -128,50 +119,44 @@ I'm using ROCKS 5.3 on an x86\_64 server.
 
     qacct -h
 
-Removing the "-h" flag will give you the total system usage. This
-command has a *lot* of switches and is quite flexible (e.g. per user,
-per node, per job, since 8 days)
+Removing the "-h" flag will give you the total system usage. This command has a *lot* of switches and is quite flexible (e.g. per user, per node, per job, since 8 days)
 
-Miscellaneous
--------------
+## Miscellaneous
 
 ### Starting the SSH Agent
 
 You may get this error when trying to shoot a node:
 
-    [root@cluster ~]# shoot-node compute-2-1  
-    Shoot Node - version 5.5  
-    Usage:  /opt/rocks/sbin/shoot-node [-h] host ...  
+    [root@cluster ~]# shoot-node compute-2-1
+    Shoot Node - version 5.5
+    Usage:  /opt/rocks/sbin/shoot-node [-h] host ...
     Requires ssh-agent to launch
 
 To start the SSH agent,
 
-    ssh-agent $SHELL  
+    ssh-agent $SHELL
     ssh-add
 
 ### MySQL
 
-ROCKS runs an alternate MySQL server on port 40000. It's used to
-maintain the SGE and Ganglia (amongst other) databases. Here's the full
-process:
+ROCKS runs an alternate MySQL server on port 40000. It's used to maintain the SGE and Ganglia (amongst other) databases. Here's the full process:
 
-    /opt/rocks/libexec/mysqld   
-      --defaults-file=/opt/rocks/etc/my.cnf   
-      --basedir=/opt/rocks   
-      --datadir=/var/opt/rocks/mysql   
-      --user=rocksdb   
-      --log-error=/var/opt/rocks/mysql/cluster.example.com.err   
-      --pid-file=/var/opt/rocks/mysql/cluster.example.com.pid   
-      --socket=/var/opt/rocks/mysql/mysql.sock   
+    /opt/rocks/libexec/mysqld
+      --defaults-file=/opt/rocks/etc/my.cnf
+      --basedir=/opt/rocks
+      --datadir=/var/opt/rocks/mysql
+      --user=rocksdb
+      --log-error=/var/opt/rocks/mysql/cluster.example.com.err
+      --pid-file=/var/opt/rocks/mysql/cluster.example.com.pid
+      --socket=/var/opt/rocks/mysql/mysql.sock
       --port=40000
 
 Luckily, you can turn it on and off like a SysV service:
 
-    service foundation-mysql stop  
+    service foundation-mysql stop
     service foundation-mysql start
 
-You can also see what's in the `cluster` database by connecting to the
-socket specified:
+You can also see what's in the `cluster` database by connecting to the socket specified:
 
     mysql --socket=/var/opt/rocks/mysql/mysql.sock --user=rocksdb
 
@@ -187,13 +172,9 @@ Here's how you change the `Kickstart_PublicAddress` attribute
 
 ### Wordpress
 
-I once needed to change the password to the Wordpress administration
-page. The ROCKS manual said I should've used `admin` and the cluster's
-root password. This didn't work, presumably since I changed the root
-password later.
+I once needed to change the password to the Wordpress administration page. The ROCKS manual said I should've used `admin` and the cluster's root password. This didn't work, presumably since I changed the root password later.
 
-I was able to reset the Wordpress admin password by connecting using
-this:
+I was able to reset the Wordpress admin password by connecting using this:
 
     mysql -uwordpress -p -hlocalhost --socket=/var/opt/rocks/mysql/mysql.sock
 
@@ -205,8 +186,7 @@ SET user_pass = md5('PASSWORD')
 WHERE user_login = 'admin';
 ```
 
-Sources
--------
+## Sources
 
 *   [ROCKS 5.3 Administration Guide](http://www.rocksclusters.org/roll-documentation/base/5.3/)
 *   [Customizing Configuration of Compute Nodes](http://www.rocksclusters.org/roll-documentation/base/5.3/customization-postconfig.html)
