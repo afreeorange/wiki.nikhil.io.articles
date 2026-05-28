@@ -12,11 +12,10 @@ Fry large chunks of tofu until they are golden brown on either side.
 - Half clove garlic
 - Half a large onion
 
-Mix all ingredients except onion and garlic. 
+Mix all ingredients except onion and garlic.
 
-In ginger oil, at medium-high heat, fry the onions. When they start browning, add garlic. Then add the sauce mix. Keep stirring and reduce until you see 'red foam' and the sauce is as thick as you'd like it to be (you can use corn starch here but don't). 
+In ginger oil, at medium-high heat, fry the onions. When they start browning, add garlic. Then add the sauce mix. Keep stirring and reduce until you see 'red foam' and the sauce is as thick as you'd like it to be (you can use corn starch here but don't).
 
-Add the fried tofu and coat all the pieces with the sauce. Garnish with chopped green onions and sesame seeds. 
+Add the fried tofu and coat all the pieces with the sauce. Garnish with chopped green onions and sesame seeds.
 
 I added a light amount of BBQ sauce and it was pretty lovely.
-
