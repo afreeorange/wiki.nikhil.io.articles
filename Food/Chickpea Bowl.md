@@ -26,4 +26,4 @@ Favorite of Allison :) [Source](https://pinchofyum.com/morrocan-spiced-chickpea-
 
 1. Heat the olive oil in a large skillet over medium heat. Add the onion; saute until soft. Add the garlic, spices, salt, and chickpeas – stir until very fragrant. Add the tomatoes (undrained) and simmer for 20 minutes while you prep the other ingredients.
 2. Chop the cucumber, cook the couscous, and mince the herbs. Arrange bowls with desired amounts of all ingredients. Voila!
-3. These are also very delicious as burritos. 
+3. These are also very delicious as burritos.
