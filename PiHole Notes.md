@@ -52,7 +52,7 @@ Add [this list](https://www.github.developerdan.com/hosts/lists/amp-hosts-extend
 
 ## Using PiHole Locally on macOS
 
-This is for M-Series macs. Use [UTM](https://mac.getutm.app/) to boot up [the `aarch64` ISO of Alpine Linux](https://www.alpinelinux.org/downloads/) on a VM with 256GB memory and 2GB disk space and _shared networking_ (I used `alpine-standard-3.24.1-aarch64.iso`.)
+This is for M-Series macs. Use [UTM](https://mac.getutm.app/) to boot up [the `aarch64` ISO of Alpine Linux](https://www.alpinelinux.org/downloads/) on a VM with 256GB memory and 2GB disk space and _shared networking_ (I used `alpine-standard-3.24.1-aarch64.iso`.) Setting all this up weighed in at around 550MB.
 
 **NOTE**: Setting this to lower memory leads to weirdness. You either won't be able to get past the UEFI boot menu or will see this:
 
@@ -93,7 +93,7 @@ Restart networking with `rc-service networking restart`.
 
 ### Headless UTM
 
-[Official Docs](https://docs.getutm.app/advanced/headless/). Haven't set this up completely.
+[Official Docs](https://docs.getutm.app/advanced/headless/). You need to right-click the VM -> Edit and then right-click and remove the Display (and Sound while you're at it.) Then,
 
 ```bash
 sudo ln -sf /Applications/UTM.app/Contents/MacOS/utmctl /usr/local/bin/utmctl
@@ -104,3 +104,4 @@ utmctl list
 # Start shit up
 utmctl start pihole
 ```
+
