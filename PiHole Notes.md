@@ -52,9 +52,9 @@ Add [this list](https://www.github.developerdan.com/hosts/lists/amp-hosts-extend
 
 ## Using PiHole Locally on macOS
 
-This is for M-Series macs. Use [UTM](https://mac.getutm.app/) to boot up [the `aarch64` ISO of Alpine Linux](https://www.alpinelinux.org/downloads/) on a VM with 256GB memory and 2GB disk space and _shared networking_ (I used `alpine-standard-3.24.1-aarch64.iso`.) Setting all this up weighed in at around 550MB.
+This is for M-Series macs. Use [UTM](https://mac.getutm.app/) to boot up [the `aarch64` ISO of Alpine Linux](https://www.alpinelinux.org/downloads/) on a VM with 256MB memory and 2GB disk space and _shared networking_ (I used `alpine-standard-3.24.1-aarch64.iso`.) Setting all this up weighed in at around 550MB.
 
-**NOTE**: Setting this to lower memory leads to weirdness. You either won't be able to get past the UEFI boot menu or will see this:
+**NOTE**: Lowering memory any further leads to weirdness. You either won't be able to get past the UEFI boot menu or will see this:
 
 ```
 error:
