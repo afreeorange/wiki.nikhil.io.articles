@@ -1,0 +1,8 @@
+- 2 cups full-fat yoghurt
+- 1/2 cup water
+- 2 tsp salt
+- 1 tbsp garlic powder
+- 1 tbsp kashmiri chili powder
+- 1/2 tbsp coriander powder
+- 1/2 tbsp cumin powder
+- 1 tbsp sugar
