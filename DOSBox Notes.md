@@ -47,3 +47,4 @@ Play around with the menu and save your state to one of many 'slots'.
 ### TODO
 
 - 3dfx drivers?
+- See also: MicroXP
