@@ -31,6 +31,20 @@ ufw enable
 ufw status verbose
 ```
 
+### Named Rules
+
+See `/etc/ufw/applications.d/` for how these work.
+
+You will run `sudo ufw app update` after modifying stuff in that folder.
+
+You can then run `sudo ufw app list` to see the named rules. To enable/disable,
+
+```bash
+sudo ufw allow Immich
+sudo ufw deny Immich
+sudo ufw delete allow Immich
+```
+
 ### Deleting Rules
 
 ```bash
@@ -39,6 +53,8 @@ ufw status numbered
 
 # Remove the offending rule
 ufw delete 3
+
+# Or you can
 ```
 
 ### Denying Things
@@ -79,4 +95,11 @@ ufw allow from 192.168.1.0/24
 ufw allow from 192.168.1.0/24 to any port 3306
 ```
 
+### Disabling IPv6
+
+Edit `/etc/default/ufw` and set `IPV6=no`.
+
+### Other Stuff
+
 Note that `ufw` won't block `macvlan` ports for obvious reasons!
+
