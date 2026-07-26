@@ -10,6 +10,12 @@ Your camera will try and advise you. People used to use light meters for this. I
 
 ## The Histogram
 
+- Luminance value on x-axis and pixel count on y-axis.
+- Leftmost edge is Luminance of zero, Rightmost is Luminance of one. Any pixels touching these edges are lost information, they're just crushed out of existence. You can use Zebra stripes to tell you which parts of your image are/will be "blown out" in either direction.
+- You section it into, say, five equal portions. From L-R, you are looking at _blacks_, _shadows_, _midtones_, _highlights_, and _whites_.
+
+Usually you want a histogram that looks like a mountain or is kinda balanced out but depends on what you're trying to do, the look you're going for.
+
 ## On Aperture
 
 Measured by f-stop. "f/2" means you take the focal length and divide it by two.
