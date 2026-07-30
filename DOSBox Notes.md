@@ -48,3 +48,33 @@ Play around with the menu and save your state to one of many 'slots'.
 
 - 3dfx drivers?
 - See also: MicroXP
+
+---
+
+## Notes from trying to run Wing Commander: Privateer
+
+[Go here](https://archive.org/details/msdos_Wing_Commander_Privateer_CD-ROM_1994) and download the zip file.
+
+Extract it. You will see the folder `msdos_Wing_Commander_Privateer_CD-ROM_1994`. Enter that directory. Extract `Wing_Commander_Privateer_CD-ROM_1994.zip`
+
+You will see `Wing_Commander_Privateer_CD-ROM_1994`. Enter that folder. Edit `dosbox.conf` and add these lines at the bottom:
+
+```
+[autoexec]
+mount c: WCPriv
+imgmount d: "WCPriv/cd/Wing Commander Privateer 1 (1995).iso"
+```
+
+Now from that folder, type:
+
+```
+dosbox-x -f dosbox.conf
+```
+
+In DOSBox, type:
+
+```
+C:
+CD PRIV
+PRIV
+```
