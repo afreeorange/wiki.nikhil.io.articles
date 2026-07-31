@@ -23,8 +23,8 @@ jobs:
           name: 📓 Building Wiki
           command: |
             cd
-            bock --version
-            bock --in=/home/circleci/project --out=/home/circleci/output --with-raw-markdown-files --with-json-files
+            /home/circleci/bin/bock --version
+            /home/circleci/bin/bock build --in=/home/circleci/project --out=/home/circleci/output --with-raw-markdown-files --with-json-files
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
