@@ -1,7 +1,8 @@
 .DS_Store
+.claude
 __bock*
-bock
+bock-*
 build
 build.sh
 deploy.sh
-.claude
+start.sh
