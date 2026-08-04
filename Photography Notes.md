@@ -53,6 +53,8 @@ Prime lenses teach you a lot about photography because they make your lazy ass _
 
 Now the LUT grid size with the PNGs is 144 x 144 x 144 = 2,985,984 which makes the sizes of the `.cube` files explode. That script will downsample to 32 x 32 x 32.
 
+[I've saved the generated `.cube` files here](https://public.nikhil.io/hald-clut-cubes.tgz).
+
 ## Other
 
 - [What This NYT/Getty/AP Photojournalist Has Learned After More Than 25 Years in the Field](https://www.youtube.com/watch?v=Ky78k8j2-zc)
