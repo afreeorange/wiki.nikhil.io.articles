@@ -60,7 +60,7 @@
 * Mandy (2018)
 * Upgrade (2006)
 
-### [Vulture](https://www.vulture.com/2017/08/a-vulture-guide-to-the-best-revenge-movies.html)(No Ranking)
+### [Vulture](https://www.vulture.com/2017/08/a-vulture-guide-to-the-best-revenge-movies.html) (No Ranking)
 
 * The Handmaiden (2016)
 * 13 Assassins (2010)
@@ -254,3 +254,89 @@
 * The Princess Bride (1987) - 3
 * Unforgiven (1992) - 2
 * V For Vendetta (2006) - 2
+
+### Sorted By Year (Ascending)
+
+Duplicates from the source lists have been merged: *Mad Max* (1979/1980), *Memento* (2000/2001), *Taken* (2008/2009), and *9 to 5* / *Nine to Five*. *Death Wish* (1974) and *Death Wish* (2018) are separate films and are listed separately. 79 titles in total.
+
+| Year | Title                                          | Lists |
+| ---- | ---------------------------------------------- | ----- |
+| 1941 | The Lady Eve                                   | 2     |
+| 1954 | Sabrina                                        | 1     |
+| 1955 | The Night of the Hunter                        | 1     |
+| 1956 | Moby Dick                                      | 1     |
+| 1962 | Cape Fear                                      | 2     |
+| 1967 | Point Blank                                    | 2     |
+| 1968 | Once Upon a Time in the West                   | 1     |
+| 1968 | The Bride Wore Black                           | 1     |
+| 1971 | Get Carter                                     | 1     |
+| 1971 | Straw Dogs                                     | 3     |
+| 1972 | The Godfather                                  | 1     |
+| 1972 | The Last House on the Left                     | 1     |
+| 1973 | Lady Snowblood                                 | 1     |
+| 1973 | The Sting                                      | 1     |
+| 1974 | Death Wish                                     | 3     |
+| 1976 | Carrie                                         | 4     |
+| 1977 | Rolling Thunder                                | 1     |
+| 1978 | I Spit on Your Grave                           | 2     |
+| 1979 | Mad Max                                        | 2     |
+| 1980 | 9 to 5                                         | 2     |
+| 1982 | Star Trek II: The Wrath of Khan                | 3     |
+| 1984 | Revenge of the Nerds                           | 1     |
+| 1985 | Rocky IV                                       | 1     |
+| 1987 | The Princess Bride                             | 3     |
+| 1989 | She-Devil                                      | 1     |
+| 1990 | Darkman                                        | 1     |
+| 1990 | Pretty Woman                                   | 1     |
+| 1990 | Revenge                                        | 1     |
+| 1992 | Unforgiven                                     | 2     |
+| 1994 | Leon: The Professional                         | 1     |
+| 1994 | The Crow                                       | 3     |
+| 1995 | Braveheart                                     | 2     |
+| 1995 | Waiting to Exhale                              | 1     |
+| 1996 | Hamlet                                         | 1     |
+| 1996 | The Craft                                      | 1     |
+| 1999 | Jawbreaker                                     | 1     |
+| 1999 | Payback                                        | 1     |
+| 1999 | The Limey                                      | 1     |
+| 2000 | Bring It On                                    | 1     |
+| 2000 | Gladiator                                      | 3     |
+| 2000 | Memento                                        | 3     |
+| 2001 | In the Bedroom                                 | 2     |
+| 2001 | Legally Blonde                                 | 1     |
+| 2001 | Ocean's Eleven                                 | 1     |
+| 2002 | Maid in Manhattan                              | 1     |
+| 2002 | The Count of Monte Cristo                      | 1     |
+| 2003 | Kill Bill (2003, 2004)                         | 5     |
+| 2003 | Oldboy                                         | 3     |
+| 2004 | Mean Girls                                     | 1     |
+| 2004 | The Punisher                                   | 1     |
+| 2004 | Walking Tall                                   | 1     |
+| 2005 | Munich                                         | 1     |
+| 2006 | John Tucker Must Die                           | 1     |
+| 2006 | Upgrade                                        | 1     |
+| 2006 | V for Vendetta                                 | 2     |
+| 2007 | Sweeney Todd: The Demon Barber of Fleet Street | 1     |
+| 2007 | The Brave One                                  | 2     |
+| 2008 | Dark Knight                                    | 1     |
+| 2008 | Let the Right One In                           | 1     |
+| 2008 | Punisher: War Zone                             | 1     |
+| 2008 | Taken                                          | 2     |
+| 2009 | Inglourious Basterds                           | 3     |
+| 2010 | 13 Assassins                                   | 1     |
+| 2010 | Machete                                        | 1     |
+| 2010 | True Grit                                      | 1     |
+| 2011 | The Girl With the Dragon Tattoo                | 3     |
+| 2012 | Django Unchained                               | 2     |
+| 2013 | Blue Ruin                                      | 1     |
+| 2014 | Gone Girl                                      | 2     |
+| 2014 | John Wick                                      | 3     |
+| 2014 | The Equalizer                                  | 1     |
+| 2016 | The Handmaiden                                 | 1     |
+| 2017 | The Beguiled                                   | 1     |
+| 2018 | Crazy Rich Asians                              | 1     |
+| 2018 | Death Wish                                     | 1     |
+| 2018 | Mandy                                          | 1     |
+| 2019 | Hustlers                                       | 1     |
+| 2019 | Us                                             | 1     |
+| 2020 | Promising Young Woman                          | 1     |
