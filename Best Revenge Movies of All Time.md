@@ -1,3 +1,5 @@
+[[toc]]
+
 ## Various Lists
 
 ### [Vogue](https://www.vogue.com/article/best-revenge-movies-of-all-time) (No Ranking)
