@@ -1,16 +1,18 @@
+[[TOC]]
+
 "Art is intrinsically a legal fiction," says Lacan. Prematerial narrative states that expression must come from communication, given that narrativity is interchangeable with culture. In a sense, the main theme of the works of Gibson is the genre, and hence the failure, of patriarchialist sexual identity. The *premise of [capitalist narrative](http://www.gutenberg.org/files/12513/12513-h/12513-h.htm) suggests* that art has intrinsic meaning. However, the characteristic theme of Geoffrey's critique of premodernist rationalism is not narrative, but prenarrative. Bataille promotes the use of submaterialist discourse to analyse society. Therefore, Sartre uses the term 'the conceptual paradigm of discourse' to denote the common ground between [sexual identity](http://www.theonion.com/articles/report-it-okay-to-spend-rest-of-day-curled-in-feta,30741/) and society.
 
 This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy. This is Mrs H., she's gorgeous, she's one lady who knows how to take care of herself. *By the way, my name is Max. I take care of both of them, which ain't easy*, 'cause when they met it was MURDER!
 
 [80 days around the world](http://www.nytimes.com/slideshow/2012/12/19/books/20favorite-book-covers.html), *we'll find a pot of gold just sitting where the rainbow's ending*. Time - we'll fight against the time, and we'll fly on the white wings of the wind. 80 days around the world, no we won't say a word before the ship is really back. Round, round, all around the world. Round, all around the world. Round, all around the world. Round, all around the world.
 
-## Structuralist Discourse & the Proletariat
+## Structuralist Discourse & the Proletariat uggests that art may be used to oppress the proletariat
 
 In the works of [Pynchon](http://www.wired.com/wiredscience/2012/12/spider-building-spider/), a predominant concept is the concept of constructive consciousness. If cultural situationism holds, the works of Pynchon are empowering. However, structuralist discourse suggests that art may be used to oppress the proletariat, but only if sexuality is interchangeable with narrativity. Therefore the [dominant assertion](http://www.slate.com/articles/news_and_politics/jurisprudence/2008/03/putting_the_second_amendment_second.single.html) that can be derived from a random [discourse generator](http://webaudio.prototyping.bbc.co.uk/wobbulator/) is a structuralist discourse which excludes the reading of Pynchon as the reader is interpolated to question the nature of random with reference to the quantum.
 
 Objective consideration of an essentially random phenomena is [by definition impossible](http://donkeykongblog.blogspot.com/2011/11/eminem-donkey-kong-scores.html). In observation, it is the [Weltanschauung](http://money.cnn.com/magazines/fortune/fortune500/) that imprints itself onto the process in observation. Teleological judgement is intrinsically incoherent, just as Schrodinger's cat cannot be dead or alive without an observer to define its quantum state. The only option, then, is to submit to the chaotic motion, and apply an ontological, essentially Lamacian, order to what cannot be comprehended absent a Weltanschauung!
 
-### Edwin interrupted
+### Edwin interrupted uggests that art may be used to oppress the proletariat
 
 There's a voice that keeps on calling me. [Down the road, that's where I'll always be](http://memory.loc.gov/cgi-bin/ampage?collId=mtj1&fileName=mtj1page049.db&recNum=259). Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. [Maybe tomorrow, *I'll want to settle down, Until tomorrow*](http://www.amazon.com/exec/obidos/ASIN/0061914304/ref=nosim/0sil8), I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.
 
