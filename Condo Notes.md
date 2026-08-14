@@ -22,6 +22,13 @@ Any maintenance personnel will need roof access. The disconnect box is marked on
 
 **June 13, 2025**: A capacitor was busted and needed replacemen (they typically last about 10-15 years). The compressor was very hot and needed to cool down. Worked with [Lozier Heating and Cooling](https://www.lozierheatingcooling.com/) for a satisfactory resolution. Highly recommended. The replacement will outlive the unit and Lozier provides a guarantee.
 
+### Thermostat
+
+This is an EcoBee Enhanced 'Smart' Thermostat.
+
+- [Cached product page](https://public.nikhil.io/PMI/ecobee-enhanced.html).
+- [YouTube video on operation](https://www.youtube.com/watch?v=Qtix9BzVFrU).
+
 ## Lighting
 
 | Fixture               | Bulb                                            |
