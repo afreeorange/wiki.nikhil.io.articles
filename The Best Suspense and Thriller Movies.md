@@ -1,4 +1,275 @@
-### Via the [British Film Institute](https://www2.bfi.org.uk/thriller/100-thrillers-see-before-you-die) (Unranked)
+[[toc]]
+
+## Merged
+
+| Movie                                                      | Year |
+| ---------------------------------------------------------- | ---- |
+| The Cabinet of Dr. Caligari (Das Cabinet des Dr. Caligari) | 1920 |
+| Dr. Mabuse the Gambler                                     | 1922 |
+| Sunrise: A Song of Two Humans                              | 1927 |
+| The Lodger                                                 | 1927 |
+| M                                                          | 1931 |
+| Freaks                                                     | 1932 |
+| The Most Dangerous Game                                    | 1932 |
+| The 39 Steps                                               | 1935 |
+| The Lady Vanishes                                          | 1938 |
+| They Drive by Night                                        | 1938 |
+| Gaslight                                                   | 1940 |
+| Rebecca                                                    | 1940 |
+| Citizen Kane                                               | 1941 |
+| The Maltese Falcon                                         | 1941 |
+| Shadow of a Doubt                                          | 1943 |
+| Double Indemnity                                           | 1944 |
+| Laura                                                      | 1944 |
+| Ministry of Fear                                           | 1944 |
+| Notorious                                                  | 1946 |
+| The Big Sleep                                              | 1946 |
+| The Spiral Staircase                                       | 1946 |
+| D.O.A.                                                     | 1949 |
+| Obsession                                                  | 1949 |
+| The Reckless Moment                                        | 1949 |
+| The Third Man                                              | 1949 |
+| In a Lonely Place                                          | 1950 |
+| On Dangerous Ground                                        | 1951 |
+| Rashômon                                                   | 1951 |
+| Strangers on a Train                                       | 1951 |
+| The Tall Target                                            | 1951 |
+| High Noon                                                  | 1952 |
+| The Big Heat                                               | 1953 |
+| The Hitch-hiker                                            | 1953 |
+| The Wages of Fear                                          | 1953 |
+| Rear Window                                                | 1954 |
+| Bad Day at Black Rock                                      | 1955 |
+| Diabolique                                                 | 1955 |
+| Kiss Me Deadly                                             | 1955 |
+| Les Diaboliques                                            | 1955 |
+| Rififi                                                     | 1955 |
+| The Night of the Hunter                                    | 1955 |
+| To Catch a Thief                                           | 1955 |
+| Forbidden Planet                                           | 1956 |
+| Invasion of the Body Snatchers                             | 1956 |
+| The Killing                                                | 1956 |
+| Hell Drivers                                               | 1957 |
+| Cairo Station                                              | 1958 |
+| Elevator to the Gallows                                    | 1958 |
+| Lift to the Scaffold                                       | 1958 |
+| Touch of Evil                                              | 1958 |
+| Vertigo                                                    | 1958 |
+| Anatomy of a Murder                                        | 1959 |
+| Night Train                                                | 1959 |
+| North by Northwest                                         | 1959 |
+| Peeping Tom                                                | 1960 |
+| Plein Soleil                                               | 1960 |
+| Psycho                                                     | 1960 |
+| 101 Dalmatians                                             | 1961 |
+| Cash on Demand                                             | 1961 |
+| Zero Focus                                                 | 1961 |
+| Cape Fear                                                  | 1962 |
+| Dr. No                                                     | 1962 |
+| Eyes Without a Face                                        | 1962 |
+| Knife in the Water                                         | 1962 |
+| The Manchurian Candidate                                   | 1962 |
+| High and Low                                               | 1963 |
+| The Birds                                                  | 1963 |
+| The Great Escape                                           | 1963 |
+| Fail-Safe                                                  | 1964 |
+| Goldfinger                                                 | 1964 |
+| Bunny Lake Is Missing                                      | 1965 |
+| Repulsion                                                  | 1965 |
+| The Spy Who Came In from the Cold                          | 1965 |
+| Wait until Dark                                            | 1967 |
+| Rosemary's Baby                                            | 1968 |
+| Ittefaq                                                    | 1969 |
+| Z                                                          | 1969 |
+| Investigation of a Citizen above Suspicion                 | 1970 |
+| Le Boucher                                                 | 1970 |
+| Le Cercle Rouge                                            | 1970 |
+| Duel                                                       | 1971 |
+| Klute                                                      | 1971 |
+| The French Connection                                      | 1971 |
+| Deliverance                                                | 1972 |
+| Don't Look Now                                             | 1973 |
+| The Day of the Jackal                                      | 1973 |
+| Badlands                                                   | 1974 |
+| Chinatown                                                  | 1974 |
+| The Conversation                                           | 1974 |
+| The Godfather, Part II                                     | 1974 |
+| The Taking of Pelham One Two Three                         | 1974 |
+| Jaws                                                       | 1975 |
+| The Passenger                                              | 1975 |
+| Assault on Precinct 13                                     | 1976 |
+| Illustrious Corpses                                        | 1976 |
+| Taxi Driver                                                | 1976 |
+| Halloween                                                  | 1978 |
+| Alien                                                      | 1979 |
+| Stalker                                                    | 1979 |
+| Blow Out                                                   | 1981 |
+| Thief                                                      | 1981 |
+| Blood Simple                                               | 1984 |
+| Runaway Train                                              | 1985 |
+| Blue Velvet                                                | 1986 |
+| Angel Heart                                                | 1987 |
+| Deadly Pursuit                                             | 1988 |
+| Miracle Mile                                               | 1988 |
+| The Vanishing                                              | 1988 |
+| Who Framed Roger Rabbit                                    | 1988 |
+| Blue Steel                                                 | 1989 |
+| Dead Calm                                                  | 1989 |
+| Jacob's Ladder                                             | 1990 |
+| The Silence of the Lambs                                   | 1991 |
+| Basic Instinct                                             | 1992 |
+| One False Move                                             | 1992 |
+| Reservoir Dogs                                             | 1992 |
+| The Hand That Rocks the Cradle                             | 1992 |
+| Carlito's Way                                              | 1993 |
+| In the Line of Fire                                        | 1993 |
+| Jurassic Park                                              | 1993 |
+| The Fugitive                                               | 1993 |
+| Three Colors: Blue                                         | 1993 |
+| True Romance                                               | 1993 |
+| The Shawshank Redemption                                   | 1994 |
+| 12 Monkeys                                                 | 1995 |
+| La Cérémonie                                               | 1995 |
+| Se7en                                                      | 1995 |
+| The Usual Suspects                                         | 1995 |
+| Bound                                                      | 1996 |
+| Tesis                                                      | 1996 |
+| Breakdown                                                  | 1997 |
+| Insomnia                                                   | 1997 |
+| L.A. Confidential                                          | 1997 |
+| The Devil's Advocate                                       | 1997 |
+| The Game                                                   | 1997 |
+| The Rainmaker                                              | 1997 |
+| American History X                                         | 1998 |
+| Enemy of the State                                         | 1998 |
+| Lock, Stock and Two Smoking Barrels                        | 1998 |
+| Run Lola Run                                               | 1998 |
+| The Negotiator                                             | 1998 |
+| American Beauty                                            | 1999 |
+| Arlington Road                                             | 1999 |
+| Fight Club                                                 | 1999 |
+| The Green Mile                                             | 1999 |
+| The Insider                                                | 1999 |
+| The Sixth Sense                                            | 1999 |
+| The Talented Mr. Ripley                                    | 1999 |
+| American Psycho                                            | 2000 |
+| Harry, He’s Here to Help                                   | 2000 |
+| Memento                                                    | 2000 |
+| Nine Queens                                                | 2000 |
+| Snatch                                                     | 2000 |
+| Traffic                                                    | 2000 |
+| Unbreakable                                                | 2000 |
+| A Beautiful Mind                                           | 2001 |
+| Gosford Park                                               | 2001 |
+| Ocean's Eleven                                             | 2001 |
+| The Others                                                 | 2001 |
+| Training Day                                               | 2001 |
+| Equilibrium                                                | 2002 |
+| Minority Report                                            | 2002 |
+| Road to Perdition                                          | 2002 |
+| The Bourne Identity                                        | 2002 |
+| Identity                                                   | 2003 |
+| In the Cut                                                 | 2003 |
+| Matchstick Men                                             | 2003 |
+| Memories of Murder                                         | 2003 |
+| Mystic River                                               | 2003 |
+| Oldboy                                                     | 2003 |
+| Collateral                                                 | 2004 |
+| Eternal Sunshine of the Spotless Mind                      | 2004 |
+| Man on Fire                                                | 2004 |
+| The Bourne Supremacy                                       | 2004 |
+| The Butterfly Effect                                       | 2004 |
+| Hidden                                                     | 2005 |
+| Lord of War                                                | 2005 |
+| The Constant Gardener                                      | 2005 |
+| Tsotsi                                                     | 2005 |
+| Black Book                                                 | 2006 |
+| Casino Royale                                              | 2006 |
+| Inside Man                                                 | 2006 |
+| Lucky Number Slevin                                        | 2006 |
+| The Departed                                               | 2006 |
+| The Illusionist                                            | 2006 |
+| The Lives of Others                                        | 2006 |
+| The Night of the Sunflowers                                | 2006 |
+| The Prestige                                               | 2006 |
+| Eastern Promises                                           | 2007 |
+| Fracture                                                   | 2007 |
+| Gone Baby Gone                                             | 2007 |
+| Lust, Caution                                              | 2007 |
+| Michael Clayton                                            | 2007 |
+| Mr. Brooks                                                 | 2007 |
+| No Country for Old Men                                     | 2007 |
+| The Bourne Ultimatum                                       | 2007 |
+| Zodiac                                                     | 2007 |
+| Changeling                                                 | 2008 |
+| RocknRolla                                                 | 2008 |
+| Taken                                                      | 2008 |
+| The Bank Job                                               | 2008 |
+| The Headless Woman                                         | 2008 |
+| The Hurt Locker                                            | 2008 |
+| About Elly                                                 | 2009 |
+| District 9                                                 | 2009 |
+| Law Abiding Citizen                                        | 2009 |
+| The Girl Who Played with Fire                              | 2009 |
+| The Girl with the Dragon Tattoo                            | 2009 |
+| 127 Hours                                                  | 2010 |
+| Incendies                                                  | 2010 |
+| Inception                                                  | 2010 |
+| Shutter Island                                             | 2010 |
+| The Ghost Writer                                           | 2010 |
+| The Town                                                   | 2010 |
+| Viva Riva!                                                 | 2010 |
+| Harry Potter and the Deathly Hallows - Part 2              | 2011 |
+| Jo Nesbø's Headhunters                                     | 2011 |
+| Miss Bala                                                  | 2011 |
+| Mission: Impossible Ghost Protocol                         | 2011 |
+| Take Shelter                                               | 2011 |
+| The Girl with the Dragon Tattoo                            | 2011 |
+| The Lincoln Lawyer                                         | 2011 |
+| Argo                                                       | 2012 |
+| Argo                                                       | 2012 |
+| Kahaani                                                    | 2012 |
+| Looper                                                     | 2012 |
+| Skyfall                                                    | 2012 |
+| The Cabin in the Woods                                     | 2012 |
+| The Dark Knight Rises                                      | 2012 |
+| The Hunt                                                   | 2012 |
+| All Is Lost                                                | 2013 |
+| Locke                                                      | 2013 |
+| Omar                                                       | 2013 |
+| Prisoners                                                  | 2013 |
+| Stranger by the Lake                                       | 2013 |
+| Blue Ruin                                                  | 2014 |
+| Gone Girl                                                  | 2014 |
+| Nightcrawler                                               | 2014 |
+| The Babadook                                               | 2014 |
+| The Imitation Game                                         | 2014 |
+| Bridge of Spies                                            | 2015 |
+| Ex Machina                                                 | 2015 |
+| Sicario                                                    | 2015 |
+| Spotlight                                                  | 2015 |
+| Victoria                                                   | 2015 |
+| 10 Cloverfield Lane                                        | 2016 |
+| Arrival                                                    | 2016 |
+| Eye In The Sky                                             | 2016 |
+| Hell or High Water                                         | 2016 |
+| Get Out                                                    | 2017 |
+| It                                                         | 2017 |
+| The Salesman (Forushande)                                  | 2017 |
+| A Quiet Place                                              | 2018 |
+| Border - Gräns                                             | 2018 |
+| Burning (Beoning)                                          | 2018 |
+| Mandy                                                      | 2018 |
+| Mission: Impossible - Fallout                              | 2018 |
+| Searching                                                  | 2018 |
+| The Guilty (Den skyldige)                                  | 2018 |
+| The Post                                                   | 2018 |
+| The Irishman                                               | 2019 |
+| Us                                                         | 2019 |
+
+## Sources
+
+### The [British Film Institute](https://www2.bfi.org.uk/thriller/100-thrillers-see-before-you-die) (Unranked)
 
 * About Elly (2009)
 * Bad Day at Black Rock (1955)
@@ -309,534 +580,3 @@
 
 ---
 
-### Merged
-
-* 10 Cloverfield Lane (2016)
-* 101 Dalmatians (1961)
-* 12 Monkeys (1995)
-* 127 Hours (2010)
-* A Beautiful Mind (2001)
-* A Quiet Place (2018)
-* About Elly (2009)
-* Alien (1979)
-* All Is Lost (2013)
-* American Beauty (1999)
-* American History X (1998)
-* American Psycho (2000)
-* Anatomy of a Murder (1959)
-* Angel Heart (1987)
-* Argo (2012)
-* Argo (2012)
-* Arlington Road (1999)
-* Arrival (2016)
-* Assault on Precinct 13 (1976)
-* Bad Day at Black Rock (1955)
-* Badlands (1974)
-* Basic Instinct (1992)
-* Black Book (2006)
-* Blood Simple (1984)
-* Blow Out (1981)
-* Blue Ruin (2014)
-* Blue Steel (1989)
-* Blue Velvet (1986)
-* Border - Gräns (2018)
-* Bound (1996)
-* Breakdown (1997)
-* Bridge of Spies (2015)
-* Bunny Lake Is Missing (1965)
-* Burning (Beoning) (2018)
-* Cairo Station (1958)
-* Cape Fear (1962)
-* Carlito's Way (1993)
-* Cash on Demand (1961)
-* Casino Royale (2006)
-* Changeling (2008)
-* Chinatown (1974)
-* Citizen Kane (1941)
-* Collateral (2004)
-* D.O.A. (1949)
-* Dead Calm (1989)
-* Deadly Pursuit (1988)
-* Deliverance (1972)
-* Diabolique (1955)
-* District 9 (2009)
-* Don't Look Now (1973)
-* Double Indemnity (1944)
-* Dr. Mabuse the Gambler (1922)
-* Dr. No (1962)
-* Duel (1971)
-* Eastern Promises (2007)
-* Elevator to the Gallows (1958)
-* Enemy of the State (1998)
-* Equilibrium (2002)
-* Eternal Sunshine of the Spotless Mind (2004)
-* Ex Machina (2015)
-* Eye In The Sky (2016)
-* Eyes Without a Face (1962)
-* Fail-Safe (1964)
-* Fight Club (1999)
-* Forbidden Planet (1956)
-* Fracture (2007)
-* Freaks (1932)
-* Gaslight (1940)
-* Get Out (2017)
-* Goldfinger (1964)
-* Gone Baby Gone (2007)
-* Gone Girl (2014)
-* Gosford Park (2001)
-* Halloween (1978)
-* Harry Potter and the Deathly Hallows - Part 2 (2011)
-* Harry, He’s Here to Help (2000)
-* Hell Drivers (1957)
-* Hell or High Water (2016)
-* Hidden (2005)
-* High and Low (1963)
-* High Noon (1952)
-* Identity (2003)
-* Illustrious Corpses (1976)
-* In a Lonely Place (1950)
-* In the Cut (2003)
-* In the Line of Fire (1993)
-* Incendies (2010)
-* Inception (2010)
-* Inside Man (2006)
-* Insomnia (1997)
-* Invasion of the Body Snatchers (1956)
-* Investigation of a Citizen above Suspicion (1970)
-* It (2017)
-* Ittefaq (1969)
-* Jacob's Ladder (1990)
-* Jaws (1975)
-* Jo Nesbø's Headhunters (2011)
-* Jurassic Park (1993)
-* Kahaani (2012)
-* Kiss Me Deadly (1955)
-* Klute (1971)
-* Knife in the Water (1962)
-* L.A. Confidential (1997)
-* La Cérémonie (1995)
-* Laura (1944)
-* Law Abiding Citizen (2009)
-* Le Boucher (1970)
-* Le Cercle Rouge (1970)
-* Les Diaboliques (1955)
-* Lift to the Scaffold (1958)
-* Lock, Stock and Two Smoking Barrels (1998)
-* Locke (2013)
-* Looper (2012)
-* Lord of War (2005)
-* Lucky Number Slevin (2006)
-* Lust, Caution (2007)
-* M (1931)
-* Man on Fire (2004)
-* Mandy (2018)
-* Matchstick Men (2003)
-* Memento (2000)
-* Memories of Murder (2003)
-* Michael Clayton (2007)
-* Ministry of Fear (1944)
-* Minority Report (2002)
-* Miracle Mile (1988)
-* Miss Bala (2011)
-* Mission: Impossible - Fallout (2018)
-* Mission: Impossible Ghost Protocol (2011)
-* Mr. Brooks (2007)
-* Mystic River (2003)
-* Night Train (1959)
-* Nightcrawler (2014)
-* Nine Queens (2000)
-* No Country for Old Men (2007)
-* North by Northwest (1959)
-* Notorious (1946)
-* Obsession (1949)
-* Ocean's Eleven (2001)
-* Oldboy (2003)
-* Omar (2013)
-* On Dangerous Ground (1951)
-* One False Move (1992)
-* Peeping Tom (1960)
-* Plein Soleil (1960)
-* Prisoners (2013)
-* Psycho (1960)
-* Rashômon (1951)
-* Rear Window (1954)
-* Rebecca (1940)
-* Repulsion (1965)
-* Reservoir Dogs (1992)
-* Rififi (1955)
-* Road to Perdition (2002)
-* RocknRolla (2008)
-* Rosemary's Baby (1968)
-* Run Lola Run (1998)
-* Runaway Train (1985)
-* Se7en (1995)
-* Searching (2018)
-* Shadow of a Doubt (1943)
-* Shutter Island (2010)
-* Sicario (2015)
-* Skyfall (2012)
-* Snatch (2000)
-* Spotlight (2015)
-* Stalker (1979)
-* Stranger by the Lake (2013)
-* Strangers on a Train (1951)
-* Sunrise: A Song of Two Humans (1927)
-* Suspense (1913)
-* Take Shelter (2011)
-* Taken (2008)
-* Taxi Driver (1976)
-* Tesis (1996)
-* The 39 Steps (1935)
-* The Babadook (2014)
-* The Bank Job (2008)
-* The Big Heat (1953)
-* The Big Sleep (1946)
-* The Birds (1963)
-* The Bourne Identity (2002)
-* The Bourne Supremacy (2004)
-* The Bourne Ultimatum (2007)
-* The Butterfly Effect (2004)
-* The Cabin in the Woods (2012)
-* The Cabinet of Dr. Caligari (Das Cabinet des Dr. Caligari) (1920)
-* The Constant Gardener (2005)
-* The Conversation (1974)
-* The Dark Knight Rises (2012)
-* The Day of the Jackal (1973)
-* The Departed (2006)
-* The Devil's Advocate (1997)
-* The French Connection (1971)
-* The Fugitive (1993)
-* The Game (1997)
-* The Ghost Writer (2010)
-* The Girl Who Played with Fire (2009)
-* The Girl with the Dragon Tattoo (2009)
-* The Girl with the Dragon Tattoo (2011)
-* The Godfather, Part II (1974)
-* The Great Escape (1963)
-* The Green Mile (1999)
-* The Guilty (Den skyldige) (2018)
-* The Hand That Rocks the Cradle (1992)
-* The Headless Woman (2008)
-* The Hitch-hiker (1953)
-* The Hunt (2012)
-* The Hurt Locker (2008)
-* The Illusionist (2006)
-* The Imitation Game (2014)
-* The Insider (1999)
-* The Irishman (2019)
-* The Killing (1956)
-* The Lady Vanishes (1938)
-* The Lincoln Lawyer (2011)
-* The Lives of Others (2006)
-* The Lodger (1927)
-* The Maltese Falcon (1941)
-* The Manchurian Candidate (1962)
-* The Most Dangerous Game (1932)
-* The Negotiator (1998)
-* The Night of the Hunter (1955)
-* The Night of the Sunflowers (2006)
-* The Others (2001)
-* The Passenger (1975)
-* The Post (2018)
-* The Prestige (2006)
-* The Rainmaker (1997)
-* The Reckless Moment (1949)
-* The Salesman (Forushande) (2017)
-* The Shawshank Redemption (1994)
-* The Silence of the Lambs (1991)
-* The Sixth Sense (1999)
-* The Spiral Staircase (1946)
-* The Spy Who Came In from the Cold (1965)
-* The Taking of Pelham One Two Three (1974)
-* The Talented Mr. Ripley (1999)
-* The Tall Target (1951)
-* The Third Man (1949)
-* The Town (2010)
-* The Usual Suspects (1995)
-* The Vanishing (1988)
-* The Wages of Fear (1953)
-* They Drive by Night (1938)
-* Thief (1981)
-* Three Colors: Blue (1993)
-* To Catch a Thief (1955)
-* Touch of Evil (1958)
-* Traffic (2000)
-* Training Day (2001)
-* True Romance (1993)
-* Tsotsi (2005)
-* Unbreakable (2000)
-* Us (2019)
-* Vertigo (1958)
-* Victoria (2015)
-* Viva Riva! (2010)
-* Wait until Dark (1967)
-* Who Framed Roger Rabbit (1988)
-* Z (1969)
-* Zero Focus (1961)
-* Zodiac (2007)
-
-### By Year
-
-* (1913) Suspense
-* (1920) The Cabinet of Dr. Caligari (Das Cabinet des Dr. Caligari)
-* (1922) Dr. Mabuse the Gambler
-* (1927) Sunrise: A Song of Two Humans
-* (1927) The Lodger
-* (1931) M
-* (1932) Freaks
-* (1932) The Most Dangerous Game
-* (1935) The 39 Steps
-* (1938) The Lady Vanishes
-* (1938) They Drive by Night
-* (1940) Gaslight
-* (1940) Rebecca
-* (1941) Citizen Kane
-* (1941) The Maltese Falcon
-* (1943) Shadow of a Doubt
-* (1944) Double Indemnity
-* (1944) Laura
-* (1944) Ministry of Fear
-* (1946) Notorious
-* (1946) The Big Sleep
-* (1946) The Spiral Staircase
-* (1949) D.O.A.
-* (1949) Obsession
-* (1949) The Reckless Moment
-* (1949) The Third Man
-* (1950) In a Lonely Place
-* (1951) On Dangerous Ground
-* (1951) Rashômon
-* (1951) Strangers on a Train
-* (1951) The Tall Target
-* (1952) High Noon
-* (1953) The Big Heat
-* (1953) The Hitch-hiker
-* (1953) The Wages of Fear
-* (1954) Rear Window
-* (1955) Bad Day at Black Rock
-* (1955) Diabolique
-* (1955) Kiss Me Deadly
-* (1955) Les Diaboliques
-* (1955) Rififi
-* (1955) The Night of the Hunter
-* (1955) To Catch a Thief
-* (1956) Forbidden Planet
-* (1956) Invasion of the Body Snatchers
-* (1956) The Killing
-* (1957) Hell Drivers
-* (1958) Cairo Station
-* (1958) Elevator to the Gallows
-* (1958) Lift to the Scaffold
-* (1958) Touch of Evil
-* (1958) Vertigo
-* (1959) Anatomy of a Murder
-* (1959) Night Train
-* (1959) North by Northwest
-* (1960) Peeping Tom
-* (1960) Plein Soleil
-* (1960) Psycho
-* (1961) 101 Dalmatians
-* (1961) Cash on Demand
-* (1961) Zero Focus
-* (1962) Cape Fear
-* (1962) Dr. No
-* (1962) Eyes Without a Face
-* (1962) Knife in the Water
-* (1962) The Manchurian Candidate
-* (1963) High and Low
-* (1963) The Birds
-* (1963) The Great Escape
-* (1964) Fail-Safe
-* (1964) Goldfinger
-* (1965) Bunny Lake Is Missing
-* (1965) Repulsion
-* (1965) The Spy Who Came In from the Cold
-* (1967) Wait until Dark
-* (1968) Rosemary's Baby
-* (1969) Ittefaq
-* (1969) Z
-* (1970) Investigation of a Citizen above Suspicion
-* (1970) Le Boucher
-* (1970) Le Cercle Rouge
-* (1971) Duel
-* (1971) Klute
-* (1971) The French Connection
-* (1972) Deliverance
-* (1973) Don't Look Now
-* (1973) The Day of the Jackal
-* (1974) Badlands
-* (1974) Chinatown
-* (1974) The Conversation
-* (1974) The Godfather, Part II
-* (1974) The Taking of Pelham One Two Three
-* (1975) Jaws
-* (1975) The Passenger
-* (1976) Assault on Precinct 13
-* (1976) Illustrious Corpses
-* (1976) Taxi Driver
-* (1978) Halloween
-* (1979) Alien
-* (1979) Stalker
-* (1981) Blow Out
-* (1981) Thief
-* (1984) Blood Simple
-* (1985) Runaway Train
-* (1986) Blue Velvet
-* (1987) Angel Heart
-* (1988) Deadly Pursuit
-* (1988) Miracle Mile
-* (1988) The Vanishing
-* (1988) Who Framed Roger Rabbit
-* (1989) Blue Steel
-* (1989) Dead Calm
-* (1990) Jacob's Ladder
-* (1991) The Silence of the Lambs
-* (1992) Basic Instinct
-* (1992) One False Move
-* (1992) Reservoir Dogs
-* (1992) The Hand That Rocks the Cradle
-* (1993) Carlito's Way
-* (1993) In the Line of Fire
-* (1993) Jurassic Park
-* (1993) The Fugitive
-* (1993) Three Colors: Blue
-* (1993) True Romance
-* (1994) The Shawshank Redemption
-* (1995) 12 Monkeys
-* (1995) La Cérémonie
-* (1995) Se7en
-* (1995) The Usual Suspects
-* (1996) Bound
-* (1996) Tesis
-* (1997) Breakdown
-* (1997) Insomnia
-* (1997) L.A. Confidential
-* (1997) The Devil's Advocate
-* (1997) The Game
-* (1997) The Rainmaker
-* (1998) American History X
-* (1998) Enemy of the State
-* (1998) Lock, Stock and Two Smoking Barrels
-* (1998) Run Lola Run
-* (1998) The Negotiator
-* (1999) American Beauty
-* (1999) Arlington Road
-* (1999) Fight Club
-* (1999) The Green Mile
-* (1999) The Insider
-* (1999) The Sixth Sense
-* (1999) The Talented Mr. Ripley
-* (2000) American Psycho
-* (2000) Harry, He’s Here to Help
-* (2000) Memento
-* (2000) Nine Queens
-* (2000) Snatch
-* (2000) Traffic
-* (2000) Unbreakable
-* (2001) A Beautiful Mind
-* (2001) Gosford Park
-* (2001) Ocean's Eleven
-* (2001) The Others
-* (2001) Training Day
-* (2002) Equilibrium
-* (2002) Minority Report
-* (2002) Road to Perdition
-* (2002) The Bourne Identity
-* (2003) Identity
-* (2003) In the Cut
-* (2003) Matchstick Men
-* (2003) Memories of Murder
-* (2003) Mystic River
-* (2003) Oldboy
-* (2004) Collateral
-* (2004) Eternal Sunshine of the Spotless Mind
-* (2004) Man on Fire
-* (2004) The Bourne Supremacy
-* (2004) The Butterfly Effect
-* (2005) Hidden
-* (2005) Lord of War
-* (2005) The Constant Gardener
-* (2005) Tsotsi
-* (2006) Black Book
-* (2006) Casino Royale
-* (2006) Inside Man
-* (2006) Lucky Number Slevin
-* (2006) The Departed
-* (2006) The Illusionist
-* (2006) The Lives of Others
-* (2006) The Night of the Sunflowers
-* (2006) The Prestige
-* (2007) Eastern Promises
-* (2007) Fracture
-* (2007) Gone Baby Gone
-* (2007) Lust, Caution
-* (2007) Michael Clayton
-* (2007) Mr. Brooks
-* (2007) No Country for Old Men
-* (2007) The Bourne Ultimatum
-* (2007) Zodiac
-* (2008) Changeling
-* (2008) RocknRolla
-* (2008) Taken
-* (2008) The Bank Job
-* (2008) The Headless Woman
-* (2008) The Hurt Locker
-* (2009) About Elly
-* (2009) District 9
-* (2009) Law Abiding Citizen
-* (2009) The Girl Who Played with Fire
-* (2009) The Girl with the Dragon Tattoo
-* (2010) 127 Hours
-* (2010) Incendies
-* (2010) Inception
-* (2010) Shutter Island
-* (2010) The Ghost Writer
-* (2010) The Town
-* (2010) Viva Riva!
-* (2011) Harry Potter and the Deathly Hallows - Part 2
-* (2011) Jo Nesbø's Headhunters
-* (2011) Miss Bala
-* (2011) Mission: Impossible Ghost Protocol
-* (2011) Take Shelter
-* (2011) The Girl with the Dragon Tattoo
-* (2011) The Lincoln Lawyer
-* (2012) Argo
-* (2012) Argo
-* (2012) Kahaani
-* (2012) Looper
-* (2012) Skyfall
-* (2012) The Cabin in the Woods
-* (2012) The Dark Knight Rises
-* (2012) The Hunt
-* (2013) All Is Lost
-* (2013) Locke
-* (2013) Omar
-* (2013) Prisoners
-* (2013) Stranger by the Lake
-* (2014) Blue Ruin
-* (2014) Gone Girl
-* (2014) Nightcrawler
-* (2014) The Babadook
-* (2014) The Imitation Game
-* (2015) Bridge of Spies
-* (2015) Ex Machina
-* (2015) Sicario
-* (2015) Spotlight
-* (2015) Victoria
-* (2016) 10 Cloverfield Lane
-* (2016) Arrival
-* (2016) Eye In The Sky
-* (2016) Hell or High Water
-* (2017) Get Out
-* (2017) It
-* (2017) The Salesman (Forushande)
-* (2018) A Quiet Place
-* (2018) Border - Gräns
-* (2018) Burning (Beoning)
-* (2018) Mandy
-* (2018) Mission: Impossible - Fallout
-* (2018) Searching
-* (2018) The Guilty (Den skyldige)
-* (2018) The Post
-* (2019) The Irishman
-* (2019) Us
