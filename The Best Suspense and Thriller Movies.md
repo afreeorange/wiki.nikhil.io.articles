@@ -1,7 +1,5 @@
 [[toc]]
 
-## Merged
-
 | Movie                                                      | Year |
 | ---------------------------------------------------------- | ---- |
 | The Cabinet of Dr. Caligari (Das Cabinet des Dr. Caligari) | 1920 |
