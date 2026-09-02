@@ -11,7 +11,7 @@ ufw default deny incoming
 # Allow all outgoing connections
 ufw default allow outgoing
 
-# Allow a port
+# Allow a port from anywhere
 ufw allow 3306
 
 # Show list of apps that have registered themselves with ufw
@@ -31,19 +31,38 @@ ufw enable
 ufw status verbose
 ```
 
-### Named Rules
+### Named Rules — Adding & Updating Application Profiles
 
-See `/etc/ufw/applications.d/` for how these work.
-
-You will run `sudo ufw app update` after modifying stuff in that folder.
-
-You can then run `sudo ufw app list` to see the named rules. To enable/disable,
+`ufw` application profiles are defined in `/etc/ufw/applications.d/`.  After adding a new profile or modifying an existing one,
 
 ```bash
-sudo ufw allow Immich
-sudo ufw deny Immich
-sudo ufw delete allow Immich
+# update UFW’s copy of the profile
+sudo ufw app update <profile>
+sudo ufw app update Immich # Example
+
+# Update all application profiles:
+sudo ufw app update all
+
+# List all profiles
+sudo ufw app list
+
+# Inspect a particular profile
+sudo ufw app info Immich
 ```
+
+Now define the traffic:
+
+```bash
+# Allow/deny on all
+sudo ufw allow Immich
+
+# Specifically
+sudo ufw allow from 10.212.10.0/24 to any app Immich
+```
+
+See the next section on how to delete rules.
+
+**Note** that `ufw deny Immich` does **not** disable an existing `allow Immich` rule. If you want to stop allowing the profile, delete the allow rule with `sudo ufw delete allow Immich`.
 
 ### Deleting Rules
 
@@ -53,8 +72,6 @@ ufw status numbered
 
 # Remove the offending rule
 ufw delete 3
-
-# Or you can
 ```
 
 ### Denying Things
