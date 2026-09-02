@@ -65,3 +65,4 @@ You will see the local models when you type `/models` and search for "llama-cpp"
 - https://huggingface.co/Brooooooklyn
 - [Friends Don't Let Friends Use Ollama](https://sleepingrobots.com/dreams/stop-using-ollama/) -- Not sure what it offers above llama.cpp tbh. Great article with history.
 - [Running local models on an M4 with 24GB memory](https://jola.dev/posts/running-local-models-on-m4)
+- [_Fantastic_ post on running inference on a Mac Mini](https://lws.io/blog/my-local-model-setup/) - oMLX, TailScale, etc.
