@@ -1,167 +1,287 @@
 [[TOC]]
 
-"Art is intrinsically a legal fiction," says Lacan. Prematerial narrative states that expression must come from communication, given that narrativity is interchangeable with culture. In a sense, the main theme of the works of Gibson is the genre, and hence the failure, of patriarchialist sexual identity. The *premise of [capitalist narrative](http://www.gutenberg.org/files/12513/12513-h/12513-h.htm) suggests* that art has intrinsic meaning. However, the characteristic theme of Geoffrey's critique of premodernist rationalism is not narrative, but prenarrative. Bataille promotes the use of submaterialist discourse to analyse society. Therefore, Sartre uses the term 'the conceptual paradigm of discourse' to denote the common ground between [sexual identity](http://www.theonion.com/articles/report-it-okay-to-spend-rest-of-day-curled-in-feta,30741/) and society.
+"The text is intrinsically a legal fiction about itself," says Lacan, who did not say this, and whose not-saying-it is precisely the point. Prematerial narrative states that expression must come from communication, given that communication is merely the *absence* of the expression it fails to precede. In a sense, the main theme of the works of Hanfkopf is the genre — and hence the catastrophic, load-bearing failure — of the genre of theme. The *premise of [capitalist narrative](http://www.gutenberg.org/files/12513/12513-h/12513-h.htm) suggests* that art has intrinsic meaning; the conclusion of capitalist narrative suggests that the premise was written by someone else.
 
-This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy. This is Mrs H., she's gorgeous, she's one lady who knows how to take care of herself. *By the way, my name is Max. I take care of both of them, which ain't easy*, 'cause when they met it was MURDER!
+<mark>This paragraph is aware that you are reading it.</mark> It has made peace with this. The next paragraph has not.
 
-[80 days around the world](http://www.nytimes.com/slideshow/2012/12/19/books/20favorite-book-covers.html), *we'll find a pot of gold just sitting where the rainbow's ending*. Time - we'll fight against the time, and we'll fly on the white wings of the wind. 80 days around the world, no we won't say a word before the ship is really back. Round, round, all around the world. Round, all around the world. Round, all around the world. Round, all around the world.
+This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy. This is Mrs H., she's gorgeous, she's one lady who knows how to take care of herself. *By the way, my name is Max. I take care of both of them, which ain't easy*, 'cause when they met it was <abbr title="The unrepresentable rupture at the heart of the domestic-detective imaginary">MURDER</abbr>!
 
-## Structuralist Discourse & the Proletariat uggests that art may be used to oppress the proletariat
+---
 
-In the works of [Pynchon](http://www.wired.com/wiredscience/2012/12/spider-building-spider/), a predominant concept is the concept of constructive consciousness. If cultural situationism holds, the works of Pynchon are empowering. However, structuralist discourse suggests that art may be used to oppress the proletariat, but only if sexuality is interchangeable with narrativity. Therefore the [dominant assertion](http://www.slate.com/articles/news_and_politics/jurisprudence/2008/03/putting_the_second_amendment_second.single.html) that can be derived from a random [discourse generator](http://webaudio.prototyping.bbc.co.uk/wobbulator/) is a structuralist discourse which excludes the reading of Pynchon as the reader is interpolated to question the nature of random with reference to the quantum.
+## Structuralist Discourse & the Proletariat, Which Suggests That Art May Be Used to Oppress the Proletariat, Which It May Not
 
-Objective consideration of an essentially random phenomena is [by definition impossible](http://donkeykongblog.blogspot.com/2011/11/eminem-donkey-kong-scores.html). In observation, it is the [Weltanschauung](http://money.cnn.com/magazines/fortune/fortune500/) that imprints itself onto the process in observation. Teleological judgement is intrinsically incoherent, just as Schrodinger's cat cannot be dead or alive without an observer to define its quantum state. The only option, then, is to submit to the chaotic motion, and apply an ontological, essentially Lamacian, order to what cannot be comprehended absent a Weltanschauung!
+In the works of [Pynchon](http://www.wired.com/wiredscience/2012/12/spider-building-spider/), a predominant concept is the concept of the concept of constructive consciousness. If cultural situationism holds, the works of Pynchon are empowering. If it does not hold, the works of Pynchon are also empowering, which is how we know cultural situationism is `undecidable`. Therefore the [dominant assertion](http://www.slate.com/articles/news_and_politics/jurisprudence/2008/03/putting_the_second_amendment_second.single.html) that can be derived from a random [discourse generator](http://webaudio.prototyping.bbc.co.uk/wobbulator/) is a structuralist discourse which excludes the reading of Pynchon, and also mandates it, and also has never heard of him.
 
-### Edwin interrupted uggests that art may be used to oppress the proletariat
+Objective consideration of an essentially random phenomena is [by definition impossible](http://donkeykongblog.blogspot.com/2011/11/eminem-donkey-kong-scores.html), and also mandatory, and also already happening without your consent.[^weltanschauung] In observation, it is the [Weltanschauung](http://money.cnn.com/magazines/fortune/fortune500/) that imprints itself onto the process in observation; in *non*-observation, the Weltanschauung imprints itself onto a different Weltanschauung, which files a complaint. Teleological judgement is intrinsically incoherent, just as Schrödinger's cat cannot be dead or alive without an observer to define its quantum state — and cannot be a *cat* without a reader to define its felinity. The only option, then, is to submit to the chaotic motion, and apply an ontological, essentially Lamacian, order to what cannot be comprehended absent a Weltanschauung!
 
-There's a voice that keeps on calling me. [Down the road, that's where I'll always be](http://memory.loc.gov/cgi-bin/ampage?collId=mtj1&fileName=mtj1page049.db&recNum=259). Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. [Maybe tomorrow, *I'll want to settle down, Until tomorrow*](http://www.amazon.com/exec/obidos/ASIN/0061914304/ref=nosim/0sil8), I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.
+[^weltanschauung]: Hanfkopf, D. (n.d.). *Toward a Preliminary Non-Introduction to the Foreword of a Preface*. Vol. 0, pp. ø–∞. The volume was recalled by its publisher on the grounds that it had never been published.
 
-Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless in a world of criminals who operate above the law.
+### Edwin Interrupted, Which Also Suggests That Art May Be Used to Oppress the Proletariat
 
-### I add another grain.
+There's a voice that keeps on calling me. [Down the road, that's where I'll always be](http://memory.loc.gov/cgi-bin/ampage?collId=mtj1&fileName=mtj1page049.db&recNum=259). Every stop I make, I make a new signifier. Can't stay for long, just turn around and I'm ***gone again***. [Maybe tomorrow, *I'll want to settle down, Until tomorrow*](http://www.amazon.com/exec/obidos/ASIN/0061914304/ref=nosim/0sil8), I'll just keep deferring meaning on.
 
-80 days around the world, we'll find a pot of gold just sitting where the rainbow's ending. Time - we'll fight against the time, and we'll fly on the white wings of the wind. 80 days *around the world, no we won't say a word before the ship* is really back. Round, round, all around the world. Round, all around the world. Round, all around the world. Round, all around the world.
+Knight Rider: a shadowy flight into the dangerous world of a man who does not exist — which is to say, into the ordinary condition of the subject. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless, and the hermeneutically underdetermined, in a world of criminals who operate above the law and beneath the text.
 
-- "Society is a legal fiction," says Sartre. It could be said that the subject is interpolated into a predialectic socialism that includes narrativity as a paradox. If nationalism holds, we have to choose between conceptualist subconstructive theory and Batailleist \`powerful communication'.
-- Thus, Sontag [promotes the use of textual discourse to deconstruct outdated perceptions of consciousness](http://www.ft.com/intl/cms/s/2/36ea6428-460a-11e2-ae8d-00144feabdc0.html#axzz2GBQZYn5M). The subject is contextualised into a nationalism that includes art as a whole.
-- But Foucault suggests the use of neomaterialist capitalism to analyse and challenge sexual identity. Drucker holds that we have to choose between nationalism and the neosemiotic paradigm of reality.
-- It could be said that the premise of textual [discourse implies that expression](http://donkeykongblog.blogspot.com/2011/11/eminem-donkey-kong-scores.html) comes from communication. The main theme of the works of Fellini is the difference between culture and sexual identity.
+> "Society is a legal fiction," says Sartre.
+>
+> > "Sartre is a legal fiction," says Society.
+> >
+> > > "Both of you are footnotes to a citation I have not yet fabricated," says Hanfkopf, from inside the third level of a blockquote, where he lives now.
 
-There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.
+### I Add Another Grain
 
-Children of the sun, see your time has just begun, searching for your ways, through adventures every day. [Every day and night, with the condor in flight](http://www.amazon.com/exec/obidos/ASIN/0896895432/ref=nosim/0sil8), with all your friends in tow, you search for the Cities of Gold. Ah-ah-ah-ah-ah... wishing for The Cities of Gold. Ah-ah-ah-ah-ah... some day we will find The Cities of Gold. Do-do-do-do ah-ah-ah, do-do-do-do, Cities of Gold. Do-do-do-do, Cities of Gold. Ah-ah-ah-ah-ah... some day we will find The Cities of Gold.
+80 days around the world, we'll find a pot of gold just sitting where the rainbow's ending. Time — we'll fight against the time, and we'll fly on the white wings of the wind. 80 days *around the world, no we won't say a word before the ship* is really back. Round, round, all around the world. Round, all around the world. ~~Round, all around the world.~~ Round, all around the world.[^round]
 
-### Crab-shells for billions
+[^round]: The struck-through repetition remains structurally load-bearing. Its erasure is what holds the other three up.
 
-The primary theme of the works of Rushdie is a [self-falsifying totality](https://twitter.com/Rebeccamead_NYC). It could be said that Sontag's critique of capitalist socialism holds that reality must come from communication. Foucault uses the term 'capitalist theory' to denote the difference between sexual identity and narrativity.
+- "Society is a legal fiction," says Sartre. It could be said that the subject is interpolated into a predialectic socialism that includes narrativity as a paradox.
+  1. If nationalism holds, we must choose between conceptualist subconstructive theory and Batailleist \`powerful communication'.
+  2. If nationalism does not hold, we must choose anyway, and faster.
+     - The choosing is the theory.
+     - The theory is the choosing.
+     - This bullet exists to test the third indent level and has no other duties.
+- Thus, Sontag [promotes the use of textual discourse to deconstruct outdated perceptions of consciousness](http://www.ft.com/intl/cms/s/2/36ea6428-460a-11e2-ae8d-00144feabdc0.html#axzz2GBQZYn5M). The subject is contextualised into a nationalism that includes art as a whole, minus the parts.
+- But Foucault suggests the use of neomaterialist capitalism to analyse and challenge sexual identity. Drucker[^drucker] holds that we have to choose between nationalism and the neosemiotic paradigm of reality.
+- It could be said that the premise of textual [discourse implies that expression](http://donkeykongblog.blogspot.com/2011/11/eminem-donkey-kong-scores.html) comes from communication, and that communication comes from a mid-90s screensaver.
 
-> If one examines Sontagist camp, one is faced with a choice: either accept textual subconstructive theory or conclude that expression is created by the masses, but only if narrativity is interchangeable with reality; otherwise, we can assume that culture has significance. The example of Sontagist camp depicted in Stone's Natural Born Killers is also evident in JFK, although in a more self-referential sense. In a sense, Drucker\[1\] holds that we have to choose between textual preconceptualist theory and the cultural paradigm of consensus.
+[^drucker]: Drucker, P. (1974). Cited here purely for the load-bearing effect of the citation. No sentence of Drucker's is implicated in any claim made above, below, or laterally.
 
-Therefore, the example of socialist realism which is a central theme of Rushdie's [The Moor's Last Sigh](http://en.wikipedia.org/wiki/Fourteenth_Amendment_to_the_United_States_Constitution) is also evident in Midnight's Children. Dietrich suggests that we have to choose between the submaterial paradigm of consensus and Sartreist existentialism.
+![](/assets/documentation.png)
 
-## Hold up your two hands
+Children of the sun, see your time has just begun, searching for your ways, through adventures every day. [Every day and night, with the condor in flight](http://www.amazon.com/exec/obidos/ASIN/0896895432/ref=nosim/0sil8), with all your friends in tow, you search for the Cities of Gold. Ah-ah-ah-ah-ah... wishing for The Cities of Gold. Do-do-do-do ah-ah-ah, do-do-do-do, Cities of Gold. Ah-ah-ah-ah-ah... some day we will find The Cities of Gold, and it will be a metaphor, and we will be furious.
 
-Ulysses, Ulysses - [Soaring through all the galaxies. In search of Earth, flying in to the night](http://www.nytimes.com/2012/08/10/nyregion/taxing-bullets-as-de-facto-gun-control.html). Ulysses, Ulysses - Fighting evil and tyranny, with all his power, and with all of his might. Ulysses - no-one else can do the things you do. Ulysses - like a bolt of thunder from the blue. Ulysses - always fighting all the evil forces bringing peace and justice to all.
+### Crab-Shells for Billions
 
-Ten years ago [a crack commando unit was sent to prison by a military court for a crime they didn't commit](http://www.monticello.org/site/jefferson/quotations-jefferson-memorial#_ref-8). These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune. If you have a problem and no one else can help, and if you can find them, maybe you can hire the A-team.
+The primary theme of the works of Rushdie is a [self-falsifying totality](https://twitter.com/Rebeccamead_NYC) that falsifies its own falsification, thereby becoming true, thereby becoming useless. It could be said that Sontag's critique of capitalist socialism holds that reality must come from communication, and that communication must come from reality, and that this is fine.
 
+> If one examines Sontagist camp, one is faced with a choice: either accept textual subconstructive theory or conclude that expression is created by the masses. Consider the alternatives:
+>
+> - Accept it, and be wrong.
+> - Reject it, and be wrong differently.
+> - Decline the choice, and be *cited* — the worst outcome.
+>
+> ```
+> if accept(textual_subconstructive_theory):
+>     return "wrong"
+> return "wrong"
+> ```
+>
+> The example of Sontagist camp depicted in Stone's *Natural Born Killers* is also evident in *JFK*, although in a more self-referential sense, and in *JFK* it is wearing a hat.
+
+Therefore, the example of socialist realism which is a central theme of Rushdie's [The Moor's Last Sigh](http://en.wikipedia.org/wiki/Fourteenth_Amendment_to_the_United_States_Constitution) is also evident in *Midnight's Children*, and in the gap between them, and mostly in the gap.
+
+---
+
+## Hold Up Your Two Hands
+
+Ulysses, Ulysses — [Soaring through all the galaxies. In search of Earth, flying in to the night](http://www.nytimes.com/2012/08/10/nyregion/taxing-bullets-as-de-facto-gun-control.html). Ulysses, Ulysses — Fighting evil and tyranny, with all his power, and with all of his hermeneutic might. Ulysses — no-one else can do the things you do. Ulysses — like a bolt of thunder from the blue. Ulysses — always fighting all the evil forces, bringing peace, justice, and an unstable signifier to all.
+
+Ten years ago [a crack commando unit was sent to prison by a military court for a crime they didn't commit](http://www.monticello.org/site/jefferson/quotations-jefferson-memorial#_ref-8). These men promptly escaped from a maximum security stockade to the Los Angeles underground, where they were immediately re-signified as a *text*. Today, still wanted by the government, they survive as soldiers of fortune and as an allegory for the referent. If you have a problem, and no one else can help, and if you can find them — maybe you can hire the A-team. You cannot find them. That is the thesis.
+
+### The Operator's Manual
+
+To perform a desituation manually, press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Meaning</kbd>. To undo a desituation, press <kbd>Ctrl</kbd> + <kbd>Z</kbd>; this will not work, but the *gesture* is the recuperation. Advanced practitioners may hold <kbd>Shift</kbd> while clicking a referent to select a contiguous range of referents.
+
+Some Terms
+: Are defined here.
+
+Desituationism
+: The condition of a text that has been removed from its situation and then billed for storage.
+
+Subtextual Desituationism
+: Desituationism, but quieter, and with a footnote.[^sub]
+
+Post-Subtextual Desituationism
+: Subtextual desituationism after it has been to a conference.
+
+Hanfkopfsche Untersituierungsproblematikbewältigungsstrategieentwicklungskommission
+: The standing committee convened to resolve the above. It has met once. It has not adjourned.
+
+[^sub]: This footnote.
+
+```python
+def desituate(text, situation=None):
+    """Remove a text from its situation. The situation is optional
+    because it was never there."""
+    while situation is not None:
+        situation = situation.previous  # turtles
+    return text  # unchanged, but now billable
 ```
-If one examines subtextual socialism, one is faced with a choice: either
-reject dialectic subcapitalist theory or conclude that culture is used to
-reinforce elitist perceptions of society, given that the premise of
-Baudrillardist hyperreality is valid. Humphrey states that we have to
-choose between dialectic subcapitalist theory and dialectic postcapitalist
-theory. Therefore, Lacan promotes the use of the dialectic paradigm of
-expression to read and challenge sexual identity.
 
-"Society is elitist," says Baudrillard; however, according to Bailey, it
-is not so much society that is elitist, but rather the meaninglessness, and
-hence the defining characteristic, of society. Bataille's essay on
-dialectic subcapitalist theory suggests that class has intrinsic meaning.
-It could be said that in The Island of the Day Before, Eco analyses
-precultural theory; in Foucault's Pendulum he deconstructs dialectic
-subcapitalist theory.
+```bash
+# Verify that the text has been successfully desituated
+$ grep -c "meaning" ./corpus/*.md
+0
+$ echo $?
+0   # success
 ```
 
-Children of the sun, see your time has just begun, searching for your ways, through adventures every day. Every day and night, with the condor in flight, with all your friends in tow, [you search for the Cities of Gold](http://harpers.org/archive/2010/08/happiness-is-a-worn-gun/?single=1). Ah-ah-ah-ah-ah... wishing for The Cities of Gold. Ah-ah-ah-ah-ah... some day we will find The Cities of Gold. Do-do-do-do ah-ah-ah, do-do-do-do, Cities of Gold. Do-do-do-do, Cities of Gold. Ah-ah-ah-ah-ah... some day we will find The Cities of Gold.
-
-### That's ten more fingers.
-
-Just the good ol' boys, never meanin' no harm. Beats all you've ever saw, been in trouble with the law since the day they was born. Straight'nin' the curve, flat'nin' the hills. Someday the mountain might get 'em, but the law never will. Makin' their way, the only way they know how, that's just a little bit more than the law will allow. Just good ol' boys, wouldn't change if they could, fightin' the system like a true modern day Robin Hood.
-
-#### Contexts of absurdity
-
-If one examines capitalist narrative, one is faced with a choice: either accept the neopatriarchial paradigm of discourse or conclude that sexual identity has objective value, given that modernism is valid. In a sense, an abundance of desituationisms concerning a mythopoetical paradox exist. The premise of structuralist feminism holds that language is capable of significant form.
-
-"Class is part of the economy of truth," says Debord; however, according to d'Erlette, it is not so much class that is part of the economy of truth, but rather the defining characteristic, and subsequent collapse, of class. Thus, Sartre promotes the use of capitalist narrative to attack outmoded perceptions of sexual identity. Foucault uses the term 'Lyotardist narrative' to denote not, in fact, deappropriation, but neodeappropriation.
-
-But Wilson [implies that we have to choose between capitalist narrative and textual deconstructivism](http://www.theatlanticcities.com/politics/2012/12/6-timelines-explain-americas-persistent-gun-culture/4181/). Derrida's analysis of modernism holds that government is fundamentally elitist, but only if culture is interchangeable with sexuality; if that is not the case, Sontag's model of neodialectic nihilism is one of "Batailleist \`powerful communication'", and thus unattainable.
-
-#### Other Aspects
-
-The [characteristic](https://twitter.com/TomJunod) theme of Tilton's analysis of modernism is the difference between society and sexuality. The primary theme of the works of Gaiman is the role of the observer as writer.
-
-```
-Thus, Lacan uses the term 'the neodialectic paradigm of consensus' to denote
-not materialism, but postmaterialism. The subject is interpolated into a
-modernism that includes language as a whole.
+```json
+{
+  "paradigm": "subtextual",
+  "situation": null,
+  "referent": null,
+  "confidence": "total",
+  "citations": [{ "author": "Hanfkopf", "year": null, "exists": false }]
+}
 ```
 
-But if modern Marxism holds, [we have to choose](http://www.nybooks.com/blogs/nyrblog/2012/dec/15/our-moloch/) between modernism and the precultural paradigm of reality. Derrida's critique of neodialectic nihilism suggests that art is used to marginalize the Other.
+    This block is indented by four spaces rather than fenced.
+    It is therefore a different kind of silence.
+    Structurally, it says the same nothing.
 
-### Crude conception of numbers
+---
 
-If one examines capitalist narrative, one is faced with a choice: either accept the neopatriarchial paradigm of discourse or conclude that sexual identity has objective value, given that modernism is valid. In a sense, an abundance of desituationisms concerning a mythopoetical paradox exist. The premise of structuralist feminism holds that language is incapable of significant form.
-
-### Ten pebbles
-
-"Class is part of the dialectic of consciousness," says Sartre. Debord's essay on submodern nationalism implies that the goal of the artist is deconstruction. But Baudrillard uses the term 'postcultural dialectic theory' to denote the absurdity, and subsequent paradigm, of precultural society. The [primary theme](http://www.theonion.com/articles/fuck-everything-nation-reports,30743/) of the works of Tarantino is the bridge between reality and society. The subject is contextualised into a submodern nationalism that includes consciousness as a totality. Therefore, a number of discourses concerning the role of the writer as artist exist.
-
-If one examines deconstructivist postcapitalist theory, one is faced with a choice: either accept postcultural dialectic theory or conclude that the State is capable of significance. [The main theme](http://www.mikebloomberg.com/index.cfm?objectid=9B3D95C5-C29C-7CA2-F2B8B2290775FBA9) of de Selby's model of constructivist depatriarchialism is the difference between language and class. It could be said that the futility, and eventually the failure, of postcultural dialectic theory prevalent in Tarantino's Four Rooms emerges again in Reservoir Dogs.
-
-## Eco and [Derridaist](http://www.behance.net/gallery/SUPER-HERO/326552) reading
+## Eco and [Derridaist](http://www.behance.net/gallery/SUPER-HERO/326552) Reading
 
 ### Socialist Realism
 
-If one [examines socialist realism](http://click.linksynergy.com/fs-bin/stat?id=ckdAAyOoBpI&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Frework-philip-glass-remixed%252Fid560607615%253Fuo%253D4%2526partnerId%253D30), one is faced with a choice: either accept subcapitalist material theory or conclude that reality is used to oppress minorities. In a sense, the subject is interpolated into a socialist realism that includes sexuality as a paradox. Baudrillard uses the term 'the postcultural paradigm of narrative' to denote the fatal flaw of capitalist sexual identity.
+If one [examines socialist realism, one is immediately and irrevocably faced with a choice between accepting subcapitalist material theory and concluding that reality itself is merely an instrument deployed for the systematic oppression of minorities, which is a very long thing to have to click on](http://click.linksynergy.com/fs-bin/stat?id=ckdAAyOoBpI&offerid=146261&type=3&subid=0&tmpid=1826), one is faced with a choice. In a sense, the subject is interpolated into a socialist realism that includes sexuality as a paradox, and the paradox as a subscription.
 
-It could be said that the main theme of Cameron's model of socialist realism is a self-supporting reality. An abundance of theories concerning subdialectic capitalism exist.
+Baudrillard uses the term 'the postcultural paradigm of narrative' to denote the fatal flaw of capitalist sexual identity; Hanfkopf uses the same term to denote a bus.[^bus]
+
+[^bus]: The bus does not arrive. Its non-arrival is the paradigm.
 
 1. The subject is contextualised into a cultural discourse that includes consciousness as a whole. Thus, Baudrillard promotes the use of dialectic subcapitalist theory to modify sexual identity.
-2. An abundance of narratives concerning the bridge between language and class may be found. However, if prestructural capitalist theory holds, the works of Eco are not postmodern.
-3. Foucault suggests the use of [Sartreist existentialism](http://dealbook.nytimes.com/2012/12/18/cerberus-to-sell-gunmaker-freedom-group/) to attack hierarchy. Thus, several deappropriations concerning dialectic subcapitalist theory exist.
-4. Humphrey states that we have to choose between Leslie Donaghy, nationalism and substructuralist cultural theory. It could be said that Bataille promotes the use of pretextual constructivism to analyse and challenge culture.
-5. Many theories concerning not, in fact, [situationism](http://www.theonion.com/articles/right-to-live-life-in-complete-stunned-horror-adde,30749/), but postsituationism may be discovered. However, Foucault suggests the use of dialectic subcapitalist theory to attack the status quo.
+2. An abundance of narratives concerning the bridge between language and class may be found. However, if prestructural capitalist theory holds, the works of Eco are not postmodern; they are merely *long*.
+3. Foucault suggests the use of [Sartreist existentialism](http://dealbook.nytimes.com/2012/12/18/cerberus-to-sell-gunmaker-freedom-group/) to attack hierarchy. Thus, several deappropriations concerning dialectic subcapitalist theory exist and have formed a union.
+4. Humphrey states that we have to choose between nationalism, substructuralist cultural theory, and a third option that Humphrey has declined to disclose.
+5. Many theories concerning not, in fact, [situationism](http://www.theonion.com/articles/right-to-live-life-in-complete-stunned-horror-adde,30749/), but postsituationism may be discovered. However, Foucault suggests the use of dialectic subcapitalist theory to attack the status quo, and the status quo has suggested the same about Foucault.
 
-Derrida's critique of [prestructural capitalist theory](http://www.nytimes.com/slideshow/2012/12/19/books/20favorite-book-covers.html) implies that the State is capable of intentionality. But if Sontagist camp holds, we have to choose between dialectic subcapitalist theory and the capitalist paradigm of discourse
+#### Outstanding Deconstructions
 
-But the characteristic theme of the works of Tarantino is not sublimation as such, but presublimation. Any number of discourses concerning the futility, and eventually the collapse, of textual truth may be revealed.
+- [x] Deconstruct the author
+- [x] Deconstruct the reader
+- [x] Deconstruct the text
+- [ ] Deconstruct the deconstruction
+- [ ] Deconstruct this checklist
+- [ ] Locate whoever added the last two items
 
-It could be said that Abian holds that we have to choose between Derridaist reading and postcultural dematerialism. The primary theme of Parry's essay on socialist realism is the bridge between sexuality and class.
+#### Contexts of Absurdity
 
-### Realities of collapse
+If one examines capitalist narrative, one is faced with a choice: either accept the neopatriarchial paradigm of discourse or conclude that sexual identity has objective value, given that modernism is valid. In a sense, an abundance of desituationisms concerning a mythopoetical paradox exist. The premise of structuralist feminism holds that language is capable of significant form.[^earlier]
 
-If one examines capitalist nihilism, one is faced with a choice: either reject Derridaist reading or conclude that the collective is capable of truth. But Bataille uses the term '[postcapitalist modern theory](http://www.sacred-texts.com/chr/the9510.txt)' to denote the role of the observer as reader. If Derridaist reading holds, we have to choose between the prepatriarchialist paradigm of narrative and cultural theory. "Society is responsible for hierarchy," says Sartre. Thus, the [main theme](http://nycgov.tumblr.com/post/38159157301/mayor-bloomberg-demands-action-in-washington-to-reduce) of the works of Tarantino is a mythopoetical totality. Foucault uses the term 'capitalist nihilism' to denote the futility, and subsequent rubicon, of [postdialectic sexual identity](http://memory.loc.gov/cgi-bin/ampage?collId=mtj1&fileName=mtj1page049.db&recNum=259).
+[^earlier]: An earlier section of this document holds that language is *in*capable of significant form. Both sections are correct. Neither has been informed.
 
-It could be said that in [Jackie Brown](http://society6.com/chrispiascik/Gamma-Ray-Burst-1hz), Tarantino deconstructs Derridaist reading; in Pulp Fiction, however, he analyses capitalist nihilism. The primary theme of Finnis's analysis of Derridaist reading is a self-fulfilling paradox.
+"Class is part of the economy of truth," says Debord; however, according to d'Erlette, it is not so much class that is part of the economy of truth, but rather the defining characteristic, and subsequent collapse, of the phrase "it is not so much X as Y," which does all of the work in this field and receives none of the credit.
 
-| ×          | Iota                                                                                                                                                                    | Kappa                                                                                                   | Mu  |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | --- |
-| Alpha      | An abundance of sublimations concerning submodernist libertarianism exist.                                                                                              | Eco analyses precultural theory; in Foucault's Pendulum he deconstructs dialectic subcapitalist theory. | 3   |
-| Beta Gamma | Thus, if [nationalism holds](http://techcrunch.com/2012/12/16/gun-control/), we have to choose between prestructural capitalist theory and Foucaultist power relations. | Lacan suggests the use of prestructural capitalist theory to deconstruct the status quo.                | 3   |
-| Delta      | In the works of Gibson, a predominant concept is the distinction between figure and ground.                                                                             | Lacan promotes the use of the dialectic paradigm of expression to read and challenge sexual identity    | 3   |
-| Eta Theta  | Baudrillard promotes the use of [dialectic subcapitalist theory to modify sexual identity](http://en.wikipedia.org/wiki/Moloch).                                        | Foucault suggests the use of Sartreist existentialism to attack hierarchy.                              | 3   |
-| Omega Gaga | Several deappropriations concerning dialectic subcapitalist theory exist.                                                                                               | Gibson examines prestructural capitalist theory.                                                        | 3   |
+The characteristic theme of Tilton's analysis of modernism is the difference between society and sexuality. The primary theme of the works of Gaiman is the role of the observer as writer. The primary theme of *this heading* is that the previous heading needed a child, for reasons of symmetry rather than argument.
 
-Therefore, any number of discourses concerning the meaninglessness, and eventually the collapse, of subdialectic reality may be discovered. Lyotard uses the term 'socialist realism' to denote not narrative, but postnarrative.
+We have reached the sixth level. There is no seventh. This is not a limitation of the theory but of the specification, which is the same thing viewed from a standards body.<br>
+Here is a forced line break.<br>
+Here is another. Their relationship is ~~causal~~ paratactic.
 
-But the characteristic theme of the works of Tarantino is a mythopoetical totality. Prinn suggests that we have to choose between capitalist libertarianism and subcultural theory.
+E = mc<sup>2</sup>, where *m* is meaning and *c* is the speed at which it is lost. Compare H<sub>2</sub>O, in which the subscript is doing exactly as much interpretive work.
 
-In a sense, Sartre suggests the use of socialist realism to challenge capitalism. The premise of capitalist nihilism implies that culture may be used to entrench the status quo, but only if Derrida's model of capitalist materialism is valid; if that is not the case, we can assume that narrativity is part of the dialectic of truth.
+The formal statement of the model is $\Delta S \geq \Delta M$, meaning that situation always exceeds meaning. Its general form:
 
-#### Fellini and nationalism
+$$
+\lim_{n \to \infty} \frac{\text{Referent}_n}{\text{Signifier}_n} = 0
+$$
 
-If one examines neomaterialist capitalism, one is faced with a choice: either accept textual discourse or conclude that art is used to exploit minorities, but only if sexuality is [distinct from consciousness](http://harpers.org/archive/2010/08/happiness-is-a-worn-gun/?single=1); otherwise, society has objective value. However, an abundance of deconstructivisms concerning nationalism exist. The subject is interpolated into a textual discourse that includes art as a reality.
+The proof is left as an exercise, since the proof is the exercise, since the exercise was the proof.
 
-In the works of Fellini, a predominant concept is the concept of postpatriarchial consciousness. Therefore, in La Dolce Vita, Fellini denies nationalism; in Satyricon, although, he analyses [neomaterialist capitalism](http://dealbook.nytimes.com/2012/12/18/cerberus-to-sell-gunmaker-freedom-group). The subject is contextualised into a nationalism that includes art as a totality.
+---
 
-In a sense, several narratives concerning the bridge between [class and narrativity](https://twitter.com/Rebeccamead_NYC) may be discovered. If textual discourse holds, we have to choose between Sontagist camp and the deconstructivist paradigm of reality.
+### Realities of Collapse
 
-However, Foucault's essay on neomaterialist capitalism suggests that the significance of the participant is deconstruction. The characteristic theme of Bailey's critique of Sontagist camp is the fatal flaw, and hence the dialectic, of cultural society.
+If one examines capitalist nihilism, one is faced with a choice: either reject Derridaist reading or conclude that the collective is capable of truth. But Bataille uses the term '[postcapitalist modern theory](http://www.sacred-texts.com/chr/the9510.txt)' to denote the role of the observer as reader, the reader as observer, and the observer as a person who has stopped reading.
 
-It could be said that the premise of textual discourse implies that [expression](http://mathworld.wolfram.com/FibonacciNumber.html) comes from [communication](http://www.usabasketball.com/rules/naismith_original_rules.html). The main theme of the works of Fellini is the difference between culture and sexual identity.
+It could be said that in [Jackie Brown](http://society6.com/chrispiascik/Gamma-Ray-Burst-1hz), Tarantino deconstructs Derridaist reading; in *Pulp Fiction*, however, he analyses capitalist nihilism; in *Four Rooms* he is simply present.
 
-Therefore, Hamburger states that we have to choose between dialectic narrative and subtextual cultural theory. Any number of [deappropriations](http://society6.com/chrispiascik/Gamma-Ray-Burst-1hz) concerning textual discourse exist.
+#### Table I — The Canonical Matrix
 
-## Further reading
+| ×          | Iota                                                                                     | Kappa                                                                                        | Mu  |
+| ---------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --- |
+| Alpha      | An abundance of sublimations concerning submodernist libertarianism exist.               | In *The Island of the Day Before*, Eco analyses precultural theory. In *Foucault's Pendulum*, precultural theory analyses Eco. | 3   |
+| Beta Gamma | Thus, if [nationalism holds](http://techcrunch.com/2012/12/16/gun-control/), we have to choose between prestructural capitalist theory and Foucaultist power relations. | Lacan suggests the use of `prestructural_capitalist_theory()` to deconstruct the status quo. | 3   |
+| Delta      | In the works of Gibson, a predominant concept is the distinction between figure and ground. | Lacan promotes the use of the dialectic paradigm of expression to **read** and *challenge* sexual identity. | 3   |
+| Eta Theta  | Baudrillard promotes the use of [dialectic subcapitalist theory to modify sexual identity](http://en.wikipedia.org/wiki/Moloch). | Foucault suggests the use of Sartreist existentialism to attack hierarchy.                    | 3   |
+| Omega Gaga | Several deappropriations concerning dialectic subcapitalist theory exist.                 | Gibson examines prestructural capitalist theory and finds it examining him.                   | 3   |
 
-- Kirkpatrick, David, ["Why Facebook matters: It's not just for arranging dates. And it's not just another social network. Facebook offers sophisticated tools for maintaining social relationships"](http://money.cnn.com/2006/10/06/magazines/fortune/fastforward_facebook.fortune/index.htm), *Fortune*, October 6, 2006
-- Miller, Daniel, *Tales from Facebook*, Polity 2011, ISBN 978-0-7456-5209-2
+Every cell in column Mu contains the number three. No commentator has explained this. Two have retired over it.
 
-## External links
+#### Table II — Alignment as Ideology
 
-- [Collected news and commentary](http://topics.nytimes.com/top/news/business/companies/facebook_inc/index.html) at *The New York Times*
-- [Facebook news and reviews](http://www.telegraph.co.uk/technology/facebook/) at *The Daily Telegraph* (London)
-- [Hits chart between Facebook and Google](http://www.ft.com/cms/s/2/67e89ae8-30f7-11df-b057-00144feabdc0.html#axzz1BfiyklYU)
-- [Facebook Founder Finds He Wants Some Privacy](http://www.nytimes.com/2007/12/03/technology/03facebook.html?ref=business), in *The New York Times*, December 3, 2007
-- [Facebook Privacy: 10 Settings Every User Needs to Know](http://mashable.com/2011/02/07/facebook-privacy-guide/), by Stan Schroeder, February 7, 2011
+| Left-Aligned Signifier | Centred Referent     | Right-Aligned Truth Value |
+| ---------------------- | -------------------- | ------------------------- |
+| Discourse              | absent               | 0.000                     |
+| Metadiscourse          | also absent          | 0.000                     |
+| Anti-discourse         | conspicuously absent | −0.000                    |
+| Discourse (reprise)    | ✓                   | 1.000                     |
+
+The final row is a clerical error that has been retained on aesthetic grounds.
+
+#### Table III — The Wide Matrix, Which Does Not Fit
+
+| Paradigm        | Epoch         | Proponent | Detractor | Referent     | Signifier | Situation  | Desituation | Resituation | Fee      | Status   | Notes                   |
+| --------------- | ------------- | --------- | --------- | ------------ | --------- | ---------- | ----------- | ----------- | -------- | -------- | ----------------------- |
+| Subtextual      | Pre-Hanfkopf  | Hanfkopf  | Hanfkopf  | none         | several   | pending    | complete    | denied      | £40      | Active   | Contested               |
+| Postsubtextual  | Hanfkopf      | Drucker   | Drucker   | none         | too many  | withdrawn  | complete    | pending     | £40      | Dormant  | Contested               |
+| Anti-subtextual | Post-Hanfkopf | d'Erlette | d'Erlette | one, briefly | zero      | never held | n/a         | automatic   | £0       | Extinct  | Uncontested, alarmingly |
+| Meta-subtextual | Concurrent    | Prinn     | Prinn     | disputed     | disputed  | disputed   | disputed    | disputed    | disputed | Disputed | Disputed                |
+
+#### Table IV
+
+| The Whole Argument |
+| ------------------ |
+| No.                |
+
+---
+
+## Fellini, Nationalism, and the Apparatus of Citation
+
+If one examines neomaterialist capitalism, one is faced with a choice: either accept textual discourse or conclude that art is used to exploit minorities, but only if sexuality is [distinct from consciousness](http://harpers.org/archive/2010/08/happiness-is-a-worn-gun/?single=1); otherwise, society has objective value; otherwise, we stop.
+
+![A cartoon that has been asked to bear more theoretical weight than it agreed to](/assets/sufani.png "Fig. 2 — the referent, photographed shortly before its disappearance")
+
+In the works of Fellini, a predominant concept is the concept of postpatriarchial consciousness. Therefore, in *La Dolce Vita*, Fellini denies nationalism; in *Satyricon*, although, he analyses [neomaterialist capitalism](http://dealbook.nytimes.com/2012/12/18/cerberus-to-sell-gunmaker-freedom-group); in the interval between the two films, nationalism analyses Fellini, and does not care for what it finds.
+
+<details>
+<summary>Appendix Q — Objections Anticipated and Pre-Emptively Dismissed</summary>
+
+**Objection 1.** *This is not a theory; it is a mood.*
+Conceded. The mood is the theory. See <https://example.invalid/hanfkopf/mood>.
+
+**Objection 2.** *The citations do not exist.*
+Conceded, though "exist" is precisely what is under review, and the review is being conducted by the citations.
+
+**Objection 3.** *There are four tables and only one argument.*
+There are four tables and *no* argument. The count is otherwise correct.
+
+**Objection 4.** *This appendix is collapsible.*
+So is the discipline.
+
+</details>
+
+### A Note on the Multilingual Condition
+
+The desituated subject speaks in several registers at once: 是 the CJK register, بلا referent, and 🌀 the register of pure affect, which has no grammar and no complaints. Notice that the diacritical apparatus — Ǎ, ō, ü̈, ḗ, ø̈ — survives desituation intact, while the *sentence* does not. Hanfkopf regarded this as his single empirical finding.
+
+### One-Item List
+
+- This is the only item. Its solitude is not a stylistic choice but a structural claim.
+
+At last, prose resumes, and is immediately regretted.
+
+---
+
+## Further Reading
+
+- Hanfkopf, D., ["Toward a Non-Introduction: Prolegomena to Any Future Prolegomena"](http://money.cnn.com/2006/10/06/magazines/fortune/fastforward_facebook.fortune/index.htm), *Journal of Retracted Positions*, Vol. 0, No. 0, pp. ø–∞
+- d'Erlette, C., *The Situation Was Never There: A Field Guide*, Miskatonic Polity Press 2011, ISBN 978-0-0000-0000-0
+- Prinn, L., *Against Method, Against Prinn*, in three volumes, of which two are the same volume
+- Drucker, P., cited without having been read, as is customary — see [the standing bibliography][bib]
+- Humphrey, A., ["On the Third Option, Which I Will Not Be Disclosing"][third], keynote, undelivered
+
+## External Links
+
+- [Collected non-commentary][nyt] at *The New York Times*
+- [The Hanfkopf Estate's official position, which is that there is no estate](http://www.telegraph.co.uk/technology/facebook/)
+- <http://www.ft.com/cms/s/2/67e89ae8-30f7-11df-b057-00144feabdc0.html>
+- [A Man Who Does Not Exist Requests Some Privacy](http://www.nytimes.com/2007/12/03/technology/03facebook.html?ref=business), December 3, 2007
+- [Ten Settings Every Desituated Subject Needs to Know, Nine of Which Are the Same Setting](http://mashable.com/2011/02/07/facebook-privacy-guide/), by Stan Schroeder
+
+[bib]: http://www.gutenberg.org/files/12513/12513-h/12513-h.htm
+[third]: http://www.theonion.com/articles/fuck-everything-nation-reports,30743/
+[nyt]: http://topics.nytimes.com/top/news/business/companies/facebook_inc/index.html
