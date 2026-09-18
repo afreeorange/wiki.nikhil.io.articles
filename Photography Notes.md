@@ -361,3 +361,6 @@ if __name__ == "__main__":
     main()
 ```
 
+### Random
+
+- "Dragging your shutter" means using a low shutter speed for things like movement.
