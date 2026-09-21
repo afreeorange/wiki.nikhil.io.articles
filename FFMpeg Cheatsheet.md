@@ -58,7 +58,7 @@ ffmpeg -i in0.mp4 -i in1.mp4 -c copy -map 0:0 -map 1:1 -shortest out.mp4
 - The `-shortest` option will cause the output duration to match the duration of the shortest input stream.
 - See the [`-map` option documentation](http://ffmpeg.org/ffmpeg.html#Advanced-options) for more info.
 
-## Concat demuxer
+## Concatenation
 
 First, make a text file.
 ````
@@ -67,10 +67,18 @@ file 'in2.mp4'
 file 'in3.mp4'
 file 'in4.mp4'
 ````
+
 Then, run `ffmpeg`:
+
 ````
 ffmpeg -f concat -i list.txt -c copy out.mp4
 ````
+
+_Or_,
+
+```bash
+ffmpeg -f concat -safe 0 -i <(for f in ./*.mp3; do echo "file '$PWD/$f'"; done) -c copy output.mp3
+```
 
 ## Delay audio/video
 
