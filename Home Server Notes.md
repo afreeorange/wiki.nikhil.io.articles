@@ -249,13 +249,13 @@ When you make changes to the configuration YAML files, merely restarting the con
 docker ps
 
 # Assume it's called `plex`. Now stop it
-docker compose -f /orangepool/docker/plex.yml -p plex stop
+docker compose -f /zpool/docker/plex.yml -p plex stop
 
 # Make your changes to the config YAML, and then bring **another** container back up!
-docker compose -f /orangepool/docker/plex.yml -p plex up -d
+docker compose -f /zpool/docker/plex.yml -p plex up -d
 
 # **** THIS WILL NOT APPLY CHANGES! ****
-docker compose -f /orangepool/docker/plex.yml -p plex start
+docker compose -f /zpool/docker/plex.yml -p plex start
 ````
 
 [Review this](https://stackoverflow.com/a/67335047) for the differences between `always`, `unless-stopped`, etc.
