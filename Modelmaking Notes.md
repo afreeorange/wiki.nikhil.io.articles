@@ -1,3 +1,36 @@
+
+## Painting
+
+Prep → Prime → Pre-shade → Base coat → Modulation → Detail/secondary painting → Pre-assembly → Clear coat → Major decals → Seal → Final assembly → Small decals → Washes → Post-shading → Fading → Damage → Weathering → Flat coat → Final details.
+
+### In Depth
+
+- **Surface Preparation** — Clean up mold lines, ejector marks, seams, and imperfections; wash the parts if needed and test-fit major assemblies.
+- **Primer** — Apply a uniform primer coat to reveal flaws, improve paint adhesion, and establish an even working surface.
+- **Surface Correction** — Fill, sand, and re-prime any seams or blemishes revealed by the primer.
+- **Panel-Line Pre-Shading** — Darken panel lines, recesses, and shadow areas to establish underlying tonal variation.
+- **Base Coat** — Apply the main colors in thin layers, allowing some of the pre-shading to remain visible.
+- **Color Modulation / Initial Highlights** — Lighten upper surfaces, panel centers, or selected areas to break up the base color and establish scale lighting.
+- **Detail Painting** — Paint cockpits, engines, wheels, metallic components, equipment, trim, and other details that are easier to reach before final assembly.
+- **Masking & Secondary Colors** — Add camouflage, stripes, identification panels, metallic sections, anti-glare panels, or other contrasting areas.
+- **Pre-Assembly** — Join the major painted subassemblies, clean up any remaining joins, and touch up the paint where necessary.
+- **Gloss / Satin Preparation Coat** — Apply a smooth clear coat where needed to provide a good surface for decals and washes.
+- **Panel Decals / Major Markings** — Apply the large or structurally important decals while access to the surfaces is still easy.
+- **Decal Sealing Coat** — Seal the decals with a thin clear coat so subsequent weathering does not damage them.
+- **Final Assembly** — Attach the major remaining components and complete the basic structure of the model.
+- **Small Decals & Stencils** — Add warning labels, maintenance markings, insignia, serial numbers, placards, and other small markings.
+- **Panel-Line Wash / Pin Wash** — Reinforce recessed detail, seams, vents, rivets, and mechanical separation lines.
+- **Post-Shading & Tonal Variation** — Add subtle shadows, fading, staining, and localized color variation to integrate the paint and markings.
+- **Filters & Fading** — Use very thin translucent colors to shift or unify tones and reduce the freshly-painted appearance.
+- **Chipping & Surface Damage** — Add worn edges, scratches, exposed primer, bare metal, scuffs, or impact damage appropriate to the subject.
+- **Operational Weathering** — Add grime, dust, mud, exhaust, oil, fuel stains, soot, rust, rain streaking, or other environment-specific effects.
+- **Final Detail Painting** — Pick out lenses, lights, sensors, weapons, cables, hydraulic lines, exposed metal, and other tiny details that should remain crisp.
+- **Final Flat / Satin Clear Coat** — Bring the different paint, decal, and weathering finishes together and establish the model’s overall sheen.
+- **Selective Finish Restoration** — After the flat coat, restore gloss or satin where appropriate: glass, lenses, polished metal, wet oil, hydraulic rods, etc.
+- **Final Touches** — Add pigments, antennae, rigging, static grass, snow, wet effects, dust on wheels/tracks, or other fragile effects that should not be buried beneath the final clear coat.
+
+---
+
 Badger Anthem silver = medium, blue = fine, black - super fine
 
 Tamiya Ratios https://www.reddit.com/r/modelmakers/comments/352qcg/tamiya_acrylic_and_thinner_mix_ratio/
